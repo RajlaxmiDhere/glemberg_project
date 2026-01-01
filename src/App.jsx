@@ -5,6 +5,15 @@ function App() {
   
   return (
     <>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/aboutus" element={<About Us />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/contactus" element={<Contact Us />} />
+        
+      </Routes>
+    </BrowserRouter>
      
     </>
   )
