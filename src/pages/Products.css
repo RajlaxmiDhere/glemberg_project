@@ -1,11 +1,11 @@
-
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(2, 1fr); /* ✅ EXACTLY 2 cards per row */
+  gap: 30px;
   margin-top: 30px;
 }
 
+/* Card design (keep or update) */
 .product-card {
   background: #f8f9fa;
   padding: 25px;
@@ -17,15 +17,5 @@
 
 .product-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-.product-logo {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-
-.product-card h3 {
-  color: #198754;
-  margin-bottom: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
