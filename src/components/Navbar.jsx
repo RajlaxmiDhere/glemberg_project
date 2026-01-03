@@ -6,9 +6,9 @@ function Nav() {
         display: "flex",                
         justifyContent: "flex-end",     
         listStyle: "none",
-        margin: "0px",
-        padding: "0px",
-        background: "yellow",
+        margin: "50px",
+        padding: "50px",
+        background: " #0b5ed7;",
         
     };
     
