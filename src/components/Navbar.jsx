@@ -1,34 +1,30 @@
 import { NavLink } from "react-router-dom";
+import { FaLinkedin, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import "./Navbar.css";
 
-function Nav() {
-  
-    const ulStyle = {
-        display: "flex",                
-        justifyContent: "flex-end",     
-        listStyle: "none",
-        margin: "50px",
-        padding: "50px",
-        background: " #0b5ed7;",
-        
-    };
-    
+function Navbar() {
+  return (
+    <nav className="navbar">
+      {/* Top Row */}
+      <div className="navbar-top">
+        <div className="logo">Glemberg Pharma</div>
 
-    const liStyle = {
-        padding: "10px" 
-    };
+        <div className="social-icons">
+          <a href="#"><FaLinkedin /></a>
+          <a href="#"><FaWhatsapp /></a>
+          <a href="#"><FaInstagram /></a>
+        </div>
+      </div>
 
-    return (
-        <>
-            <ul style={ulStyle}>
-                <li style={liStyle}> <NavLink to="/">Home</NavLink> </li>
-                <li style={liStyle}> <NavLink to="/about">About Us </NavLink> </li>
-                <li style={liStyle}> <NavLink to="/products">Products</NavLink> </li>
-                <li style={liStyle}> <NavLink to="/contact">Contact Us</NavLink> </li>
-              
-            </ul>
-        </>
-    );
+      {/* Bottom Row */}
+      <ul className="nav-links">
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/about">About Us</NavLink></li>
+        <li><NavLink to="/products">Products</NavLink></li>
+        <li><NavLink to="/contact">Contact</NavLink></li>
+      </ul>
+    </nav>
+  );
 }
 
-export default Nav;
-
+export default Navbar;
