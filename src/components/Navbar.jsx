@@ -1,18 +1,34 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-function Navbar() {
-  return (
-    <nav className="navbar">
-      <h2>PharmaCare</h2>
-      <div className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="/about">About Us</Link>
-        <Link to="/products">Products</Link>
-        <Link to="/contact">Contact Us</Link>
-      </div>
-    </nav>
-  );
+function Nav() {
+  
+    const ulStyle = {
+        display: "flex",                
+        justifyContent: "flex-end",     
+        listStyle: "none",
+        margin: "0px",
+        padding: "0px",
+        background: "yellow",
+        
+    };
+    
+
+    const liStyle = {
+        padding: "10px" 
+    };
+
+    return (
+        <>
+            <ul style={ulStyle}>
+                <li style={liStyle}> <NavLink to="/">Home</NavLink> </li>
+                <li style={liStyle}> <NavLink to="/about">About Us </NavLink> </li>
+                <li style={liStyle}> <NavLink to="/products">Products</NavLink> </li>
+                <li style={liStyle}> <NavLink to="/contact">Contact Us</NavLink> </li>
+              
+            </ul>
+        </>
+    );
 }
 
-export default Navbar;
+export default Nav;
 
