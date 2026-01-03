@@ -1,1 +1,47 @@
+.navbar {
+  background: linear-gradient(90deg, #0b5ed7, #198754);
+  padding: 15px 40px;
+  color: white;
+}
+
+/* Top row */
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  margin-left: 15px;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* Bottom row */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin-top: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid #c9f7f5;
+}
 
