@@ -1,18 +1,25 @@
-import React from 'react';
-import logo from './assets/Glemberg Pharma Logo_page-0001.jpg'; // Adjust the path and file extension
+function Home() {
 
-const Navbar = () => {
   return (
-    <nav style={{ padding: '10px', display: 'flex', alignItems: 'center' }}>
-      {/* This displays your logo */}
-      <img 
-        src={logo} 
-        alt="Glemberg Pharma Logo" 
-        style={{ height: '50px', width: 'auto' }} 
-      />
-      <h1>Glemberg Pharma</h1>
-    </nav>
-  );
-};
 
-export default Navbar;
+    <div className="container">
+
+      <h1>Welcome to PharmaCare</h1>
+
+      <p>
+
+        We provide high-quality pharmaceutical products with trusted healthcare
+
+        solutions.
+
+      </p>
+
+    </div>
+
+  );
+
+}
+
+
+
+export default Home;
