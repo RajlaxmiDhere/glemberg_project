@@ -1,11 +1,10 @@
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* ✅ EXACTLY 2 cards per row */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 30px;
   margin-top: 30px;
 }
 
-/* Card design (keep or update) */
 .product-card {
   background: #f8f9fa;
   padding: 25px;
