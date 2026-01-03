@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './assets/'; // Adjust the path and file extension
+import logo from './assets/Glemberg Pharma Logo_page-0001.jpg'; // Adjust the path and file extension
 
 const Navbar = () => {
   return (
