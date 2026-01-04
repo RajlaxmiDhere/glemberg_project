@@ -46,16 +46,14 @@
   border-bottom: 2px solid #c9f7f5;
 }
 .logo-container {
-  display: flex;
-  align-items: center;
-  gap: 0px;
+  position: relative;
 }
 
 .logo-img {
-  width: 100px;
-  height: auto;
+  width: 140px;
+  position: absolute;
+  top: -20px;    /* overlap */
 }
-
 
 
 
