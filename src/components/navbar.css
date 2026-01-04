@@ -52,7 +52,7 @@
 .logo-img {
   width: 200px;
   position: absolute;
-  top: -20px;    /* overlap */
+  top: -10px;    /* overlap */
 }
 
 
