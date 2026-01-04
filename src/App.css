@@ -27,8 +27,8 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 40px;        /* 🔼 increase size */
-  font-weight: 700;       /* slightly bolder */
+  font-size:25px;        /* 🔼 increase size */
+  font-weight: 600;       /* slightly bolder */
   transition: color 0.3s ease;
 }
 
