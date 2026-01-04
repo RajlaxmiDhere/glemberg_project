@@ -49,11 +49,10 @@
   position: relative;
 }
 
-.logo-img {
-  width: 200px;
-  position: absolute;
-  top: -10px;
-  }
+.logo img {
+  height: 60px;
+  width: auto;
+}
 
 
 
