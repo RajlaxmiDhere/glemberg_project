@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { FaLinkedin, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import logo from "../assets/logo.png";   // ✅ import logo
 import "./Navbar.css";
 
 function Navbar() {
@@ -7,12 +7,17 @@ function Navbar() {
     <nav className="navbar">
       {/* Top Row */}
       <div className="navbar-top">
-        <div className="logo">Glemberg Pharma</div>
+        {/* Left: Logo */}
+        <div className="logo-container">
+          <img src={logo} alt="Company Logo" className="logo-img" />
+          <span className="company-name">Glemberg Pharma</span>
+        </div>
 
+        {/* Right: Social icons */}
         <div className="social-icons">
-          <a href="#"><FaLinkedin /></a>
-          <a href="#"><FaWhatsapp /></a>
-          <a href="#"><FaInstagram /></a>
+          <a href="#">LinkedIn</a>
+          <a href="#">WhatsApp</a>
+          <a href="#">Instagram</a>
         </div>
       </div>
 
