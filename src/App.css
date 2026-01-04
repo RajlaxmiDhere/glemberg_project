@@ -60,21 +60,28 @@ nav ul li a:hover {
    Home Page (Hero Section)
    ========================= */
 .hero {
-background:
-    linear-gradient(135deg, rgba(255,255,255,0.05) 25%, transparent 25%) ,
-    linear-gradient(225deg, rgba(255,255,255,0.05) 25%, transparent 25%),
-    linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
-    linear-gradient(315deg, rgba(255,255,255,0.05) 25%, transparent 25%),
-    linear-gradient(90deg, #243A5E, #6B4B73);
-  background-size: 500px 500px;
-}
+  min-height: 75vh;              /* makes it large */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;       /* vertical centering */
+  align-items: center;
 
- /* blue to green */
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(225deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(45deg,  rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(315deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, #243A5E, #6B4B73);
+
+  background-size: 100% 100%;    /* 🔑 IMPORTANT FIX */
+  background-repeat: no-repeat;
+
   color: #ffffff;
-  padding: 70px 40px;
+  padding: 80px 40px;
   border-radius: 10px;
   text-align: center;
 }
+
 
 .hero h1 {
   font-size: 36px;
