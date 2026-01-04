@@ -13,15 +13,8 @@ function Navbar() {
           <img src={logo} alt="Company Logo" className="logo-img" />
           <img src={name} alt="Company Name" className="name-img" />
         </div>
-
-        {/* Right: Social icons */}
-        <div className="social-icons">
-          <a href="#">LinkedIn</a>
-          <a href="#">WhatsApp</a>
-          <a href="#">Instagram</a>
         </div>
-      </div>
-
+    
       {/* Bottom Row */}
       <ul className="nav-links">
         <li><NavLink to="/">Home</NavLink></li>
