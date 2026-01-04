@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.jpg";   
 import "./navbar.css";
+import name from "../assets/C_name.jpg";
 
 function Navbar() {
   return (
@@ -10,7 +11,7 @@ function Navbar() {
         {/* Left: Logo */}
         <div className="logo-container">
           <img src={logo} alt="Company Logo" className="logo-img" />
-          <span className="company-name">Glemberg Pharma</span>
+          <img src={name} alt="Company Name" className="name-img" />
         </div>
 
         {/* Right: Social icons */}
