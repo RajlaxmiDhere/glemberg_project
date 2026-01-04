@@ -4,7 +4,7 @@
    Navbar Styles
    ========================= */
 nav {
-  background-color:#0b5ed7 ; /* pharma blue */
+  background-color:#7bbde8 ; /* pharma blue */
   padding: 15px 40px;
   display: flex;
   justify-content: space-between;
@@ -62,7 +62,7 @@ nav ul li a:hover {
 .hero {
   background: linear-gradient(
     135deg,
-  #0b5ed7,
+#7bbde8,
     #198754
   ); /* blue to green */
   color: #ffffff;
