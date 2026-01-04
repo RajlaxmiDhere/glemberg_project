@@ -73,7 +73,7 @@ nav ul li a:hover {
     linear-gradient(315deg, rgba(255,255,255,0.05) 1px, transparent 1px),
     linear-gradient(90deg, #243A5E, #6B4B73);
 
-  background-size: 80% 100%;    /* 🔑 IMPORTANT FIX */
+  background-size: 100% 80%;    /* 🔑 IMPORTANT FIX */
   background-repeat: no-repeat;
 
   color: #ffffff;
