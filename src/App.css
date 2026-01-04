@@ -13,8 +13,8 @@ nav {
 
 nav h1 {
   color: #ffffff;
-  font-size: 42px;
-font-weight: 700;
+  font-size: 22px;
+font-weight: 600;
 
 }
 
@@ -27,9 +27,11 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: #ffffff;
-  font-weight: 500;
+  font-size: 20px;        /* 🔼 increase size */
+  font-weight: 600;       /* slightly bolder */
   transition: color 0.3s ease;
 }
+
 
 nav ul li a:hover {
   color: #c9f7f5; /* light pharma green */
