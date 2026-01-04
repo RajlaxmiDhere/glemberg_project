@@ -47,7 +47,7 @@
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0px;
 }
 
 .logo-img {
@@ -55,10 +55,6 @@
   height: auto;
 }
 
-.company-name {
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-}
+
 
 
