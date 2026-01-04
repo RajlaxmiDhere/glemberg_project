@@ -60,14 +60,14 @@ nav ul li a:hover {
    Home Page (Hero Section)
    ========================= */
 .hero {
-background: linear-gradient(
-  90deg,
-  #243A5E 0%,
-  #2F5C8F 30%,
-  #4A5A8A 60%,
-  #6B4B73 85%,
-  #4A2F44 100%
-);
+background:
+    linear-gradient(135deg, rgba(255,255,255,0.05) 25%, transparent 25%) ,
+    linear-gradient(225deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+    linear-gradient(90deg, #243A5E, #6B4B73);
+  background-size: 300px 300px;
+}
 
  /* blue to green */
   color: #ffffff;
@@ -162,14 +162,6 @@ footer {
   font-size: 14px;
   color: #777;
 }
-.section-bg {
-  background:
-    linear-gradient(135deg, rgba(255,255,255,0.05) 25%, transparent 25%) ,
-    linear-gradient(225deg, rgba(255,255,255,0.05) 25%, transparent 25%),
-    linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
-    linear-gradient(315deg, rgba(255,255,255,0.05) 25%, transparent 25%),
-    linear-gradient(90deg, #243A5E, #6B4B73);
-  background-size: 300px 300px;
-}
+
 
 
