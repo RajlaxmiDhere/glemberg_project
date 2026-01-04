@@ -60,11 +60,7 @@ nav ul li a:hover {
    Home Page (Hero Section)
    ========================= */
 .hero {
-  background: linear-gradient(
-    135deg,
-#7bbde8,
-    #198754
-  ); /* blue to green */
+  background: linear-gradient(90deg, #0b5ed7, #198754); /* blue to green */
   color: #ffffff;
   padding: 70px 40px;
   border-radius: 10px;
