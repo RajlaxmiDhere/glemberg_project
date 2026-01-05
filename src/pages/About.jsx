@@ -16,7 +16,7 @@ function About() {
           <img src={journeyImg} alt="The Journey So Far" />
         </div>
         <div className="about-content">
-          <h2>Who We Are</h2>
+          <h2>The Journey So Far</h2>
           <p>
             Glemberg Pharma believes that every innovation begins with a promise —
             a promise to improve lives and build a healthier tomorrow. Our
