@@ -1,26 +1,106 @@
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 30px;
-  margin-top: 30px;
+/* =========================
+   Products Page Wrapper
+   ========================= */
+.products-page {
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #f0fdfa 0%,
+    #e6f7f4 50%,
+    #0f9488 100%
+  );
+  padding: 60px 0;
 }
 
-.product-card {
-  background: #f8f9fa;
-  padding: 25px;
-  border-radius: 10px;
+/* =========================
+   Page Heading
+   ========================= */
+.products-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e4f91;
+  margin-bottom: 50px;
   text-align: center;
-  border: 1px solid #e3e6ea;
-  transition: all 0.3s ease;
 }
 
-.product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+/* =========================
+   Card Styling
+   ========================= */
+.product-card {
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #ffffff;
+
+  box-shadow: 0 10px 25px rgba(30, 79, 145, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-@media (max-width: 768px) {
-  .products-grid {
-    grid-template-columns: 1fr; /* 1 card per row on mobile */
+
+/* Hover effect */
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 35px rgba(15, 148, 136, 0.35);
+}
+
+/* =========================
+   Card Image (Header)
+   ========================= */
+.product-card img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  background-color: #f1f6fb;
+}
+
+/* =========================
+   Card Body
+   ========================= */
+.product-card .card-body {
+  padding: 22px;
+}
+
+/* Product Title */
+.product-card .card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0f9488;
+  margin-bottom: 10px;
+}
+
+/* Product Description */
+.product-card .card-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #2f3e4e;
+}
+
+/* =========================
+   Bootstrap Grid Spacing
+   ========================= */
+.products-row {
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+   Responsive Adjustments
+   ========================= */
+@media (max-width: 992px) {
+  .products-title {
+    font-size: 30px;
+  }
+
+  .product-card img {
+    height: 200px;
   }
 }
 
+@media (max-width: 768px) {
+  .product-card img {
+    height: 180px;
+  }
+
+  .product-card .card-title {
+    font-size: 18px;
+  }
+}
