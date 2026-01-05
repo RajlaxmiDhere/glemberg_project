@@ -1,7 +1,15 @@
 .about-page {
-  background-color: #F1F6FB;
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #f0fdfa 0%,
+    #e6f7f4 40%,
+    #cdeee8 70%,
+    #0f9488 100%
+  );
   padding: 60px 0;
 }
+
 
 /* Common Row Layout */
 .about-row {
