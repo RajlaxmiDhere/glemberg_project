@@ -12,7 +12,7 @@ function Products() {
       <div className="container">
 
         {/* Page Title */}
-        <h2 className="products-title">Our Products</h2>
+        <h1 className="products-title">Our Products</h1>
 
         {/* Products Row */}
         <div className="row products-row">
@@ -20,12 +20,12 @@ function Products() {
           {/* Product Card 1 */}
           <div className="col-md-6 col-lg-5 mb-4">
             <div className="card product-card h-100">
-              <img src={product1} className="card-img-top" alt="Pain Relief Medicine" />
+              <img src={product1} className="card-img-top" alt="Gabanx_NT_100" />
               <div className="card-body">
-                <h5 className="card-title">Pain Relief Medicine</h5>
+                <h5 className="card-title">Gabanx_NT_100</h5>
                 <p className="card-text">
-                  Fast-acting and effective pain relief solutions developed
-                  with high safety, quality, and patient care standards.
+                <b>Diabetic Neuropathy: </b> Reduces neurotransmitter realease from neurons in the spiral cord and brain
+                  <b>Peripheral Neuropathy:</b> Reduces neuropathic pain
                 </p>
               </div>
             </div>
@@ -34,12 +34,17 @@ function Products() {
           {/* Product Card 2 */}
           <div className="col-md-6 col-lg-5 mb-4">
             <div className="card product-card h-100">
-              <img src={product2} className="card-img-top" alt="Antibiotic Range" />
+              <img src={product2} className="card-img-top" alt="Bonew_jelly_sachet" />
               <div className="card-body">
-                <h5 className="card-title">Antibiotic Range</h5>
+                <h5 className="card-title">Bonew_jelly_sachet</h5>
                 <p className="card-text">
-                  Broad-spectrum antibiotics designed to combat bacterial
-                  infections with proven clinical effectiveness.
+                 
+ <b>Osteoporosis:</b> Prevents bone loss, especially after menopause, and rebuilds bone to lower hip/spine fracture risk. 
+
+<b>Paget's Disease:</b> Manages this bone disorder characterized by excessive bone turnover. 
+Glucocorticoid-Induced 
+
+<b>Osteoporosis:</b> Treats bone loss from steroid use. 
                 </p>
               </div>
             </div>
@@ -48,12 +53,16 @@ function Products() {
           {/* Product Card 3 */}
           <div className="col-md-6 col-lg-5 mb-4">
             <div className="card product-card h-100">
-              <img src={product3} className="card-img-top" alt="Healthcare Supplements" />
+              <img src={product3} className="card-img-top" alt="Carnex_LC_tab" />
               <div className="card-body">
-                <h5 className="card-title">Healthcare Supplements</h5>
+                <h5 className="card-title">Carnex_LC_tab</h5>
                 <p className="card-text">
-                  Nutritional supplements formulated to strengthen immunity
-                  and support overall health and wellness.
+                  <b>Muscle Pain & Cramps:</b>Helps relieve muscle pain (myalgia) and cramps, including statin-induced cramps.
+                  <b>Nerve Function:</b> Supports nerve repair and improves pain and function in conditions like diabetic neuropathy and carpal tunnel syndrome.
+
+<b>Wound & Fracture Healing:</b> Promotes collagen and protein synthesis, aiding faster wound healing and bone repair.
+
+<b>Anti-inflammatory & Bone Health:</b>Reduces inflammation and helps prevent bone loss by supporting healthy bone metabolism.
                 </p>
               </div>
             </div>
@@ -62,12 +71,17 @@ function Products() {
           {/* Product Card 4 */}
           <div className="col-md-6 col-lg-5 mb-4">
             <div className="card product-card h-100">
-              <img src={product4} className="card-img-top" alt="Cardiac Care Products" />
+              <img src={product4} className="card-img-top" alt="Glemvit_D3_60K" />
               <div className="card-body">
-                <h5 className="card-title">Cardiac Care Products</h5>
+                <h5 className="card-title">Glemvit_D3_60K</h5>
                 <p className="card-text">
-                  Advanced cardiac care medicines developed to support heart
-                  health and manage cardiovascular conditions effectively.
+               <b>Bone Health:</b> Helps the body 
+absorb calcium and phosphorus, essential for building and maintaining strong bones and preventing bone diseases like rickets (in children) and osteomalacia (in adults).
+
+<b>Muscle Function: </b>Supports muscle strength and proper functioning, reducing weakness and cramps
+
+<b>Calcium Regulation:</b> Treats low blood calcium levels (hypocalcemia) and related conditions like hypoparathyroidism.
+
                 </p>
               </div>
             </div>
