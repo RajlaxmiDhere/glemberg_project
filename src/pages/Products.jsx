@@ -1,10 +1,10 @@
 import "./Products.css";
 
 // Product Images
-import product1 from "../assets/product1.jpg";
-import product2 from "../assets/product2.jpg";
-import product3 from "../assets/product3.jpg";
-import product4 from "../assets/product4.jpg";
+import product1 from "../assets/gabanx_NT_100.jpg";
+import product2 from "../assets/Bonew_jelly_sachet.jpg";
+import product3 from "../assets/Carnex_LC_tab.jpg";
+import product4 from "../assets/Glemvit_D3_60K.jpg";
 
 function Products() {
   return (
