@@ -25,6 +25,7 @@ function Products() {
                 <h5 className="card-title">Gabanx_NT_100</h5>
                 <p className="card-text">
                 <b>Diabetic Neuropathy: </b> Reduces neurotransmitter realease from neurons in the spiral cord and brain
+                  <br></br>
                   <b>Peripheral Neuropathy:</b> Reduces neuropathic pain
                 </p>
               </div>
@@ -40,7 +41,7 @@ function Products() {
                 <p className="card-text">
                  
  <b>Osteoporosis:</b> Prevents bone loss, especially after menopause, and rebuilds bone to lower hip/spine fracture risk. 
-
+<br></br>
 <b>Paget's Disease:</b> Manages this bone disorder characterized by excessive bone turnover. 
 Glucocorticoid-Induced 
 
@@ -61,7 +62,7 @@ Glucocorticoid-Induced
                   <b>Nerve Function:</b> Supports nerve repair and improves pain and function in conditions like diabetic neuropathy and carpal tunnel syndrome.
 
 <b>Wound & Fracture Healing:</b> Promotes collagen and protein synthesis, aiding faster wound healing and bone repair.
-
+<br></br>
 <b>Anti-inflammatory & Bone Health:</b>Reduces inflammation and helps prevent bone loss by supporting healthy bone metabolism.
                 </p>
               </div>
@@ -79,7 +80,7 @@ Glucocorticoid-Induced
 absorb calcium and phosphorus, essential for building and maintaining strong bones and preventing bone diseases like rickets (in children) and osteomalacia (in adults).
 
 <b>Muscle Function: </b>Supports muscle strength and proper functioning, reducing weakness and cramps
-
+<br></br>
 <b>Calcium Regulation:</b> Treats low blood calcium levels (hypocalcemia) and related conditions like hypoparathyroidism.
 
                 </p>
