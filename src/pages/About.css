@@ -38,7 +38,7 @@
 /* Image */
 .about-image img {
   width: 100%;
-  max-width: 450px;
+  max-width: 500px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(30,79,145,0.15);
 }
