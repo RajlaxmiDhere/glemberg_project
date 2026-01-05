@@ -79,7 +79,7 @@ Glucocorticoid-Induced
                 <p className="card-text">
                <b>Bone Health:</b> Helps the body 
 absorb calcium and phosphorus, essential for building and maintaining strong bones and preventing bone diseases like rickets (in children) and osteomalacia (in adults).
-
+<br></br>
 <b>Muscle Function: </b>Supports muscle strength and proper functioning, reducing weakness and cramps
 <br></br>
 <b>Calcium Regulation:</b> Treats low blood calcium levels (hypocalcemia) and related conditions like hypoparathyroidism.
