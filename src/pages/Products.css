@@ -46,11 +46,13 @@
    Card Image (Header)
    ========================= */
 .product-card img {
-  height: 220px;
+  height: 240px;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   background-color: #f1f6fb;
+  padding: 12px;
 }
+
 
 /* =========================
    Card Body
