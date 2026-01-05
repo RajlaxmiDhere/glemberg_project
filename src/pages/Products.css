@@ -4,9 +4,10 @@
 .products-page {
   min-height: 100vh;
   background: linear-gradient(
-    90deg,
-    #f0fdfa 0%,
-    #e6f7f4 50%,
+     90deg,
+     #f0fdfa 0%,
+    #e6f7f4 40%,
+    #cdeee8 70%,
     #0f9488 100%
   );
   padding: 60px 0;
