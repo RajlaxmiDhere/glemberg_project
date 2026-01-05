@@ -44,7 +44,7 @@ function Products() {
 <br></br>
 <b>Paget's Disease:</b> Manages this bone disorder characterized by excessive bone turnover. 
 Glucocorticoid-Induced 
-
+<br></br>
 <b>Osteoporosis:</b> Treats bone loss from steroid use. 
                 </p>
               </div>
@@ -59,8 +59,9 @@ Glucocorticoid-Induced
                 <h5 className="card-title">Carnex_LC_tab</h5>
                 <p className="card-text">
                   <b>Muscle Pain & Cramps:</b>Helps relieve muscle pain (myalgia) and cramps, including statin-induced cramps.
+                  <br></br>
                   <b>Nerve Function:</b> Supports nerve repair and improves pain and function in conditions like diabetic neuropathy and carpal tunnel syndrome.
-
+<br></br>
 <b>Wound & Fracture Healing:</b> Promotes collagen and protein synthesis, aiding faster wound healing and bone repair.
 <br></br>
 <b>Anti-inflammatory & Bone Health:</b>Reduces inflammation and helps prevent bone loss by supporting healthy bone metabolism.
