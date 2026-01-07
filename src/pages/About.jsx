@@ -18,7 +18,7 @@ function About() {
         <div className="about-content">
           <h2>The Journey So Far</h2>
           <p>
-           <b>Glemberg Pharma</b> believes that every innovation begins with a promise — a promise to improve lives and build a healthier tomorrow. Our foundation is built on strong principles of innovation, quality, safety, purity, and efficacy. Over the years, Glemberg Pharma has emerged as a trusted name in ethical pharmaceutical products across India and beyond.
+           <strong>Glemberg Pharma</strong>strong> believes that every innovation begins with a promise — a promise to improve lives and build a healthier tomorrow. Our foundation is built on strong principles of innovation, quality, safety, purity, and efficacy. Over the years, Glemberg Pharma has emerged as a trusted name in ethical pharmaceutical products across India and beyond.
 
 We ensure that every product meets the highest international quality standards through stringent quality control processes. Our mission is to develop and deliver innovative, safe, and high-quality medicines that address critical healthcare needs and improve patient outcomes worldwide.
           </p>
