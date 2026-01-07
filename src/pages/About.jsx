@@ -48,7 +48,7 @@ Our mission is fueled by a dedicated team of scientists and researchers working 
         </div>
         <div className="about-content">
           <h1>Our Vision</h1>
-          <h2>Pioneering innovation with unwavering trust</h2>
+          <h2>Pioneering innovation with Enduring trust</h2>
           <p>
             Our vision is rooted in the belief that standard is never enough. We are committed to pushing the boundaries of medical science through continuous research and development. By investing in modern technology and creative scientific thinking, we aim to bring new, more effective therapies to market that set entirely new benchmarks for the industry.By harmonizing scientific advancement with a legacy of reliability, we aim to be the most trusted name for healthcare providers and patients alike, ensuring a healthier and more secure future for all.
           </p>
