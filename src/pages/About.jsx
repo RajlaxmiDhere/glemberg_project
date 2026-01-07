@@ -78,11 +78,12 @@ Our mission is fueled by a dedicated team of scientists and researchers working 
         <div className="about-content">
           <h1>Our Core Values</h1>
           <ul>
-            <li>Integrity & Transparency</li>
-            <li>Quality & Safety</li>
             <li>Innovation & Excellence</li>
             <li>Patient-Centric Care</li>
+            <li>Quality & Safety</li>
+            <li>Integrity & Transparency</li>
             <li>Commitment to Health</li>
+            
           </ul>
         </div>
       </section>
