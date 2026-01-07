@@ -9,33 +9,38 @@ const Contact = () => {
 
         <form>
           <div className="mb-3">
+            <label>Your Name</label>
             <input
               type="text"
               className="form-control"
-              placeholder="Your Name"
+              placeholder="Full-Name"
               required
             />
           </div>
 
           <div className="mb-3">
+            <label>Your Email Address</label>
+            
             <input
               type="email"
               className="form-control"
-              placeholder="Your Email Address"
+              placeholder="Email Address"
               required
             />
           </div>
 
           <div className="mb-3">
+            <label>Your Phone Number</label>
             <input
               type="tel"
               className="form-control"
-              placeholder="Your Phone Number"
+              placeholder="Phone Number"
               required
             />
           </div>
 
           <div className="mb-3">
+            <label>Additional Information</label>
             <textarea
               className="form-control"
               rows="4"
