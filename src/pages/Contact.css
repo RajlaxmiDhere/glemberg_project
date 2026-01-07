@@ -1,63 +1,42 @@
-import React from "react";
-import "./Contact.css";
+.contact-form {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  padding: 35px;
+  border-radius: 12px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
 
-const Contact = () => {
-  return (
-    <div className="container d-flex justify-content-center align-items-center min-vh-100">
-      <div className="contact-form">
-        <h4 className="text-center mb-4">Contact Us</h4>
+/* Labels */
+.form-label {
+  color: #0a2540;
+  font-weight: 500;
+}
 
-        <form>
-          {/* Name */}
-          <div className="mb-3">
-            <label className="form-label">Name</label>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Enter your name"
-              required
-            />
-          </div>
+/* Inputs */
+.form-control {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #0a2540;
+}
 
-          {/* Email */}
-          <div className="mb-3">
-            <label className="form-label">Email Address</label>
-            <input
-              type="email"
-              className="form-control"
-              placeholder="Enter your email"
-              required
-            />
-          </div>
+.form-control::placeholder {
+  color: rgba(10, 37, 64, 0.6);
+}
 
-          {/* Phone */}
-          <div className="mb-3">
-            <label className="form-label">Phone Number</label>
-            <input
-              type="tel"
-              className="form-control"
-              placeholder="Enter your phone number"
-              required
-            />
-          </div>
+.form-control:focus {
+  background: transparent;
+  box-shadow: none;
+  border-color: #172c7a;
+}
 
-          {/* Message */}
-          <div className="mb-3">
-            <label className="form-label">Query / Message</label>
-            <textarea
-              className="form-control"
-              rows="4"
-              placeholder="Write your message here"
-            ></textarea>
-          </div>
+/* Button */
+.btn-primary {
+  background-color: #172c7a;
+  border: none;
+}
 
-          <button type="submit" className="btn btn-primary w-100">
-            Submit
-          </button>
-        </form>
-      </div>
-    </div>
-  );
-};
-
-export default Contact;
+.btn-primary:hover {
+  background-color: #0f1f5a;
+}
