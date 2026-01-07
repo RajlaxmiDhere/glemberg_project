@@ -34,6 +34,7 @@
 
 .about-row.journey .about-content {
   flex: 0 0 50%;
+  color: #ff5733;
 }
 
 /* Half layout: 50% image, 50% text */
