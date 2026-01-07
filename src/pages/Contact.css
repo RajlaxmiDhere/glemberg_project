@@ -1,3 +1,13 @@
+body {
+  background: linear-gradient(
+    90deg,
+    #f5faff,
+    #e6f2ff,
+    #cfe6ff,
+    #b3d9ff
+  );
+}
+
 .contact-form {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(6px);
@@ -8,13 +18,6 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Labels */
-.form-label {
-  color: #0a2540;
-  font-weight: 500;
-}
-
-/* Inputs */
 .form-control {
   background: transparent;
   border: 1px solid #ffffff;
@@ -31,7 +34,6 @@
   border-color: #172c7a;
 }
 
-/* Button */
 .btn-primary {
   background-color: #172c7a;
   border: none;
