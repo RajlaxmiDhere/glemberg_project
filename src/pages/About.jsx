@@ -41,7 +41,7 @@ function About() {
 
       {/* Our Dedicated Team */}
       <section className="about-full">
-        <h2>Our Dedicated Team</h2>
+        <h1>Our Dedicated Team</h1>
         <p>
           We are a committed team of scientists, researchers, and healthcare
           professionals working together to deliver high-quality, safe, and
