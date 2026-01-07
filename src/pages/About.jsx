@@ -62,7 +62,7 @@ function About() {
         </div>
         <div className="about-content">
           <h1>Our Vision</h1>
-          <h2>Pioneering innovation with Enduring trust</h2>
+          <h3>Pioneering innovation with Enduring trust</h3>
           <p>
             Our vision is rooted in the belief that standard is never enough. We
             are committed to pushing the boundaries of medical science through
@@ -84,7 +84,7 @@ function About() {
         </div>
         <div className="about-content">
           <h1>Our Goal</h1>
-          <h2>Advancing Global Health</h2>
+          <h3>Advancing Global Health</h3>
           <p>
             Our goal is to address critical healthcare needs through continuous
             research, quality manufacturing, and patient-focused solutions.
