@@ -28,11 +28,11 @@
 
 /* Journey: 30% image, 70% text */
 .about-row.journey .about-image {
-  flex: 0 0 30%;
+  flex: 0 0 50%;
 }
 
 .about-row.journey .about-content {
-  flex: 0 0 70%;
+  flex: 0 0 40%;
 }
 
 /* Half layout: 50% image, 50% text */
