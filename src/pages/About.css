@@ -55,14 +55,14 @@
 /* MAIN SECTION HEADINGS */
 .about-content h1,
 .about-content > h2,
-.about-full h2 {
+.about-full h3 {
   color: #1e4f91;
   font-size: 34px;
   margin-bottom: 16px;
 }
 
 /* TAGLINES */
-.about-row.half .about-content h2 {
+.about-row.half .about-content h3 {
   color: #2f3e4e;
   font-weight: 500;
 }
