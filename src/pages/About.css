@@ -1,17 +1,73 @@
-/* Journey text highlight (remove old orange) */
+.about-page {
+  min-height: 100vh;
+  background: linear-gradient(
+    90deg,
+    #E8F4FD 0%,
+    #D6ECFA 40%,
+    #BFDFF5 70%,
+    #9CC9E8 100%
+  );
+  padding: 60px 0;
+}
+
+/* Common Row Layout */
+.about-row {
+  max-width: 1400px;
+  margin: 80px auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Reverse layout */
+.about-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Journey layout */
+.about-row.journey .about-image {
+  flex: 0 0 40%;
+}
+
 .about-row.journey .about-content {
   flex: 0 0 50%;
   color: #2f3e4e;
 }
 
-/* Section Headings */
-.about-content h2 {
+/* Half layout */
+.about-row.half .about-image {
+  flex: 0 0 50%;
+}
+
+.about-row.half .about-content {
+  flex: 0 0 50%;
+}
+
+/* Images */
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(30, 79, 145, 0.18);
+}
+
+/* MAIN SECTION HEADINGS */
+.about-content h1,
+.about-content > h2,
+.about-full h2 {
   color: #1e4f91;
   font-size: 34px;
   margin-bottom: 16px;
 }
 
-/* All paragraphs */
+/* TAGLINES */
+.about-row.half .about-content h2 {
+  color: #2f3e4e;
+  font-weight: 500;
+}
+
+/* Paragraphs */
 .about-content p {
   font-size: 20px;
   line-height: 1.9;
@@ -19,24 +75,65 @@
   margin-bottom: 16px;
 }
 
-/* List items */
+/* Lists */
+.about-content ul {
+  padding-left: 20px;
+}
+
 .about-content ul li {
   font-size: 20px;
   margin-bottom: 10px;
   color: #2f3e4e;
 }
 
-/* Full width section heading */
-.about-full h2 {
-  color: #1e4f91;
-  font-size: 36px;
-  margin-bottom: 20px;
+/* Full width section */
+.about-full {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(6px);
+  padding: 90px 30px;
+  text-align: center;
+  border-radius: 16px;
+  max-width: 1200px;
+  margin: 100px auto;
 }
 
-/* Full width section paragraph (including tagline lines) */
 .about-full p {
   max-width: 800px;
   margin: auto;
   font-size: 20px;
   color: #2f3e4e;
+}
+
+/* Team images */
+.team-gallery {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-gallery img {
+  width: 230px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(30, 79, 145, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-row,
+  .about-row.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-row.journey .about-image,
+  .about-row.journey .about-content,
+  .about-row.half .about-image,
+  .about-row.half .about-content {
+    flex: 0 0 100%;
+  }
+
+  .team-gallery {
+    flex-direction: column;
+  }
 }
