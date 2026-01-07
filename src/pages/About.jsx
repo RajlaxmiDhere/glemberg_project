@@ -64,7 +64,7 @@ Our mission is fueled by a dedicated team of scientists and researchers working 
           <h1>Our Goal</h1>
           <h2>Advancing Global Health</h2>
           <p>
-            To address critical healthcare needs through continuous research,
+            Our goal is to address critical healthcare needs through continuous research,
             quality manufacturing, and patient-focused solutions.
           </p>
         </div>
