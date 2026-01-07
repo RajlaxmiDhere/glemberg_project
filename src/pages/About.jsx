@@ -62,6 +62,7 @@ Our mission is fueled by a dedicated team of scientists and researchers working 
         </div>
         <div className="about-content">
           <h1>Our Goal</h1>
+          <h2>Advancing Global Health</h2>
           <p>
             To address critical healthcare needs through continuous research,
             quality manufacturing, and patient-focused solutions.
