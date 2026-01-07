@@ -18,7 +18,7 @@ function About() {
         <div className="about-content">
           <h2>The Journey So Far</h2>
           <p>
-<strong>Glemberg Pharma is a name synonymous with trust and innovation</strong>in the global pharmaceutical landscape. Built on the core pillars of quality, safety, and purity, we go beyond manufacturing—we deliver a promise to improve lives. By adhering to rigorous WHO-GMP standards and stringent quality controls, we ensure that every life-saving innovation we produce meets the highest international benchmarks, providing patients with the efficacy they deserve.
+<strong>Glemberg Pharma is a name synonymous with trust and innovation</strong> in the global pharmaceutical landscape. Built on the core pillars of quality, safety, and purity, we go beyond manufacturing—we deliver a promise to improve lives. By adhering to rigorous WHO-GMP standards and stringent quality controls, we ensure that every life-saving innovation we produce meets the highest international benchmarks, providing patients with the efficacy they deserve.
 <br></br>
 Our mission is fueled by a dedicated team of scientists and researchers working relentlessly to make healthcare both reliable and affordable. We don’t just develop medicines; we create paths to a healthier future through patient-focused solutions and ethical excellence. At Glemberg Pharma, we are committed to enriching human life, ensuring that world-class healthcare is accessible to everyone, everywhere.
           </p>
