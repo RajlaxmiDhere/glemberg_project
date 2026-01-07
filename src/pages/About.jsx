@@ -47,8 +47,8 @@ Our mission is fueled by a dedicated team of scientists and researchers working 
           <img src={visionImg} alt="Our Vision" />
         </div>
         <div className="about-content">
-          <h2>Our Vision</h2>
-          <h1>Pioneering innovation with unwavering trust</h1>
+          <h1>Our Vision</h1>
+          <h2>Pioneering innovation with unwavering trust</h2>
           <p>
             Our vision is rooted in the belief that "standard" is never enough. We are committed to pushing the boundaries of medical science through continuous research and development. By investing in modern technology and creative scientific thinking, we aim to bring new, more effective therapies to market that set entirely new benchmarks for the industry.By harmonizing scientific advancement with a legacy of reliability, we aim to be the most trusted name for healthcare providers and patients alike, ensuring a healthier and more secure future for all.
           </p>
@@ -61,7 +61,7 @@ Our mission is fueled by a dedicated team of scientists and researchers working 
           <img src={goalImg} alt="Our Goal" />
         </div>
         <div className="about-content">
-          <h2>Our Goal</h2>
+          <h1>Our Goal</h1>
           <p>
             To address critical healthcare needs through continuous research,
             quality manufacturing, and patient-focused solutions.
@@ -75,7 +75,7 @@ Our mission is fueled by a dedicated team of scientists and researchers working 
           <img src={valuesImg} alt="Our Core Values" />
         </div>
         <div className="about-content">
-          <h2>Our Core Values</h2>
+          <h1>Our Core Values</h1>
           <ul>
             <li>Integrity & Transparency</li>
             <li>Quality & Safety</li>
