@@ -13,10 +13,10 @@ function About() {
       {/* Journey / Who We Are */}
       <section className="about-row journey">
         <div className="about-image">
-          <img src={journeyImg} alt="The Journey So Far" />
+          <img src={journeyImg} alt="About Us" />
         </div>
         <div className="about-content">
-          <h2>The Journey So Far</h2>
+          <h1>The Journey So Far</h1>
           <p>
             <strong>
               Glemberg Pharma is a name synonymous with trust and innovation
