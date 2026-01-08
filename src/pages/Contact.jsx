@@ -57,4 +57,16 @@ const Contact = () => {
   );
 };
 
+<div class="map-container">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.571832049615!2d74.58524677516244!3d16.847514383950882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc118a93e50ca2f%3A0x7156be7db78e48d9!2sNeminathnagar%2C%20Sangli%2C%20Maharashtra%20416416!5e0!3m2!1sen!2sin!4v1704715000000!5m2!1sen!2sin" 
+    width="100%" 
+    height="450" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
 export default Contact;
