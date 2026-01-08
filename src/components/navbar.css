@@ -1,12 +1,9 @@
 /* =========================
    TOP SOCIAL BAR
    ========================= */
-/* =========================
-   TOP SOCIAL BAR
-   ========================= */
 .top-social-bar {
   background-color: #172c7a;
-  padding: 8px 0;
+  padding: 6px 0;
 }
 
 .social-bar-inner {
@@ -19,25 +16,23 @@
   gap: 18px;
 }
 
-/* Force correct icon size */
-.social-bar-inner .bi {
+.social-bar-inner i {
   font-size: 18px;
   color: #ffffff;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.social-bar-inner .bi:hover {
+.social-bar-inner i:hover {
+  transform: scale(1.2);
   color: #25d366;
-  transform: scale(1.15);
-  transition: 0.3s ease;
 }
-
 
 /* =========================
    NAVBAR
    ========================= */
 .navbar {
   background-color: #172c7a;
-  padding: 22px 0;
+  padding: 22px 0;   /* ⬅ IMPORTANT: height fix */
 }
 
 .navbar-inner {
@@ -50,28 +45,25 @@
   justify-content: space-between;
 }
 
-/* Logo slightly smaller than navbar height */
+/* LOGO */
 .navbar-logo {
   max-height: 50px;   /* slightly smaller than navbar */
   width: auto;
   object-fit: contain;
 }
 
-
-/* =========================
-   NAV LINKS
-   ========================= */
+/* NAV LINKS */
 .nav-links {
   display: flex;
-  gap: 28px;
+  gap: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .nav-links a {
-  color: white;
-  font-size: 23px;
+  color: #ffffff;
+  font-size: 20px;
   font-weight: 600;
   text-decoration: none;
 }
