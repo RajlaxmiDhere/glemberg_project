@@ -101,7 +101,43 @@ const Contact = () => {
       </div>
 
     </div>
+ import React from "react";
+import "./Contact.css";
+
+const Contact = () => {
+  // Replace this with your actual phone number (include country code)
+  const phoneNumber = "919876543210"; 
+  const message = "Hello! I have an enquiry regarding your services.";
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  return (
+    <div className="contact-page-wrapper">
+      
+      {/* WhatsApp Button */}
+      <a 
+        href={whatsappLink} 
+        className="whatsapp-float" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+          alt="WhatsApp" 
+          style={{ width: '35px', height: '35px' }} 
+        />
+      </a>
+
+      <div className="container d-flex justify-content-center align-items-center min-vh-100">
+        {/* ... your existing form code ... */}
+      </div>
+
+      <div className="map-container">
+        {/* ... your existing map code ... */}
+      </div>
+    </div>
   );
 };
+
+export default Contact;
 
 export default Contact;
