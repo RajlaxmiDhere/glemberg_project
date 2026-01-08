@@ -4,7 +4,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
   const phoneNumber = "8975173157";
-  const displayPhone =+91 7559189020
+  const displayPhone ="+91 7559189020";
   const email = "glembergpharmaceuticals@gmail.com";
 
   const message = "Hello! I have an enquiry regarding your services.";
