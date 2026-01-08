@@ -2,9 +2,15 @@ import React from "react";
 import "./Contact.css";
 
 const Contact = () => {
-  const phoneNumber = "8975173157";
+  const phoneNumber = "8010393478";
+  const displayPhone = "+91 80103 93478";
+  const email = "info@glembergpharma.com";
+
   const message = "Hello! I have an enquiry regarding your services.";
-  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappLink = `https://wa.me/91${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  const mapLink =
+    "https://www.google.com/maps/place/Neminath+Nagar,+Sangli,+Maharashtra+416416";
 
   return (
     <div className="contact-page-wrapper">
@@ -23,33 +29,45 @@ const Contact = () => {
         />
       </a>
 
-      {/* Top Section: Info + Form */}
+      {/* Top Section */}
       <div className="container contact-top">
         <div className="row align-items-center">
 
-          {/* LEFT: Contact Information */}
+          {/* LEFT: Corporate Office Info */}
           <div className="col-md-6 contact-info">
-            <h3>Corporate Office</h3>
+            <h3 className="mb-3">Corporate Office</h3>
 
-            <p>
+            <p className="mb-3">
               <strong>Glemberg Pharma Pvt. Ltd.</strong><br />
               Neminath Nagar,<br />
               Sangli, Maharashtra – 416416<br />
               India
             </p>
 
-            <p>
-              <strong>Phone:</strong><br />
-              +917559189020
-              <br></br>
-              +918975173157
-            </p>
+            {/* Get Location Button */}
+            <a
+              href={mapLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline-primary mb-4"
+              style={{ borderRadius: "25px", padding: "8px 22px" }}
+            >
+              Get Location
+            </a>
 
-            <p>
-              <strong>Email:</strong><br />
-              glembergpharmaceuticals@gmail.com
-              
-            </p>
+            {/* Phone */}
+            <h1 className="contact-heading">
+              <a href={`tel:+91${phoneNumber}`} className="contact-link">
+                {displayPhone}
+              </a>
+            </h1>
+
+            {/* Email */}
+            <h1 className="contact-heading">
+              <a href={`mailto:${email}`} className="contact-link">
+                {email}
+              </a>
+            </h1>
           </div>
 
           {/* RIGHT: Contact Form */}
