@@ -19,7 +19,7 @@
 
 /* LOGO */
 .navbar-logo {
-  max-height: 48px;
+  max-height: 60px;
   width: auto;
 }
 
@@ -34,7 +34,7 @@
 
 .nav-links a {
   color: white;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 600;
   text-decoration: none;
 }
