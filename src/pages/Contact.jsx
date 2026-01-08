@@ -2,8 +2,26 @@ import React from "react";
 import "./Contact.css";
 
 const Contact = () => {
+  const phoneNumber = "919876543210";
+  const message = "Hello! I have an enquiry regarding your services.";
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
   return (
     <div className="contact-page-wrapper">
+
+      {/* WhatsApp Floating Button */}
+      <a
+        href={whatsappLink}
+        className="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="WhatsApp"
+          style={{ width: "35px", height: "35px" }}
+        />
+      </a>
 
       {/* Top Section: Info + Form */}
       <div className="container contact-top">
@@ -90,51 +108,4 @@ const Contact = () => {
       <div className="map-container">
         <iframe
           title="Google Map Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.571434316682!2d74.60334887584102!3d16.847599918136364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1230623d53bc5%3A0xb5f67cf6931948d9!2sNeminath%20Nagar%2C%20Sangli%2C%20Maharashtra%20416416!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-          width="100%"
-          height="450"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-
-    </div>
-const Contact = () => {
-  // Replace this with your actual phone number (include country code)
-  const phoneNumber = "919876543210"; 
-  const message = "Hello! I have an enquiry regarding your services.";
-  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-  return (
-    <div className="contact-page-wrapper">
-      
-      {/* WhatsApp Button */}
-      <a 
-        href={whatsappLink} 
-        className="whatsapp-float" 
-        target="_blank" 
-        rel="noopener noreferrer"
-      >
-        <img 
-          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-          alt="WhatsApp" 
-          style={{ width: '35px', height: '35px' }} 
-        />
-      </a>
-
-      <div className="container d-flex justify-content-center align-items-center min-vh-100">
-        {/* ... your existing form code ... */}
-      </div>
-
-      <div className="map-container">
-        {/* ... your existing map code ... */}
-      </div>
-    </div>
-  );
-};
-
-export default Contact;
-
-export default Contact;
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.571434316682!2d74.60334887584102!3d16.847599918136364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1230623d53
