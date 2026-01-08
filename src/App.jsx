@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Products from "./pages/Products";
@@ -9,18 +10,33 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <BrowserRouter>
-      <div className="app-container">
-        {/* NAVBAR (handles its own top social bar) */}
-        <Navbar />
 
-        {/* ROUTES */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+      {/* TOP SOCIAL BAR */}
+      <div className="top-social-bar">
+        <div className="top-social-inner">
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">
+            <i className="bi bi-instagram"></i>
+          </a>
+          <a href="https://wa.me/918010393478" target="_blank" rel="noreferrer">
+            <i className="bi bi-whatsapp"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+            <i className="bi bi-linkedin"></i>
+          </a>
+        </div>
       </div>
+
+      {/* NAVBAR */}
+      <Navbar />
+
+      {/* ROUTES */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+
     </BrowserRouter>
   );
 }
