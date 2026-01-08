@@ -1,31 +1,39 @@
+/* =========================
+   Top Social Bar
+   ========================= */
+.top-social-bar {
+  background-color: #172c7a;
+  padding: 6px 0;
+}
+
+/* Icon hover effect */
+.top-social-bar a {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.top-social-bar a:hover {
+  transform: scale(1.2);
+  color: #25d366; /* WhatsApp green highlight */
+}
+
+/* =========================
+   Navbar
+   ========================= */
 .navbar {
-  background: #172c7a;   
-  padding: 15px 40px;
+  background: #172c7a;
   color: white;
 }
 
 /* Top row */
 .navbar-top {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
 }
 
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.social-icons a {
-  color: white;
-  font-size: 30px;
-  margin-left: 15px;
-  transition: transform 0.3s;
-}
-
-.social-icons a:hover {
-  transform: scale(1.2);
+.logo-container img {
+  height: 60px;
+  width: auto;
 }
 
 /* Bottom row */
@@ -34,8 +42,7 @@
   display: flex;
   gap: 30px;
   list-style: none;
-  margin-top: 15px;
-   padding: 0 40px;  
+  padding: 0 40px 15px;
 }
 
 .nav-links a {
@@ -47,14 +54,3 @@
 .nav-links a.active {
   border-bottom: 2px solid #c9f7f5;
 }
-.logo-container {
-  position: relative;
-}
-
-.logo img {
-  height: 60px;
-  width: auto;
-}
-
-
-
