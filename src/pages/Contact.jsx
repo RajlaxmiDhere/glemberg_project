@@ -37,7 +37,7 @@ const Contact = () => {
             </p>
 
             {/* Phone */}
-            <h4 className="info-heading">Phone Number</h4>
+            <h3 className="info-heading">Phone Number</h3>
             <p className="info-value">
               <a href={`tel:+91${phoneNumber}`} className="contact-link">
                 {displayPhone}
@@ -45,7 +45,7 @@ const Contact = () => {
             </p>
 
             {/* Email */}
-            <h4 className="info-heading">Email</h4>
+            <h3 className="info-heading">Email</h3>
             <p className="info-value">
               <a href={`mailto:${email}`} className="contact-link">
                 {email}
