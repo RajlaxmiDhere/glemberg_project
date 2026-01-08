@@ -52,10 +52,11 @@
 
 /* Logo slightly smaller than navbar height */
 .navbar-logo {
-  max-height: 40px;
+  max-height: 50px;   /* slightly smaller than navbar */
   width: auto;
   object-fit: contain;
 }
+
 
 /* =========================
    NAV LINKS
