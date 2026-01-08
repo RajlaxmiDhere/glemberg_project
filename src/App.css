@@ -4,7 +4,7 @@
    Navbar Styles
    ========================= */
 nav {
-  background-color:#7bbde8 ; /* pharma blue */
+  background-color:#7bbde8 ;
   padding: 15px 40px;
   display: flex;
   justify-content: space-between;
@@ -27,14 +27,14 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: #ffffff;
-  font-size:25px;        /* 🔼 increase size */
-  font-weight: 600;       /* slightly bolder */
+  font-size:25px;      
+  font-weight: 600;       
   transition: color 0.3s ease;
 }
 
 
 nav ul li a:hover {
-  color: #82befa; /* light pharma green */
+  color: #82befa; 
 }
 
 /* =========================
