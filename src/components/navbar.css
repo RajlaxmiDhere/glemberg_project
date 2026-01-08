@@ -1,15 +1,12 @@
 /* =========================
    TOP SOCIAL BAR
    ========================= */
+/* =========================
+   TOP SOCIAL BAR
+   ========================= */
 .top-social-bar {
   background-color: #172c7a;
-  padding: 6px 0;
-}
-
-/* Force icon size (CRITICAL FIX) */
-.bi {
-  font-size: 18px !important;
-  line-height: 1;
+  padding: 8px 0;
 }
 
 .social-bar-inner {
@@ -19,18 +16,21 @@
 
   display: flex;
   justify-content: flex-end;
-  gap: 16px;
+  gap: 18px;
 }
 
-.social-icon {
+/* Force correct icon size */
+.social-bar-inner .bi {
+  font-size: 18px;
   color: #ffffff;
-  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.social-icon:hover {
-  transform: scale(1.2);
+.social-bar-inner .bi:hover {
   color: #25d366;
+  transform: scale(1.15);
+  transition: 0.3s ease;
 }
+
 
 /* =========================
    NAVBAR
