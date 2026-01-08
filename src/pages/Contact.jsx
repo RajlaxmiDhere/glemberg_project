@@ -39,22 +39,18 @@ const Contact = () => {
             </p>
 
             {/* Phone */}
-            <h3 className="info-heading">
-              <FaPhoneAlt style={{ marginRight: "10px", color: "#0f9488" }} />
-              Phone Number
-            </h3>
+            <h3 className="info-heading">Phone Number</h3>
             <p className="info-value">
+              <FaPhoneAlt style={{ marginRight: "8px", color: "#0f9488" }} />
               <a href={`tel:+91${phoneNumber}`} className="contact-link">
                 {displayPhone}
               </a>
             </p>
 
             {/* Email */}
-            <h3 className="info-heading">
-              <FaEnvelope style={{ marginRight: "10px", color: "#0f9488" }} />
-              Email
-            </h3>
+            <h3 className="info-heading">Email</h3>
             <p className="info-value">
+              <FaEnvelope style={{ marginRight: "8px", color: "#0f9488" }} />
               <a href={`mailto:${email}`} className="contact-link">
                 {email}
               </a>
@@ -141,7 +137,7 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Map (UNCHANGED SIZE) */}
+      {/* Map */}
       <div className="map-container">
         <iframe
           title="Google Map Location"
@@ -160,3 +156,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
