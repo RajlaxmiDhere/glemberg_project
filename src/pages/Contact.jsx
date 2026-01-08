@@ -3,9 +3,9 @@ import "./Contact.css";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
-  const phoneNumber = "8010393478";
-  const displayPhone = "+91 80103 93478";
-  const email = "info@glembergpharma.com";
+  const phoneNumber = "8975173157";
+  const displayPhone = "+91 7559189020 <br></br> +91 8975173157";
+  const email = "glembergpharmaceuticals@gmail.com";
 
   const message = "Hello! I have an enquiry regarding your services.";
   const whatsappLink = `https://wa.me/91${phoneNumber}?text=${encodeURIComponent(message)}`;
