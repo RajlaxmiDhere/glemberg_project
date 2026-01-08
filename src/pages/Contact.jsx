@@ -101,9 +101,6 @@ const Contact = () => {
       </div>
 
     </div>
- import React from "react";
-import "./Contact.css";
-
 const Contact = () => {
   // Replace this with your actual phone number (include country code)
   const phoneNumber = "919876543210"; 
