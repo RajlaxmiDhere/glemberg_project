@@ -42,7 +42,7 @@ const Contact = () => {
               Neminath Nagar,<br />
               Sangli, Maharashtra – 416416<br />
               India
-            </p>
+          
 
             {/* Get Location Button */}
             <a
@@ -54,6 +54,7 @@ const Contact = () => {
             >
               Get Location
             </a>
+              </p>
 
             {/* Phone */}
             <h1 className="contact-heading">
