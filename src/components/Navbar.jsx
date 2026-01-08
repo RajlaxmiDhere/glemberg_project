@@ -7,7 +7,7 @@ function Navbar() {
     <>
       {/* TOP SOCIAL BAR */}
       <div className="top-social-bar">
-        <div className="social-bar-inner">
+        <div className="top-social-inner">
           <a href="https://instagram.com" target="_blank" rel="noreferrer">
             <i className="bi bi-instagram"></i>
           </a>
@@ -23,8 +23,10 @@ function Navbar() {
       {/* NAVBAR */}
       <nav className="navbar">
         <div className="navbar-inner">
+          {/* LEFT: Company Logo */}
           <img src={logo} alt="Glemberg Pharma" className="navbar-logo" />
 
+          {/* RIGHT: Menu */}
           <ul className="nav-links">
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/about">About Us</NavLink></li>
