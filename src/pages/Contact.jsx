@@ -15,7 +15,6 @@ const Contact = () => {
   return (
     <div className="contact-page-wrapper">
 
-      {/* Top Section */}
       <div className="container contact-top">
         <div className="row align-items-center">
 
@@ -23,14 +22,14 @@ const Contact = () => {
           <div className="col-md-6 contact-info">
             <h3 className="mb-3">Corporate Office</h3>
 
-            <p className="mb-3">
+            <p className="mb-4">
               <strong>Glemberg Pharma Pvt. Ltd.</strong><br />
               Neminath Nagar,<br />
               Sangli, Maharashtra – 416416<br />
               India
             </p>
 
-            {/* Get Location Button */}
+            {/* Get Location */}
             <a
               href={mapLink}
               target="_blank"
@@ -41,35 +40,50 @@ const Contact = () => {
               Get Location
             </a>
 
-            {/* Phone Section */}
+            {/* Phone */}
             <h4 className="info-heading">Phone Number</h4>
-            <p className="info-text">
+            <p className="info-value">
               <a href={`tel:+91${phoneNumber}`} className="contact-link">
                 {displayPhone}
               </a>
             </p>
 
-            {/* Email Section */}
+            {/* Email */}
             <h4 className="info-heading">Email</h4>
-            <p className="info-text">
+            <p className="info-value">
               <a href={`mailto:${email}`} className="contact-link">
                 {email}
               </a>
+            </p>
 
-              {/* WhatsApp Icon */}
+            {/* WhatsApp Icon BELOW mail */}
+            <div className="mt-3">
               <a
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ marginLeft: "15px" }}
               >
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
                   alt="WhatsApp"
-                  style={{ width: "32px", height: "32px" }}
+                  style={{ width: "40px", height: "40px" }}
                 />
               </a>
-            </p>
+            </div>
+
+            {/* Enquire Now Button */}
+            <div className="mt-3">
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-success"
+                style={{ borderRadius: "25px", padding: "10px 28px" }}
+              >
+                Enquire Now
+              </a>
+            </div>
+
           </div>
 
           {/* RIGHT: Contact Form */}
@@ -127,7 +141,7 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Bottom Section: Map */}
+      {/* Map (UNCHANGED) */}
       <div className="map-container">
         <iframe
           title="Google Map Location"
