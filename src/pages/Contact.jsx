@@ -15,20 +15,6 @@ const Contact = () => {
   return (
     <div className="contact-page-wrapper">
 
-      {/* WhatsApp Floating Button */}
-      <a
-        href={whatsappLink}
-        className="whatsapp-float"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-          alt="WhatsApp"
-          style={{ width: "50px", height: "50px" }}
-        />
-      </a>
-
       {/* Top Section */}
       <div className="container contact-top">
         <div className="row align-items-center">
@@ -42,7 +28,7 @@ const Contact = () => {
               Neminath Nagar,<br />
               Sangli, Maharashtra – 416416<br />
               India
-          
+            </p>
 
             {/* Get Location Button */}
             <a
@@ -54,21 +40,36 @@ const Contact = () => {
             >
               Get Location
             </a>
-              </p>
 
-            {/* Phone */}
-            <h1 className="contact-heading">
+            {/* Phone Section */}
+            <h4 className="info-heading">Phone Number</h4>
+            <p className="info-text">
               <a href={`tel:+91${phoneNumber}`} className="contact-link">
                 {displayPhone}
               </a>
-            </h1>
+            </p>
 
-            {/* Email */}
-            <h1 className="contact-heading">
+            {/* Email Section */}
+            <h4 className="info-heading">Email</h4>
+            <p className="info-text">
               <a href={`mailto:${email}`} className="contact-link">
                 {email}
               </a>
-            </h1>
+
+              {/* WhatsApp Icon */}
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ marginLeft: "15px" }}
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                  alt="WhatsApp"
+                  style={{ width: "32px", height: "32px" }}
+                />
+              </a>
+            </p>
           </div>
 
           {/* RIGHT: Contact Form */}
