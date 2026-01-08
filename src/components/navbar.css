@@ -6,6 +6,12 @@
   padding: 6px 0;
 }
 
+/* Force icon size (CRITICAL FIX) */
+.bi {
+  font-size: 18px !important;
+  line-height: 1;
+}
+
 .social-bar-inner {
   max-width: 1200px;
   margin: auto;
@@ -13,12 +19,11 @@
 
   display: flex;
   justify-content: flex-end;
-  gap: 18px;
+  gap: 16px;
 }
 
 .social-icon {
   color: #ffffff;
-  font-size: 18px;   /* small icons */
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -32,7 +37,7 @@
    ========================= */
 .navbar {
   background-color: #172c7a;
-  padding: 14px 0;          /* navbar height */
+  padding: 14px 0;
 }
 
 .navbar-inner {
@@ -45,7 +50,7 @@
   justify-content: space-between;
 }
 
-/* ✅ LOGO slightly smaller than navbar height */
+/* Logo slightly smaller than navbar height */
 .navbar-logo {
   max-height: 40px;
   width: auto;
