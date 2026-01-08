@@ -6,14 +6,13 @@
   padding: 6px 0;
 }
 
-/* Icon hover effect */
 .top-social-bar a {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .top-social-bar a:hover {
   transform: scale(1.2);
-  color: #25d366; /* WhatsApp green highlight */
+  color: #25d366;
 }
 
 /* =========================
@@ -24,7 +23,7 @@
   color: white;
 }
 
-/* Top row */
+/* Logo row */
 .navbar-top {
   display: flex;
   align-items: center;
@@ -36,13 +35,14 @@
   width: auto;
 }
 
-/* Bottom row */
+/* Navigation links */
 .nav-links {
   font-size: 23px;
   display: flex;
   gap: 30px;
   list-style: none;
   padding: 0 40px 15px;
+  margin: 0;
 }
 
 .nav-links a {
