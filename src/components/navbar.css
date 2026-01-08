@@ -1,12 +1,14 @@
 /* =========================
-   TOP SOCIAL BAR
+   TOP SOCIAL BAR (VISIBLE)
    ========================= */
 .top-social-bar {
-  background-color: #172c7a;
-  padding: 6px 0;
+  background-color: #0b2c6f;
+  height: 38px;              /* 👈 ensures visibility */
+  display: flex;
+  align-items: center;
 }
 
-.social-bar-inner {
+.top-social-inner {
   max-width: 1200px;
   margin: auto;
   padding: 0 40px;
@@ -16,13 +18,14 @@
   gap: 18px;
 }
 
-.social-bar-inner i {
+.top-social-inner i {
   font-size: 18px;
   color: #ffffff;
-  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.social-bar-inner i:hover {
+.top-social-inner i:hover {
   transform: scale(1.2);
   color: #25d366;
 }
@@ -32,9 +35,10 @@
    ========================= */
 .navbar {
   background-color: #172c7a;
-  padding: 22px 0;   /* ⬅ IMPORTANT: height fix */
+  padding: 20px 0;           /* 👈 header height */
 }
 
+/* NAVBAR INNER */
 .navbar-inner {
   max-width: 1200px;
   margin: auto;
@@ -47,9 +51,8 @@
 
 /* LOGO */
 .navbar-logo {
-  max-height: 50px;   /* slightly smaller than navbar */
+  max-height: 48px;          /* 👈 smaller than navbar */
   width: auto;
-  object-fit: contain;
 }
 
 /* NAV LINKS */
@@ -62,7 +65,7 @@
 }
 
 .nav-links a {
-  color: #ffffff;
+  color: white;
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
@@ -71,3 +74,4 @@
 .nav-links a.active {
   border-bottom: 2px solid #c9f7f5;
 }
+
