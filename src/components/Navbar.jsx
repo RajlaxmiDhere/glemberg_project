@@ -8,34 +8,17 @@ function Navbar() {
 
   return (
     <>
-      {/* Top Social Bar – Only on Home */}
+      {/* Top Social Bar – only on Home */}
       {isHome && (
         <div className="top-social-bar">
-          <div className="container d-flex justify-content-end gap-4">
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noreferrer"
-              className="text-white fs-5"
-            >
+          <div className="social-bar-inner">
+            <a href="#" className="social-icon">
               <i className="bi bi-instagram"></i>
             </a>
-
-            <a
-              href="https://wa.me/918010393478"
-              target="_blank"
-              rel="noreferrer"
-              className="text-white fs-5"
-            >
+            <a href="#" className="social-icon">
               <i className="bi bi-whatsapp"></i>
             </a>
-
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noreferrer"
-              className="text-white fs-5"
-            >
+            <a href="#" className="social-icon">
               <i className="bi bi-linkedin"></i>
             </a>
           </div>
@@ -44,18 +27,16 @@ function Navbar() {
 
       {/* Navbar */}
       <nav className="navbar">
-        <div className="navbar-top">
-          <div className="logo-container">
-            <img src={logo} alt="Company Logo" className="logo-img" />
-          </div>
-        </div>
+        <div className="navbar-inner">
+          <img src={logo} alt="Company Logo" className="navbar-logo" />
 
-        <ul className="nav-links">
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/about">About Us</NavLink></li>
-          <li><NavLink to="/products">Products</NavLink></li>
-          <li><NavLink to="/contact">Contact Us</NavLink></li>
-        </ul>
+          <ul className="nav-links">
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/about">About Us</NavLink></li>
+            <li><NavLink to="/products">Products</NavLink></li>
+            <li><NavLink to="/contact">Contact Us</NavLink></li>
+          </ul>
+        </div>
       </nav>
     </>
   );
