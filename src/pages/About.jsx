@@ -1,5 +1,4 @@
 import "./About.css";
-
 import journeyImg from "../assets/about.jpg";
 import teamImg from "../assets/team.jpg";
 import visionImg from "../assets/vision.jpg";
