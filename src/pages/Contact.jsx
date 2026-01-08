@@ -54,8 +54,6 @@ const Contact = () => {
         </form>
       </div>
     </div>
-  );
-};
 
 {/* Map Section - Now properly inside the component */}
       <div className="map-container">
@@ -71,6 +69,7 @@ const Contact = () => {
         </iframe>
       </div>
     </div>
+  </>
   );
 };
 
