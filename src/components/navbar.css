@@ -1,61 +1,29 @@
 /* =========================
-   TOP SOCIAL BAR (VISIBLE)
-   ========================= */
-.top-social-bar {
-  background-color: #0b2c6f;
-  height: 38px;              /* 👈 ensures visibility */
-  display: flex;
-  align-items: center;
-}
-
-.top-social-inner {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 40px;
-
-  display: flex;
-  justify-content: flex-end;
-  gap: 18px;
-}
-
-.top-social-inner i {
-  font-size: 18px;
-  color: #ffffff;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.top-social-inner i:hover {
-  transform: scale(1.2);
-  color: #25d366;
-}
-
-/* =========================
    NAVBAR
    ========================= */
 .navbar {
   background-color: #172c7a;
-  padding: 20px 0;           /* 👈 header height */
+  padding: 22px 0;
 }
 
-/* NAVBAR INNER */
 .navbar-inner {
   max-width: 1200px;
+  width: 100%;
   margin: auto;
   padding: 0 40px;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* ✅ logo left, menu right */
 }
 
 /* LOGO */
 .navbar-logo {
-  max-height: 48px;          /* 👈 smaller than navbar */
+  max-height: 48px;
   width: auto;
 }
 
-/* NAV LINKS */
+/* MENU */
 .nav-links {
   display: flex;
   gap: 30px;
@@ -74,4 +42,3 @@
 .nav-links a.active {
   border-bottom: 2px solid #c9f7f5;
 }
-
