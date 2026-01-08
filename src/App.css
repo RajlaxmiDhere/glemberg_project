@@ -1,1 +1,33 @@
+/* =========================
+   TOP SOCIAL BAR
+   ========================= */
+.top-social-bar {
+  background-color: #0b2c6f;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.top-social-inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 0 40px;
+
+  display: flex;
+  justify-content: flex-end; /* ✅ RIGHT SIDE */
+  gap: 18px;
+}
+
+.top-social-inner i {
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.top-social-inner i:hover {
+  transform: scale(1.2);
+  color: #25d366;
+}
 
