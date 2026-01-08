@@ -22,23 +22,19 @@ const Contact = () => {
           <div className="col-md-6 contact-info">
             <h3 className="mb-3">Corporate Office</h3>
 
-            <p className="mb-4">
+            <p className="mb-2">
               <strong>Glemberg Pharma Pvt. Ltd.</strong><br />
               Neminath Nagar,<br />
               Sangli, Maharashtra – 416416<br />
               India
             </p>
 
-            {/* Get Location */}
-            <a
-              href={mapLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-outline-primary mb-4"
-              style={{ borderRadius: "25px", padding: "8px 22px" }}
-            >
-              Get Location
-            </a>
+            {/* Simple Map Link */}
+            <p className="mb-4">
+              <a href={mapLink} target="_blank" rel="noopener noreferrer">
+                View on Google Maps
+              </a>
+            </p>
 
             {/* Phone */}
             <h4 className="info-heading">Phone Number</h4>
@@ -56,8 +52,8 @@ const Contact = () => {
               </a>
             </p>
 
-            {/* WhatsApp Icon BELOW mail */}
-            <div className="mt-3">
+            {/* WhatsApp + Enquire Now (SAME LINE) */}
+            <div className="d-flex align-items-center gap-3 mt-3">
               <a
                 href={whatsappLink}
                 target="_blank"
@@ -66,13 +62,10 @@ const Contact = () => {
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
                   alt="WhatsApp"
-                  style={{ width: "40px", height: "40px" }}
+                  style={{ width: "42px", height: "42px" }}
                 />
               </a>
-            </div>
 
-            {/* Enquire Now Button */}
-            <div className="mt-3">
               <a
                 href={whatsappLink}
                 target="_blank"
@@ -83,7 +76,6 @@ const Contact = () => {
                 Enquire Now
               </a>
             </div>
-
           </div>
 
           {/* RIGHT: Contact Form */}
@@ -141,13 +133,13 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Map (UNCHANGED) */}
+      {/* Map — INCREASED SIZE */}
       <div className="map-container">
         <iframe
           title="Google Map Location"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.571434316682!2d74.60334887584102!3d16.847599918136364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1230623d53bc5%3A0xb5f67cf6931948d9!2sNeminath%20Nagar%2C%20Sangli%2C%20Maharashtra%20416416!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
           width="100%"
-          height="450"
+          height="550"
           style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"
