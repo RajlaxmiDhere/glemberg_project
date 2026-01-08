@@ -1,5 +1,6 @@
 import React from "react";
 import "./Contact.css";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
   const phoneNumber = "8010393478";
@@ -29,15 +30,19 @@ const Contact = () => {
               India
             </p>
 
-            {/* Simple Map Link */}
+            {/* Location Link */}
             <p className="mb-4">
+              <FaMapMarkerAlt style={{ marginRight: "8px", color: "#0f9488" }} />
               <a href={mapLink} target="_blank" rel="noopener noreferrer">
                 View on Google Maps
               </a>
             </p>
 
             {/* Phone */}
-            <h3 className="info-heading">Phone Number</h3>
+            <h3 className="info-heading">
+              <FaPhoneAlt style={{ marginRight: "10px", color: "#0f9488" }} />
+              Phone Number
+            </h3>
             <p className="info-value">
               <a href={`tel:+91${phoneNumber}`} className="contact-link">
                 {displayPhone}
@@ -45,14 +50,17 @@ const Contact = () => {
             </p>
 
             {/* Email */}
-            <h3 className="info-heading">Email</h3>
+            <h3 className="info-heading">
+              <FaEnvelope style={{ marginRight: "10px", color: "#0f9488" }} />
+              Email
+            </h3>
             <p className="info-value">
               <a href={`mailto:${email}`} className="contact-link">
                 {email}
               </a>
             </p>
 
-            {/* WhatsApp + Enquire Now (SAME LINE) */}
+            {/* WhatsApp + Enquire Now */}
             <div className="d-flex align-items-center gap-3 mt-3">
               <a
                 href={whatsappLink}
@@ -133,7 +141,7 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Map — INCREASED SIZE */}
+      {/* Map (UNCHANGED SIZE) */}
       <div className="map-container">
         <iframe
           title="Google Map Location"
