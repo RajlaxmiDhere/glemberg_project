@@ -40,11 +40,14 @@ const Contact = () => {
 
             <p>
               <strong>Phone:</strong><br />
-              +91 98765 43210
+              +917559189020
+              <br></br>
+              +918975173157
             </p>
 
             <p>
               <strong>Email:</strong><br />
+              glembergpharmaceuticals@gmail.com
               
             </p>
           </div>
