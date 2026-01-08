@@ -1,99 +1,66 @@
-body {
-  background: linear-gradient(
-    90deg,
-    #f5faff,
-    #e6f2ff,
-    #cfe6ff,
-    #b3d9ff
-  );
-}
-
-.contact-form {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(6px);
-  padding: 35px;
-  border-radius: 12px;
-  max-width: 450px;
-  width: 100%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.form-control {
-  background: transparent;
-  border: 1px solid #ffffff;
-  color: #0a2540;
-}
-
-.form-control::placeholder {
-  color: rgba(10, 37, 64, 0.6);
-}
-
-.form-control:focus {
-  background: transparent;
-  box-shadow: none;
-  border-color: #172c7a;
-}
-
-.btn-primary {
-  background-color: #172c7a;
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: #0f1f5a;
-}
-
-/* Ensure the gradient covers the whole page scroll */
 .contact-page-wrapper {
+  min-height: 100vh;
   background: linear-gradient(
-    90deg,
-    #f5faff,
-    #e6f2ff,
-    #cfe6ff,
-    #b3d9ff
+    180deg,
+    #f0fdfa 0%,
+    #e6f7f4 50%,
+    #0f9488 100%
   );
-  width: 100%;
-  padding-bottom: 50px;
 }
 
-/* Reset body background if it's causing white gaps */
-body {
-  margin: 0;
-  padding: 0;
+/* Top Section */
+.contact-top {
+  padding: 80px 20px;
 }
 
-/* WhatsApp Floating Button */
-.whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 40px;
-  right: 40px;
-  background-color: #25d366;
-  color: #FFF;
-  border-radius: 50px;
-  text-align: center;
+/* Contact Info (Left) */
+.contact-info {
+  color: #1e4f91;
+}
+
+.contact-info h3 {
   font-size: 30px;
-  box-shadow: 2px 2px 3px #999;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: transform 0.3s ease;
+  margin-bottom: 20px;
 }
 
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  color: white;
+.contact-info p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #2f3e4e;
+  margin-bottom: 15px;
 }
 
-/* For mobile devices */
-@media (max-width: 600px) {
-  .whatsapp-float {
-    width: 50px;
-    height: 50px;
-    bottom: 20px;
-    right: 20px;
+/* Contact Form (Right) */
+.contact-form {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(30, 79, 145, 0.18);
+}
+
+.contact-form label {
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.contact-form .form-control {
+  border-radius: 6px;
+}
+
+/* Map */
+.map-container {
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-top {
+    padding: 50px 15px;
+  }
+
+  .contact-info {
+    text-align: center;
+    margin-bottom: 40px;
   }
 }
+
