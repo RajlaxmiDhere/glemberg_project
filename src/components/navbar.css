@@ -1,54 +1,73 @@
 /* =========================
-   Top Social Bar
+   TOP SOCIAL BAR
    ========================= */
 .top-social-bar {
   background-color: #172c7a;
   padding: 6px 0;
 }
 
-.top-social-bar a {
+.social-bar-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 40px;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+}
+
+.social-icon {
+  color: #ffffff;
+  font-size: 18px;   /* small icons */
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.top-social-bar a:hover {
+.social-icon:hover {
   transform: scale(1.2);
   color: #25d366;
 }
 
 /* =========================
-   Navbar
+   NAVBAR
    ========================= */
 .navbar {
-  background: #172c7a;
-  color: white;
+  background-color: #172c7a;
+  padding: 14px 0;          /* navbar height */
 }
 
-/* Logo row */
-.navbar-top {
+.navbar-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 40px;
+
   display: flex;
   align-items: center;
-  padding: 20px 40px;
+  justify-content: space-between;
 }
 
-.logo-container img {
-  height: 60px;
+/* ✅ LOGO slightly smaller than navbar height */
+.navbar-logo {
+  max-height: 40px;
   width: auto;
+  object-fit: contain;
 }
 
-/* Navigation links */
+/* =========================
+   NAV LINKS
+   ========================= */
 .nav-links {
-  font-size: 23px;
   display: flex;
-  gap: 30px;
+  gap: 28px;
   list-style: none;
-  padding: 0 40px 15px;
   margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
-  text-decoration: none;
   color: white;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .nav-links a.active {
