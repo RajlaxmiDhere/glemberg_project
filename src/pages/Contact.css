@@ -43,23 +43,21 @@ body {
   background-color: #0f1f5a;
 }
 
-/* Map Container Styling */
-.map-container {
-  max-width: 1200px;
-  margin: 70px auto;
-  padding: 0 30px;
-}
-
-.map-container iframe {
+/* Ensure the gradient covers the whole page scroll */
+.contact-page-wrapper {
+  background: linear-gradient(
+    90deg,
+    #f5faff,
+    #e6f2ff,
+    #cfe6ff,
+    #b3d9ff
+  );
   width: 100%;
-  border-radius: 12px; /* Tumchya images pramane round corners */
-  box-shadow: 0 10px 25px rgba(30, 79, 145, 0.15); /* Tumchya design nusar shadow */
-  display: block;
+  padding-bottom: 50px;
 }
 
-/* Mobile sathi Map chi height kami karnyathi */
-@media (max-width: 600px) {
-  .map-container iframe {
-    height: 300px;
-  }
+/* Reset body background if it's causing white gaps */
+body {
+  margin: 0;
+  padding: 0;
 }
