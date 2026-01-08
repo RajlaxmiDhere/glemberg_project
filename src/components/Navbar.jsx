@@ -8,7 +8,7 @@ function Navbar() {
 
   return (
     <>
-      {/* Top Social Bar – ONLY on Home */}
+      {/* Top Social Bar – Only on Home */}
       {isHome && (
         <div className="top-social-bar">
           <div className="container d-flex justify-content-end gap-4">
