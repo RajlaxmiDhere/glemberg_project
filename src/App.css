@@ -1,4 +1,22 @@
+.top-social-bar {
+  background-color: #172c7a; /* Dark blue background */
+  padding: 8px 40px;
+  display: flex;
+  justify-content: flex-end; /* Puts logos on the right */
+  align-items: center;
+  gap: 15px;
+}
 
+.social-logo {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+  filter: brightness(0) invert(1); /* Makes icons white */
+}
+
+.social-logo:hover {
+  transform: scale(1.2);
+}
 
 /* =========================
    Navbar Styles
