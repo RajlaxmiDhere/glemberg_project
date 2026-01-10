@@ -1,5 +1,5 @@
 import "./Footer.css";
-import logo from "../assets/combined.jpg"; // your company logo
+import logo from "../assets/logo.jpg"; // your company logo
 
 function Footer() {
   return (
@@ -17,18 +17,7 @@ function Footer() {
           </p>
         </div>
 
-        {/* MIDDLE: Quick Links */}
-        <div className="footer-col">
-          <h4>Quick Links</h4>
-          <ul className="footer-links">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Products</li>
-            <li>Contact Us</li>
-          </ul>
-        </div>
-
-        {/* RIGHT: Contact + Social + WhatsApp */}
+        {/* MIDDLE: Contact (moved here) */}
         <div className="footer-col">
           <h4>Contact</h4>
 
@@ -71,12 +60,19 @@ function Footer() {
           </a>
         </div>
 
-        
-        
+        {/* RIGHT: Quick Links (moved here) */}
+        <div className="footer-col">
+          <h4>Quick Links</h4>
+          <ul className="footer-links">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Products</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+
       </div>
 
-      
-      
       {/* Bottom Copyright */}
       <div className="footer-bottom">
         © {new Date().getFullYear()} Glemberg Pharmaceuticals Pvt. Ltd.  
@@ -88,4 +84,5 @@ function Footer() {
 }
 
 export default Footer;
+
 
