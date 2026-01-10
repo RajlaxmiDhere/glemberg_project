@@ -2,7 +2,7 @@
    TOP SOCIAL BAR
    ========================= */
 .top-social-bar {
-  background-color:#E8F4FD;
+  background-color: #E8F4FD;
   height: 40px;
   display: flex;
   align-items: center;
@@ -13,21 +13,25 @@
   width: 100%;
   margin: auto;
   padding: 0 40px;
-
   display: flex;
-  justify-content: flex-end; /* ✅ RIGHT SIDE */
+  justify-content: flex-end; 
   gap: 18px;
+}
+
+.top-social-inner a {
+  text-decoration: none; /* Removes underline from links */
 }
 
 .top-social-inner i {
   font-size: 18px;
-  color: #ffffff;
+  color: #333; /* Changed from white to dark grey so it's visible on light blue */
   cursor: pointer;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
+/* Updated Hover Rule */
 .top-social-inner i:hover {
   transform: scale(1.2);
-  color: #25d366;
+  /* Uses the --logo-color variable defined in your HTML */
+  color: var(--logo-color); 
 }
-
