@@ -6,6 +6,12 @@
   padding: 60px 0;
   width: 100%
 }
+position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures it stays on top of all other content */
+  
+  /* Optional: Adds a slight shadow when you scroll */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
 .navbar-inner {   
   max-width: 1400px;
