@@ -2,7 +2,13 @@
    NAVBAR
    ========================= */
 .navbar {
-  background-color: #172c7a;
+  background: linear-gradient(
+    90deg,
+    #E8F4FD 0%,
+    #D6ECFA 40%,
+    #BFDFF5 70%,
+    #9CC9E8 100%
+  );
   padding: 60px 0;
   width: 100%
 }
