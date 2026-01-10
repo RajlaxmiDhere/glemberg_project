@@ -23,19 +23,20 @@ function App() {
     />
   </a>
 
-                <img
-  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-  alt="Whatsapp"
-  style={{ 
-    width: "26px",      // 42px is too big for a button, 24px fits better
-    height: "26px", 
-    display: "block",    // Prevents weird spacing issues
-    objectFit: "contain" // Ensures the logo doesn't stretch
-  }}
-/>
+               <a href="https://wa.me/918975173157" target="_blank" rel="noreferrer">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      alt="Whatsapp"
+      style={{ width: "50px", height: "50px", display: "block", objectFit: "contain" }}
+    />
+  </a>
 
-  <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-    <i className="bi bi-linkedin"></i>
+<a href="https://linkedin.com" target="_blank" rel="noreferrer">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+      alt="LinkedIn"
+      style={{ width: "50px", height: "50px", display: "block", objectFit: "contain" }}
+    />
   </a>
 </div>
       <Navbar />
