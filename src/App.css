@@ -17,15 +17,24 @@
 
 .top-social-inner i {
   font-size: 20px;
-  /* ✅ Use the brand color immediately instead of grey */
-  color: var(--logo-color); 
-  transition: transform 0.3s ease;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
+/* Permanent Brand Colors */
+.bi-instagram {
+  color: #E4405F; /* Instagram Pink/Red */
+}
+
+.bi-whatsapp {
+  color: #25D366; /* WhatsApp Green */
+}
+
+.bi-linkedin {
+  color: #0A66C2; /* LinkedIn Blue */
+}
+
+/* Hover effect just for scaling */
 .top-social-inner i:hover {
-  /* Keep the zoom effect on hover */
   transform: scale(1.2);
-  /* Optional: make it slightly brighter or darker on hover if you want */
-  filter: brightness(1.1); 
 }
