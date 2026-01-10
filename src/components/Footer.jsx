@@ -29,7 +29,7 @@ function Footer() {
           </p>
 
           <p className="footer-contact">
-            📞 <a href="tel: +91 7559189020 "> +91 7559189020 </a>
+            📞 <a href="tel: +91 7559189020 "> +91 7559189020 </a><br></br>
             📞 <a href="tel:  +91 8975173157 "> +91 8975173157 </a>
           </p>
 
