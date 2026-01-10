@@ -96,6 +96,22 @@
   color: #ffffff;
   transition: transform 0.3s ease, color 0.3s ease;
 }
+.bi-instagram {
+  color: #E4405F; /* Instagram Pink/Red */
+}
+
+.bi-whatsapp {
+  color: #25D366; /* WhatsApp Green */
+}
+
+.bi-linkedin {
+  color: #0A66C2; /* LinkedIn Blue */
+}
+
+/* Hover effect just for scaling */
+.top-social-inner i:hover {
+  transform: scale(1.2);
+}
 
 .footer-social i:hover {
   transform: scale(1.25);
