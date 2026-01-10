@@ -52,17 +52,19 @@ function Footer() {
           </p>
 
           {/* Social Icons */}
-          <div className="footer-social">
-            <a href="https://instagram.com" target="_blank" rel="noreferrer">
-              <i className="bi bi-instagram"></i>
-            </a>
-            <a href="https://wa.me/ +91 7559189020" target="_blank" rel="noreferrer">
-              <i className="bi bi-whatsapp"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-              <i className="bi bi-linkedin"></i>
-            </a>
-          </div>
+              <div className="top-social-inner">
+  <a href="https://instagram.com" target="_blank" rel="noreferrer">
+    <i className="bi bi-instagram"></i>
+  </a>
+
+  <a href="https://wa.me/918975173157" target="_blank" rel="noreferrer">
+    <i className="bi bi-whatsapp"></i>
+  </a>
+
+  <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+    <i className="bi bi-linkedin"></i>
+  </a>
+</div>
 
           {/* WhatsApp Enquire Button */}
           <a
