@@ -30,8 +30,8 @@
 }
 
 /* Updated Hover Rule */
-.top-social-inner i:hover {
+/*.top-social-inner i:hover {
   transform: scale(1.2);
   /* Uses the --logo-color variable defined in your HTML */
   color: var(--logo-color); 
-}
+}*/
