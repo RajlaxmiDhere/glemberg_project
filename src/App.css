@@ -13,7 +13,7 @@
   margin: auto;
   padding: 0 60px;
   display: flex;
-  justify-content:center;
+  justify-content:flex-end;
   gap: 20px;
 }
 
