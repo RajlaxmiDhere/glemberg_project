@@ -69,10 +69,15 @@ const Contact = () => {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/whatsapp.svg"
-                  alt="whatsapp"
-                  style={{ width: "42px", height: "42px" }}
-                />
+  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+  alt="Whatsapp"
+  style={{ 
+    width: "24px",      // 42px is too big for a button, 24px fits better
+    height: "24px", 
+    display: "block",    // Prevents weird spacing issues
+    objectFit: "contain" // Ensures the logo doesn't stretch
+  }}
+/>
               </a>
 
               <a
