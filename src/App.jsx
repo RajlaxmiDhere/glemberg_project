@@ -27,7 +27,7 @@ function App() {
     <img
       src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
       alt="Whatsapp"
-      style={{ width: "28px", height: "28px", display: "block", objectFit: "contain" }}
+      style={{ width: "30px", height: "30px", display: "block", objectFit: "contain" }}
     />
   </a>
 
