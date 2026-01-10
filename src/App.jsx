@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -13,18 +14,24 @@ function App() {
   return (
     <BrowserRouter>
 
-      <div className="top-social-inner">
-  <a href="https://instagram.com" target="_blank" rel="noreferrer" style={{ "--hover-color": "#E4405F" }}>
-    <i className="bi bi-instagram"></i>
-  </a>
-  <a href="https://wa.me/918010393478" target="_blank" rel="noreferrer" style={{ "--hover-color": "#25D366" }}>
-    <i className="bi bi-whatsapp"></i>
-  </a>
-  <a href="https://linkedin.com" target="_blank" rel="noreferrer" style={{ "--hover-color": "#0A66C2" }}>
-    <i className="bi bi-linkedin"></i>
-  </a>
-</div>
+     <div className="top-social-bar">
+  <div className="top-social-inner">
+    {/* Instagram */}
+    <a href="https://instagram.com" target="_blank" rel="noreferrer">
+      <i className="bi bi-instagram" style={{ "--logo-color": "#E4405F" }}></i>
+    </a>
 
+    {/* WhatsApp */}
+    <a href="https://wa.me/918975173157" target="_blank" rel="noreferrer">
+      <i className="bi bi-whatsapp" style={{ "--logo-color": "#25D366" }}></i>
+    </a>
+
+    {/* LinkedIn */}
+    <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+      <i className="bi bi-linkedin" style={{ "--logo-color": "#0A66C2" }}></i>
+    </a>
+  </div>
+</div>
       {/* NAVBAR */}
       <Navbar />
 
