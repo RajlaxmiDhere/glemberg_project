@@ -1,5 +1,5 @@
 import "./Footer.css";
-import logo from "../assets/logo.jpg"; // your company logo
+import logo from "../assets/logo.jpg"; 
 
 function Footer() {
   return (
@@ -37,8 +37,8 @@ function Footer() {
           </p>
 
           <p className="footer-contact">
-            📞 <a href="tel:"></a>
-             📞 <a href="tel:"></a>
+            📞 <a href="tel: +91 7559189020"> +91 7559189020</a>
+             📞 <a href="tel:+91 8975173157">+91 8975173157</a>
             
           </p>
 
@@ -53,7 +53,7 @@ function Footer() {
             <a href="https://instagram.com" target="_blank" rel="noreferrer">
               <i className="bi bi-instagram"></i>
             </a>
-            <a href="https://wa.me/918010393478" target="_blank" rel="noreferrer">
+            <a href="https://wa.me/ +91 7559189020" target="_blank" rel="noreferrer">
               <i className="bi bi-whatsapp"></i>
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noreferrer">
@@ -63,7 +63,7 @@ function Footer() {
 
           {/* WhatsApp Enquire Button */}
           <a
-            href="https://wa.me/918010393478"
+            href="https://wa.me/ +91 7559189020"
             target="_blank"
             rel="noreferrer"
             className="whatsapp-btn"
