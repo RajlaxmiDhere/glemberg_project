@@ -1,5 +1,6 @@
 import "./Footer.css";
-import logo from "../assets/logo.jpg"; // your company logo
+import logo from "../assets/logo.jpg";
+import { NavLink } from "react-router-dom";
 
 function Footer() {
   return (
@@ -18,7 +19,7 @@ function Footer() {
         </div>
 
         {/* MIDDLE: Contact */}
-        <div className="footer-col footer-contact-col">
+        <div className="footer-col">
           <h4>Contact</h4>
 
           <p className="footer-contact">
@@ -39,7 +40,7 @@ function Footer() {
             </a>
           </p>
 
-          {/* Social Icons (LinkedIn + Instagram in one line) */}
+          {/* Social Icons */}
           <div className="footer-social-row">
             <a href="https://linkedin.com" target="_blank" rel="noreferrer">
               <img
@@ -57,34 +58,36 @@ function Footer() {
               />
             </a>
           </div>
-
-          {/* Enquire Button aligned to right */}
-          <div className="footer-enquire-right">
-            <a
-              href="https://wa.me/917559189020"
-              target="_blank"
-              rel="noreferrer"
-              className="whatsapp-btn"
-            >
-              Enquire Now
-            </a>
-          </div>
         </div>
 
         {/* RIGHT: Quick Links */}
         <div className="footer-col">
           <h4>Quick Links</h4>
           <ul className="footer-links">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Products</li>
-            <li>Contact Us</li>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/about">About Us</NavLink></li>
+            <li><NavLink to="/products">Products</NavLink></li>
+            <li><NavLink to="/contact">Contact Us</NavLink></li>
           </ul>
         </div>
 
       </div>
 
-      {/* Bottom Copyright */}
+      {/* FLOATING WHATSAPP BUTTON – FOOTER BOTTOM RIGHT */}
+      <a
+        href="https://wa.me/917559189020"
+        target="_blank"
+        rel="noreferrer"
+        className="footer-whatsapp-float"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="WhatsApp"
+        />
+        Enquire Now
+      </a>
+
+      {/* BOTTOM COPYRIGHT */}
       <div className="footer-bottom">
         © {new Date().getFullYear()} Glemberg Pharmaceuticals Pvt. Ltd.
         All Rights Reserved.
