@@ -17,16 +17,7 @@ function Footer() {
           </p>
         </div>
 
-        {/* MIDDLE: Quick Links */}
-        <div className="footer-col">
-          <h4>Quick Links</h4>
-          <ul className="footer-links">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Products</li>
-            <li>Contact Us</li>
-          </ul>
-        </div>
+       
 
         {/* RIGHT: Contact + Social + WhatsApp */}
         <div className="footer-col">
@@ -73,6 +64,17 @@ function Footer() {
 
       </div>
 
+       {/* MIDDLE: Quick Links */}
+        <div className="footer-col">
+          <h4>Quick Links</h4>
+          <ul className="footer-links">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Products</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+      
       {/* Bottom Copyright */}
       <div className="footer-bottom">
         © {new Date().getFullYear()} Glemberg Pharmaceuticals Pvt. Ltd.  
