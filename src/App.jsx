@@ -14,20 +14,19 @@ import "./App.css";
 function App() {
   return (
     <BrowserRouter>
-      <div className="top-social-inner">
+     <div className="top-social-inner">
   <a href="https://instagram.com" target="_blank" rel="noreferrer">
-    <i className="bi bi-instagram" style={{ "--logo-color": "#E4405F" }}></i>
+    <i className="bi bi-instagram"></i>
   </a>
 
   <a href="https://wa.me/918975173157" target="_blank" rel="noreferrer">
-    <i className="bi bi-whatsapp" style={{ "--logo-color": "#25D366" }}></i>
+    <i className="bi bi-whatsapp"></i>
   </a>
 
   <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-    <i className="bi bi-linkedin" style={{ "--logo-color": "#0A66C2" }}></i>
+    <i className="bi bi-linkedin"></i>
   </a>
 </div>
-
       <Navbar />
 
       <Routes>
