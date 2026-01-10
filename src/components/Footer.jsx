@@ -40,17 +40,29 @@ function Footer() {
           </p>
 
           {/* Social Icons */}
-          <div className="footer-social">
-            <a href="https://instagram.com" target="_blank" rel="noreferrer">
-              <i className="bi bi-instagram"></i>
-            </a>
-            <a href="https://wa.me/+91 7559189020" target="_blank" rel="noreferrer">
-              <i className="bi bi-whatsapp"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-              <i className="bi bi-linkedin"></i>
-            </a>
-          </div>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+      alt="Instagram"
+      style={{ width: "26px", height: "26px", display: "block", objectFit: "contain" }}
+    />
+  </a>
+
+               <a href="https://wa.me/918975173157" target="_blank" rel="noreferrer">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      alt="Whatsapp"
+      style={{ width: "30px", height: "30px", display: "block", objectFit: "contain" }}
+    />
+  </a>
+
+<a href="https://linkedin.com" target="_blank" rel="noreferrer">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+      alt="LinkedIn"
+      style={{ width: "26px", height: "26px", display: "block", objectFit: "contain" }}
+    />
+  </a>
 
           {/* WhatsApp Enquire Button */}
           <a
