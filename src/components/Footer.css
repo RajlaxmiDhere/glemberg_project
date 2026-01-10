@@ -8,7 +8,7 @@
 }
 
 /* =========================
-   FOOTER CONTAINER
+   CONTAINER
    ========================= */
 .footer-container {
   max-width: 1200px;
@@ -65,12 +65,30 @@
 }
 
 /* =========================
+   CONTACT
+   ========================= */
+.footer-contact {
+  font-size: 14px;
+  color: #e3e9f0;
+  margin-bottom: 6px;
+}
+
+.footer-contact a {
+  color: #e3e9f0;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
    SOCIAL ICONS
    ========================= */
 .footer-social {
   display: flex;
   gap: 18px;
-  margin-bottom: 18px;
+  margin: 16px 0;
 }
 
 .footer-social i {
@@ -141,4 +159,3 @@
     justify-content: center;
   }
 }
-
