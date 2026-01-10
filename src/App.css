@@ -17,13 +17,15 @@
 
 .top-social-inner i {
   font-size: 20px;
-  color: #444; /* Standard dark grey color */
-  transition: transform 0.3s ease, color 0.3s ease;
+  /* ✅ Use the brand color immediately instead of grey */
+  color: var(--logo-color); 
+  transition: transform 0.3s ease;
   cursor: pointer;
 }
 
-/* This is the magic part for dynamic colors */
 .top-social-inner i:hover {
+  /* Keep the zoom effect on hover */
   transform: scale(1.2);
-  color: var(--logo-color); 
+  /* Optional: make it slightly brighter or darker on hover if you want */
+  filter: brightness(1.1); 
 }
