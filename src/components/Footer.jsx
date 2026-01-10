@@ -1,5 +1,5 @@
 import "./Footer.css";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/combined.jpg"; // your company logo
 
 function Footer() {
   return (
@@ -9,11 +9,11 @@ function Footer() {
 
         {/* LEFT: Logo + About */}
         <div className="footer-col">
-          <img src={logo} alt="Glemberg Pharma" className="footer-logo" />
+          <img src={logo} alt="Glemberg Pharma Logo" className="footer-logo" />
           <p className="footer-about">
             Glemberg Pharmaceuticals Pvt. Ltd. is committed to delivering
             high-quality, safe, and effective pharmaceutical products,
-            improving lives through innovation and trust.
+            improving lives through innovation, trust, and global standards.
           </p>
         </div>
 
@@ -28,10 +28,25 @@ function Footer() {
           </ul>
         </div>
 
-        {/* RIGHT: Contact + Social */}
+        {/* RIGHT: Contact + Social + WhatsApp */}
         <div className="footer-col">
-          <h4>Connect With Us</h4>
+          <h4>Contact</h4>
 
+          <p className="footer-contact">
+            📍 Sangli, Maharashtra, India
+          </p>
+
+          <p className="footer-contact">
+            📞 <a href="tel:+918010393478">+91 80103 93478</a>
+          </p>
+
+          <p className="footer-contact">
+            ✉️ <a href="mailto:info@glembergpharma.com">
+              info@glembergpharma.com
+            </a>
+          </p>
+
+          {/* Social Icons */}
           <div className="footer-social">
             <a href="https://instagram.com" target="_blank" rel="noreferrer">
               <i className="bi bi-instagram"></i>
@@ -58,7 +73,7 @@ function Footer() {
 
       </div>
 
-      {/* Bottom Bar */}
+      {/* Bottom Copyright */}
       <div className="footer-bottom">
         © {new Date().getFullYear()} Glemberg Pharmaceuticals Pvt. Ltd.  
         All Rights Reserved.
