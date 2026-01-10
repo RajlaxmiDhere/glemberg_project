@@ -11,20 +11,17 @@ function App() {
   return (
     <BrowserRouter>
 
-      {/* TOP SOCIAL BAR */}
-      <div className="top-social-bar">
-        <div className="top-social-inner">
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">
-            <i className="bi bi-instagram"></i>
-          </a>
-          <a href="https://wa.me/918010393478" target="_blank" rel="noreferrer">
-            <i className="bi bi-whatsapp"></i>
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-            <i className="bi bi-linkedin"></i>
-          </a>
-        </div>
-      </div>
+      <div className="top-social-inner">
+  <a href="https://instagram.com" target="_blank" rel="noreferrer" style={{ "--hover-color": "#E4405F" }}>
+    <i className="bi bi-instagram"></i>
+  </a>
+  <a href="https://wa.me/918010393478" target="_blank" rel="noreferrer" style={{ "--hover-color": "#25D366" }}>
+    <i className="bi bi-whatsapp"></i>
+  </a>
+  <a href="https://linkedin.com" target="_blank" rel="noreferrer" style={{ "--hover-color": "#0A66C2" }}>
+    <i className="bi bi-linkedin"></i>
+  </a>
+</div>
 
       {/* NAVBAR */}
       <Navbar />
