@@ -72,8 +72,8 @@ const Contact = () => {
   src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
   alt="Whatsapp"
   style={{ 
-    width: "30px",      // 42px is too big for a button, 24px fits better
-    height: "30px", 
+    width: "50px",      // 42px is too big for a button, 24px fits better
+    height: "50px", 
     display: "block",    // Prevents weird spacing issues
     objectFit: "contain" // Ensures the logo doesn't stretch
   }}
