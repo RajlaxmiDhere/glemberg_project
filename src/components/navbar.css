@@ -20,8 +20,11 @@
 
 /* LOGO */
 .navbar-logo {
-  max-height: 60px;
+  /* Increased from 60px to 110px to make it look big as requested */
+  height: 110px; 
+  max-height: 110px;
   width: auto;
+  display: block;
 }
 
 /* MENU */
