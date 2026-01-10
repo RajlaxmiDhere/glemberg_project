@@ -62,9 +62,7 @@ function Footer() {
           </a>
         </div>
 
-      </div>
-
-       {/* MIDDLE: Quick Links */}
+         {/* MIDDLE: Quick Links */}
         <div className="footer-col">
           <h4>Quick Links</h4>
           <ul className="footer-links">
@@ -74,6 +72,10 @@ function Footer() {
             <li>Contact Us</li>
           </ul>
         </div>
+        
+      </div>
+
+      
       
       {/* Bottom Copyright */}
       <div className="footer-bottom">
