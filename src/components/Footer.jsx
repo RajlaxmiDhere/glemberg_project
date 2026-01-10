@@ -5,19 +5,57 @@ function Footer() {
   return (
     <footer className="footer">
 
-      <div className="footer-container">
+      <div className="footer-container footer-grid-fixed">
 
-        {/* LEFT: Logo + About */}
-        <div className="footer-col">
-          <img src={logo} alt="Glemberg Pharma Logo" className="footer-logo" />
-          <p className="footer-about">
-            Glemberg Pharmaceuticals Pvt. Ltd. is committed to delivering
-            high-quality, safe, and effective pharmaceutical products,
-            improving lives through innovation, trust, and global standards.
-          </p>
+        {/* LEFT: Social Icons */}
+        <div className="footer-col footer-social-col">
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">
+            <i className="bi bi-instagram"></i>
+          </a>
+
+          <a href="https://wa.me/918975173157" target="_blank" rel="noreferrer">
+            <i className="bi bi-whatsapp"></i>
+          </a>
+
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+            <i className="bi bi-linkedin"></i>
+          </a>
         </div>
 
-        {/* MIDDLE: Quick Links */}
+        {/* CONTACT COLUMN */}
+        <div className="footer-col">
+          <h4>Contact</h4>
+
+          <p className="footer-contact">
+            📍 <strong>Glemberg Pharma Pvt. Ltd.</strong><br />
+            Neminath Nagar,<br />
+            Sangli, Maharashtra – 416416<br />
+            India
+          </p>
+
+          <p className="footer-contact">
+            📞 <a href="tel:+917559189020">+91 7559189020</a><br />
+            📞 <a href="tel:+918975173157">+91 8975173157</a>
+          </p>
+
+          <p className="footer-contact footer-email">
+            ✉️ <a href="mailto:glembergpharmaceuticals@gmail.com">
+              glembergpharmaceuticals@gmail.com
+            </a>
+          </p>
+
+          <a
+            href="https://wa.me/917559189020"
+            target="_blank"
+            rel="noreferrer"
+            className="whatsapp-btn"
+          >
+            <i className="bi bi-whatsapp"></i>
+            Enquire Now
+          </a>
+        </div>
+
+        {/* QUICK LINKS */}
         <div className="footer-col">
           <h4>Quick Links</h4>
           <ul className="footer-links">
@@ -28,59 +66,18 @@ function Footer() {
           </ul>
         </div>
 
-        {/* RIGHT: Contact + Social + WhatsApp */}
+        {/* LOGO + ABOUT */}
         <div className="footer-col">
-          <h4>Contact</h4>
-
-          <p className="footer-contact">
-            📍<strong>Glemberg Pharma Pvt. Ltd.</strong><br />
-              Neminath Nagar,<br />
-              Sangli, Maharashtra – 416416<br />
-              India
+          <img src={logo} alt="Glemberg Pharma Logo" className="footer-logo" />
+          <p className="footer-about">
+            Glemberg Pharmaceuticals Pvt. Ltd. is committed to delivering
+            high-quality, safe, and effective pharmaceutical products,
+            improving lives through innovation, trust, and global standards.
           </p>
-
-          <p className="footer-contact">
-            📞 <a href="tel: +91 7559189020"> +91 7559189020</a><br></br>
-             📞 <a href="tel:+91 8975173157">+91 8975173157</a>
-            
-          </p>
-
-          <p className="footer-contact">
-            ✉️ <a href="mailto:glembergpharmaceuticals@gmail.com">
-             glembergpharmaceuticals@gmail.com
-            </a>
-          </p>
-
-          {/* Social Icons */}
-              <div className="top-social-inner">
-  <a href="https://instagram.com" target="_blank" rel="noreferrer">
-    <i className="bi bi-instagram"></i>
-  </a>
-
-  <a href="https://wa.me/918975173157" target="_blank" rel="noreferrer">
-    <i className="bi bi-whatsapp"></i>
-  </a>
-
-  <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-    <i className="bi bi-linkedin"></i>
-  </a>
-</div>
-
-          {/* WhatsApp Enquire Button */}
-          <a
-            href="https://wa.me/ +91 7559189020"
-            target="_blank"
-            rel="noreferrer"
-            className="whatsapp-btn"
-          >
-            <i className="bi bi-whatsapp"></i>
-            Enquire Now
-          </a>
         </div>
 
       </div>
 
-      {/* Bottom Copyright */}
       <div className="footer-bottom">
         © {new Date().getFullYear()} Glemberg Pharmaceuticals Pvt. Ltd.  
         All Rights Reserved.
