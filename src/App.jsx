@@ -23,8 +23,8 @@ function App() {
   src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
   alt="Whatsapp"
   style={{ 
-    width: "24px",      // 42px is too big for a button, 24px fits better
-    height: "24px", 
+    width: "26px",      // 42px is too big for a button, 24px fits better
+    height: "26px", 
     display: "block",    // Prevents weird spacing issues
     objectFit: "contain" // Ensures the logo doesn't stretch
   }}
