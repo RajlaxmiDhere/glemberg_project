@@ -14,19 +14,19 @@ import "./App.css";
 function App() {
   return (
     <BrowserRouter>
-      <div className="top-social-bar">
-        <div className="top-social-inner">
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">
-            <i className="bi bi-instagram" style={{ "--logo-color": "#E4405F" }}></i>
-          </a>
-          <a href="https://wa.me/918975173157" target="_blank" rel="noreferrer">
-            <i className="bi bi-whatsapp" style={{ "--logo-color": "#25D366" }}></i>
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-            <i className="bi bi-linkedin" style={{ "--logo-color": "#0A66C2" }}></i>
-          </a>
-        </div>
-      </div>
+      <div className="top-social-inner">
+  <a href="https://instagram.com" target="_blank" rel="noreferrer">
+    <i className="bi bi-instagram" style={{ "--logo-color": "#E4405F" }}></i>
+  </a>
+
+  <a href="https://wa.me/918975173157" target="_blank" rel="noreferrer">
+    <i className="bi bi-whatsapp" style={{ "--logo-color": "#25D366" }}></i>
+  </a>
+
+  <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+    <i className="bi bi-linkedin" style={{ "--logo-color": "#0A66C2" }}></i>
+  </a>
+</div>
 
       <Navbar />
 
