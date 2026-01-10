@@ -69,8 +69,8 @@ const Contact = () => {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Whtasapp.svg"
-                  alt="Whatsapp"
+                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/whatsapp.svg"
+                  alt="whatsapp"
                   style={{ width: "42px", height: "42px" }}
                 />
               </a>
