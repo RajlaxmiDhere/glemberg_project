@@ -37,7 +37,9 @@ function Footer() {
           </p>
 
           <p className="footer-contact">
-            📞 <a href="tel:+918010393478">+91 80103 93478</a>
+            📞 <a href="tel:"></a>
+             📞 <a href="tel:"></a>
+            
           </p>
 
           <p className="footer-contact">
