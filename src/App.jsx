@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
+
 import "./App.css";
 function App() {
   return (
