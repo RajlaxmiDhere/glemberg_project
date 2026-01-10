@@ -17,66 +17,61 @@ function Footer() {
           </p>
         </div>
 
-        {/* MIDDLE: Contact (moved here) */}
-        <div className="footer-col">
+        {/* MIDDLE: Contact */}
+        <div className="footer-col footer-contact-col">
           <h4>Contact</h4>
 
           <p className="footer-contact">
             📍 <strong>Glemberg Pharma Pvt. Ltd.</strong><br />
-              Neminath Nagar,<br />
-              Sangli, Maharashtra – 416416<br />
-              India
+            Neminath Nagar,<br />
+            Sangli, Maharashtra – 416416<br />
+            India
           </p>
 
           <p className="footer-contact">
-            📞 <a href="tel: +91 7559189020 "> +91 7559189020 </a><br></br>
-            📞 <a href="tel:  +91 8975173157 "> +91 8975173157 </a>
+            📞 <a href="tel:+917559189020">+91 7559189020</a><br />
+            📞 <a href="tel:+918975173157">+91 8975173157</a>
           </p>
 
           <p className="footer-contact">
             ✉️ <a href="mailto:glembergpharmaceuticals@gmail.com">
-            glembergpharmaceuticals@gmail.com
+              glembergpharmaceuticals@gmail.com
             </a>
           </p>
 
-          {/* Social Icons */}
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
-      alt="Instagram"
-      style={{ width: "26px", height: "26px", display: "block", objectFit: "contain" }}
-    />
-  </a>
+          {/* Social Icons (LinkedIn + Instagram in one line) */}
+          <div className="footer-social-row">
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                alt="LinkedIn"
+                className="footer-social-img"
+              />
+            </a>
 
-               <a href="https://wa.me/918975173157" target="_blank" rel="noreferrer">
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-      alt="Whatsapp"
-      style={{ width: "30px", height: "30px", display: "block", objectFit: "contain" }}
-    />
-  </a>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+                alt="Instagram"
+                className="footer-social-img"
+              />
+            </a>
+          </div>
 
-<a href="https://linkedin.com" target="_blank" rel="noreferrer">
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-      alt="LinkedIn"
-      style={{ width: "26px", height: "26px", display: "block", objectFit: "contain" }}
-    />
-  </a>
-
-          {/* WhatsApp Enquire Button */}
-          <a
-            href="https://wa.me/+91 7559189020"
-            target="_blank"
-            rel="noreferrer"
-            className="whatsapp-btn"
-          >
-            <i className="bi bi-whatsapp"></i>
-            Enquire Now
-          </a>
+          {/* Enquire Button aligned to right */}
+          <div className="footer-enquire-right">
+            <a
+              href="https://wa.me/917559189020"
+              target="_blank"
+              rel="noreferrer"
+              className="whatsapp-btn"
+            >
+              Enquire Now
+            </a>
+          </div>
         </div>
 
-        {/* RIGHT: Quick Links (moved here) */}
+        {/* RIGHT: Quick Links */}
         <div className="footer-col">
           <h4>Quick Links</h4>
           <ul className="footer-links">
@@ -91,7 +86,7 @@ function Footer() {
 
       {/* Bottom Copyright */}
       <div className="footer-bottom">
-        © {new Date().getFullYear()} Glemberg Pharmaceuticals Pvt. Ltd.  
+        © {new Date().getFullYear()} Glemberg Pharmaceuticals Pvt. Ltd.
         All Rights Reserved.
       </div>
 
@@ -100,5 +95,3 @@ function Footer() {
 }
 
 export default Footer;
-
-
