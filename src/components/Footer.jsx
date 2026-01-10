@@ -33,7 +33,7 @@ function Footer() {
           <h4>Contact</h4>
 
           <p className="footer-contact">
-            📍 Sangli, Maharashtra, India
+            📍 Sangli, Maharashtra, Indi
           </p>
 
           <p className="footer-contact">
