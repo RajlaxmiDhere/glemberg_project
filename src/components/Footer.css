@@ -32,7 +32,7 @@
    TEXT
    ========================= */
 .footer-about {
-  font-size: 14px;
+  font-size:18px;
   line-height: 1.8;
   color: #e3e9f0;
 }
@@ -54,7 +54,7 @@
 }
 
 .footer-links li {
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 8px;
   cursor: pointer;
   color: #e3e9f0;
@@ -68,7 +68,7 @@
    CONTACT
    ========================= */
 .footer-contact {
-  font-size: 14px;
+  font-size: 18px;
   color: #e3e9f0;
   margin-bottom: 6px;
 }
@@ -131,7 +131,7 @@
   padding: 12px 22px;
   border-radius: 30px;
 
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   text-decoration: none;
 
