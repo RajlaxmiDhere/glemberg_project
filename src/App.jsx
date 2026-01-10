@@ -15,8 +15,12 @@ function App() {
   return (
     <BrowserRouter>
      <div className="top-social-inner">
-  <a href="https://instagram.com" target="_blank" rel="noreferrer">
-    <i className="bi bi-instagram"></i>
+<a href="https://instagram.com" target="_blank" rel="noreferrer">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+      alt="Instagram"
+      style={{ width: "50px", height: "50px", display: "block", objectFit: "contain" }}
+    />
   </a>
 
                 <img
