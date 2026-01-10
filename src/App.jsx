@@ -27,7 +27,7 @@ function App() {
     <img
       src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
       alt="Whatsapp"
-      style={{ width: "50px", height: "50px", display: "block", objectFit: "contain" }}
+      style={{ width: "26px", height: "26px", display: "block", objectFit: "contain" }}
     />
   </a>
 
@@ -35,7 +35,7 @@ function App() {
     <img
       src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
       alt="LinkedIn"
-      style={{ width: "50px", height: "50px", display: "block", objectFit: "contain" }}
+      style={{ width: "26px", height: "26px", display: "block", objectFit: "contain" }}
     />
   </a>
 </div>
