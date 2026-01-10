@@ -1,23 +1,26 @@
 import "./Footer.css";
+import logo from "../assets/logo.jpg";
 
 function Footer() {
   return (
     <footer className="footer">
+
       <div className="footer-container">
 
-        {/* LEFT: Company Info */}
-        <div className="footer-section">
-          <h4>Glemberg Pharmaceuticals Pvt. Ltd.</h4>
-          <p>
-            Committed to quality healthcare solutions with trust,
-            innovation, and global standards.
+        {/* LEFT: Logo + About */}
+        <div className="footer-col">
+          <img src={logo} alt="Glemberg Pharma" className="footer-logo" />
+          <p className="footer-about">
+            Glemberg Pharmaceuticals Pvt. Ltd. is committed to delivering
+            high-quality, safe, and effective pharmaceutical products,
+            improving lives through innovation and trust.
           </p>
         </div>
 
         {/* MIDDLE: Quick Links */}
-        <div className="footer-section">
+        <div className="footer-col">
           <h4>Quick Links</h4>
-          <ul>
+          <ul className="footer-links">
             <li>Home</li>
             <li>About Us</li>
             <li>Products</li>
@@ -25,21 +28,42 @@ function Footer() {
           </ul>
         </div>
 
-        {/* RIGHT: Contact Info */}
-        <div className="footer-section">
-          <h4>Contact</h4>
-          <p>📍 Sangli, Maharashtra, India</p>
-          <p>📞 +91 80103 93478</p>
-          <p>✉️ info@glembergpharma.com</p>
+        {/* RIGHT: Contact + Social */}
+        <div className="footer-col">
+          <h4>Connect With Us</h4>
+
+          <div className="footer-social">
+            <a href="https://instagram.com" target="_blank" rel="noreferrer">
+              <i className="bi bi-instagram"></i>
+            </a>
+            <a href="https://wa.me/918010393478" target="_blank" rel="noreferrer">
+              <i className="bi bi-whatsapp"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+              <i className="bi bi-linkedin"></i>
+            </a>
+          </div>
+
+          {/* WhatsApp Enquire Button */}
+          <a
+            href="https://wa.me/918010393478"
+            target="_blank"
+            rel="noreferrer"
+            className="whatsapp-btn"
+          >
+            <i className="bi bi-whatsapp"></i>
+            Enquire Now
+          </a>
         </div>
 
       </div>
 
-      {/* Bottom Copyright */}
+      {/* Bottom Bar */}
       <div className="footer-bottom">
         © {new Date().getFullYear()} Glemberg Pharmaceuticals Pvt. Ltd.  
         All Rights Reserved.
       </div>
+
     </footer>
   );
 }
