@@ -18,7 +18,7 @@
 
   display: grid;
   grid-template-columns: 1.4fr 1.4fr 1fr;
-  gap: 50px;
+  gap: 60px;
 }
 
 /* =========================
