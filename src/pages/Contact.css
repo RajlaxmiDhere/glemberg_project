@@ -1,10 +1,11 @@
 .contact-page-wrapper {
   min-height: 100vh;
   background: linear-gradient(
-    180deg,
-    #f0fdfa 0%,
-    #e6f7f4 50%,
-    #0f9488 100%
+    90deg,
+    #E8F4FD 0%,
+    #D6ECFA 40%,
+    #BFDFF5 70%,
+    #9CC9E8 100%
   );
 }
 
@@ -32,7 +33,7 @@
 
 /* Contact Form (Right) */
 .contact-form {
-  background: #ffffff;
+  background:#E8F4FD;
   padding: 35px;
   border-radius: 14px;
   box-shadow: 0 10px 25px rgba(30, 79, 145, 0.18);
