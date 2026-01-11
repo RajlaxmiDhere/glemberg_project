@@ -37,7 +37,7 @@
   font-size: 30px;        /* Large font size */
   font-weight: 500;       /* Bold letters */
   font-style: italic;
-  margin-top: 5px;
+  margin-top: -10px;
   letter-spacing: 1.5px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
