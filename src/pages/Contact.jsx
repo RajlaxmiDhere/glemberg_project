@@ -30,7 +30,7 @@ const Contact = () => {
 
             <p className="mb-2">
               <strong>Glemberg Pharma Pvt. Ltd.</strong><br />
-              Neminath Nagar,Sangli,<br></br> Maharashtra – 416416<br />
+              Neminath Nagar, Sangli ,<br></br> Maharashtra – 416416<br />
               India
             </p>
 
