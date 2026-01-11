@@ -116,14 +116,18 @@ const Contact = () => {
 
       {/* MAP */}
       <div className="map-container">
+       
         <iframe
-          title="Google Map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.571434316682!2d74.60334887584102!3d16.847599918136364"
-          width="100%"
-          height="550"
-          style={{ border: 0 }}
-          loading="lazy"
-        ></iframe>
+  title="Google Map Location"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.571434316682!2d74.6033489!3d16.8476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1230623d53bc5%3A0xb5f67cf6931948d9!2sNeminath%20Nagar%2C%20Sangli%2C%20Maharashtra%20416416!5e0!3m2!1sen!2sin!4v1710000000000"
+  width="100%"
+  height="550"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+></iframe>
+
       </div>
     </div>
   );
