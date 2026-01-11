@@ -6,8 +6,6 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-inner">
-        <div className="navbar-tagline">
-        {/* GROUPED LOGO AND TAGLINE */}
         <div className="logo-group">
           <img src={logo} alt="Glemberg Pharma" className="navbar-logo" />
           <span className="navbar-tagline">Science with a human touch</span>
