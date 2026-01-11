@@ -79,33 +79,58 @@
   text-decoration: underline;
 }
 
-/* WHATSAPP BUTTON */
+/* =========================
+   WHATSAPP ENQUIRE BUTTON
+   ========================= */
 .whatsapp-enquire-btn {
   display: inline-flex;
   align-items: center;
   gap: 12px;
 
-  margin-top: 25px;
-  background-color: #25D366;
-  border-radius: 30px;
-  padding: 12px 32px;
+  margin-top: 26px;
 
-  font-size: 17px;
-  font-weight: 600;
+  padding: 14px 36px;
+  border-radius: 999px; /* Perfect pill */
+
+  background: linear-gradient(135deg, #2fe36a, #25d366);
   color: #ffffff;
 
-  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  /* Soft glow like your image */
+  box-shadow:
+    0 8px 22px rgba(37, 211, 102, 0.45),
+    0 0 18px rgba(37, 211, 102, 0.55);
+
   transition: all 0.3s ease;
 }
 
-.whatsapp-enquire-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 26px rgba(37, 211, 102, 0.45);
-}
-
-.whatsapp-icon {
+/* WhatsApp icon */
+.whatsapp-enquire-btn .whatsapp-icon {
   font-size: 22px;
 }
+
+/* Hover effect */
+.whatsapp-enquire-btn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 30px rgba(37, 211, 102, 0.6),
+    0 0 24px rgba(37, 211, 102, 0.7);
+}
+
+/* Mobile center */
+@media (max-width: 768px) {
+  .whatsapp-enquire-btn {
+    justify-content: center;
+  }
+}
+
 
 /* FORM */
 .contact-form {
