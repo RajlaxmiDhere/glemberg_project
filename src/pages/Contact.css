@@ -1,10 +1,11 @@
 .contact-page-wrapper {
   min-height: 100vh;
   background: linear-gradient(
-    180deg,
-    #f0fdfa 0%,
-    #e6f7f4 50%,
-    #0f9488 100%
+    90deg,
+    #E8F4FD 0%,
+    #D6ECFA 40%,
+    #BFDFF5 70%,
+    #9CC9E8 100%
   );
 }
 
