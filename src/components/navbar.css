@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column; /* Forces vertical stacking */
   align-items: center;   /* Centers the tagline under the logo */
-  font-size: 22px;
+  font-size: 26px;
 }
 
 .navbar-logo {
