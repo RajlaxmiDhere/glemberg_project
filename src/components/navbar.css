@@ -22,7 +22,7 @@
 .navbar-tagline {
    font-family:'Georgia', serif;
   color: #ffffff;
-  font-size: 30px;
+  font-size: 22px;
   font-style: italic;
   weight: 500;
   margin-top: 5px;        /* Small space between logo and text */
@@ -35,7 +35,7 @@
   margin: auto;
   padding: 0 40px;
   display: flex;
-  align-items: left;
+  align-items: center;
   justify-content: space-between;
 }
 
