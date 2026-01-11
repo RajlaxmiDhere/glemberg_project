@@ -5,6 +5,7 @@ import "./navbar.css";
 function Navbar() {
   return (
     <nav className="navbar">
+      <div className="logo-group">
       <div className="navbar-inner">
         {/* LEFT: Company Logo */}
         <img src={logo} alt="Glemberg Pharma" className="navbar-logo" />
