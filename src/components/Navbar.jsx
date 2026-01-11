@@ -8,6 +8,7 @@ function Navbar() {
       <div className="navbar-inner">
         {/* LEFT: Company Logo */}
         <img src={logo} alt="Glemberg Pharma" className="navbar-logo" />
+        <span className="navbar-tagline">Science with a human touch</span>
 
         {/* RIGHT: Menu */}
         <ul className="nav-links">
