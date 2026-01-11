@@ -14,29 +14,75 @@
   padding: 80px 20px;
 }
 
-/* Contact Info (Left) */
+/* =========================
+   LEFT: CONTACT INFO
+   ========================= */
 .contact-info {
   color: #1e4f91;
+  padding-right: 40px;
 }
 
+/* Section Headings (Corporate Office, Phone Number, Email) */
 .contact-info h3 {
   font-size: 30px;
-  margin-bottom: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
 }
 
+/* Address text */
 .contact-info p {
   font-size: 16px;
   line-height: 1.8;
   color: #2f3e4e;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
-/* Contact Form (Right) */
+/* Icon + text rows */
+.info-value {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+/* Links */
+.contact-link,
+.contact-info a {
+  color: #1e4f91;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Google Maps link spacing */
+.contact-info p.mb-4 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 28px;
+}
+
+/* WhatsApp + Button row */
+.contact-info .d-flex {
+  margin-top: 28px;
+}
+
+/* =========================
+   RIGHT: CONTACT FORM
+   ========================= */
 .contact-form {
   background: #E8F4FD;
   padding: 35px;
   border-radius: 14px;
   box-shadow: 0 10px 25px rgba(30, 79, 145, 0.18);
+}
+
+.contact-form h4 {
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .contact-form label {
@@ -48,12 +94,16 @@
   border-radius: 6px;
 }
 
-/* Map */
+/* =========================
+   MAP
+   ========================= */
 .map-container {
   margin-top: 40px;
 }
 
-/* Responsive */
+/* =========================
+   RESPONSIVE
+   ========================= */
 @media (max-width: 768px) {
   .contact-top {
     padding: 50px 15px;
@@ -61,6 +111,19 @@
 
   .contact-info {
     text-align: center;
+    padding-right: 0;
     margin-bottom: 40px;
+  }
+
+  .info-value {
+    justify-content: center;
+  }
+
+  .contact-info p.mb-4 {
+    justify-content: center;
+  }
+
+  .contact-info .d-flex {
+    justify-content: center;
   }
 }
