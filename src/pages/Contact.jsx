@@ -1,6 +1,7 @@
 import React from "react";
 import "./Contact.css";
 import {
+   FaWhatsapp,
   FaMapMarkerAlt,
   FaPhoneAlt,
   FaEnvelope,
@@ -67,14 +68,15 @@ const Contact = () => {
 
             {/* WHATSAPP BUTTON */}
             <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-success whatsapp-enquire-btn"
-            >
-              <FaWhatsapp className="whatsapp-icon" />
-              Enquire Now
-            </a>
+                 href={whatsappLink}
+                 target="_blank"
+                 rel="noopener noreferrer"
+               className="whatsapp-enquire-btn"
+              >
+            <FaWhatsapp className="whatsapp-icon" />
+            Enquire Now
+          </a>
+
           </div>
 
           {/* RIGHT: FORM */}

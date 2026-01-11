@@ -3,32 +3,8 @@
    ========================= */
 .navbar {
   background: linear-gradient(135deg, #0b2c6f, #172c7a);
-  /* REDUCED padding from 60px to 20px to move content up */
-  padding: 15px 0; 
+  padding: 10px 0; /* Reduced padding to move content up */
   width: 100%;
-}
-.logo-group {
-  display: flex;
-  flex-direction: column; /* Forces vertical stacking */
-  align-items: center;   /* Centers the tagline under the logo */
-  font-size: 26px;
-}
-
-.navbar-logo {
-  height: 110px;          /* Keeps your requested logo size */
-  width: auto;
-  display: block;
-}
-
-.navbar-tagline {
-   font-family:'Georgia', serif;
-  color: #ffffff;
-  font-size: 32px;        /* Increased from 16px/22px to 32px */
-  font-weight: 700;
-  font-style: italic;
-  margin-top: 5px;        /* Small space between logo and text */
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .navbar-inner {   
@@ -41,30 +17,29 @@
   justify-content: space-between;
 }
 
-/* NEW: Container to stack Logo and Tagline */
-.logo-container {
+/* LOGO GROUP */
+.logo-group {
   display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers tagline under logo */
+  flex-direction: column; /* Vertical stacking */
+  align-items: center;    /* Center tagline under logo */
 }
 
-/* LOGO */
 .navbar-logo {
   height: 110px; 
-  max-height: 110px;
   width: auto;
   display: block;
 }
 
-/* NEW: Tagline Styles */
+/* TAGLINE - BIG & BOLD */
 .navbar-tagline {
+  font-family: 'Georgia', serif;
   color: #ffffff;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 36px;        /* Large font size */
+  font-weight: 700;       /* Bold letters */
   font-style: italic;
-  margin-top: 5px;      /* Gap between logo and text */
-  letter-spacing: 1px;
-  text-transform: none;
+  margin-top: 5px;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 /* MENU */
