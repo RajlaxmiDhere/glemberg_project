@@ -29,8 +29,8 @@
 /* MAIN HEADINGS (Corporate Office, Phone Number, Email) */
 .contact-info h4,
 .info-heading {
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 27px;
+  font-weight: 500;
   margin-bottom: 18px;
   color: #1e4f91; /* ✔ heading color */
 }
