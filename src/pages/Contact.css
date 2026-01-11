@@ -23,7 +23,7 @@
    LEFT PANEL – INFO
    ========================= */
 .contact-info {
-  color: #1e4f91;
+  color:#2f3e4e;
 }
 
 /* Main section heading */
@@ -81,7 +81,7 @@
   font-size: 22px;      /* ⬅ larger, professional */
   margin-right: 10px;
   margin-top: 4px;
-  color: #0f9488;
+  color:  #2f3e4e;
   flex-shrink: 0;
 }
 
