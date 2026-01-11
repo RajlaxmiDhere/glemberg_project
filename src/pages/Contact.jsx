@@ -1,6 +1,11 @@
 import React from "react";
 import "./Contact.css";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaWhatsapp } from "react-icons/fa";
+import {
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaWhatsapp
+} from "react-icons/fa";
 
 const Contact = () => {
 
@@ -39,30 +44,26 @@ const Contact = () => {
             </p>
 
             {/* LOCATION */}
-            <p className="info-value">
+            <div className="info-value">
               <FaMapMarkerAlt />
               <a href={mapLink} target="_blank" rel="noopener noreferrer">
                 View on Google Maps
               </a>
-            </p>
+            </div>
 
             {/* PHONE */}
             <h3 className="info-heading">Phone Number</h3>
-            <div className="info-value">
-              <FaPhoneAlt />
-              <div>
-                {phoneNumbers.map((num, index) => (
-                  <a
-                    key={index}
-                    href={`tel:${num.replace(/\s/g, "")}`}
-                    className="contact-link"
-                  >
-                    {num}
-                    <br />
-                  </a>
-                ))}
+            {phoneNumbers.map((num, index) => (
+              <div className="info-value" key={index}>
+                <FaPhoneAlt />
+                <a
+                  href={`tel:${num.replace(/\s/g, "")}`}
+                  className="contact-link"
+                >
+                  {num}
+                </a>
               </div>
-            </div>
+            ))}
 
             {/* EMAIL */}
             <h3 className="info-heading">Email</h3>
@@ -94,22 +95,38 @@ const Contact = () => {
               <form>
                 <div className="mb-3">
                   <label>Your Name</label>
-                  <input type="text" className="form-control" placeholder="Full Name" />
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Full Name"
+                  />
                 </div>
 
                 <div className="mb-3">
                   <label>Email Address</label>
-                  <input type="email" className="form-control" placeholder="Email Address" />
+                  <input
+                    type="email"
+                    className="form-control"
+                    placeholder="Email Address"
+                  />
                 </div>
 
                 <div className="mb-3">
                   <label>Phone Number</label>
-                  <input type="tel" className="form-control" placeholder="Phone Number" />
+                  <input
+                    type="tel"
+                    className="form-control"
+                    placeholder="Phone Number"
+                  />
                 </div>
 
                 <div className="mb-3">
                   <label>Message</label>
-                  <textarea className="form-control" rows="4" placeholder="Your Message"></textarea>
+                  <textarea
+                    className="form-control"
+                    rows="4"
+                    placeholder="Your Message"
+                  ></textarea>
                 </div>
 
                 <button type="submit" className="btn btn-primary w-100">
