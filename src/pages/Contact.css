@@ -1,3 +1,6 @@
+/* =========================
+   PAGE BACKGROUND
+   ========================= */
 .contact-page-wrapper {
   min-height: 100vh;
   background: linear-gradient(
@@ -9,79 +12,131 @@
   );
 }
 
-/* Top Section */
+/* =========================
+   TOP SECTION
+   ========================= */
 .contact-top {
   padding: 80px 20px;
 }
 
 /* =========================
-   LEFT: CONTACT INFO
+   LEFT PANEL – INFO
    ========================= */
 .contact-info {
   color: #1e4f91;
-  padding-right: 40px;
 }
 
-/* Section Headings (Corporate Office, Phone Number, Email) */
+/* Main section heading */
 .contact-info h3 {
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
-/* Address text */
+/* Address block */
 .contact-info p {
-  font-size: 16px;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #2f3e4e;
+  margin-bottom: 18px;
+}
+
+/* =========================
+   SUB HEADINGS (Phone / Email)
+   ========================= */
+.info-heading {
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 8px;
+  color: #1e4f91;
+}
+
+/* =========================
+   VALUES (Phone & Email text)
+   ========================= */
+.info-value {
+  font-size: 16px;   /* ⬅ slightly smaller */
   line-height: 1.8;
   color: #2f3e4e;
-  margin-bottom: 14px;
-}
-
-/* Icon + text rows */
-.info-value {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 18px;
-  font-size: 16px;
 }
 
 /* Links */
-.contact-link,
-.contact-info a {
+.contact-link {
   color: #1e4f91;
   text-decoration: none;
 }
 
-.contact-info a:hover {
+.contact-link:hover {
   text-decoration: underline;
 }
 
-/* Google Maps link spacing */
-.contact-info p.mb-4 {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 28px;
-}
-
-/* WhatsApp + Button row */
-.contact-info .d-flex {
-  margin-top: 28px;
+/* =========================
+   ICONS – LOCATION / PHONE / EMAIL
+   ========================= */
+.info-value svg,
+.contact-info svg {
+  font-size: 22px;      /* ⬅ larger, professional */
+  margin-right: 10px;
+  margin-top: 4px;
+  color: #0f9488;
+  flex-shrink: 0;
 }
 
 /* =========================
-   RIGHT: CONTACT FORM
+   GOOGLE MAP LINK
+   ========================= */
+.contact-info a {
+  font-weight: 500;
+}
+
+/* =========================
+   WHATSAPP BUTTON (ICON + TEXT)
+   ========================= */
+.contact-info .btn-success {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  background-color: #25D366;
+  border: none;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  padding: 12px 30px;
+  border-radius: 30px;
+
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* WhatsApp logo inside button */
+.contact-info .btn-success img {
+  width: 22px;
+  height: 22px;
+}
+
+/* Hover */
+.contact-info .btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(37, 211, 102, 0.45);
+}
+
+/* =========================
+   RIGHT PANEL – FORM
    ========================= */
 .contact-form {
   background: #E8F4FD;
-  padding: 35px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(30, 79, 145, 0.18);
+  padding: 38px;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(30, 79, 145, 0.18);
 }
 
 .contact-form h4 {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 600;
 }
 
@@ -98,7 +153,7 @@
    MAP
    ========================= */
 .map-container {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 /* =========================
@@ -111,7 +166,6 @@
 
   .contact-info {
     text-align: center;
-    padding-right: 0;
     margin-bottom: 40px;
   }
 
@@ -119,11 +173,7 @@
     justify-content: center;
   }
 
-  .contact-info p.mb-4 {
-    justify-content: center;
-  }
-
-  .contact-info .d-flex {
+  .contact-info .btn-success {
     justify-content: center;
   }
 }
