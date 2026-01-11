@@ -10,7 +10,8 @@
 .logo-group {
   display: flex;
   flex-direction: column; /* Forces vertical stacking */
-  align-items: center;    /* Centers the tagline under the logo */
+  align-items: center;   /* Centers the tagline under the logo */
+  font-size: 22px;
 }
 
 .navbar-logo {
