@@ -23,17 +23,21 @@
    LEFT PANEL – INFO
    ========================= */
 .contact-info {
-  color:#2f3e4e;
+  color: #2f3e4e;
 }
 
-/* Main section heading */
-.contact-info h3 {
+/* MAIN HEADINGS (Corporate Office, Phone Number, Email) */
+.contact-info h3,
+.info-heading {
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 18px;
+  color: #1e4f91; /* ✔ heading color */
 }
 
-/* Address block */
+/* =========================
+   ADDRESS / CONTENT TEXT
+   ========================= */
 .contact-info p {
   font-size: 17px;
   line-height: 1.9;
@@ -42,30 +46,21 @@
 }
 
 /* =========================
-   SUB HEADINGS (Phone / Email)
-   ========================= */
-.info-heading {
-  font-size: 26px;
-  font-weight: 600;
-  margin-top: 30px;
-  margin-bottom: 8px;
-  color: #1e4f91;
-}
-
-/* =========================
-   VALUES (Phone & Email text)
+   VALUES (PHONE & EMAIL)
    ========================= */
 .info-value {
-  font-size: 16px;   /* ⬅ slightly smaller */
+  font-size: 16px;
   line-height: 1.8;
   color: #2f3e4e;
   display: flex;
   align-items: flex-start;
 }
 
-/* Links */
+/* =========================
+   LINKS
+   ========================= */
 .contact-link {
-  color: #1e4f91;
+  color: #2f3e4e;
   text-decoration: none;
 }
 
@@ -78,10 +73,10 @@
    ========================= */
 .info-value svg,
 .contact-info svg {
-  font-size: 22px;      /* ⬅ larger, professional */
+  font-size: 22px;
   margin-right: 10px;
   margin-top: 4px;
-  color:  #2f3e4e;
+  color: #1e4f91;   /* ✔ professional icon color */
   flex-shrink: 0;
 }
 
@@ -105,15 +100,16 @@
 
   font-size: 17px;
   font-weight: 600;
+  color: #ffffff;
 
-  padding: 12px 30px;
+  padding: 12px 32px;
   border-radius: 30px;
 
   box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* WhatsApp logo inside button */
+/* WhatsApp icon inside button */
 .contact-info .btn-success img {
   width: 22px;
   height: 22px;
@@ -177,3 +173,4 @@
     justify-content: center;
   }
 }
+
