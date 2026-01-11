@@ -85,6 +85,7 @@
   flex: 1;                      /* 🔑 equal body height */
   display: flex;
   flex-direction: column;
+   background-color: #E8F4FD; 
 }
 
 /* Product Title */
