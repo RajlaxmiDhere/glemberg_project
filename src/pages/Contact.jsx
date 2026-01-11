@@ -1,7 +1,6 @@
 import React from "react";
 import "./Contact.css";
 import {
-   FaWhatsapp,
   FaMapMarkerAlt,
   FaPhoneAlt,
   FaEnvelope,
