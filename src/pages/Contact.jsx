@@ -26,7 +26,7 @@ const Contact = () => {
 
           {/* LEFT: Corporate Office Info */}
           <div className="col-md-6 contact-info">
-            <h3 className="mb-3">Corporate Office</h3>
+            <h4 className="mb-3">Corporate Office</h4>
 
             <p className="mb-2">
               <strong>Glemberg Pharma Pvt. Ltd.</strong><br />
@@ -43,7 +43,7 @@ const Contact = () => {
             </p>
 
             {/* Phone */}
-            <h3 className="info-heading">Phone Number</h3>
+            <h4 className="info-heading">Phone Number</h4>
             <p className="info-value">
               <FaPhoneAlt style={{ marginRight: "8px", color: "#0f9488" }} />
               <a href={`tel:+91${phoneNumber}`} className="contact-link">
@@ -52,7 +52,7 @@ const Contact = () => {
             </p>
 
             {/* Email */}
-            <h3 className="info-heading">Email</h3>
+            <h4 className="info-heading">Email</h4>
             <p className="info-value">
               <FaEnvelope style={{ marginRight: "8px", color: "#0f9488" }} />
               <a href={`mailto:${email}`} className="contact-link">
