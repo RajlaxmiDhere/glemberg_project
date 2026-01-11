@@ -20,9 +20,9 @@
   color: #2f3e4e;
 }
 
-/* MAIN HEADING – Corporate Office */
+/* MAIN HEADING */
 .contact-info h3 {
-  font-size: 28px;          /* ⬅ slightly reduced */
+  font-size: 28px;
   font-weight: 600;
   color: #1e4f91;
   margin-bottom: 16px;
@@ -35,49 +35,37 @@
   margin-bottom: 18px;
 }
 
-/* SUB HEADINGS – Phone / Email */
+/* SUB HEADINGS */
 .info-heading {
-  font-size: 22px;          /* ⬅ balanced with content */
+  font-size: 22px;
   font-weight: 600;
   color: #1e4f91;
   margin-top: 26px;
   margin-bottom: 6px;
 }
 
-/* VALUES – Phone & Email */
+/* VALUES */
 .info-value {
-  font-size: 18px;          /* ⬅ increased slightly */
+  font-size: 18px;
   line-height: 1.9;
   display: flex;
-  align-items: center;      /* ⬅ icon & text same height */
+  align-items: center;
   gap: 12px;
+  margin-bottom: 6px;
   color: #2f3e4e;
 }
 
-/* ICONS – SAME SIZE AS TEXT */
+/* ICONS — SAME SIZE AS TEXT */
 .info-value svg {
-  font-size: 18px;          /* ⬅ SAME as text */
+  font-size: 18px;
   color: #2f3e4e;
   flex-shrink: 0;
-}
-
-/* LOCATION LINK */
-.location-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 18px;
-}
-
-.location-link svg {
-  font-size: 18px;
 }
 
 /* LINKS */
 .contact-link {
   color: #2f3e4e;
   text-decoration: none;
-  font-size: 18px;
 }
 
 .contact-link:hover {
@@ -93,7 +81,6 @@
   gap: 12px;
 
   margin-top: 28px;
-
   padding: 14px 36px;
   border-radius: 999px;
 
@@ -115,12 +102,12 @@
   transition: all 0.3s ease;
 }
 
-/* WhatsApp icon inside button */
-.whatsapp-enquire-btn .whatsapp-icon {
+/* WhatsApp icon */
+.whatsapp-icon {
   font-size: 20px;
 }
 
-/* Hover effect */
+/* Hover */
 .whatsapp-enquire-btn:hover {
   transform: translateY(-3px);
   box-shadow:
@@ -151,11 +138,8 @@
     justify-content: center;
   }
 
-  .location-link {
-    justify-content: center;
-  }
-
   .whatsapp-enquire-btn {
     justify-content: center;
   }
 }
+
