@@ -23,11 +23,12 @@
 .navbar-tagline {
    font-family:'Georgia', serif;
   color: #ffffff;
-  font-size: 22px;
+  font-size: 32px;        /* Increased from 16px/22px to 32px */
+  font-weight: 700;
   font-style: italic;
-  weight: 500;
   margin-top: 5px;        /* Small space between logo and text */
   letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .navbar-inner {   

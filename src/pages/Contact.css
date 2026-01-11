@@ -1,6 +1,4 @@
-/* =========================
-   PAGE BACKGROUND
-   ========================= */
+/* PAGE BACKGROUND */
 .contact-page-wrapper {
   min-height: 100vh;
   background: linear-gradient(
@@ -12,53 +10,66 @@
   );
 }
 
-/* =========================
-   TOP SECTION
-   ========================= */
+/* TOP SECTION */
 .contact-top {
   padding: 80px 20px;
 }
 
-/* =========================
-   LEFT PANEL – INFO
-   ========================= */
+/* LEFT PANEL */
 .contact-info {
   color: #2f3e4e;
 }
 
-/* MAIN HEADINGS (Corporate Office, Phone Number, Email) */
-.contact-info h4,
-.info-heading {
-  font-size: 27px;
-  font-weight: 500;
+/* MAIN HEADING */
+.contact-info h3 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #1e4f91;
   margin-bottom: 18px;
-  color: #1e4f91; /* ✔ heading color */
 }
 
-/* =========================
-   ADDRESS / CONTENT TEXT
-   ========================= */
+/* ADDRESS */
 .contact-info p {
   font-size: 17px;
   line-height: 1.9;
-  color: #2f3e4e;
   margin-bottom: 18px;
 }
 
-/* =========================
-   VALUES (PHONE & EMAIL)
-   ========================= */
-.info-value {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #2f3e4e;
+/* LOCATION LINK */
+.location-link {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  gap: 8px;
 }
 
-/* =========================
-   LINKS
-   ========================= */
+.location-link svg {
+  font-size: 22px;
+}
+
+/* SUB HEADINGS */
+.info-heading {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1e4f91;
+  margin-top: 28px;
+  margin-bottom: 6px;
+}
+
+/* VALUES */
+.info-value {
+  font-size: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* ICONS */
+.info-value svg {
+  font-size: 22px;
+  margin-top: 4px;
+}
+
+/* LINKS */
 .contact-link {
   color: #2f3e4e;
   text-decoration: none;
@@ -68,62 +79,35 @@
   text-decoration: underline;
 }
 
-/* =========================
-   ICONS – LOCATION / PHONE / EMAIL
-   ========================= */
-.info-value svg,
-.contact-info svg {
-  font-size: 22px;
-  margin-right: 10px;
-  margin-top: 4px;
-  color: #1e4f91;   /* ✔ professional icon color */
-  flex-shrink: 0;
-}
-
-/* =========================
-   GOOGLE MAP LINK
-   ========================= */
-.contact-info a {
-  font-weight: 500;
-}
-
-/* =========================
-   WHATSAPP BUTTON (ICON + TEXT)
-   ========================= */
-.contact-info .btn-success {
+/* WHATSAPP BUTTON */
+.whatsapp-enquire-btn {
   display: inline-flex;
   align-items: center;
   gap: 12px;
 
+  margin-top: 25px;
   background-color: #25D366;
-  border: none;
+  border-radius: 30px;
+  padding: 12px 32px;
 
   font-size: 17px;
   font-weight: 600;
   color: #ffffff;
 
-  padding: 12px 32px;
-  border-radius: 30px;
-
   box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-/* WhatsApp icon inside button */
-.contact-info .btn-success img {
-  width: 22px;
-  height: 22px;
-}
-
-/* Hover */
-.contact-info .btn-success:hover {
+.whatsapp-enquire-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 26px rgba(37, 211, 102, 0.45);
 }
 
-/* =========================
-   RIGHT PANEL – FORM
-   ========================= */
+.whatsapp-icon {
+  font-size: 22px;
+}
+
+/* FORM */
 .contact-form {
   background: #E8F4FD;
   padding: 38px;
@@ -131,46 +115,24 @@
   box-shadow: 0 12px 28px rgba(30, 79, 145, 0.18);
 }
 
-.contact-form h4 {
-  font-size: 26px;
-  font-weight: 600;
-}
-
-.contact-form label {
-  font-weight: 500;
-  margin-bottom: 6px;
-}
-
-.contact-form .form-control {
-  border-radius: 6px;
-}
-
-/* =========================
-   MAP
-   ========================= */
+/* MAP */
 .map-container {
   margin-top: 50px;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .contact-top {
-    padding: 50px 15px;
-  }
-
   .contact-info {
     text-align: center;
-    margin-bottom: 40px;
   }
 
   .info-value {
     justify-content: center;
   }
 
-  .contact-info .btn-success {
+  .location-link {
     justify-content: center;
   }
 }
+
 
