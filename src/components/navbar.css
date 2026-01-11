@@ -4,8 +4,28 @@
 .navbar {
   background: linear-gradient(135deg, #0b2c6f, #172c7a);
   /* REDUCED padding from 60px to 20px to move content up */
-  padding: 20px 0; 
+  padding: 15px 0; 
   width: 100%;
+}
+.logo-group {
+  display: flex;
+  flex-direction: column; /* Forces vertical stacking */
+  align-items: center;    /* Centers the tagline under the logo */
+}
+
+.navbar-logo {
+  height: 110px;          /* Keeps your requested logo size */
+  width: auto;
+  display: block;
+}
+
+.navbar-tagline {
+  color: #ffffff;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 5px;        /* Small space between logo and text */
+  letter-spacing: 0.5px;
 }
 
 .navbar-inner {   
