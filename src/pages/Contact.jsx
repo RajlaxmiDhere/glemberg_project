@@ -37,7 +37,7 @@ const Contact = () => {
             <h3>Corporate Office</h3>
 
             <p>
-              <strong>Glemberg Pharma Pvt. Ltd.</strong><br />
+              Glemberg Pharma Pvt. Ltd. <br />
               Neminath Nagar,<br />
               Sangli, Maharashtra – 416416<br />
               India
