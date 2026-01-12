@@ -27,12 +27,14 @@
 .content {
   z-index: 1;
   text-align: center;
-  color: #ffffff;
-  font-family: 'Arial', sans-serif;
-  /* Adds a slight dark tint so white text pops against the video */
-  background: rgba(0, 0, 0, 0.4); 
-  padding: 2rem;
-  border-radius: 15px;
+  /* Soft white/blue tint instead of black */
+  background: rgba(240, 245, 255, 0.6); 
+  backdrop-filter: blur(4px); /* Modern frosted glass effect */
+  padding: 3rem;
+  border-radius: 20px;
+  color: #0b2c6f; /* Using your brand navy for the text */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Optional: Smooth fade-in for the video */
