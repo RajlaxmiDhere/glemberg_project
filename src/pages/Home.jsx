@@ -1,28 +1,26 @@
 import React from 'react';
-// Adjust the number of dots (../) based on where your assets folder is
-import pharmaVideo from '../assets/home_v.mp4'; 
+import './Home.css';
+import pillVideo from '../assets/home.mp4'; 
 
-function Home() {
+const Home= () => {
   return (
-    <div className="home-container">
-      <div className="video-banner">
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline 
-          className="hero-video"
-        >
-          <source src={pharmaVideo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-      <div className="content-section">
-        {/* Your other page content goes here */}
+    <div className="video-container">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="background-video"
+      >
+        {/* Use the imported variable here */}
+        <source src={pillVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="content">
+        <h1>Welcome</h1>
       </div>
     </div>
   );
-}
+};
 
 export default Home;
