@@ -1,6 +1,6 @@
 import React from 'react';
 // Adjust the number of dots (../) based on where your assets folder is
-import pharmaVideo from '../assets/5448_183788663_small_V1.mp4'; 
+import pharmaVideo from '../assets/home_v.mp4'; 
 
 function Home() {
   return (
