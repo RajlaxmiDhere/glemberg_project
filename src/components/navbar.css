@@ -21,7 +21,7 @@
 .logo-group {
   display: flex;
   flex-direction: column; /* Vertical stacking */
-  align-items: center;    /* Center tagline under logo */
+  align-items: left;    /* Center tagline under logo */
 }
 
 .navbar-logo {
