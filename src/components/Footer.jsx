@@ -11,11 +11,9 @@ function Footer() {
         {/* LEFT: Logo + About */}
         <div className="footer-col">
           <img src={logo} alt="Glemberg Pharma Logo" className="footer-logo" />
-          <p className="footer-about">
-            Glemberg Pharmaceuticals Pvt. Ltd. is committed to delivering
-            high-quality, safe, and effective pharmaceutical products,
-            improving lives through innovation, trust, and global standards.
-          </p>
+          <p className="footer-tagline">
+                Science with a Human Touch
+           </p>
         </div>
 
         {/* MIDDLE: Contact */}

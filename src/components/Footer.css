@@ -32,13 +32,15 @@
 /* =========================
    ABOUT TEXT
    ========================= */
-.footer-about {
-  font-size: 18px;        /* ⬆ increased */
-  font-weight: 500;      /* ⬆ added weight */
-  line-height: 1.95;
-  color: #e6ecf5;
-  max-width: 95%;
+.footer-tagline {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #9ca3af;
+  font-style: italic;
+  letter-spacing: 0.5px;
+ 
 }
+
 
 /* =========================
    HEADINGS
