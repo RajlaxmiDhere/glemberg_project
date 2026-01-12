@@ -16,9 +16,9 @@ const Home= () => {
         <source src={pillVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="content">
-        <h1>Welcome</h1>
-      </div>
+     
+
+      
     </div>
   );
 };
