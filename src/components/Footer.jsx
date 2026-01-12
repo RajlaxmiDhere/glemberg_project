@@ -21,7 +21,7 @@ function Footer() {
           <h4>Contact</h4>
 
           <p className="footer-contact">
-            📍 <strong>Glemberg Pharma Pvt. Ltd.</strong><br />
+            📍Glemberg Pharma Pvt. Ltd.<br />
             Neminath Nagar,<br />
             Sangli, Maharashtra – 416416<br />
             India
