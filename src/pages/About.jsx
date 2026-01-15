@@ -1,115 +1,50 @@
-import "./About.css";
-import journeyImg from "../assets/about.jpg";
-import teamImg from "../assets/team.jpg";
-import visionImg from "../assets/vision.jpg";
-import goalImg from "../assets/goal.jpg";
-import valuesImg from "../assets/values.jpg";
+import React, { useState, useEffect } from 'react';
+import "./HeroVideo.css";
+import pillVideo from "../assets/video1.mp4";
 
-function About() {
+function Home() {
+  const [showWelcome, setShowWelcome] = useState(false);
+
+  useEffect(() => {
+    // Check if the user has already seen the welcome message in this session
+    const hasSeenWelcome = sessionStorage.getItem("hasSeenWelcome");
+
+    if (!hasSeenWelcome) {
+      setShowWelcome(true);
+      // Set the flag so it doesn't show again
+      sessionStorage.setItem("hasSeenWelcome", "true");
+    }
+  }, []);
+
   return (
-    <div className="about-page">
+    <>
+      <section className="hero-video-section">
+        <video className="hero-video" autoPlay muted loop playsInline>
+          <source src={pillVideo} type="video/mp4" />
+        </video>
 
-      {/* Journey / Who We Are */}
-      <section className="about-row journey">
-        <div className="about-image">
-          <img src={journeyImg} alt="About Us" />
-        </div>
-        <div className="about-content">
-          <h1>The Journey So Far</h1>
+        <div className="hero-overlay"></div>
+
+        <div className="hero-content">
+          {/* Render the welcome text only if showWelcome is true */}
+          {showWelcome && (
+            <p className="welcome-tagline">Welcome to Glemberg Pharma</p>
+          )}
+          
+          <h1>Committed to Better Healthcare</h1>
           <p>
-            <strong>
-              Glemberg Pharma is a name synonymous with trust and innovation
-            </strong>{" "}
-            in the global pharmaceutical landscape. Built on the core pillars of
-            quality, safety, and purity, we go beyond manufacturing—we deliver a
-            promise to improve lives. By adhering to rigorous WHO-GMP standards
-            and stringent quality controls, we ensure that every life-saving
-            innovation we produce meets the highest international benchmarks,
-            providing patients with the efficacy they deserve.
-            <br /><br />
-            Our mission is fueled by a dedicated team of scientists and
-            researchers working relentlessly to make healthcare both reliable
-            and affordable. We don’t just develop medicines; we create paths to a
-            healthier future through patient-focused solutions and ethical
-            excellence. At Glemberg Pharma, we are committed to enriching human
-            life, ensuring that world-class healthcare is accessible to
-            everyone, everywhere.
+            Glemberg Pharma delivers safe, effective, and innovative
+            pharmaceutical solutions to improve lives and build a healthier
+            tomorrow.
           </p>
+
+          <a href="/contact" className="hero-btn">
+            Enquire Now
+          </a>
         </div>
       </section>
-
-      {/* Our Dedicated Team */}
-      <section className="about-full">
-        <h1>Our Dedicated Team</h1>
-        <p>
-          We are a committed team of scientists, researchers, and healthcare
-          professionals working together to deliver high-quality, safe, and
-          effective pharmaceutical solutions.
-        </p>
-
-        <div className="team-gallery">
-          <img src={teamImg} alt="Team Member 1" />
-          <img src={teamImg} alt="Team Member 2" />
-          <img src={teamImg} alt="Team Member 3" />
-        </div>
-      </section>
-
-      {/* Our Vision */}
-      <section className="about-row half reverse">
-        <div className="about-image">
-          <img src={visionImg} alt="Our Vision" />
-        </div>
-        <div className="about-content">
-          <h1>Our Vision</h1>
-          <h3>Pioneering innovation with Enduring trust</h3>
-          <p>
-            Our vision is rooted in the belief that standard is never enough. We
-            are committed to pushing the boundaries of medical science through
-            continuous research and development. By investing in modern
-            technology and creative scientific thinking, we aim to bring new,
-            more effective therapies to market that set entirely new benchmarks
-            for the industry. By harmonizing scientific advancement with a
-            legacy of reliability, we aim to be the most trusted name for
-            healthcare providers and patients alike, ensuring a healthier and
-            more secure future for all.
-          </p>
-        </div>
-      </section>
-
-      {/* Our Goal */}
-      <section className="about-row half">
-        <div className="about-image">
-          <img src={goalImg} alt="Our Goal" />
-        </div>
-        <div className="about-content">
-          <h1>Our Goal</h1>
-          <h3>Advancing Global Health</h3>
-          <p>
-            Our goal is to address critical healthcare needs through continuous
-            research, quality manufacturing, and patient-focused solutions.
-          </p>
-        </div>
-      </section>
-
-      {/* Our Core Values */}
-      <section className="about-row half reverse">
-        <div className="about-image">
-          <img src={valuesImg} alt="Our Core Values" />
-        </div>
-        <div className="about-content">
-          <h1>Our Core Values</h1>
-          <ul>
-            <li>Innovation & Excellence</li>
-            <li>Patient-Centric Care</li>
-            <li>Quality & Safety</li>
-            <li>Integrity & Transparency</li>
-            <li>Commitment to Health</li>
-          </ul>
-        </div>
-      </section>
-
-    </div>
+    </>
   );
 }
 
-export default About;
+export default Home;
