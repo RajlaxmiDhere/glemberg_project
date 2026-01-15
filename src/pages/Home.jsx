@@ -45,9 +45,7 @@ function Home() {
           pharmaceutical solutions to improve lives.
         </p>
 
-        <a href="/contact" className="hero-btn">
-          Enquire Now
-        </a>
+        
       </div>
 
     </section>
