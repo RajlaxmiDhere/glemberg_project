@@ -1,36 +1,42 @@
-import React from 'react';
-import './Home.css';
-import pillVideo from '../assets/video1.mp4'; 
+import "./HeroVideo.css";
 
-const Home= () => {
+function Home() {
   return (
-    <div className="video-container">
-  <video
-    className="background-video"
-    autoPlay
-    muted
-    loop
-    playsInline
-  >
-    <source src="/your-video1.mp4" type="video/mp4" />
-  </video>
+    <>
+      {/* HERO VIDEO SECTION */}
+      <section className="hero-video-section">
+        <video
+          className="hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/video1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
 
-  <div className="video-overlay"></div>
+        {/* Overlay */}
+        <div className="hero-overlay"></div>
 
-  <div className="video-content">
-    <h1>Committed to Better Healthcare</h1>
-    <p>
-      Delivering safe, effective and innovative pharmaceutical
-      solutions for a healthier tomorrow.
-    </p>
+        {/* Content */}
+        <div className="hero-content">
+          <h1>Committed to Better Healthcare</h1>
+          <p>
+            Glemberg Pharma delivers safe, effective, and innovative
+            pharmaceutical solutions to improve lives and build a healthier
+            tomorrow.
+          </p>
 
-    <a href="/contact" className="cta-btn">
-      Enquire Now
-    </a>
-  </div>
-</div>
+          <a href="/contact" className="hero-btn">
+            Enquire Now
+          </a>
+        </div>
+      </section>
 
+      {/* REST OF HOME PAGE CONTENT CAN CONTINUE BELOW */}
+    </>
   );
-};
+}
 
 export default Home;
