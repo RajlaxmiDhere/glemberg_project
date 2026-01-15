@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import pillVideo from '../assets/home.mp4'; 
+import pillVideo from '../assets/video1.mp4'; 
 
 const Home= () => {
   return (
