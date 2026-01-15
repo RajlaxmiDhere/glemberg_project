@@ -12,7 +12,7 @@ const Home= () => {
     loop
     playsInline
   >
-    <source src="/your-video.mp4" type="video/mp4" />
+    <source src="/your-video1.mp4" type="video/mp4" />
   </video>
 
   <div className="video-overlay"></div>
