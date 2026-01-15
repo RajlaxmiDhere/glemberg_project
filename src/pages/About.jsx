@@ -1,6 +1,6 @@
 import "./About.css";
 
-import journeyImg from "../assets/journey.jpg";
+import journeyImg from "../assets/about.jpg";
 import teamImg from "../assets/team.jpg";
 import visionImg from "../assets/vision.jpg";
 import goalImg from "../assets/goal.jpg";
