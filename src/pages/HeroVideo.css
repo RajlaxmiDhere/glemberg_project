@@ -26,18 +26,21 @@
 }
 
 /* ==============================
-   DARK OVERLAY (FOR READABILITY)
+   SOFT OVERLAY (VIDEO VISIBLE)
    ============================== */
 .hero-overlay {
   position: absolute;
   inset: 0;
-   background: linear-gradient(
-    90deg,
-    #E8F4FD 0%,
-    #D6ECFA 40%,
-    #BFDFF5 70%,
-    #9CC9E8 100%
+
+  /* Light pharma-blue overlay */
+  background: linear-gradient(
+    rgba(11, 44, 111, 0.35),
+    rgba(23, 44, 122, 0.55)
   );
+
+  /* Natural blending with video */
+  mix-blend-mode: multiply;
+
   z-index: 1;
 }
 
@@ -54,6 +57,15 @@
   top: 50%;
   transform: translateY(-50%);
   color: #ffffff;
+}
+
+/* Welcome Tagline */
+.welcome-tagline {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  color: #d6f5ff;
 }
 
 /* Heading */
@@ -112,5 +124,3 @@
     font-size: 16px;
   }
 }
-
-
