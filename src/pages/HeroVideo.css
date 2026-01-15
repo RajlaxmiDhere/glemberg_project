@@ -1,0 +1,113 @@
+/* ==============================
+   HERO VIDEO SECTION
+   ============================== */
+.hero-video-section {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  background: #000;
+}
+
+/* ==============================
+   VIDEO
+   ============================== */
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* ==============================
+   DARK OVERLAY (FOR READABILITY)
+   ============================== */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(11, 44, 111, 0.75),
+    rgba(23, 44, 122, 0.85)
+  );
+  z-index: 1;
+}
+
+/* ==============================
+   CONTENT
+   ============================== */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 20px;
+  text-align: center;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+}
+
+/* Heading */
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+
+/* Paragraph */
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 35px;
+  color: #e6f1ff;
+}
+
+/* ==============================
+   CTA BUTTON
+   ============================== */
+.hero-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  border-radius: 30px;
+
+  background: linear-gradient(135deg, #2fe36a, #25d366);
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px rgba(37, 211, 102, 0.6);
+}
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+@media (max-width: 768px) {
+  .hero-video-section {
+    height: 75vh;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}
+
+
