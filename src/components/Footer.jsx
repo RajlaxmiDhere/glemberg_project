@@ -18,34 +18,30 @@ function Footer() {
         {/* MIDDLE: Contact */}
         <div className="footer-col">
           <h4>Contact</h4>
-
           <p className="footer-contact">
-            <span></span>
-            <span>
-              Glemberg Pharma Pvt. Ltd.<br />
-              Neminath Nagar,<br />
-              Sangli, Maharashtra – 416416<br />
-              India
-            </span>
+            Glemberg Pharma Pvt. Ltd.<br />
+            Neminath Nagar,<br />
+            Sangli, Maharashtra – 416416<br />
+            India
           </p>
 
-          <p className="footer-contact">
-            <h4>Phone</h4>
-            <span></span>
-            <span>
+          <div className="contact-sub-section">
+            <h5>Phone</h5>
+            <p className="footer-contact">
               <a href="tel:+917559189020">+91 7559189020</a><br />
               <a href="tel:+918975173157">+91 8975173157</a>
-            </span>
-          </p>
+            </p>
+          </div>
 
-          <p className="footer-contact">
-            <h4>Email</h4>
-            <span></span>
-            <a href="mailto:glembergpharmaceuticals@gmail.com">
-              glembergpharmaceuticals@gmail.com
-            </a>
-          </p>
-        </div> {/* <--- THIS WAS MISSING: Closes Middle Column */}
+          <div className="contact-sub-section">
+            <h5>Email</h5>
+            <p className="footer-contact">
+              <a href="mailto:glembergpharmaceuticals@gmail.com">
+                glembergpharmaceuticals@gmail.com
+              </a>
+            </p>
+          </div>
+        </div>
 
         {/* RIGHT: Quick Links */}
         <div className="footer-col">
