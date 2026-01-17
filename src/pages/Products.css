@@ -16,13 +16,7 @@
 /* Sidebar Styling */
 .filter-sidebar {
   width: 300px;
-  background:  linear-gradient(
-    90deg,
-    #E8F4FD 0%,
-    #D6ECFA 40%,
-    #BFDFF5 70%,
-    #9CC9E8 100%
-  ); /* Light green tint like screenshot */
+  background: linear-gradient(135deg, #0b2c6f, #172c7a);
   padding: 25px;
   border-radius: 20px;
   height: fit-content;
