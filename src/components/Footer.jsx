@@ -20,7 +20,7 @@ function Footer() {
           <h4>Contact</h4>
 
           <p className="footer-contact">
-            <span>📍</span>
+            <span></span>
             <span>
               Glemberg Pharma Pvt. Ltd.<br />
               Neminath Nagar,<br />
@@ -30,7 +30,8 @@ function Footer() {
           </p>
 
           <p className="footer-contact">
-            <span>📞</span>
+            <h4>Phone</h4>
+            <span></span>
             <span>
               <a href="tel:+917559189020">+91 7559189020</a><br />
               <a href="tel:+918975173157">+91 8975173157</a>
@@ -38,7 +39,8 @@ function Footer() {
           </p>
 
           <p className="footer-contact">
-            <span>✉️</span>
+            <h4>Email</h4>
+            <span></span>
             <a href="mailto:glembergpharmaceuticals@gmail.com">
               glembergpharmaceuticals@gmail.com
             </a>
