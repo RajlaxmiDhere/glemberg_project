@@ -46,8 +46,8 @@
    HEADINGS
    ========================= */
 .footer-col h4 {
-  font-size: 20px;       /* ⬆ increased */
-  font-weight: 500;     /* ⬆ bolder */
+  font-size: 23px;       /* ⬆ increased */
+  font-weight: 700;     /* ⬆ bolder */
   margin-bottom: 20px;
   color: #ffffff;
 }
@@ -68,7 +68,7 @@
 }
 
 .footer-links a {
-  color: #ffffff
+  color: #e6ecf5;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -94,7 +94,7 @@
 }
 
 .footer-contact a {
-  color: #c9f7f5;
+  color: #e6ecf5;
   text-decoration: none;
 }
 
