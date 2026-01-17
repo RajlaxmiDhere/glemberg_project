@@ -19,6 +19,7 @@
   align-items: center;
   gap: 50px;
 }
+
 /* Reverse layout */
 .about-row.reverse {
   flex-direction: row-reverse;
