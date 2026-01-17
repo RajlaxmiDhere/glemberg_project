@@ -21,41 +21,25 @@ function Footer() {
           <h4>Contact</h4>
 
           <p className="footer-contact">
-            📍Glemberg Pharma Pvt. Ltd.<br />
+            Glemberg Pharma Pvt. Ltd.<br />
             Neminath Nagar,<br />
             Sangli, Maharashtra – 416416<br />
             India
           </p>
 
           <p className="footer-contact">
-            📞 <a href="tel:+917559189020">+91 7559189020</a><br />
-            📞 <a href="tel:+918975173157">+91 8975173157</a>
+            <a href="tel:+917559189020">+91 7559189020</a><br />
+            <a href="tel:+918975173157">+91 8975173157</a>
           </p>
 
           <p className="footer-contact">
-            ✉️ <a href="mailto:glembergpharmaceuticals@gmail.com">
+            <a href="mailto:glembergpharmaceuticals@gmail.com">
               glembergpharmaceuticals@gmail.com
             </a>
           </p>
 
           {/* Social Icons */}
-          <div className="footer-social-row">
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                alt="LinkedIn"
-                className="footer-social-img"
-              />
-            </a>
 
-            <a href="https://instagram.com" target="_blank" rel="noreferrer">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
-                alt="Instagram"
-                className="footer-social-img"
-              />
-            </a>
-          </div>
         </div>
 
         {/* RIGHT: Quick Links */}
