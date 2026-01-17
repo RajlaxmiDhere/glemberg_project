@@ -23,13 +23,7 @@
 }
 
 .filter-title {
-  color:  linear-gradient(
-    90deg,
-    #E8F4FD 0%,
-    #D6ECFA 40%,
-    #BFDFF5 70%,
-    #9CC9E8 100%
-  );
+  color:white;
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
