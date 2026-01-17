@@ -13,7 +13,7 @@ const Product = () => {
       desc: "Alendronic acid jelly 70mg",
       category: "ortho", 
       division: "ORTHO DIVISION",
-      image: "/Bonew_jelly_sachet.jpg" 
+      image: "../assets/Bonew_jelly_sachet.jpg" 
     },
     { 
       id: 2, 
@@ -21,7 +21,7 @@ const Product = () => {
       desc: "L-Carnitine, L-arginine vitamin E, folic acid, Cynocobalamin",
       category: "ortho", 
       division: "ORTHO DIVISION",
-      image: "/Carnex_LC_tab.jpg" 
+      image: "../assets/Carnex_LC_tab.jpg" 
     },
     { 
       id: 3, 
@@ -29,7 +29,7 @@ const Product = () => {
       desc: "Cholecalciferol softgel cap 60000 IU",
       category: "ortho", 
       division: "ORTHO DIVISION",
-      image: "/Glemvit_D3_60K.jpg" 
+      image: "../assets/Glemvit_D3_60K.jpg" 
     },
     { 
       id: 4, 
@@ -37,7 +37,7 @@ const Product = () => {
       desc: "Gabapentin and nortriptyline tablet",
       category: "ortho", 
       division: "ORTHO DIVISION",
-      image: "/gabanx_NT_100.jpg" 
+      image: "../assets/gabanx_NT_100.jpg" 
     },
     { id: 5, name: "General Medicine", desc: "Standard formulation", category: "general", division: "GENERAL RANGE", image: "https://via.placeholder.com/150" },
     { id: 6, name: "Derma Cream X", desc: "Skin care solution", category: "derma", division: "DERMA DIVISION", image: "https://via.placeholder.com/150" },
