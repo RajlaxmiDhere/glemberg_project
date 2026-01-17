@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Product.css';
+import './Products.css';
 
 const Product = () => {
   // 1. State to track the selected division
