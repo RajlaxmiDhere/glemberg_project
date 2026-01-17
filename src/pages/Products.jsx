@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import './Products.css';
+import bonewJelly from '../assets/Bonew_jelly_sachet.jpg';
+import carnexLc from '../assets/Carnex_LC_tab.jpg';
+import glemvitD3 from '../assets/Glemvit_D3_60K.jpg';
+import gabanxNt from '../assets/gabanx_NT_100.jpg';
 
 // Import images at the top if they are in your src folder, 
 // or use the path strings if they are in the public folder.
@@ -13,7 +17,7 @@ const Product = () => {
       desc: "Alendronic acid jelly 70mg",
       category: "ortho", 
       division: "ORTHO DIVISION",
-      image: "../assets/Bonew_jelly_sachet.jpg" 
+      image: bonewJelly
     },
     { 
       id: 2, 
@@ -21,7 +25,7 @@ const Product = () => {
       desc: "L-Carnitine, L-arginine vitamin E, folic acid, Cynocobalamin",
       category: "ortho", 
       division: "ORTHO DIVISION",
-      image: "../assets/Carnex_LC_tab.jpg" 
+      image: carnexLc
     },
     { 
       id: 3, 
@@ -29,7 +33,7 @@ const Product = () => {
       desc: "Cholecalciferol softgel cap 60000 IU",
       category: "ortho", 
       division: "ORTHO DIVISION",
-      image: "../assets/Glemvit_D3_60K.jpg" 
+      image: glemvitD3
     },
     { 
       id: 4, 
@@ -37,7 +41,7 @@ const Product = () => {
       desc: "Gabapentin and nortriptyline tablet",
       category: "ortho", 
       division: "ORTHO DIVISION",
-      image: "../assets/gabanx_NT_100.jpg" 
+      image: gabanxNt
     },
     { id: 5, name: "General Medicine", desc: "Standard formulation", category: "general", division: "GENERAL RANGE", image: "https://via.placeholder.com/150" },
     { id: 6, name: "Derma Cream X", desc: "Skin care solution", category: "derma", division: "DERMA DIVISION", image: "https://via.placeholder.com/150" },
