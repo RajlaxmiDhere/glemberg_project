@@ -6,6 +6,7 @@ import bonewJelly from '../assets/Bonew_jelly_sachet.jpg';
 import carnexLc from '../assets/Carnex_LC_tab.jpg';
 import glemvitD3 from '../assets/Glemvit_D3_60K.jpg';
 import gabanxNt from '../assets/gabanx_NT_100.jpg';
+import Aceglem_MR from '../assets/Aceglem_MR_tab.jpg';
 
 const Product = () => {
   const [filter, setFilter] = useState('all');
@@ -43,7 +44,7 @@ const Product = () => {
       division: "ORTHO DIVISION",
       image: gabanxNt
     },
-    { id: 5, name: "General Medicine", desc: "Standard formulation", category: "general", division: "GENERAL RANGE", image: "https://via.placeholder.com/150" },
+    { id: 5, name: "Aceglem_MR_tab", desc: "", category: "general", division: "GENERAL RANGE", image:Aceglem_MR },
     { id: 6, name: "Derma Cream X", desc: "Skin care solution", category: "derma", division: "DERMA DIVISION", image: "https://via.placeholder.com/150" },
   ];
 
