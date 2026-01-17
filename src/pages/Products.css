@@ -2,7 +2,13 @@
   display: flex;
   gap: 40px;
   padding: 50px;
-  background-color: #f9f9f9;
+  background: linear-gradient(
+    90deg,
+    #E8F4FD 0%,
+    #D6ECFA 40%,
+    #BFDFF5 70%,
+    #9CC9E8 100%
+  );
   min-height: 100vh;
   font-family: 'Arial', sans-serif;
 }
