@@ -48,11 +48,23 @@
 }
 
 .filter-item:hover {
-  border-color: #00a651;
+  border-color: linear-gradient(
+    90deg,
+    #E8F4FD 0%,
+    #D6ECFA 40%,
+    #BFDFF5 70%,
+    #9CC9E8 100%
+  );
 }
 
 .filter-item.active {
-  background: #00a651; /* Main green from screenshot */
+  background: linear-gradient(
+    90deg,
+    #E8F4FD 0%,
+    #D6ECFA 40%,
+    #BFDFF5 70%,
+    #9CC9E8 100%
+  );/* Main green from screenshot */
   color: white;
 }
 
@@ -74,7 +86,13 @@
 }
 
 .product-card:hover {
-  border-color: #00a651;
+  border-color: linear-gradient(
+    90deg,
+    #E8F4FD 0%,
+    #D6ECFA 40%,
+    #BFDFF5 70%,
+    #9CC9E8 100%
+  );
   box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
