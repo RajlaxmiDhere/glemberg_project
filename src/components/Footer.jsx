@@ -33,8 +33,7 @@ function Footer() {
           </p>
 
           <p className="footer-contact">
-            ✉️ <a href="mailto:glembergpharmaceuticals@gmail.com">
-              glembergpharmaceuticals@gmail.com
+            ✉️ <a href="mailto:glembergpharmaceuticals@gmail.com">glembergpharmaceuticals@gmail.com
             </a>
           </p>
 
