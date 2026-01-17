@@ -18,7 +18,7 @@ function Footer() {
 
         {/* MIDDLE: Contact */}
         <div className="footer-col">
-          <h4>Contact</h4>
+          <h4>Office</h4>
 
           <p className="footer-contact">
             Glemberg Pharma Pvt. Ltd.<br />
@@ -28,11 +28,13 @@ function Footer() {
           </p>
 
           <p className="footer-contact">
+            <h4>phone</h4>
             <a href="tel:+917559189020">+91 7559189020</a><br />
             <a href="tel:+918975173157">+91 8975173157</a>
           </p>
 
           <p className="footer-contact">
+            <h4>Email</h4>
             <a href="mailto:glembergpharmaceuticals@gmail.com">
               glembergpharmaceuticals@gmail.com
             </a>
