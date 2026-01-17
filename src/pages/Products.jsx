@@ -46,20 +46,6 @@ const Product = () => {
     { id: 5, name: "General Medicine", desc: "Standard formulation", category: "general", division: "GENERAL RANGE", image: "https://via.placeholder.com/150" },
     { id: 6, name: "Derma Cream X", desc: "Skin care solution", category: "derma", division: "DERMA DIVISION", image: "https://via.placeholder.com/150" },
   ];
-const ProductBanner = ({ title, subtitle, titleColor = "#1a237e" }) => {
-  return (
-    <div className="product-banner-card">
-      <h1 className="product-title" style={{ color: titleColor }}>
-        {title}
-      </h1>
-      <p className="product-subtitle">
-        {subtitle}
-      </p>
-    </div>
-  );
-};
-
-export default ProductBanner;
 
   const filteredProducts = filter === 'all' 
     ? products 
