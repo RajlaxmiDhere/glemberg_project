@@ -84,7 +84,7 @@
 .footer-contact {
   font-size: 20px;       /* ⬆ increased */
   font-weight: 500;
-  color: #D4EDDA;
+  color: #e6ecf5;
   margin-bottom: 14px;
   line-height: 1.75;
 }
@@ -94,7 +94,7 @@
 }
 
 .footer-contact a {
-  color: #e6ecf5;
+  color: #c9f7f5;
   text-decoration: none;
 }
 
