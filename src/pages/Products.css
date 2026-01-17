@@ -104,7 +104,13 @@
 
 .category-label {
   margin-top: 20px;
-  background: #e8f5e9;
+  background:  linear-gradient(
+    90deg,
+    #E8F4FD 0%,
+    #D6ECFA 40%,
+    #BFDFF5 70%,
+    #9CC9E8 100%
+  );
   color: #2e7d32;
   padding: 8px 20px;
   border-radius: 25px;
