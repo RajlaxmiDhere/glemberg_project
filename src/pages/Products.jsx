@@ -7,10 +7,9 @@ const Product = () => {
 
   // 2. Your Product Data (Add your items here)
   const products = [
-    { id: 1, name: "General Medicine A", category: "general", division: "GENERAL RANGE" },
+    { id: 1, name: "General Medicine", category: "general", division: "GENERAL RANGE" },
     { id: 2, name: "Derma Cream X", category: "derma", division: "DERMA DIVISION" },
     { id: 3, name: "Ortho Tablet Y", category: "ortho", division: "ORTHO DIVISION" },
-    { id: 4, name: "General Tonic B", category: "general", division: "GENERAL RANGE" },
     // Add more products as needed
   ];
 
