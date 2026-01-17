@@ -6,7 +6,7 @@ import bonewJelly from '../assets/Bonew_jelly_sachet.jpg';
 import carnexLc from '../assets/Carnex_LC_tab.jpg';
 import glemvitD3 from '../assets/Glemvit_D3_60K.jpg';
 import gabanxNt from '../assets/gabanx_NT_100.jpg';
-import Aceglem_MR from '../assets/Aceglem_MR_tab.jpg';
+import Aceglem_MR from '../assets/Aceglem_MR_tab.png';
 
 const Product = () => {
   const [filter, setFilter] = useState('all');
