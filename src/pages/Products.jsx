@@ -1,116 +1,75 @@
-import "./Products.css";
+import React, { useState } from 'react';
+import './product.css';
 
-// Product Images
-import product1 from "../assets/gabanx_NT_100.jpg";
-import product2 from "../assets/Bonew_jelly_sachet.jpg";
-import product3 from "../assets/Carnex_LC_tab.jpg";
-import product4 from "../assets/Glemvit_D3_60K.jpg";
+const Product = () => {
+  // 1. State to track the selected division
+  const [filter, setFilter] = useState('all');
 
-function Products() {
+  // 2. Your Product Data (Add your items here)
   const products = [
-    {
-      img: product1,
-      title: "Gabanx_NT_100",
-      desc: (
-        <>
-          <b>Diabetic Neuropathy:</b> Reduces neurotransmitter release from neurons.
-          <br />
-          <b>Peripheral Neuropathy:</b> Reduces neuropathic pain.
-        </>
-      ),
-    },
-    {
-      img: product2,
-      title: "Bonew_jelly_sachet",
-      desc: (
-        <>
-          <b>Osteoporosis:</b> Prevents bone loss and fractures.
-          <br />
-          <b>Paget's Disease:</b> Manages excessive bone turnover.
-        </>
-      ),
-    },
-    {
-      img: product3,
-      title: "Carnex_LC_tab",
-      desc: (
-        <>
-          <b>Muscle Pain & Cramps:</b> Relieves muscle pain.
-          <br />
-          <b>Nerve Function:</b> Supports nerve repair.
-        </>
-      ),
-    },
-    {
-      img: product4,
-      title: "Glemvit_D3_60K",
-      desc: (
-        <>
-          <b>Bone Health:</b> Improves calcium absorption.
-          <br />
-          <b>Muscle Function:</b> Reduces weakness and cramps.
-        </>
-      ),
-    },
-    {
-      img: product1,
-      title: "Gabanx_NT_200",
-      desc: "Advanced neuropathic pain management.",
-    },
-    {
-      img: product2,
-      title: "Bonew_Jelly Plus",
-      desc: "Enhanced calcium and vitamin support.",
-    },
-    {
-      img: product3,
-      title: "Carnex_LC Forte",
-      desc: "Improved muscle recovery formulation.",
-    },
-    {
-      img: product4,
-      title: "Glemvit_D3 Max",
-      desc: "High-dose vitamin D supplementation.",
-    },
-    {
-      img: product1,
-      title: "Gabanx_NT SR",
-      desc: "Sustained-release neuropathy care.",
-    },
-    {
-      img: product2,
-      title: "Bonew_Jelly Kids",
-      desc: "Bone health support for children.",
-    },
+    { id: 1, name: "General Medicine A", category: "general", division: "GENERAL RANGE" },
+    { id: 2, name: "Derma Cream X", category: "derma", division: "DERMA DIVISION" },
+    { id: 3, name: "Ortho Tablet Y", category: "ortho", division: "ORTHO DIVISION" },
+    { id: 4, name: "General Tonic B", category: "general", division: "GENERAL RANGE" },
+    // Add more products as needed
   ];
 
+  // 3. Logic to filter the list
+  const filteredProducts = filter === 'all' 
+    ? products 
+    : products.filter(p => p.category === filter);
+
   return (
-    <div className="products-page">
-      <div className="container">
+    <div className="product-page-container">
+      {/* Sidebar Filter */}
+      <aside className="filter-sidebar">
+        <h3 className="filter-title">Filter by Product Division</h3>
+        <ul className="filter-list">
+          <li 
+            className={`filter-item ${filter === 'all' ? 'active' : ''}`} 
+            onClick={() => setFilter('all')}
+          >
+            Show All Products
+          </li>
+          <li 
+            className={`filter-item ${filter === 'general' ? 'active' : ''}`} 
+            onClick={() => setFilter('general')}
+          >
+            General Range
+          </li>
+          <li 
+            className={`filter-item ${filter === 'derma' ? 'active' : ''}`} 
+            onClick={() => setFilter('derma')}
+          >
+            Derma Division
+          </li>
+          <li 
+            className={`filter-item ${filter === 'ortho' ? 'active' : ''}`} 
+            onClick={() => setFilter('ortho')}
+          >
+            Ortho Division
+          </li>
+        </ul>
+      </aside>
 
-        <h1 className="products-title">Our Products</h1>
-
-        <div className="row products-row">
-          {products.map((product, index) => (
-            <div key={index} className="col-lg-4 col-md-6 mb-4">
-              <div className="card product-card h-100">
-                <img
-                  src={product.img}
-                  className="card-img-top"
-                  alt={product.title}
-                />
-                <div className="card-body">
-                  <h5 className="card-title">{product.title}</h5>
-                  <p className="card-text">{product.desc}</p>
-                </div>
+      {/* Product Grid */}
+      <main className="product-grid">
+        {filteredProducts.map(product => (
+          <div key={product.id} className="product-card">
+            <div className="card-inner">
+              <div className="product-logo-placeholder">
+                {/* Replace with <img> tag later */}
+                <span className="brand-text">{product.name}</span>
+              </div>
+              <div className="category-label">
+                {product.division}
               </div>
             </div>
-          ))}
-        </div>
-
-      </div>
+          </div>
+        ))}
+      </main>
     </div>
   );
-}
+};
 
-export default Products;
+export default Product;
