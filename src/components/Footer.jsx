@@ -30,6 +30,7 @@ function Footer() {
           </p>
 
           <p className="footer-contact">
+            <h4>Phone</h4>
             <span></span>
             <span>
               <a href="tel:+917559189020">+91 7559189020</a><br />
@@ -38,6 +39,7 @@ function Footer() {
           </p>
 
           <p className="footer-contact">
+            <h4>Email</h4>
             <span></span>
             <a href="mailto:glembergpharmaceuticals@gmail.com">
               glembergpharmaceuticals@gmail.com
