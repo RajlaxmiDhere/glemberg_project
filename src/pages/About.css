@@ -13,13 +13,12 @@
 /* Common Row Layout */
 .about-row {
   max-width: 1400px;
-  margin: 10px auto;
+  margin: 10px auto 80px auto; 
   padding: 0 30px;
   display: flex;
   align-items: center;
   gap: 50px;
 }
-
 /* Reverse layout */
 .about-row.reverse {
   flex-direction: row-reverse;
