@@ -32,12 +32,14 @@ function Footer() {
             📞 <a href="tel:+918975173157">+91 8975173157</a>
           </p>
 
+          
           <p className="footer-contact">
-  <span className="contact-icon">✉️</span>
-  <a href="mailto:glembergpharmaceuticals@gmail.com">
-    glembergpharmaceuticals@gmail.com
-  </a>
-</p>
+
+            ✉️ <a href="mailto:glembergpharmaceuticals@gmail.com">glembergpharmaceuticals@gmail.com
+
+            </a>
+
+          </p> 
 
           {/* Social Icons */}
           <div className="footer-social-row">
