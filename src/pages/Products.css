@@ -85,7 +85,7 @@
 /* Image styling for your uploaded photos */
 .product-image-box {
   width: 100%;
-  height: 120px;
+  height: 100px;
   margin-bottom: 15px;
   display: flex;
   justify-content: center;
