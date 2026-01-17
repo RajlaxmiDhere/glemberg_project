@@ -5,15 +5,14 @@ import { NavLink } from "react-router-dom";
 function Footer() {
   return (
     <footer className="footer">
-
       <div className="footer-container">
-
+        
         {/* LEFT: Logo + About */}
         <div className="footer-col">
           <img src={logo} alt="Glemberg Pharma Logo" className="footer-logo" />
           <p className="footer-tagline">
-                Science with a Human Touch
-           </p>
+            Science with a Human Touch
+          </p>
         </div>
 
         {/* MIDDLE: Contact */}
@@ -21,26 +20,30 @@ function Footer() {
           <h4>Contact</h4>
 
           <p className="footer-contact">
-            📍Glemberg Pharma Pvt. Ltd.<br />
-            Neminath Nagar,<br />
-            Sangli, Maharashtra – 416416<br />
-            India
+            <span>📍</span>
+            <span>
+              Glemberg Pharma Pvt. Ltd.<br />
+              Neminath Nagar,<br />
+              Sangli, Maharashtra – 416416<br />
+              India
+            </span>
           </p>
 
           <p className="footer-contact">
-            📞 <a href="tel:+917559189020">+91 7559189020</a><br />
-            📞 <a href="tel:+918975173157">+91 8975173157</a>
+            <span>📞</span>
+            <span>
+              <a href="tel:+917559189020">+91 7559189020</a><br />
+              <a href="tel:+918975173157">+91 8975173157</a>
+            </span>
           </p>
 
-          
           <p className="footer-contact">
-
-            ✉️ <a href="mailto:glembergpharmaceuticals@gmail.com">glembergpharmaceuticals@gmail.com
-
+            <span>✉️</span>
+            <a href="mailto:glembergpharmaceuticals@gmail.com">
+              glembergpharmaceuticals@gmail.com
             </a>
-
-          </p> 
-
+          </p>
+        </div> {/* <--- THIS WAS MISSING: Closes Middle Column */}
 
         {/* RIGHT: Quick Links */}
         <div className="footer-col">
@@ -55,7 +58,7 @@ function Footer() {
 
       </div>
 
-      {/* FLOATING WHATSAPP BUTTON – FOOTER BOTTOM RIGHT */}
+      {/* FLOATING WHATSAPP BUTTON */}
       <a
         href="https://wa.me/917559189020"
         target="_blank"
@@ -74,7 +77,6 @@ function Footer() {
         © {new Date().getFullYear()} Glemberg Pharmaceuticals Pvt. Ltd.
         All Rights Reserved.
       </div>
-
     </footer>
   );
 }
