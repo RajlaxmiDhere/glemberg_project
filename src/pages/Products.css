@@ -1,126 +1,90 @@
-/* =========================
-   Products Page Wrapper
-   ========================= */
-.products-page {
+.product-page-container {
+  display: flex;
+  gap: 40px;
+  padding: 50px;
+  background-color: #f9f9f9;
   min-height: 100vh;
-  background: linear-gradient(
-    90deg,
-    #E8F4FD 0%,
-    #D6ECFA 40%,
-    #BFDFF5 70%,
-    #9CC9E8 100%
-  );
-  padding: 60px 0;
+  font-family: 'Arial', sans-serif;
 }
 
-/* =========================
-   Page Heading
-   ========================= */
-.products-title {
-  font-size: 36px;
-  font-weight: 700;
-  color: #1e4f91;
-  margin-bottom: 50px;
+/* Sidebar Styling */
+.filter-sidebar {
+  width: 300px;
+  background: #f0f7f4; /* Light green tint like screenshot */
+  padding: 25px;
+  border-radius: 20px;
+  height: fit-content;
+}
+
+.filter-title {
+  color: #2e7d32;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.filter-list {
+  list-style: none;
+  padding: 0;
+}
+
+.filter-item {
+  background: white;
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #444;
+  font-weight: 500;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+}
+
+.filter-item:hover {
+  border-color: #00a651;
+}
+
+.filter-item.active {
+  background: #00a651; /* Main green from screenshot */
+  color: white;
+}
+
+/* Grid and Card Styling */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  flex: 1;
+}
+
+.product-card {
+  background: white;
+  border-radius: 20px;
+  border: 2px solid #eee;
+  padding: 40px 20px;
+  transition: 0.3s;
   text-align: center;
 }
 
-/* =========================
-   Bootstrap Row Fix
-   ========================= */
-.products-row {
-  display: flex;
-  justify-content: center;
-}
-
-.products-row > div {
-  display: flex;
-}
-
-/* =========================
-   Card Styling (EQUAL SIZE)
-   ========================= */
-.product-card {
-  border: none;
-  border-radius: 14px;
-  overflow: hidden;
-  background-color: #E8F4FD;
-
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-
-  box-shadow:
-    0 8px 18px rgba(30, 79, 145, 0.18),
-    0 4px 10px rgba(0, 0, 0, 0.08);
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
 .product-card:hover {
-  transform: translateY(-8px);
-  box-shadow:
-    0 16px 35px rgba(15, 148, 136, 0.35),
-    0 6px 18px rgba(0, 0, 0, 0.15);
+  border-color: #00a651;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
-/* =========================
-   Card Image
-   ========================= */
-.product-card img {
-  height: 240px;
-  width: 100%;
-  object-fit: contain;
-  background-color: #E8F4FD;
-  padding: 12px;
+.brand-text {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
 }
 
-/* =========================
-   Card Body
-   ========================= */
-.product-card .card-body {
-  padding: 22px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  background-color: #E8F4FD;
+.category-label {
+  margin-top: 20px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: inline-block;
 }
-
-/* Title */
-.product-card .card-title {
-  font-size: 20px;
-  font-weight: 600;
-  color: #0f9488;
-  margin-bottom: 10px;
-}
-
-/* Description */
-.product-card .card-text {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #2f3e4e;
-}
-
-/* =========================
-   Responsive
-   ========================= */
-@media (max-width: 992px) {
-  .products-title {
-    font-size: 30px;
-  }
-
-  .product-card img {
-    height: 200px;
-  }
-}
-
-@media (max-width: 768px) {
-  .product-card img {
-    height: 180px;
-  }
-
-  .product-card .card-title {
-    font-size: 18px;
-  }
-}
-
