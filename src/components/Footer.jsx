@@ -33,9 +33,11 @@ function Footer() {
           </p>
 
           <p className="footer-contact">
-            ✉️ <a href="mailto:glembergpharmaceuticals@gmail.com">glembergpharmaceuticals@gmail.com
-            </a>
-          </p>
+  <span className="contact-icon">✉️</span>
+  <a href="mailto:glembergpharmaceuticals@gmail.com">
+    glembergpharmaceuticals@gmail.com
+  </a>
+</p>
 
           {/* Social Icons */}
           <div className="footer-social-row">
