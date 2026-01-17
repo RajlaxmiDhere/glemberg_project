@@ -41,25 +41,6 @@ function Footer() {
 
           </p> 
 
-          {/* Social Icons */}
-          <div className="footer-social-row">
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                alt="LinkedIn"
-                className="footer-social-img"
-              />
-            </a>
-
-            <a href="https://instagram.com" target="_blank" rel="noreferrer">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
-                alt="Instagram"
-                className="footer-social-img"
-              />
-            </a>
-          </div>
-        </div>
 
         {/* RIGHT: Quick Links */}
         <div className="footer-col">
