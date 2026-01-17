@@ -1,6 +1,5 @@
 import "./About.css";
 import journeyImg from "../assets/about.jpg";
-import teamImg from "../assets/team.jpg";
 import visionImg from "../assets/vision.jpg";
 import goalImg from "../assets/goal.jpg";
 import valuesImg from "../assets/values.jpg";
@@ -35,22 +34,6 @@ function About() {
             life, ensuring that world-class healthcare is accessible to
             everyone, everywhere.
           </p>
-        </div>
-      </section>
-
-      {/* Our Dedicated Team */}
-      <section className="about-full">
-        <h1>Our Dedicated Team</h1>
-        <p>
-          We are a committed team of scientists, researchers, and healthcare
-          professionals working together to deliver high-quality, safe, and
-          effective pharmaceutical solutions.
-        </p>
-
-        <div className="team-gallery">
-          <img src={teamImg} alt="Team Member 1" />
-          <img src={teamImg} alt="Team Member 2" />
-          <img src={teamImg} alt="Team Member 3" />
         </div>
       </section>
 
