@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./HeroVideo.css";
 import pillVideo from "../assets/video1.mp4";
 
-// certification logos (use your own images if available)
+// ONLY ONE CERTIFICATE (PDF)
 import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
+
 function Home() {
   const [showWelcome, setShowWelcome] = useState(false);
 
@@ -59,30 +60,28 @@ function Home() {
         </div>
       </section>
 
-      {/* ================= QUALITY STANDARDS ================= */}
+      {/* ================= QUALITY SECTION ================= */}
       <section className="quality-section">
         <div className="quality-container">
 
-          {/* LEFT */}
+          {/* LEFT CONTENT */}
           <div className="quality-text">
             <h2>International Quality Standards</h2>
             <p>
-              We manufacture from partners holding the following
-              certifications, ensuring our commitment to superior
-              standards in every aspect of production.
+              We manufacture from certified partners, ensuring strict
+              compliance with international quality and safety standards
+              in every aspect of production.
             </p>
-          </div>
 
-          {/* RIGHT */}
-          <div className="quality-logos">
-            <h4>Global Quality Certifications</h4>
-            <div className="logo-grid">
-              <img src={who} alt="WHO GMP" />
-              <img src={fda} alt="FDA" />
-              <img src={iso} alt="ISO" />
-              <img src={iso2018} alt="ISO 2018" />
-              <img src={fssai} alt="FSSAI" />
-            </div>
+            {/* ✅ SINGLE CERTIFICATE BUTTON */}
+            <a
+              href={certificate}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="certificate-btn"
+            >
+              View Certificate of Incorporation
+            </a>
           </div>
 
         </div>
@@ -92,4 +91,3 @@ function Home() {
 }
 
 export default Home;
-
