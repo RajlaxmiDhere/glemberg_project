@@ -3,12 +3,7 @@ import "./HeroVideo.css";
 import pillVideo from "../assets/video1.mp4";
 
 // certification logos (use your own images if available)
-import who from "../assets/who-gmp.png";
-import fda from "../assets/fda.png";
-import iso from "../assets/iso.png";
-import iso2018 from "../assets/iso-2018.png";
-import fssai from "../assets/fssai.png";
-
+import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
 function Home() {
   const [showWelcome, setShowWelcome] = useState(false);
 
@@ -48,17 +43,17 @@ function Home() {
       <section className="stats-section">
         <div className="stats-grid">
           <div className="stat-card blue">
-            <h2>50+</h2>
+            <h2>20+</h2>
             <p>Products</p>
           </div>
 
           <div className="stat-card orange">
-            <h2>100+</h2>
+            <h2>25+</h2>
             <p>Team Members</p>
           </div>
 
           <div className="stat-card purple">
-            <h2>1000+</h2>
+            <h2>500+</h2>
             <p>Happy Clients</p>
           </div>
         </div>
