@@ -1,116 +1,106 @@
-import "./Products.css";
+import React, { useState } from 'react';
+import './Products.css';
 
-// Product Images
-import product1 from "../assets/gabanx_NT_100.jpg";
-import product2 from "../assets/Bonew_jelly_sachet.jpg";
-import product3 from "../assets/Carnex_LC_tab.jpg";
-import product4 from "../assets/Glemvit_D3_60K.jpg";
+// Importing your specific ortho assets
+import bonewJelly from '../assets/Bonew_jelly_sachet.jpg';
+import carnexLc from '../assets/Carnex_LC_tab.jpg';
+import glemvitD3 from '../assets/Glemvit_D3_60K.jpg';
+import gabanxNt from '../assets/gabanx_NT_100.jpg';
+import AceglemMR from '../assets/Aceglem_MR_tab.png';
+import AceglemSP from '../assets/Aceglem_SP_tab.png';
 
-function Products() {
+
+const Product = () => {
+  const [filter, setFilter] = useState('all');
+
   const products = [
-    {
-      img: product1,
-      title: "Gabanx_NT_100",
-      desc: (
-        <>
-          <b>Diabetic Neuropathy:</b> Reduces neurotransmitter release from neurons.
-          <br />
-          <b>Peripheral Neuropathy:</b> Reduces neuropathic pain.
-        </>
-      ),
+    { 
+      id: 1, 
+      name: "Bonew Jelly Sachet", 
+      desc: "Alendronic acid jelly 70mg",
+      category: "ortho", 
+      division: "ORTHO DIVISION",
+      image: bonewJelly
     },
-    {
-      img: product2,
-      title: "Bonew_jelly_sachet",
-      desc: (
-        <>
-          <b>Osteoporosis:</b> Prevents bone loss and fractures.
-          <br />
-          <b>Paget's Disease:</b> Manages excessive bone turnover.
-        </>
-      ),
+    { 
+      id: 2, 
+      name: "Carnex LC tab", 
+      desc: "L-Carnitine, L-arginine vitamin E, folic acid, Cynocobalamin",
+      category: "ortho", 
+      division: "ORTHO DIVISION",
+      image: carnexLc
     },
-    {
-      img: product3,
-      title: "Carnex_LC_tab",
-      desc: (
-        <>
-          <b>Muscle Pain & Cramps:</b> Relieves muscle pain.
-          <br />
-          <b>Nerve Function:</b> Supports nerve repair.
-        </>
-      ),
+    { 
+      id: 3, 
+      name: "GLEMVIT D3 60K", 
+      desc: "Cholecalciferol softgel cap 60000 IU",
+      category: "ortho", 
+      division: "ORTHO DIVISION",
+      image: glemvitD3
     },
-    {
-      img: product4,
-      title: "Glemvit_D3_60K",
-      desc: (
-        <>
-          <b>Bone Health:</b> Improves calcium absorption.
-          <br />
-          <b>Muscle Function:</b> Reduces weakness and cramps.
-        </>
-      ),
+    { 
+      id: 4, 
+      name: "Gabanx NT 100", 
+      desc: "Gabapentin and nortriptyline tablet",
+      category: "ortho", 
+      division: "ORTHO DIVISION",
+      image: gabanxNt
     },
-    {
-      img: product1,
-      title: "Gabanx_NT_200",
-      desc: "Advanced neuropathic pain management.",
+    { 
+      id: 5, name: "Aceglem_MR_tab", 
+      desc: "", category: "general", 
+      division: "GENERAL RANGE", 
+      image:AceglemMR
     },
-    {
-      img: product2,
-      title: "Bonew_Jelly Plus",
-      desc: "Enhanced calcium and vitamin support.",
-    },
-    {
-      img: product3,
-      title: "Carnex_LC Forte",
-      desc: "Improved muscle recovery formulation.",
-    },
-    {
-      img: product4,
-      title: "Glemvit_D3 Max",
-      desc: "High-dose vitamin D supplementation.",
-    },
-    {
-      img: product1,
-      title: "Gabanx_NT SR",
-      desc: "Sustained-release neuropathy care.",
-    },
-    {
-      img: product2,
-      title: "Bonew_Jelly Kids",
-      desc: "Bone health support for children.",
-    },
+    { id: 6, name: "Derma Cream X", desc: "Skin care solution", category: "derma", division: "DERMA DIVISION", image: "https://via.placeholder.com/150" },
   ];
 
+  const filteredProducts = filter === 'all' 
+    ? products 
+    : products.filter(p => p.category === filter);
+
   return (
-    <div className="products-page">
-      <div className="container">
+    <div className="product-page-container">
+      <aside className="filter-sidebar">
+        <h3 className="filter-title">Filter by Product Division</h3>
+        <ul className="filter-list">
+          <li className={`filter-item ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>
+            Show All Products
+          </li>
+          <li className={`filter-item ${filter === 'general' ? 'active' : ''}`} onClick={() => setFilter('general')}>
+            General Range
+          </li>
+          <li className={`filter-item ${filter === 'derma' ? 'active' : ''}`} onClick={() => setFilter('derma')}>
+            Derma Division
+          </li>
+          <li className={`filter-item ${filter === 'ortho' ? 'active' : ''}`} onClick={() => setFilter('ortho')}>
+            Ortho Division
+          </li>
+        </ul>
+      </aside>
 
-        <h1 className="products-title">Our Products</h1>
-
-        <div className="row products-row">
-          {products.map((product, index) => (
-            <div key={index} className="col-lg-4 col-md-6 mb-4">
-              <div className="card product-card h-100">
-                <img
-                  src={product.img}
-                  className="card-img-top"
-                  alt={product.title}
-                />
-                <div className="card-body">
-                  <h5 className="card-title">{product.title}</h5>
-                  <p className="card-text">{product.desc}</p>
+      <main className="product-grid">
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map(product => (
+            <div key={product.id} className="product-card">
+              <div className="card-inner">
+                <div className="product-image-box">
+                  <img src={product.image} alt={product.name} className="product-img" />
+                </div>
+                <h2 className="brand-text">{product.name}</h2>
+                <p className="product-description">{product.desc}</p>
+                <div className="category-label">
+                  {product.division}
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-
-      </div>
+          ))
+        ) : (
+          <div className="no-products">No products found in this division.</div>
+        )}
+      </main>
     </div>
   );
-}
+};
 
-export default Products;
+export default Product;

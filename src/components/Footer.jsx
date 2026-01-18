@@ -2,11 +2,14 @@ import "./Footer.css";
 import logo from "../assets/logo.jpg";
 import { NavLink } from "react-router-dom";
 
+/* ✅ ICON IMPORTS */
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        
+
         {/* LEFT: Logo + About */}
         <div className="footer-col">
           <img src={logo} alt="Glemberg Pharma Logo" className="footer-logo" />
@@ -17,35 +20,32 @@ function Footer() {
 
         {/* MIDDLE: Contact */}
         <div className="footer-col">
-          <h4>Contact</h4>
+          <h4>Office</h4>
 
           <p className="footer-contact">
-            <span></span>
-            <span>
-              Glemberg Pharma Pvt. Ltd.<br />
-              Neminath Nagar,<br />
-              Sangli, Maharashtra – 416416<br />
-              India
-            </span>
+            <FaMapMarkerAlt />&nbsp;
+            <strong>Glemberg Pharma Pvt. Ltd.</strong><br />
+            Neminath Nagar,<br />
+            Sangli, Maharashtra – 416416<br />
+            India
           </p>
 
           <p className="footer-contact">
             <h4>Phone</h4>
-            <span></span>
-            <span>
-              <a href="tel:+917559189020">+91 7559189020</a><br />
-              <a href="tel:+918975173157">+91 8975173157</a>
-            </span>
+            <FaPhoneAlt />&nbsp;
+            <a href="tel:+917559189020">+91 7559189020</a><br />
+            <FaPhoneAlt />&nbsp;
+            <a href="tel:+918975173157">+91 8975173157</a>
           </p>
 
           <p className="footer-contact">
             <h4>Email</h4>
-            <span></span>
+            <FaEnvelope />&nbsp;
             <a href="mailto:glembergpharmaceuticals@gmail.com">
               glembergpharmaceuticals@gmail.com
             </a>
           </p>
-        </div> {/* <--- THIS WAS MISSING: Closes Middle Column */}
+        </div>
 
         {/* RIGHT: Quick Links */}
         <div className="footer-col">
