@@ -1,25 +1,33 @@
 .product-page-container {
   display: flex;
-  flex-direction: column; /* ✅ allows heading on top */
+  flex-direction: column;
   gap: 30px;
   padding: 50px;
   background: linear-gradient(90deg, #E8F4FD 0%, #D6ECFA 40%, #BFDFF5 70%, #9CC9E8 100%);
   min-height: 100vh;
   font-family: 'Arial', sans-serif;
 }
+
+/* CENTER HEADING */
 .products-heading {
-  font-size: 2.4rem;
+  text-align: center;
+  font-size: 2.6rem;
   font-weight: 700;
   color: #0b2c6f;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
 }
 
+/* MAIN ROW */
+.products-content {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  align-items: flex-start;
+}
 
-/* =========================
-   SIDEBAR
-   ========================= */
+/* SIDEBAR */
 .filter-sidebar {
-  width: 280px; 
+  width: 280px;
   background: linear-gradient(135deg, #0b2c6f, #172c7a);
   padding: 25px;
   border-radius: 20px;
@@ -47,7 +55,6 @@
   cursor: pointer;
   transition: all 0.3s ease;
   color: #444;
-  font-weight: 500;
 }
 
 .filter-item:hover {
@@ -60,46 +67,31 @@
   color: white;
 }
 
-/* =========================
-   PRODUCT GRID (3 CARDS)
-   ========================= */
+/* PRODUCT GRID */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* exactly 3 cards */
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   flex: 1;
-  align-items: start;
 }
 
-/* =========================
-   PRODUCT CARD
-   ========================= */
+/* PRODUCT CARD */
 .product-card {
   background: #E8F4FD;
   border-radius: 20px;
-  border: 1px solid #e1e8ed;
   padding: 22px;
-  min-height: 360px; /* 🔼 increased height */
+  min-height: 360px;
+  border: 1px solid #e1e8ed;
   transition: all 0.35s ease;
-  height: auto;
-
-  /* ✅ Professional shadow */
-  box-shadow: 
-    0 6px 14px rgba(11, 44, 111, 0.08),
-    0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 14px rgba(11, 44, 111, 0.08);
 }
 
 .product-card:hover {
   transform: translateY(-6px);
-  box-shadow:
-    0 14px 30px rgba(11, 44, 111, 0.18),
-    0 6px 10px rgba(0, 0, 0, 0.08);
-  border: 1px solid #9CC9E8;
+  box-shadow: 0 14px 30px rgba(11, 44, 111, 0.18);
 }
 
-/* =========================
-   CARD INNER
-   ========================= */
+/* CARD CONTENT */
 .card-inner {
   display: flex;
   flex-direction: column;
@@ -108,19 +100,15 @@
   height: 100%;
 }
 
-/* =========================
-   IMAGE
-   ========================= */
 .product-image-box {
   width: 100%;
-  height: 130px; /* 🔼 increased */
+  height: 130px;
   margin-bottom: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fcfcfc;
+  background: #fcfcfc;
   border-radius: 12px;
-  overflow: hidden;
 }
 
 .product-img {
@@ -129,27 +117,18 @@
   object-fit: contain;
 }
 
-/* =========================
-   TEXT
-   ========================= */
 .brand-text {
   font-size: 1.1rem;
   font-weight: bold;
-  margin: 10px 0 6px 0;
   color: #0b2c6f;
 }
 
 .product-description {
   font-size: 0.85rem;
   color: #666;
-  margin-bottom: 18px;
-  line-height: 1.35;
-  min-height: 65px; /* 🔼 keeps uniform height */
+  min-height: 65px;
 }
 
-/* =========================
-   CATEGORY TAG
-   ========================= */
 .category-label {
   margin-top: auto;
   background: linear-gradient(135deg, #e3f2fd, #cfe9fb);
@@ -158,7 +137,4 @@
   border-radius: 25px;
   font-size: 0.75rem;
   font-weight: bold;
-  display: inline-block;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
 }
