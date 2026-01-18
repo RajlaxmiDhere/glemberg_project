@@ -8,6 +8,18 @@ import glemvitD3 from '../assets/Glemvit_D3_60K.jpg';
 import gabanxNt from '../assets/gabanx_NT_100.jpg';
 import AceglemMR from '../assets/Aceglem_MR_tab.png';
 import AceglemSP from '../assets/Aceglem_SP_tab.png';
+import AceglemP from '../assets/Aceglem_P_tab.png';
+import Moxgemcv625 from '../assets/Moxgem_cv_625_tab.png';
+import Moxgem500cap from '../assets/Moxgem_500_cap.png';
+import Cefogem100 from '../assets/Cefogem_100_tab .png';
+import Cefogem200  from '../assets/Cefogem_200_tab .png';
+import Cefogemcv from '../assets/Cefogem_cv_tab.png';
+import Cefixgim100 from '../assets/Cefixgim_100_tab.png';
+import  Cefixgim200 from '../assets/Cefixgim_200_tab.png';
+import  Gempan40 from '../assets/Gempan_40_tab.png';
+import RabergDSR  from '../assets/Raberg_DSR_cap.png';
+import Ferrozxt  from '../assets/Ferroz_xt_tab.png';
+
 
 const Product = () => {
   const [filter, setFilter] = useState('all');
@@ -47,96 +59,163 @@ const Product = () => {
     },
     { 
       id: 5, 
-      name: "Aceglem MR Tab", 
+      name: "Aceglem_MR_tab", 
       desc: "", 
       category: "general", 
       division: "GENERAL RANGE", 
-      image: AceglemMR
+      image:AceglemMR
     },
     { 
       id: 6,
-      name: "Aceglem SP Tab", 
+      name: "Aceglem_SP_tab", 
       desc: "", 
       category: "general", 
       division: "GENERAL RANGE", 
-      image: AceglemSP
+      image:AceglemSP
     },
+    { 
+      id: 7,
+      name: "Aceglem_P_tab", 
+      desc: "", 
+      category: "general", 
+      division: "GENERAL RANGE", 
+      image:AceglemP
+    },
+    { 
+      id:8 ,
+      name: "Moxgem_cv_625_tab", 
+      desc: "", 
+      category: "general", 
+      division: "GENERAL RANGE", 
+      image:Moxgemcv625
+    },
+        { 
+      id:9 ,
+      name: "Moxgem_500_cap", 
+      desc: "", 
+      category: "general", 
+      division: "GENERAL RANGE", 
+      image:Moxgem500cap
+    },
+            { 
+      id:10 ,
+      name: "Cefogem_100_tab", 
+      desc: "", 
+      category: "general", 
+      division: "GENERAL RANGE", 
+      image:Cefogem100
+    },
+    { 
+      id:11 ,
+      name: "Cefogem_200_tab", 
+      desc: "", 
+      category: "general", 
+      division: "GENERAL RANGE", 
+      image:Cefogem200
+    },
+        { 
+      id:12 ,
+      name: "Cefogem_cv_tab", 
+      desc: "", 
+      category: "general", 
+      division: "GENERAL RANGE", 
+      image:Cefogemcv
+    },
+            { 
+      id:13 ,
+      name: "Cefixgim_100_tab", 
+      desc: "", 
+      category: "general", 
+      division: "GENERAL RANGE", 
+      image:Cefixgim100
+    },
+                { 
+      id:14 ,
+      name: "Cefixgim_200_tab", 
+      desc: "", 
+      category: "general", 
+      division: "GENERAL RANGE", 
+      image:Cefixgim200
+    },
+                    { 
+      id:15 ,
+      name: " Gempan_40_tab", 
+      desc: "", 
+      category: "general", 
+      division: "GENERAL RANGE", 
+      image: Gempan40
+    },
+                    { 
+      id:16 ,
+      name: "Gempan_40_tab", 
+      desc: "", 
+      category: "general", 
+      division: "GENERAL RANGE", 
+      image: Gempan40
+    },
+                    { 
+      id:17 ,
+      name: "Raberg_DSR_cap", 
+      desc: "", 
+      category: "general", 
+      division: "GENERAL RANGE", 
+      image: RabergDSR
+    },
+                        { 
+      id:17 ,
+      name: "Ferroz_xt_tab ", 
+      desc: "", 
+      category: "general", 
+      division: "GENERAL RANGE", 
+      image: Ferroz_xt 
+    },
+    
   ];
 
-  const filteredProducts =
-    filter === 'all'
-      ? products
-      : products.filter(p => p.category === filter);
+  const filteredProducts = filter === 'all' 
+    ? products 
+    : products.filter(p => p.category === filter);
 
   return (
     <div className="product-page-container">
+      <aside className="filter-sidebar">
+        <h3 className="filter-title">Filter by Product Division</h3>
+        <ul className="filter-list">
+          <li className={`filter-item ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>
+            Show All Products
+          </li>
+          <li className={`filter-item ${filter === 'general' ? 'active' : ''}`} onClick={() => setFilter('general')}>
+            General Range
+          </li>
+          <li className={`filter-item ${filter === 'derma' ? 'active' : ''}`} onClick={() => setFilter('derma')}>
+            Derma Division
+          </li>
+          <li className={`filter-item ${filter === 'ortho' ? 'active' : ''}`} onClick={() => setFilter('ortho')}>
+            Ortho Division
+          </li>
+        </ul>
+      </aside>
 
-      {/* PAGE HEADING */}
-      <h2 className="products-heading">Our Products</h2>
-
-      {/* MAIN CONTENT */}
-      <div className="products-content">
-
-        {/* SIDEBAR */}
-        <aside className="filter-sidebar">
-          <h3 className="filter-title">Filter by Product Division</h3>
-          <ul className="filter-list">
-            <li
-              className={`filter-item ${filter === 'all' ? 'active' : ''}`}
-              onClick={() => setFilter('all')}
-            >
-              Show All Products
-            </li>
-            <li
-              className={`filter-item ${filter === 'general' ? 'active' : ''}`}
-              onClick={() => setFilter('general')}
-            >
-              General Range
-            </li>
-            <li
-              className={`filter-item ${filter === 'derma' ? 'active' : ''}`}
-              onClick={() => setFilter('derma')}
-            >
-              Derma Division
-            </li>
-            <li
-              className={`filter-item ${filter === 'ortho' ? 'active' : ''}`}
-              onClick={() => setFilter('ortho')}
-            >
-              Ortho Division
-            </li>
-          </ul>
-        </aside>
-
-        {/* PRODUCT GRID */}
-        <main className="product-grid">
-          {filteredProducts.length > 0 ? (
-            filteredProducts.map(product => (
-              <div key={product.id} className="product-card">
-                <div className="card-inner">
-                  <div className="product-image-box">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="product-img"
-                    />
-                  </div>
-                  <h2 className="brand-text">{product.name}</h2>
-                  <p className="product-description">{product.desc}</p>
-                  <div className="category-label">
-                    {product.division}
-                  </div>
+      <main className="product-grid">
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map(product => (
+            <div key={product.id} className="product-card">
+              <div className="card-inner">
+                <div className="product-image-box">
+                  <img src={product.image} alt={product.name} className="product-img" />
+                </div>
+                <h2 className="brand-text">{product.name}</h2>
+                <p className="product-description">{product.desc}</p>
+                <div className="category-label">
+                  {product.division}
                 </div>
               </div>
-            ))
-          ) : (
-            <div className="no-products">
-              No products found in this division.
             </div>
-          )}
-        </main>
-
-      </div>
+          ))
+        ) : (
+          <div className="no-products">No products found in this division.</div>
+        )}
+      </main>
     </div>
   );
 };
