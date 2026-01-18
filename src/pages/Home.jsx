@@ -2,6 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./HeroVideo.css";
 import pillVideo from "../assets/video1.mp4";
 
+// certification logos (use your own images if available)
+import who from "../assets/who-gmp.png";
+import fda from "../assets/fda.png";
+import iso from "../assets/iso.png";
+import iso2018 from "../assets/iso-2018.png";
+import fssai from "../assets/fssai.png";
+
 function Home() {
   const [showWelcome, setShowWelcome] = useState(false);
 
@@ -15,34 +22,21 @@ function Home() {
 
   return (
     <>
-      {/* =========================
-         HERO VIDEO SECTION
-         ========================= */}
+      {/* ================= HERO SECTION ================= */}
       <section className="hero-video-section">
-        {/* VIDEO */}
-        <video
-          className="hero-video"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
+        <video className="hero-video" autoPlay muted loop playsInline>
           <source src={pillVideo} type="video/mp4" />
         </video>
 
-        {/* OVERLAY */}
         <div className="hero-overlay"></div>
 
-        {/* CONTENT */}
         <div className="hero-content">
           {showWelcome && (
             <div className="welcome-tagline">
               Welcome to Glemberg Pharma
             </div>
           )}
-
           <h1>Committed to Better Healthcare</h1>
-
           <p>
             Glemberg Pharma delivers safe, effective, and innovative
             pharmaceutical solutions to improve lives.
@@ -50,44 +44,50 @@ function Home() {
         </div>
       </section>
 
-      {/* =========================
-         BELOW HERO SECTION
-         ========================= */}
-      <section className="home-highlights">
-        <h2 className="section-heading">Why Choose Glemberg Pharma</h2>
+      {/* ================= STATS SECTION ================= */}
+      <section className="stats-section">
+        <div className="stats-grid">
+          <div className="stat-card blue">
+            <h2>50+</h2>
+            <p>Products</p>
+          </div>
 
-        <div className="highlights-grid">
+          <div className="stat-card orange">
+            <h2>100+</h2>
+            <p>Team Members</p>
+          </div>
 
-          <div className="highlight-card">
-            <h3>Quality Assurance</h3>
+          <div className="stat-card purple">
+            <h2>1000+</h2>
+            <p>Happy Clients</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= QUALITY STANDARDS ================= */}
+      <section className="quality-section">
+        <div className="quality-container">
+
+          {/* LEFT */}
+          <div className="quality-text">
+            <h2>International Quality Standards</h2>
             <p>
-              We follow strict quality standards to ensure safe,
-              reliable, and effective pharmaceutical products.
+              We manufacture from partners holding the following
+              certifications, ensuring our commitment to superior
+              standards in every aspect of production.
             </p>
           </div>
 
-          <div className="highlight-card">
-            <h3>Wide Product Range</h3>
-            <p>
-              A diverse portfolio covering general, ortho, and
-              specialty healthcare needs.
-            </p>
-          </div>
-
-          <div className="highlight-card">
-            <h3>Trusted Expertise</h3>
-            <p>
-              Backed by experienced professionals committed to
-              improving healthcare outcomes.
-            </p>
-          </div>
-
-          <div className="highlight-card">
-            <h3>Customer Centric</h3>
-            <p>
-              We believe in long-term relationships built on trust,
-              transparency, and care.
-            </p>
+          {/* RIGHT */}
+          <div className="quality-logos">
+            <h4>Global Quality Certifications</h4>
+            <div className="logo-grid">
+              <img src={who} alt="WHO GMP" />
+              <img src={fda} alt="FDA" />
+              <img src={iso} alt="ISO" />
+              <img src={iso2018} alt="ISO 2018" />
+              <img src={fssai} alt="FSSAI" />
+            </div>
           </div>
 
         </div>
@@ -97,3 +97,4 @@ function Home() {
 }
 
 export default Home;
+
