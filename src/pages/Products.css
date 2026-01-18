@@ -7,7 +7,9 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* Sidebar Styling */
+/* =========================
+   SIDEBAR
+   ========================= */
 .filter-sidebar {
   width: 280px; 
   background: linear-gradient(135deg, #0b2c6f, #172c7a);
@@ -50,46 +52,61 @@
   color: white;
 }
 
-/* --- THE FIX FOR CARD SIZING & ALIGNMENT --- */
+/* =========================
+   PRODUCT GRID (3 CARDS)
+   ========================= */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* exactly 3 cards */
   gap: 25px;
   flex: 1;
-  /* Stops cards from stretching vertically to fill the page height */
-  align-items: start; 
+  align-items: start;
 }
 
+/* =========================
+   PRODUCT CARD
+   ========================= */
 .product-card {
   background: white;
   border-radius: 20px;
   border: 1px solid #e1e8ed;
-  padding: 20px; 
-  transition: all 0.3s ease;
-  /* Ensures the card only grows to fit the content inside */
-  height: auto; 
-  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  padding: 22px;
+  min-height: 360px; /* 🔼 increased height */
+  transition: all 0.35s ease;
+  height: auto;
+
+  /* ✅ Professional shadow */
+  box-shadow: 
+    0 6px 14px rgba(11, 44, 111, 0.08),
+    0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Internal wrapper from your JSX */
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 14px 30px rgba(11, 44, 111, 0.18),
+    0 6px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid #9CC9E8;
+}
+
+/* =========================
+   CARD INNER
+   ========================= */
 .card-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  height: 100%;
 }
 
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  border: 1px solid #9CC9E8;
-}
-
-/* Image styling based on your Ortho images */
+/* =========================
+   IMAGE
+   ========================= */
 .product-image-box {
   width: 100%;
-  height: 100px; 
-  margin-bottom: 12px;
+  height: 130px; /* 🔼 increased */
+  margin-bottom: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,30 +121,36 @@
   object-fit: contain;
 }
 
+/* =========================
+   TEXT
+   ========================= */
 .brand-text {
   font-size: 1.1rem;
   font-weight: bold;
-  margin: 10px 0 5px 0;
+  margin: 10px 0 6px 0;
   color: #0b2c6f;
 }
 
 .product-description {
   font-size: 0.85rem;
   color: #666;
-  margin-bottom: 15px;
-  line-height: 1.3;
-  /* Standardizes text area so cards stay uniform */
-  min-height: 45px; 
+  margin-bottom: 18px;
+  line-height: 1.35;
+  min-height: 65px; /* 🔼 keeps uniform height */
 }
 
+/* =========================
+   CATEGORY TAG
+   ========================= */
 .category-label {
   margin-top: auto;
-  background: #e3f2fd;
+  background: linear-gradient(135deg, #e3f2fd, #cfe9fb);
   color: #0b2c6f;
-  padding: 6px 18px;
+  padding: 7px 20px;
   border-radius: 25px;
   font-size: 0.75rem;
   font-weight: bold;
   display: inline-block;
   text-transform: uppercase;
+  letter-spacing: 0.6px;
 }
