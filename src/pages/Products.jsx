@@ -167,7 +167,7 @@ const Product = () => {
       desc: "", 
       category: "general", 
       division: "GENERAL RANGE", 
-      image: Ferroz_xt 
+      image: Ferrozxt 
     },
     
   ];
