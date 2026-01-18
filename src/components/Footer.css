@@ -98,7 +98,7 @@
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
 }
 
 .footer-contact a:hover {
