@@ -52,7 +52,7 @@ const Product = () => {
       division: "GENERAL RANGE", 
       image:AceglemMR
     },
-    { id: 6, name: "Aceglem_SP", desc: "", category: "general", division: "GENERAL RANGE", image: "Aceglem_SP_tab.png" },
+    { id: 6, name: "AceglemSP", desc: "", category: "general", division: "GENERAL RANGE", image: "Aceglem_SP_tab.png" },
   ];
 
   const filteredProducts = filter === 'all' 
