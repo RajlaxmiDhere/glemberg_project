@@ -96,6 +96,9 @@
 .footer-contact a {
   color: #e6ecf5;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .footer-contact a:hover {

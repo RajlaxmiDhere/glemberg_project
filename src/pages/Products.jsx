@@ -47,12 +47,21 @@ const Product = () => {
       image: gabanxNt
     },
     { 
-      id: 5, name: "Aceglem_MR_tab", 
-      desc: "", category: "general", 
+      id: 5, 
+      name: "Aceglem_MR_tab", 
+      desc: "", 
+      category: "general", 
       division: "GENERAL RANGE", 
       image:AceglemMR
     },
-    { id: 6, name: "Derma Cream X", desc: "Skin care solution", category: "derma", division: "DERMA DIVISION", image: "https://via.placeholder.com/150" },
+    { 
+      id: 6,
+      name: "Aceglem_SP_tab", 
+      desc: "", 
+      category: "general", 
+      division: "GENERAL RANGE", 
+      image:AceglemSP
+    },
   ];
 
   const filteredProducts = filter === 'all' 
