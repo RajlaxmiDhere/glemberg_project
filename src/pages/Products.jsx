@@ -52,7 +52,7 @@ const Product = () => {
       division: "GENERAL RANGE", 
       image:AceglemMR
     },
-    { id: 6, name: "Derma Cream X", desc: "Skin care solution", category: "derma", division: "DERMA DIVISION", image: "https://via.placeholder.com/150" },
+    { id: 6, name: "Aceglem_SP", desc: "", category: "general", division: "GENERAL RANGE", image: "Aceglem_SP_tab.png" },
   ];
 
   const filteredProducts = filter === 'all' 
