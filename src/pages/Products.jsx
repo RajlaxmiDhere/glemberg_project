@@ -15,8 +15,8 @@ import Cefogem100 from '../assets/Cefogem_100_tab.png';
 import Cefogem200  from '../assets/Cefogem_200_tab.png';
 import Cefogemcv from '../assets/Cefogem_cv_tab.png';
 import Cefixgim100 from '../assets/Cefixgim_100_tab.png';
-import  Cefixgim200 from '../assets/Cefixgim_200_tab.png';
-import  Gempan40 from '../assets/Gempan_40_tab.png';
+import Cefixgim200 from '../assets/Cefixgim_200_tab.png';
+import Gempan40 from '../assets/Gempan_40_tab.png';
 import RabergDSR  from '../assets/Raberg_DSR_cap.png';
 import Ferrozxt  from '../assets/Ferroz_xt_tab.png';
 
