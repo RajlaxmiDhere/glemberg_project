@@ -7,6 +7,8 @@ import carnexLc from '../assets/Carnex_LC_tab.jpg';
 import glemvitD3 from '../assets/Glemvit_D3_60K.jpg';
 import gabanxNt from '../assets/gabanx_NT_100.jpg';
 import Aceglem_MR from '../assets/Aceglem_MR_tab.png';
+import Aceglem_SP from '../assets/Aceglem_SP_tab.png';
+
 
 const Product = () => {
   const [filter, setFilter] = useState('all');
@@ -44,7 +46,12 @@ const Product = () => {
       division: "ORTHO DIVISION",
       image: gabanxNt
     },
-    { id: 5, name: "Aceglem_MR_tab", desc: "", category: "general", division: "GENERAL RANGE", image:Aceglem_MR },
+    { 
+      id: 5, name: "Aceglem_SP_tab", 
+      desc: "", category: "general", 
+      division: "GENERAL RANGE", 
+      image:Aceglem_SP
+    },
     { id: 6, name: "Derma Cream X", desc: "Skin care solution", category: "derma", division: "DERMA DIVISION", image: "https://via.placeholder.com/150" },
   ];
 
