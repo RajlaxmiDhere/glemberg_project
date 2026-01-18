@@ -1,6 +1,6 @@
-/* ==============================
+/* =========================
    HERO VIDEO SECTION
-   ============================== */
+   ========================= */
 .hero-video-section {
   position: relative;
   width: 100%;
@@ -9,9 +9,7 @@
   background: #000;
 }
 
-/* ==============================
-   VIDEO
-   ============================== */
+/* VIDEO */
 .hero-video {
   position: absolute;
   top: 50%;
@@ -22,105 +20,132 @@
   height: auto;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  z-index: 0;
 }
 
-/* ==============================
-   SOFT OVERLAY (VIDEO VISIBLE)
-   ============================== */
+/* OVERLAY */
 .hero-overlay {
   position: absolute;
   inset: 0;
-
-  /* Light pharma-blue overlay */
-  background: linear-gradient(
-    rgba(11, 44, 111, 0.35),
-    rgba(23, 44, 122, 0.55)
-  );
-
-  /* Natural blending with video */
-  mix-blend-mode: multiply;
-
+  background: rgba(0, 0, 0, 0.45);
   z-index: 1;
 }
 
-/* ==============================
-   CONTENT
-   ============================== */
+/* CONTENT */
 .hero-content {
   position: relative;
   z-index: 2;
+  height: 100%;
   max-width: 900px;
-  padding: 0 20px;
-  text-align: center;
   margin: auto;
-  top: 50%;
-  transform: translateY(-50%);
+  padding: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
   color: #ffffff;
 }
 
-/* Welcome Tagline */
 .welcome-tagline {
-  font-size: 14px;
-  letter-spacing: 2px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
   text-transform: uppercase;
-  margin-bottom: 14px;
-  color: #d6f5ff;
+  color: #c9f7f5;
 }
 
-/* Heading */
 .hero-content h1 {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 18px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 700px;
+  color: #e6ecf5;
+}
+
+/* =========================
+   BELOW HERO – HIGHLIGHTS
+   ========================= */
+.home-highlights {
+  background: #ffffff;
+  padding: 80px 60px;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0b2c6f;
+  margin-bottom: 60px;
   letter-spacing: 0.5px;
 }
 
-/* Paragraph */
-.hero-content p {
-  font-size: 18px;
-  line-height: 1.8;
-  margin-bottom: 35px;
-  color: #e6f1ff;
+.highlights-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
 }
 
-/* ==============================
-   CTA BUTTON
-   ============================== */
-.hero-btn {
-  display: inline-block;
-  padding: 14px 36px;
-  border-radius: 30px;
-
-  background: linear-gradient(135deg, #2fe36a, #25d366);
-  color: #ffffff;
-
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-
-  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
-  transition: all 0.3s ease;
+.highlight-card {
+  background: #f8fbff;
+  border-radius: 18px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(11, 44, 111, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hero-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 35px rgba(37, 211, 102, 0.6);
+.highlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(11, 44, 111, 0.15);
 }
 
-/* ==============================
+.highlight-card h3 {
+  font-size: 1.3rem;
+  color: #0b2c6f;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.highlight-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* =========================
    RESPONSIVE
-   ============================== */
-@media (max-width: 768px) {
-  .hero-video-section {
-    height: 75vh;
+   ========================= */
+@media (max-width: 1000px) {
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .hero-content h1 {
-    font-size: 34px;
-  }
-
-  .hero-content p {
-    font-size: 16px;
+    font-size: 2.4rem;
   }
 }
+
+@media (max-width: 600px) {
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-highlights {
+    padding: 60px 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
+
