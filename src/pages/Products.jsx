@@ -9,7 +9,6 @@ import gabanxNt from '../assets/gabanx_NT_100.jpg';
 import AceglemMR from '../assets/Aceglem_MR_tab.png';
 import AceglemSP from '../assets/Aceglem_SP_tab.png';
 
-
 const Product = () => {
   const [filter, setFilter] = useState('all');
 
@@ -48,67 +47,96 @@ const Product = () => {
     },
     { 
       id: 5, 
-      name: "Aceglem_MR_tab", 
+      name: "Aceglem MR Tab", 
       desc: "", 
       category: "general", 
       division: "GENERAL RANGE", 
-      image:AceglemMR
+      image: AceglemMR
     },
     { 
       id: 6,
-      name: "Aceglem_SP_tab", 
+      name: "Aceglem SP Tab", 
       desc: "", 
       category: "general", 
       division: "GENERAL RANGE", 
-      image:AceglemSP
+      image: AceglemSP
     },
   ];
 
-  const filteredProducts = filter === 'all' 
-    ? products 
-    : products.filter(p => p.category === filter);
+  const filteredProducts =
+    filter === 'all'
+      ? products
+      : products.filter(p => p.category === filter);
 
   return (
     <div className="product-page-container">
-      <h2 className="products-heading">Our Products</h2>
-      <aside className="filter-sidebar">
-        <h3 className="filter-title">Filter by Product Division</h3>
-        <ul className="filter-list">
-          <li className={`filter-item ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>
-            Show All Products
-          </li>
-          <li className={`filter-item ${filter === 'general' ? 'active' : ''}`} onClick={() => setFilter('general')}>
-            General Range
-          </li>
-          <li className={`filter-item ${filter === 'derma' ? 'active' : ''}`} onClick={() => setFilter('derma')}>
-            Derma Division
-          </li>
-          <li className={`filter-item ${filter === 'ortho' ? 'active' : ''}`} onClick={() => setFilter('ortho')}>
-            Ortho Division
-          </li>
-        </ul>
-      </aside>
 
-      <main className="product-grid">
-        {filteredProducts.length > 0 ? (
-          filteredProducts.map(product => (
-            <div key={product.id} className="product-card">
-              <div className="card-inner">
-                <div className="product-image-box">
-                  <img src={product.image} alt={product.name} className="product-img" />
-                </div>
-                <h2 className="brand-text">{product.name}</h2>
-                <p className="product-description">{product.desc}</p>
-                <div className="category-label">
-                  {product.division}
+      {/* PAGE HEADING */}
+      <h2 className="products-heading">Our Products</h2>
+
+      {/* MAIN CONTENT */}
+      <div className="products-content">
+
+        {/* SIDEBAR */}
+        <aside className="filter-sidebar">
+          <h3 className="filter-title">Filter by Product Division</h3>
+          <ul className="filter-list">
+            <li
+              className={`filter-item ${filter === 'all' ? 'active' : ''}`}
+              onClick={() => setFilter('all')}
+            >
+              Show All Products
+            </li>
+            <li
+              className={`filter-item ${filter === 'general' ? 'active' : ''}`}
+              onClick={() => setFilter('general')}
+            >
+              General Range
+            </li>
+            <li
+              className={`filter-item ${filter === 'derma' ? 'active' : ''}`}
+              onClick={() => setFilter('derma')}
+            >
+              Derma Division
+            </li>
+            <li
+              className={`filter-item ${filter === 'ortho' ? 'active' : ''}`}
+              onClick={() => setFilter('ortho')}
+            >
+              Ortho Division
+            </li>
+          </ul>
+        </aside>
+
+        {/* PRODUCT GRID */}
+        <main className="product-grid">
+          {filteredProducts.length > 0 ? (
+            filteredProducts.map(product => (
+              <div key={product.id} className="product-card">
+                <div className="card-inner">
+                  <div className="product-image-box">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="product-img"
+                    />
+                  </div>
+                  <h2 className="brand-text">{product.name}</h2>
+                  <p className="product-description">{product.desc}</p>
+                  <div className="category-label">
+                    {product.division}
+                  </div>
                 </div>
               </div>
+            ))
+          ) : (
+            <div className="no-products">
+              No products found in this division.
             </div>
-          ))
-        ) : (
-          <div className="no-products">No products found in this division.</div>
-        )}
-      </main>
+          )}
+        </main>
+
+      </div>
     </div>
   );
 };
