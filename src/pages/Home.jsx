@@ -18,7 +18,7 @@ function Home() {
 
   return (
     <>
-      {/* ================= HERO SECTION ================= */}
+      {/* ================= HERO VIDEO (UNCHANGED) ================= */}
       <section className="hero-video-section">
         <video className="hero-video" autoPlay muted loop playsInline>
           <source src={pillVideo} type="video/mp4" />
@@ -32,7 +32,9 @@ function Home() {
               Welcome to Glemberg Pharma
             </div>
           )}
+
           <h1>Committed to Better Healthcare</h1>
+
           <p>
             Glemberg Pharma delivers safe, effective, and innovative
             pharmaceutical solutions to improve lives.
@@ -40,8 +42,10 @@ function Home() {
         </div>
       </section>
 
-      {/* ================= STATS SECTION ================= */}
-      <section className="stats-section">
+      {/* ================= BELOW HERO SECTION ================= */}
+      <section className="below-hero-section">
+
+        {/* STATS */}
         <div className="stats-grid">
           <div className="stat-card blue">
             <h2>20+</h2>
@@ -58,13 +62,9 @@ function Home() {
             <p>Happy Clients</p>
           </div>
         </div>
-      </section>
 
-      {/* ================= QUALITY SECTION ================= */}
-      <section className="quality-section">
+        {/* QUALITY */}
         <div className="quality-container">
-
-          {/* LEFT CONTENT */}
           <div className="quality-text">
             <h2>International Quality Standards</h2>
             <p>
@@ -73,7 +73,6 @@ function Home() {
               in every aspect of production.
             </p>
 
-            {/* ✅ SINGLE CERTIFICATE BUTTON */}
             <a
               href={certificate}
               target="_blank"
@@ -83,11 +82,12 @@ function Home() {
               View Certificate of Incorporation
             </a>
           </div>
-
         </div>
+
       </section>
     </>
   );
 }
 
 export default Home;
+
