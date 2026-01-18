@@ -70,6 +70,7 @@ const Product = () => {
 
   return (
     <div className="product-page-container">
+      <h2 className="products-heading">Our Products</h2>
       <aside className="filter-sidebar">
         <h3 className="filter-title">Filter by Product Division</h3>
         <ul className="filter-list">
