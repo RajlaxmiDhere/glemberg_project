@@ -1,4 +1,21 @@
 /* ================= STATS SECTION ================= */
+.certificate-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 26px;
+  background: #0b2c6f;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.certificate-btn:hover {
+  background: #173a8a;
+  transform: translateY(-2px);
+}
+
 .stats-section {
   background: #ffffff;
   padding: 60px 40px;
