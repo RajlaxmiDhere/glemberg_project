@@ -19,6 +19,8 @@ import Cefixgim200 from '../assets/Cefixgim_200_tab.png';
 import Gempan40 from '../assets/Gempan_40_tab.png';
 import RabergDSR from '../assets/Raberg_DSR_cap.png';
 import Ferrozxt from '../assets/Ferroz_xt_tab.png';
+import Genzocopowder  from '../assets/Genzoco_powder.png';
+import Itragem200  from '../assets/Itragem_200_cap.png';
 
 const Product = () => {
   const [filter, setFilter] = useState('all');
@@ -42,6 +44,8 @@ const Product = () => {
     { id: 15, name: "Gempan 40 Tab", desc: "", category: "general", division: "GENERAL RANGE", image: Gempan40 },
     { id: 16, name: "Raberg DSR Cap", desc: "", category: "general", division: "GENERAL RANGE", image: RabergDSR },
     { id: 17, name: "Ferroz XT Tab", desc: "", category: "general", division: "GENERAL RANGE", image: Ferrozxt },
+    { id: 18, name: "Genzoco powder", desc: "", category: "derma", division: "DERMA DIVISION", image: Genzocopowder },
+    { id: 19, name: "Itragem 200 cap", desc: "", category: "derma", division: "DERMA DIVISION", image: Itragem200 },
   ];
 
   const filteredProducts =
