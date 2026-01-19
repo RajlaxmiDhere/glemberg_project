@@ -1,22 +1,46 @@
+/* Change this to stack heading on top of content */
 .product-page-container {
   display: flex;
-  gap: 40px;
+  flex-direction: column; 
+  gap: 20px;
   padding: 50px;
   background: linear-gradient(90deg, #E8F4FD 0%, #D6ECFA 40%, #BFDFF5 70%, #9CC9E8 100%);
   min-height: 100vh;
   font-family: 'Arial', sans-serif;
 }
-/* CENTER HEADING */
-.products-heading {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+/* NEW: Styles for the big heading */
+.products-main-heading {
+  text-align: center;
+  color: #0b2c6f;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* Sidebar Styling */
+/* NEW: This holds the sidebar and grid side-by-side */
+.product-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Ensure your grid stays flexible */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+  gap: 25px;
+  flex: 1;
+  align-items: start;
+}
+
+/* Keep your sidebar width fixed */
 .filter-sidebar {
-  width: 280px; 
+  width: 280px;
+  flex-shrink: 0; /* Prevents sidebar from shrinking */
   background: linear-gradient(135deg, #0b2c6f, #172c7a);
   padding: 25px;
   border-radius: 20px;
