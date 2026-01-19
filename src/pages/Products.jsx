@@ -68,8 +68,7 @@ const Product = () => {
           <li className={`filter-item ${filter === 'derma' ? 'active' : ''}`} onClick={() => setFilter('derma')}>
             Derma Division
           </li>
-
-          </li>
+          {/* Removed the extra </li> that was here */}
         </ul>
       </aside>
 
