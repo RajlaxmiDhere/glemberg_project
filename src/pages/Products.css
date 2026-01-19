@@ -106,12 +106,38 @@
   background: #E8F4FD;
   border-radius: 20px;
   border: 1px solid #e1e8ed;
-  padding: 20px; 
+  padding: 20px;
   transition: all 0.3s ease;
-  /* Ensures the card only grows to fit the content inside */
-  height: auto; 
+  height: auto;
   box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+
+  position: relative;   /* ✅ ADD */
+  overflow: hidden;     /* ✅ ADD */
 }
+.product-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    #0a8f3c,
+    #6bdc2c
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.product-card:hover::before {
+  opacity: 1;
+}
+
 
 /* Internal wrapper from your JSX */
 .card-inner {
