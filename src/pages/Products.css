@@ -105,14 +105,13 @@
 .product-card {
   background: #E8F4FD;
   border-radius: 20px;
-  border: 1px solid #e1e8ed;
+  border: 2px solid #e1e8ed;
   padding: 20px;
   transition: all 0.3s ease;
   height: auto;
   box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-
-  position: relative;   /* ✅ ADD */
-  overflow: hidden;     /* ✅ ADD */
+  position: relative;  
+  overflow: hidden;     
 }
 .product-card::before {
   content: "";
