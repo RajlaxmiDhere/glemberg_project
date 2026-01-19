@@ -27,7 +27,7 @@ function Home() {
   loop
   playsInline
   preload="auto"
-  poster={heroPoster}
+  poster={pillVideo}
 >
   <source src={pillVideo} type="video/mp4" />
 </video>
