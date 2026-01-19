@@ -116,8 +116,8 @@
 }
 
 .footer-social-img {
-  width: 28px;           /* ⬆ slightly bigger */
-  height: 28px;
+  width: 30px;           /* ⬆ slightly bigger */
+  height: 30px;
   object-fit: contain;
   cursor: pointer;
   transition: transform 0.3s ease, opacity 0.3s ease;
