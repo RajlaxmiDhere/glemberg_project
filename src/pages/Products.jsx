@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Products.css';
 
-// Importing your specific ortho assets
+// Importing assets
 import bonewJelly from '../assets/Bonew_jelly_sachet.jpg';
 import carnexLc from '../assets/Carnex_LC_tab.jpg';
 import glemvitD3 from '../assets/Glemvit_D3_60K.jpg';
@@ -19,9 +19,8 @@ import Cefixgim200 from '../assets/Cefixgim_200_tab.png';
 import Gempan40 from '../assets/Gempan_40_tab.png';
 import RabergDSR from '../assets/Raberg_DSR_cap.png';
 import Ferrozxt from '../assets/Ferroz_xt_tab.png';
-import Genzocopowder  from '../assets/Genzoco_powder.png';
-import Itragem200  from '../assets/Itragem_200_cap.png';
-<h2 className="products-heading">Our Products</h2>
+import Genzocopowder from '../assets/Genzoco_powder.png';
+import Itragem200 from '../assets/Itragem_200_cap.png';
 
 const Product = () => {
   const [filter, setFilter] = useState('all');
@@ -31,7 +30,6 @@ const Product = () => {
     { id: 2, name: "Carnex LC Tab", desc: "L-Carnitine, L-Arginine, Vitamin E", category: "ortho", division: "ORTHO DIVISION", image: carnexLc },
     { id: 3, name: "GLEMVIT D3 60K", desc: "Cholecalciferol softgel cap 60000 IU", category: "ortho", division: "ORTHO DIVISION", image: glemvitD3 },
     { id: 4, name: "Gabanx NT 100", desc: "Gabapentin and Nortriptyline tablet", category: "ortho", division: "ORTHO DIVISION", image: gabanxNt },
-
     { id: 5, name: "Aceglem MR Tab", desc: "", category: "general", division: "GENERAL RANGE", image: AceglemMR },
     { id: 6, name: "Aceglem SP Tab", desc: "", category: "general", division: "GENERAL RANGE", image: AceglemSP },
     { id: 7, name: "Aceglem P Tab", desc: "", category: "general", division: "GENERAL RANGE", image: AceglemP },
@@ -48,51 +46,53 @@ const Product = () => {
     { id: 18, name: "Genzoco powder", desc: "", category: "derma", division: "DERMA DIVISION", image: Genzocopowder },
     { id: 19, name: "Itragem 200 cap", desc: "", category: "derma", division: "DERMA DIVISION", image: Itragem200 },
   ];
+
   const filteredProducts = filter === 'all' 
     ? products 
     : products.filter(p => p.category === filter);
 
- return (
-  <div className="product-page-container">
-    {/* This sits at the very top */}
-    <h1 className="products-main-heading">Our Products</h1>
+  return (
+    <div className="product-page-container">
+      {/* 1. MAIN HEADING AT TOP */}
+      <h1 className="products-main-heading">Our Products</h1>
 
-    {/* This wrapper keeps the sidebar and grid side-by-side below the title */}
-    <div className="product-content-body">
-      <aside className="filter-sidebar">
-        <h3 className="filter-title">Filter by Product Division</h3>
-        <ul className="filter-list">
-          <li className={`filter-item ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>
-            Show All Products
-          </li>
-          <li className={`filter-item ${filter === 'general' ? 'active' : ''}`} onClick={() => setFilter('general')}>
-            General Range
-          </li>
-          <li className={`filter-item ${filter === 'ortho' ? 'active' : ''}`} onClick={() => setFilter('ortho')}>
-            Ortho Division
-          </li>          
-          <li className={`filter-item ${filter === 'derma' ? 'active' : ''}`} onClick={() => setFilter('derma')}>
-            Derma Division
-          </li>
-        </ul>
-      </aside>
+      {/* 2. BODY WRAPPER FOR SIDEBAR + GRID */}
+      <div className="product-content-body">
+        <aside className="filter-sidebar">
+          <h3 className="filter-title">Filter by Product Division</h3>
+          <ul className="filter-list">
+            <li className={`filter-item ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>
+              Show All Products
+            </li>
+            <li className={`filter-item ${filter === 'general' ? 'active' : ''}`} onClick={() => setFilter('general')}>
+              General Range
+            </li>
+            <li className={`filter-item ${filter === 'ortho' ? 'active' : ''}`} onClick={() => setFilter('ortho')}>
+              Ortho Division
+            </li>          
+            <li className={`filter-item ${filter === 'derma' ? 'active' : ''}`} onClick={() => setFilter('derma')}>
+              Derma Division
+            </li>
+          </ul>
+        </aside>
 
-      <main className="product-grid">
-        {filteredProducts.map(product => (
-          <div key={product.id} className="product-card">
-            <div className="card-inner">
-              <div className="product-image-box">
-                <img src={product.image} alt={product.name} className="product-img" />
+        <main className="product-grid">
+          {filteredProducts.map(product => (
+            <div key={product.id} className="product-card">
+              <div className="card-inner">
+                <div className="product-image-box">
+                  <img src={product.image} alt={product.name} className="product-img" />
+                </div>
+                <h2 className="brand-text">{product.name}</h2>
+                <p className="product-description">{product.desc}</p>
+                <div className="category-label">{product.division}</div>
               </div>
-              <h2 className="brand-text">{product.name}</h2>
-              <p className="product-description">{product.desc}</p>
-              <div className="category-label">{product.division}</div>
             </div>
-          </div>
-        ))}
-      </main>
+          ))}
+        </main>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Product;
