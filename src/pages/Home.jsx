@@ -20,9 +20,17 @@ function Home() {
     <>
       {/* ================= HERO VIDEO (UNCHANGED) ================= */}
       <section className="hero-video-section">
-        <video className="hero-video" autoPlay muted loop playsInline>
-          <source src={pillVideo} type="video/mp4" />
-        </video>
+       <video
+  className="hero-video"
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
+  poster={heroPoster}
+>
+  <source src={pillVideo} type="video/mp4" />
+</video>
 
         <div className="hero-overlay"></div>
 
