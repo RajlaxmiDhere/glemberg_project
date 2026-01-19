@@ -62,11 +62,14 @@ const Product = () => {
           <li className={`filter-item ${filter === 'general' ? 'active' : ''}`} onClick={() => setFilter('general')}>
             General Range
           </li>
-          <li className={`filter-item ${filter === 'derma' ? 'active' : ''}`} onClick={() => setFilter('derma')}>
-            Derma Division
           </li>
           <li className={`filter-item ${filter === 'ortho' ? 'active' : ''}`} onClick={() => setFilter('ortho')}>
             Ortho Division
+          </li>          
+          <li className={`filter-item ${filter === 'derma' ? 'active' : ''}`} onClick={() => setFilter('derma')}>
+            Derma Division
+          </li>
+
           </li>
         </ul>
       </aside>
