@@ -17,8 +17,8 @@ function About() {
           <h1>The Journey So Far</h1>
           <p>
             <strong>
-              Glemberg Pharma is a name synonymous with trust and innovation
-            </strong>{" "}
+              Glemberg Pharma </strong>is a name synonymous with <strong>trust and innovation</strong>
+            {" "}
             in the global pharmaceutical landscape. Built on the core pillars of
             quality, safety, and purity, we go beyond manufacturing—we deliver a
             promise to improve lives. By adhering to rigorous WHO-GMP standards
