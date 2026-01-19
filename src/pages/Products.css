@@ -68,6 +68,7 @@
 }
 
 .product-card {
+  box-sizing: border-box;
   background: #E8F4FD;
   border-radius: 20px;
   border: 1px solid #e1e8ed;
@@ -89,7 +90,7 @@
 .product-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  border: 1px solid #9CC9E8;
+  border: 2px solid #9CC9E8;
 }
 
 /* Image styling based on your Ortho images */
