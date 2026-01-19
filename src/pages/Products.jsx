@@ -21,6 +21,7 @@ import RabergDSR from '../assets/Raberg_DSR_cap.png';
 import Ferrozxt from '../assets/Ferroz_xt_tab.png';
 import Genzocopowder  from '../assets/Genzoco_powder.png';
 import Itragem200  from '../assets/Itragem_200_cap.png';
+<h2 className="products-heading">Our Products</h2>
 
 const Product = () => {
   const [filter, setFilter] = useState('all');
@@ -71,7 +72,7 @@ const Product = () => {
           {/* Removed the extra </li> that was here */}
         </ul>
       </aside>
-      <h2 className="products-heading">Our Products</h2>
+  
 
       <main className="product-grid">
         {filteredProducts.length > 0 ? (
