@@ -1,24 +1,133 @@
-/* --- UPDATED FOR EXACTLY 4 COLUMNS --- */
+.product-page-container {
+  display: flex;
+  gap: 40px;
+  padding: 50px;
+  background: linear-gradient(90deg, #E8F4FD 0%, #D6ECFA 40%, #BFDFF5 70%, #9CC9E8 100%);
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Sidebar Styling */
+.filter-sidebar {
+  width: 280px; 
+  background: linear-gradient(135deg, #0b2c6f, #172c7a);
+  padding: 25px;
+  border-radius: 20px;
+  height: fit-content;
+  box-shadow: 0 10px 30px rgba(11, 44, 111, 0.2);
+}
+
+.filter-title {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.filter-list {
+  list-style: none;
+  padding: 0;
+}
+
+.filter-item {
+  background: white;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #444;
+  font-weight: 500;
+}
+
+.filter-item:hover {
+  transform: translateX(5px);
+  background: #f8fbff;
+}
+
+.filter-item.active {
+  background: #0056b3;
+  color: white;
+}
+
+/* --- THE FIX FOR CARD SIZING & ALIGNMENT --- */
 .product-grid {
   display: grid;
-  /* Force exactly 4 equal columns */
-  grid-template-columns: repeat(4, 1fr); 
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
   gap: 25px;
   flex: 1;
+  /* Stops cards from stretching vertically to fill the page height */
   align-items: start; 
 }
 
-/* Add a Media Query for responsiveness */
-@media (max-width: 1100px) {
-  .product-grid {
-    /* Drops to 2 cards on medium screens so they don't get too squashed */
-    grid-template-columns: repeat(2, 1fr);
-  }
+.product-card {
+  background: #E8F4FD;
+  border-radius: 20px;
+  border: 1px solid #e1e8ed;
+  padding: 20px; 
+  transition: all 0.3s ease;
+  /* Ensures the card only grows to fit the content inside */
+  height: auto; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
 }
 
-@media (max-width: 768px) {
-  .product-grid {
-    /* Drops to 1 card on mobile */
-    grid-template-columns: 1fr;
-  }
+/* Internal wrapper from your JSX */
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border: 1px solid #9CC9E8;
+}
+
+/* Image styling based on your Ortho images */
+.product-image-box {
+  width: 100%;
+  height: 100px; 
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.product-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.brand-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #0b2c6f;
+}
+
+.product-description {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.3;
+  /* Standardizes text area so cards stay uniform */
+  min-height: 45px; 
+}
+
+.category-label {
+  margin-top: auto;
+  background: #e3f2fd;
+  color: #0b2c6f;
+  padding: 6px 18px;
+  border-radius: 25px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  display: inline-block;
+  text-transform: uppercase;
 }
