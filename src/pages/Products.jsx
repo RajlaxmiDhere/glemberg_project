@@ -71,6 +71,7 @@ const Product = () => {
           {/* Removed the extra </li> that was here */}
         </ul>
       </aside>
+      <h2 className="products-heading">Our Products</h2>
 
       <main className="product-grid">
         {filteredProducts.length > 0 ? (
