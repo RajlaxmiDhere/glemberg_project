@@ -62,7 +62,6 @@ const Product = () => {
           <li className={`filter-item ${filter === 'general' ? 'active' : ''}`} onClick={() => setFilter('general')}>
             General Range
           </li>
-          </li>
           <li className={`filter-item ${filter === 'ortho' ? 'active' : ''}`} onClick={() => setFilter('ortho')}>
             Ortho Division
           </li>          
