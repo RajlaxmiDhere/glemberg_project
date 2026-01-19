@@ -7,11 +7,7 @@
   height: 85vh;
   overflow: hidden;
   
-    background: linear-gradient(
-    180deg,
-    #000000 0%,
-    #0b2c6f 100%
-  );
+    background: #000000;
 }
 
 .hero-video {
