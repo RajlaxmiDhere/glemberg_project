@@ -54,46 +54,49 @@ const Product = () => {
 
   return (
     <div className="product-page-container">
-      <aside className="filter-sidebar">
-        <h3 className="filter-title">Filter by Product Division</h3>
-        <ul className="filter-list">
-          <li className={`filter-item ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>
-            Show All Products
-          </li>
-          <li className={`filter-item ${filter === 'general' ? 'active' : ''}`} onClick={() => setFilter('general')}>
-            General Range
-          </li>
-          <li className={`filter-item ${filter === 'ortho' ? 'active' : ''}`} onClick={() => setFilter('ortho')}>
-            Ortho Division
-          </li>          
-          <li className={`filter-item ${filter === 'derma' ? 'active' : ''}`} onClick={() => setFilter('derma')}>
-            Derma Division
-          </li>
-          {/* Removed the extra </li> that was here */}
-        </ul>
-      </aside>
-  
+      {/* 1. Heading is now at the top level of the container */}
+      <h2 className="products-heading">Our Products</h2>
 
-      <main className="product-grid">
-        {filteredProducts.length > 0 ? (
-          filteredProducts.map(product => (
-            <div key={product.id} className="product-card">
-              <div className="card-inner">
-                <div className="product-image-box">
-                  <img src={product.image} alt={product.name} className="product-img" />
-                </div>
-                <h2 className="brand-text">{product.name}</h2>
-                <p className="product-description">{product.desc}</p>
-                <div className="category-label">
-                  {product.division}
+      <div className="main-content-area">
+        <aside className="filter-sidebar">
+          <h3 className="filter-title">Filter by Product Division</h3>
+          <ul className="filter-list">
+            <li className={`filter-item ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>
+              Show All Products
+            </li>
+            <li className={`filter-item ${filter === 'general' ? 'active' : ''}`} onClick={() => setFilter('general')}>
+              General Range
+            </li>
+            <li className={`filter-item ${filter === 'ortho' ? 'active' : ''}`} onClick={() => setFilter('ortho')}>
+              Ortho Division
+            </li>          
+            <li className={`filter-item ${filter === 'derma' ? 'active' : ''}`} onClick={() => setFilter('derma')}>
+              Derma Division
+            </li>
+          </ul>
+        </aside>
+
+        <main className="product-grid">
+          {filteredProducts.length > 0 ? (
+            filteredProducts.map(product => (
+              <div key={product.id} className="product-card">
+                <div className="card-inner">
+                  <div className="product-image-box">
+                    <img src={product.image} alt={product.name} className="product-img" />
+                  </div>
+                  <h2 className="brand-text">{product.name}</h2>
+                  <p className="product-description">{product.desc}</p>
+                  <div className="category-label">
+                    {product.division}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))
-        ) : (
-          <div className="no-products">No products found in this division.</div>
-        )}
-      </main>
+            ))
+          ) : (
+            <div className="no-products">No products found in this division.</div>
+          )}
+        </main>
+      </div>
     </div>
   );
 };
