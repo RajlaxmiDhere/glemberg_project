@@ -73,7 +73,11 @@ const Product = () => {
         </ul>
       </aside>
   
- <h2 className="products-heading">Our Products</h2>
+ <div className="product-page-wrapper">
+    {/* This puts the title right below the navigation/logo area */}
+    <h2 className="section-title">Our Products</h2>
+   </div>
+  </div>
       <main className="product-grid">
         {filteredProducts.length > 0 ? (
           filteredProducts.map(product => (
