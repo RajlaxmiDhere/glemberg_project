@@ -48,7 +48,6 @@ const Product = () => {
     { id: 18, name: "Genzoco powder", desc: "", category: "derma", division: "DERMA DIVISION", image: Genzocopowder },
     { id: 19, name: "Itragem 200 cap", desc: "", category: "derma", division: "DERMA DIVISION", image: Itragem200 },
   ];
-  <h2 className="products-heading">Our Products</h2>
   const filteredProducts = filter === 'all' 
     ? products 
     : products.filter(p => p.category === filter);
@@ -74,7 +73,7 @@ const Product = () => {
         </ul>
       </aside>
   
-
+ <h2 className="products-heading">Our Products</h2>
       <main className="product-grid">
         {filteredProducts.length > 0 ? (
           filteredProducts.map(product => (
