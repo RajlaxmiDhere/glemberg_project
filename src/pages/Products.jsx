@@ -21,7 +21,7 @@ import RabergDSR from '../assets/Raberg_DSR_cap.png';
 import Ferrozxt from '../assets/Ferroz_xt_tab.png';
 import Genzocopowder  from '../assets/Genzoco_powder.png';
 import Itragem200  from '../assets/Itragem_200_cap.png';
-<h2 className="products-heading">Our Products</h2>
+
 
 const Product = () => {
   const [filter, setFilter] = useState('all');
@@ -48,6 +48,7 @@ const Product = () => {
     { id: 18, name: "Genzoco powder", desc: "", category: "derma", division: "DERMA DIVISION", image: Genzocopowder },
     { id: 19, name: "Itragem 200 cap", desc: "", category: "derma", division: "DERMA DIVISION", image: Itragem200 },
   ];
+  <h2 className="products-heading">Our Products</h2>
   const filteredProducts = filter === 'all' 
     ? products 
     : products.filter(p => p.category === filter);
