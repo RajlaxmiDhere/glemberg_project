@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Products.css';
 
-// Product Images
+// Importing your specific ortho assets
 import bonewJelly from '../assets/Bonew_jelly_sachet.jpg';
 import carnexLc from '../assets/Carnex_LC_tab.jpg';
 import glemvitD3 from '../assets/Glemvit_D3_60K.jpg';
@@ -47,33 +47,34 @@ const Product = () => {
     { id: 18, name: "Genzoco powder", desc: "", category: "derma", division: "DERMA DIVISION", image: Genzocopowder },
     { id: 19, name: "Itragem 200 cap", desc: "", category: "derma", division: "DERMA DIVISION", image: Itragem200 },
   ];
-
-  const filteredProducts =
-    filter === 'all' ? products : products.filter(p => p.category === filter);
+  const filteredProducts = filter === 'all' 
+    ? products 
+    : products.filter(p => p.category === filter);
 
   return (
     <div className="product-page-container">
+      <aside className="filter-sidebar">
+        <h3 className="filter-title">Filter by Product Division</h3>
+        <ul className="filter-list">
+          <li className={`filter-item ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>
+            Show All Products
+          </li>
+          <li className={`filter-item ${filter === 'general' ? 'active' : ''}`} onClick={() => setFilter('general')}>
+            General Range
+          </li>
+          <li className={`filter-item ${filter === 'ortho' ? 'active' : ''}`} onClick={() => setFilter('ortho')}>
+            Ortho Division
+          </li>          
+          <li className={`filter-item ${filter === 'derma' ? 'active' : ''}`} onClick={() => setFilter('derma')}>
+            Derma Division
+          </li>
+          {/* Removed the extra </li> that was here */}
+        </ul>
+      </aside>
 
-      {/* CENTER HEADING */}
-      <h2 className="products-heading">Our Products</h2>
-
-      {/* MAIN LAYOUT */}
-      <div className="products-content">
-
-        {/* LEFT FILTER */}
-        <aside className="filter-sidebar">
-          <h3 className="filter-title">Filter by Product Division</h3>
-          <ul className="filter-list">
-            <li className={`filter-item ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>Show All Products</li>
-            <li className={`filter-item ${filter === 'general' ? 'active' : ''}`} onClick={() => setFilter('general')}>General Range</li>
-            <li className={`filter-item ${filter === 'derma' ? 'active' : ''}`} onClick={() => setFilter('derma')}>Derma Division</li>
-            <li className={`filter-item ${filter === 'ortho' ? 'active' : ''}`} onClick={() => setFilter('ortho')}>Ortho Division</li>
-          </ul>
-        </aside>
-
-        {/* RIGHT PRODUCTS */}
-        <main className="product-grid">
-          {filteredProducts.map(product => (
+      <main className="product-grid">
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map(product => (
             <div key={product.id} className="product-card">
               <div className="card-inner">
                 <div className="product-image-box">
@@ -81,13 +82,16 @@ const Product = () => {
                 </div>
                 <h2 className="brand-text">{product.name}</h2>
                 <p className="product-description">{product.desc}</p>
-                <div className="category-label">{product.division}</div>
+                <div className="category-label">
+                  {product.division}
+                </div>
               </div>
             </div>
-          ))}
-        </main>
-
-      </div>
+          ))
+        ) : (
+          <div className="no-products">No products found in this division.</div>
+        )}
+      </main>
     </div>
   );
 };
