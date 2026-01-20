@@ -50,35 +50,51 @@ function Home() {
         </div>
       </section>
 
+      
       <section className="below-hero-section">
-        {/* STATS GRID WITH ANIMATED NUMBERS */}
-        <div className="stats-grid">
-          <div className="stat-card blue">
-            <h2><CountUp end={20} />+</h2>
-            <p>Products</p>
-          </div>
 
-          <div className="stat-card orange">
-            <h2><CountUp end={25} />+</h2>
-            <p>Team Members</p>
-          </div>
+  <div className="below-hero-inner">
 
-          <div className="stat-card purple">
-            <h2><CountUp end={500} />+</h2>
-            <p>Happy Clients</p>
-          </div>
-        </div>
+    {/* STATS */}
+    <div className="stats-row">
+      <div className="stat-box">
+        <h2>20+</h2>
+        <p>Products</p>
+      </div>
 
-        <div className="quality-container">
-          <div className="quality-text">
-            <h2>International Quality Standards</h2>
-            <p>We manufacture from certified partners, ensuring strict compliance with international quality and safety standards.</p>
-            <a href={certificate} target="_blank" rel="noopener noreferrer" className="certificate-btn">
-              View Certificate of Incorporation
-            </a>
-          </div>
-        </div>
-      </section>
+      <div className="stat-box">
+        <h2>25+</h2>
+        <p>Team Members</p>
+      </div>
+
+      <div className="stat-box">
+        <h2>500+</h2>
+        <p>Happy Clients</p>
+      </div>
+    </div>
+
+    {/* QUALITY */}
+    <div className="quality-section">
+      <h2>International Quality Standards</h2>
+      <p>
+        We manufacture from certified partners, ensuring strict compliance
+        with international quality and safety standards.
+      </p>
+
+      <a
+        href={certificate}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="certificate-btn"
+      >
+        View Certificate of Incorporation
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
     </>
   );
 }
