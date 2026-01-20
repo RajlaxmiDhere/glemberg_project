@@ -62,19 +62,19 @@ function Home() {
 
   <div className="stat-card-modern blue">
     <FaIndustry className="stat-icon" />
-    <h2>50+</h2>
+    <h2>20+</h2>
     <p>Products</p>
   </div>
 
   <div className="stat-card-modern orange">
     <FaUserMd className="stat-icon" />
-    <h2>100+</h2>
+    <h2>25+</h2>
     <p>Team Members</p>
   </div>
 
   <div className="stat-card-modern purple">
     <FaSmile className="stat-icon" />
-    <h2>1000+</h2>
+    <h2>500+</h2>
     <p>Happy Clients</p>
   </div>
 
