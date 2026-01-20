@@ -119,11 +119,7 @@
   inset: 0;
   border-radius: 20px;
   padding: 2px;
-  background: linear-gradient(
-    135deg,
-    #0a8f3c,
-    #6bdc2c
-  );
+  background:background: linear-gradient(135deg, #0b2c6f, #4facfe);
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
