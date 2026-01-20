@@ -141,11 +141,11 @@ background: linear-gradient(135deg, #05163a, #0b2c6f);
   align-items: center;
   text-align: center;
 }
-
 .product-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  border: 1px solid #9CC9E8;
+  /* This shadow matches the darker blue theme */
+  box-shadow: 0 10px 25px rgba(4, 13, 33, 0.15); 
+  border: 1px solid #0b2c6f;
 }
 
 /* Image styling based on your Ortho images */
