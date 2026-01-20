@@ -2,7 +2,7 @@ import "./Footer.css";
 import logo from "../assets/logo.jpg";
 import { NavLink } from "react-router-dom";
 
-/* ✅ ICON IMPORTS */
+/* ICONS */
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 function Footer() {
@@ -10,7 +10,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
 
-        {/* LEFT: Logo + About */}
+        {/* LEFT: Logo + Tagline */}
         <div className="footer-col">
           <img src={logo} alt="Glemberg Pharma Logo" className="footer-logo" />
           <p className="footer-tagline">
@@ -18,29 +18,29 @@ function Footer() {
           </p>
         </div>
 
-        {/* MIDDLE: Contact */}
+        {/* MIDDLE: Office & Contact */}
         <div className="footer-col">
           <h4>Office</h4>
 
           <p className="footer-contact">
-            <FaMapMarkerAlt />&nbsp;
+            <FaMapMarkerAlt />{" "}
             <strong>Glemberg Pharma Pvt. Ltd.</strong><br />
             Neminath Nagar,<br />
             Sangli, Maharashtra – 416416<br />
             India
           </p>
 
+          <h4>Phone</h4>
           <p className="footer-contact">
-            <h4>Phone</h4>
-            <FaPhoneAlt />&nbsp;
+            <FaPhoneAlt />{" "}
             <a href="tel:+917559189020">+91 7559189020</a><br />
-            <FaPhoneAlt />&nbsp;
+            <FaPhoneAlt />{" "}
             <a href="tel:+918975173157">+91 8975173157</a>
           </p>
 
+          <h4>Email</h4>
           <p className="footer-contact">
-            <h4>Email</h4>
-            <FaEnvelope />&nbsp;
+            <FaEnvelope />{" "}
             <a href="mailto:glembergpharmaceuticals@gmail.com">
               glembergpharmaceuticals@gmail.com
             </a>
@@ -74,10 +74,9 @@ function Footer() {
         Enquire Now
       </a>
 
-      {/* BOTTOM COPYRIGHT */}
+      {/* COPYRIGHT */}
       <div className="footer-bottom">
-        © {new Date().getFullYear()} Glemberg Pharmaceuticals Pvt. Ltd.
-        All Rights Reserved.
+        © {new Date().getFullYear()} Glemberg Pharmaceuticals Pvt. Ltd. All Rights Reserved.
       </div>
     </footer>
   );
