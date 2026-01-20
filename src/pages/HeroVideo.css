@@ -87,41 +87,86 @@
 /* =========================
    STATS ROW
    ========================= */
-.stats-row {
+/* =========================
+   MODERN STATS (ANGLED)
+   ========================= */
+.stats-modern {
+  max-width: 1200px;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   margin-bottom: 90px;
 }
 
-.stat-box {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(6px);
-  padding: 50px 30px;
-  border-radius: 22px;
+/* Card */
+.stat-card-modern {
+  position: relative;
+  padding: 45px 30px;
   text-align: center;
+  border-radius: 12px;
+  clip-path: polygon(
+    0 0,
+    95% 0,
+    100% 20%,
+    100% 100%,
+    0 100%
+  );
 
-  box-shadow: 0 16px 40px rgba(30, 79, 145, 0.18);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.stat-box:hover {
+.stat-card-modern:hover {
   transform: translateY(-6px);
-  box-shadow: 0 22px 48px rgba(30, 79, 145, 0.22);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.12);
 }
 
-.stat-box h2 {
-  font-size: 3rem;
+/* ICON */
+.stat-icon {
+  font-size: 34px;
+  margin-bottom: 18px;
+}
+
+/* NUMBER */
+.stat-card-modern h2 {
+  font-size: 3.2rem;
   font-weight: 700;
-  color: #0b2c6f;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-.stat-box p {
+/* LABEL */
+.stat-card-modern p {
   font-size: 1.1rem;
   font-weight: 500;
-  color: #374151;
 }
+
+/* COLOR VARIANTS */
+.stat-card-modern.blue {
+  background: #eef2ff;
+  color: #1e40af;
+}
+
+.stat-card-modern.orange {
+  background: #fff1e6;
+  color: #ea580c;
+}
+
+.stat-card-modern.purple {
+  background: #f3f0ff;
+  color: #6d28d9;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 900px) {
+  .stats-modern {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
 
 /* =========================
    QUALITY SECTION
