@@ -56,22 +56,28 @@ function Home() {
         <div className="below-hero-inner">
 
           {/* STATS */}
-          <div className="stats-row">
-            <div className="stat-box">
-              <h2>20+</h2>
-              <p>Products</p>
-            </div>
+          {/* ================= STATS ================= */}
+<div className="stats-modern">
 
-            <div className="stat-box">
-              <h2>25+</h2>
-              <p>Team Members</p>
-            </div>
+  <div className="stat-card-modern blue">
+    <div className="stat-icon">🏭</div>
+    <h2>50+</h2>
+    <p>Products</p>
+  </div>
 
-            <div className="stat-box">
-              <h2>500+</h2>
-              <p>Happy Clients</p>
-            </div>
-          </div>
+  <div className="stat-card-modern orange">
+    <div className="stat-icon">👥</div>
+    <h2>100+</h2>
+    <p>Team Members</p>
+  </div>
+
+  <div className="stat-card-modern purple">
+    <div className="stat-icon">😊</div>
+    <h2>1000+</h2>
+    <p>Happy Clients</p>
+  </div>
+
+</div>
 
           {/* QUALITY */}
           <div className="quality-section">
