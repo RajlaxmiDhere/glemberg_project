@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from "react";
 import "./HeroVideo.css";
 import pillVideo from "../assets/video1.mp4";
+
+// Certificate PDF
 import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
 
 function Home() {
   const [showWelcome, setShowWelcome] = useState(false);
-  const [count, setCount] = useState({ products: 0, team: 0, clients: 0 });
+  const [count, setCount] = useState({
+    products: 0,
+    team: 0,
+    clients: 0,
+  });
 
   useEffect(() => {
     const hasSeen = sessionStorage.getItem("hasSeenWelcome");
@@ -21,9 +27,15 @@ function Home() {
       if (t < 25) t++;
       if (c < 500) c += 10;
 
-      setCount({ products: p, team: t, clients: c });
+      setCount({
+        products: p,
+        team: t,
+        clients: c,
+      });
 
-      if (p === 20 && t === 25 && c === 500) clearInterval(interval);
+      if (p === 20 && t === 25 && c === 500) {
+        clearInterval(interval);
+      }
     }, 40);
 
     return () => clearInterval(interval);
@@ -31,7 +43,7 @@ function Home() {
 
   return (
     <>
-      {/* HERO VIDEO */}
+      {/* ================= HERO VIDEO ================= */}
       <section className="hero-video-section">
         <video
           className="hero-video"
@@ -49,9 +61,13 @@ function Home() {
 
         <div className="hero-content">
           {showWelcome && (
-            <div className="welcome-tagline">Welcome to Glemberg Pharma</div>
+            <div className="welcome-tagline">
+              Welcome to Glemberg Pharma
+            </div>
           )}
+
           <h1>Committed to Better Healthcare</h1>
+
           <p>
             Glemberg Pharma delivers safe, effective, and innovative
             pharmaceutical solutions to improve lives.
@@ -59,11 +75,11 @@ function Home() {
         </div>
       </section>
 
-      {/* ================= PROFESSIONAL INFO SECTION ================= */}
+      {/* ================= BELOW HERO SECTION ================= */}
       <section className="below-hero-section">
 
+        {/* FEATURE / STATS */}
         <div className="feature-wrapper">
-
           <div className="feature-card">
             <h2>{count.products}+</h2>
             <p>Quality Products</p>
@@ -78,15 +94,15 @@ function Home() {
             <h2>{count.clients}+</h2>
             <p>Trusted Clients</p>
           </div>
-
         </div>
 
+        {/* QUALITY */}
         <div className="quality-highlight">
           <h2>International Quality Standards</h2>
           <p>
             We partner with certified manufacturers and follow strict global
             quality norms to ensure safety, efficacy, and reliability in every
-            product.
+            product we deliver.
           </p>
 
           <a
