@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./HeroVideo.css";
 import pillVideo from "../assets/video1.mp4";
 
-// ONLY ONE CERTIFICATE (PDF)
+// Certificate PDF
 import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
 
 function Home() {
@@ -20,17 +20,17 @@ function Home() {
     <>
       {/* ================= HERO VIDEO (UNCHANGED) ================= */}
       <section className="hero-video-section">
-       <video
-  className="hero-video"
-  autoPlay
-  muted
-  loop
-  playsInline
-  preload="auto"
-  poster={pillVideo}
->
-  <source src={pillVideo} type="video/mp4" />
-</video>
+        <video
+          className="hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster={pillVideo}
+        >
+          <source src={pillVideo} type="video/mp4" />
+        </video>
 
         <div className="hero-overlay"></div>
 
@@ -50,35 +50,35 @@ function Home() {
         </div>
       </section>
 
-      {/* ================= BELOW HERO SECTION ================= */}
+      {/* ================= BELOW HERO SECTION (FIXED ONLY HERE) ================= */}
       <section className="below-hero-section">
 
-        {/* STATS */}
-        <div className="stats-grid">
-          <div className="stat-card blue">
-            <h2>20+</h2>
-            <p>Products</p>
+        <div className="below-hero-inner">
+
+          {/* STATS */}
+          <div className="stats-row">
+            <div className="stat-box">
+              <h2>20+</h2>
+              <p>Products</p>
+            </div>
+
+            <div className="stat-box">
+              <h2>25+</h2>
+              <p>Team Members</p>
+            </div>
+
+            <div className="stat-box">
+              <h2>500+</h2>
+              <p>Happy Clients</p>
+            </div>
           </div>
 
-          <div className="stat-card orange">
-            <h2>25+</h2>
-            <p>Team Members</p>
-          </div>
-
-          <div className="stat-card purple">
-            <h2>500+</h2>
-            <p>Happy Clients</p>
-          </div>
-        </div>
-
-        {/* QUALITY */}
-        <div className="quality-container">
-          <div className="quality-text">
+          {/* QUALITY */}
+          <div className="quality-section">
             <h2>International Quality Standards</h2>
             <p>
               We manufacture from certified partners, ensuring strict
-              compliance with international quality and safety standards
-              in every aspect of production.
+              compliance with international quality and safety standards.
             </p>
 
             <a
@@ -90,6 +90,7 @@ function Home() {
               View Certificate of Incorporation
             </a>
           </div>
+
         </div>
 
       </section>

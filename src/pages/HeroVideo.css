@@ -1,4 +1,70 @@
 /* =========================
+   HERO VIDEO SECTION
+   ========================= */
+.hero-video-section {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  background: #000000;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.welcome-tagline {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  color: #c9f7f5;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 700px;
+  color: #e6ecf5;
+}
+
+/* =========================
    BELOW HERO SECTION
    ========================= */
 .below-hero-section {
@@ -12,7 +78,7 @@
   padding: 100px 20px;
 }
 
-/* CENTER CONTENT */
+/* Center content */
 .below-hero-inner {
   max-width: 1200px;
   margin: auto;
@@ -34,12 +100,14 @@
   padding: 50px 30px;
   border-radius: 22px;
   text-align: center;
+
   box-shadow: 0 16px 40px rgba(30, 79, 145, 0.18);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .stat-box:hover {
   transform: translateY(-6px);
+  box-shadow: 0 22px 48px rgba(30, 79, 145, 0.22);
 }
 
 .stat-box h2 {
@@ -66,6 +134,7 @@
 
 .quality-section h2 {
   font-size: 2.6rem;
+  font-weight: 700;
   color: #047857;
   margin-bottom: 18px;
 }
@@ -74,26 +143,15 @@
   font-size: 1.05rem;
   line-height: 1.8;
   color: #374151;
+  margin-bottom: 25px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .stats-row {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-.quality-text p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #374151;
-}
-
+/* =========================
+   BUTTON
+   ========================= */
 .certificate-btn {
   display: inline-block;
-  margin-top: 25px;
-  padding: 12px 26px;
+  padding: 12px 28px;
   background: #0b2c6f;
   color: #ffffff;
   font-weight: 600;
@@ -107,10 +165,13 @@
   transform: translateY(-2px);
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+   ========================= */
 @media (max-width: 900px) {
-  .stats-grid {
+  .stats-row {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
 
   .hero-content h1 {
@@ -120,6 +181,7 @@
 
 @media (max-width: 600px) {
   .below-hero-section {
-    padding: 60px 25px;
+    padding: 60px 20px;
   }
 }
+
