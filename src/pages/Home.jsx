@@ -10,13 +10,37 @@ import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
 function Home() {
   const [showWelcome, setShowWelcome] = useState(false);
 
+  // ✅ COUNT-UP STATES
+  const [products, setProducts] = useState(1);
+  const [team, setTeam] = useState(1);
+  const [clients, setClients] = useState(1);
+
   useEffect(() => {
     const hasSeen = sessionStorage.getItem("hasSeenWelcome");
     if (!hasSeen) {
       setShowWelcome(true);
       sessionStorage.setItem("hasSeenWelcome", "true");
     }
+
+    // ✅ COUNT-UP LOGIC
+    animateCount(setProducts, 20);
+    animateCount(setTeam, 25);
+    animateCount(setClients, 500);
+
   }, []);
+
+  // 🔹 reusable counter function
+  const animateCount = (setter, target) => {
+    let start = 1;
+    const duration = 1200; // ms
+    const stepTime = Math.max(Math.floor(duration / target), 20);
+
+    const counter = setInterval(() => {
+      start += 1;
+      setter(start);
+      if (start >= target) clearInterval(counter);
+    }, stepTime);
+  };
 
   return (
     <>
@@ -56,7 +80,6 @@ function Home() {
           {/* ================= FEATURE INTRO ================= */}
           <div className="feature-section">
 
-            {/* TEXT WITH ANIMATION */}
             <div className="feature-text animate-text">
               <h2 className="animate-line delay-1">
                 Built on Science. Focused on Care.
@@ -68,15 +91,13 @@ function Home() {
               </p>
 
               <p className="animate-line delay-3">
-                Glemberg Pharma focuses on delivering reliable, well-researched
-                medicines across <strong>Orthopaedic, Dermatology,</strong> and
-                <strong> General healthcare</strong> segments.
+                Delivering trusted medicines across Orthopaedic, Dermatology,
+                and General healthcare segments.
               </p>
 
               <p className="animate-line delay-4">
-                From development to delivery, our approach ensures consistency,
-                safety, and trust—making quality healthcare solutions accessible
-                and dependable.
+                From development to delivery, our focus remains on safety,
+                consistency, and real-world clinical reliability.
               </p>
 
               <NavLink
@@ -87,7 +108,7 @@ function Home() {
               </NavLink>
             </div>
 
-            {/* IMAGE SPACE (ADD IMAGE LATER) */}
+            {/* IMAGE SPACE */}
             <div className="feature-image">
               <div className="image-placeholder">
                 Image Area
@@ -96,24 +117,24 @@ function Home() {
 
           </div>
 
-          {/* ================= STATS ================= */}
+          {/* ================= STATS (COUNT-UP) ================= */}
           <div className="stats-modern">
 
             <div className="stat-card-modern blue">
               <FaIndustry className="stat-icon" />
-              <h2>20+</h2>
+              <h2>{products}+</h2>
               <p>Products</p>
             </div>
 
             <div className="stat-card-modern orange">
               <FaUserMd className="stat-icon" />
-              <h2>25+</h2>
+              <h2>{team}+</h2>
               <p>Team Members</p>
             </div>
 
             <div className="stat-card-modern purple">
               <FaSmile className="stat-icon" />
-              <h2>500+</h2>
+              <h2>{clients}+</h2>
               <p>Happy Clients</p>
             </div>
 
