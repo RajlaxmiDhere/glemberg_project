@@ -16,23 +16,15 @@ function About() {
         <div className="about-content">
           <h1>The Journey So Far</h1>
           <p>
-            <strong>
-              Glemberg Pharma </strong>is a name synonymous with <strong>trust and innovation</strong>
-            {" "}
-            in the global pharmaceutical landscape. Built on the core pillars of
-            quality, safety, and purity, we go beyond manufacturing—we deliver a
-            promise to improve lives. By adhering to rigorous WHO-GMP standards
-            and stringent quality controls, we ensure that every life-saving
-            innovation we produce meets the highest international benchmarks,
-            providing patients with the efficacy they deserve.
+            <strong>Glemberg Pharma</strong> is a name synonymous with{" "}
+            <strong>trust and innovation</strong> in the global pharmaceutical
+            landscape. Built on the core pillars of quality, safety, and purity,
+            we go beyond manufacturing—we deliver a promise to improve lives.
             <br /><br />
-            Our mission is fueled by a dedicated team of scientists and
-            researchers working relentlessly to make healthcare both reliable
-            and affordable. We don’t just develop medicines; we create paths to a
-            healthier future through patient-focused solutions and ethical
-            excellence. At Glemberg Pharma, we are committed to enriching human
-            life, ensuring that world-class healthcare is accessible to
-            everyone, everywhere.
+            Our mission is fueled by dedicated scientists and researchers
+            working relentlessly to make healthcare reliable and affordable.
+            At Glemberg Pharma, we are committed to enriching human life by
+            ensuring world-class healthcare access for everyone.
           </p>
         </div>
       </section>
@@ -44,17 +36,12 @@ function About() {
         </div>
         <div className="about-content">
           <h1>Our Vision</h1>
-          <h3>Pioneering innovation with Enduring trust</h3>
+          <h3>Pioneering Innovation with Enduring Trust</h3>
           <p>
-            Our vision is rooted in the belief that standard is never enough. We
-            are committed to pushing the boundaries of medical science through
-            continuous research and development. By investing in modern
-            technology and creative scientific thinking, we aim to bring new,
-            more effective therapies to market that set entirely new benchmarks
-            for the industry. By harmonizing scientific advancement with a
-            legacy of reliability, we aim to be the most trusted name for
-            healthcare providers and patients alike, ensuring a healthier and
-            more secure future for all.
+            We believe that “standard” is never enough. Through continuous
+            research, modern technology, and creative scientific thinking, we
+            aim to develop therapies that redefine industry benchmarks while
+            maintaining absolute reliability.
           </p>
         </div>
       </section>
@@ -68,8 +55,9 @@ function About() {
           <h1>Our Goal</h1>
           <h3>Advancing Global Health</h3>
           <p>
-            Our goal is to address critical healthcare needs through continuous
-            research, quality manufacturing, and patient-focused solutions.
+            Our goal is to address critical healthcare needs through research,
+            quality manufacturing, and patient-focused solutions that positively
+            impact lives worldwide.
           </p>
         </div>
       </section>
