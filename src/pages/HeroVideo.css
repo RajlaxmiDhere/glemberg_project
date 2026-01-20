@@ -124,8 +124,9 @@
 
 /* ICON */
 .stat-icon {
-  font-size: 34px;
-  margin-bottom: 18px;
+  font-size: 32px;
+  margin-bottom: 16px;
+  opacity: 0.9;
 }
 
 /* NUMBER */
