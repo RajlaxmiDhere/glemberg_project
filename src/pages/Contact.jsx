@@ -32,59 +32,67 @@ const Contact = () => {
         <div className="row align-items-center">
 
           {/* LEFT: CONTACT INFO */}
-          <div className="col-md-6 contact-info">
+          <div className="col-md-6">
+            <div className="contact-info-card">
 
-            <h3>Corporate Office</h3>
+              <h3>Corporate Office</h3>
 
-            <p>
-              <b>Glemberg Pharma Pvt. Ltd.</b> <br />
-              Neminath Nagar,<br />
-              Sangli, Maharashtra – 416416<br />
-              India
-            </p>
+              <p>
+                <b>Glemberg Pharma Pvt. Ltd.</b> <br />
+                Neminath Nagar,<br />
+                Sangli, Maharashtra – 416416<br />
+                India
+              </p>
 
-            {/* LOCATION */}
-            <div className="info-value">
-              <FaMapMarkerAlt />
-              <a href={mapLink} target="_blank" rel="noopener noreferrer">
-                View on Google Maps
-              </a>
-            </div>
-
-            {/* PHONE */}
-            <h3 className="info-heading">Phone Number</h3>
-            {phoneNumbers.map((num, index) => (
-              <div className="info-value" key={index}>
-                <FaPhoneAlt />
-                <a
-                  href={`tel:${num.replace(/\s/g, "")}`}
-                  className="contact-link"
-                >
-                  {num}
+              {/* LOCATION */}
+              <div className="info-value">
+                <span className="icon-circle">
+                  <FaMapMarkerAlt />
+                </span>
+                <a href={mapLink} target="_blank" rel="noopener noreferrer">
+                  View on Google Maps
                 </a>
               </div>
-            ))}
 
-            {/* EMAIL */}
-            <h3 className="info-heading">Email</h3>
-            <div className="info-value">
-              <FaEnvelope />
-              <a href={`mailto:${email}`} className="contact-link">
-                {email}
+              {/* PHONE */}
+              <h3 className="info-heading">Phone Number</h3>
+              {phoneNumbers.map((num, index) => (
+                <div className="info-value" key={index}>
+                  <span className="icon-circle">
+                    <FaPhoneAlt />
+                  </span>
+                  <a
+                    href={`tel:${num.replace(/\s/g, "")}`}
+                    className="contact-link"
+                  >
+                    {num}
+                  </a>
+                </div>
+              ))}
+
+              {/* EMAIL */}
+              <h3 className="info-heading">Email</h3>
+              <div className="info-value">
+                <span className="icon-circle">
+                  <FaEnvelope />
+                </span>
+                <a href={`mailto:${email}`} className="contact-link">
+                  {email}
+                </a>
+              </div>
+
+              {/* WHATSAPP BUTTON */}
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whatsapp-enquire-btn"
+              >
+                <FaWhatsapp className="whatsapp-icon" />
+                Enquire Now
               </a>
+
             </div>
-
-            {/* WHATSAPP BUTTON */}
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="whatsapp-enquire-btn"
-            >
-              <FaWhatsapp className="whatsapp-icon" />
-              Enquire Now
-            </a>
-
           </div>
 
           {/* RIGHT: CONTACT FORM */}
@@ -95,38 +103,22 @@ const Contact = () => {
               <form>
                 <div className="mb-3">
                   <label>Your Name</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Full Name"
-                  />
+                  <input type="text" className="form-control" placeholder="Full Name" />
                 </div>
 
                 <div className="mb-3">
                   <label>Email Address</label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    placeholder="Email Address"
-                  />
+                  <input type="email" className="form-control" placeholder="Email Address" />
                 </div>
 
                 <div className="mb-3">
                   <label>Phone Number</label>
-                  <input
-                    type="tel"
-                    className="form-control"
-                    placeholder="Phone Number"
-                  />
+                  <input type="tel" className="form-control" placeholder="Phone Number" />
                 </div>
 
                 <div className="mb-3">
                   <label>Message</label>
-                  <textarea
-                    className="form-control"
-                    rows="4"
-                    placeholder="Your Message"
-                  ></textarea>
+                  <textarea className="form-control" rows="4" placeholder="Your Message"></textarea>
                 </div>
 
                 <button type="submit" className="btn btn-primary w-100">
