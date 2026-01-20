@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./HeroVideo.css";
 import pillVideo from "../assets/video1.mp4";
+import { FaIndustry, FaUserMd, FaSmile } from "react-icons/fa";
+
 
 // Certificate PDF
 import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
@@ -55,29 +57,29 @@ function Home() {
 
         <div className="below-hero-inner">
 
-          {/* STATS */}
           {/* ================= STATS ================= */}
 <div className="stats-modern">
 
   <div className="stat-card-modern blue">
-    <div className="stat-icon">🏭</div>
+    <FaIndustry className="stat-icon" />
     <h2>50+</h2>
     <p>Products</p>
   </div>
 
   <div className="stat-card-modern orange">
-    <div className="stat-icon">👥</div>
+    <FaUserMd className="stat-icon" />
     <h2>100+</h2>
     <p>Team Members</p>
   </div>
 
   <div className="stat-card-modern purple">
-    <div className="stat-icon">😊</div>
+    <FaSmile className="stat-icon" />
     <h2>1000+</h2>
     <p>Happy Clients</p>
   </div>
 
 </div>
+
 
           {/* QUALITY */}
           <div className="quality-section">
