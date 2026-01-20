@@ -1,58 +1,31 @@
-/* 1. Main Container: Now stacks vertically */
 .product-page-container {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   padding: 50px;
-  background: linear-gradient(90deg, #E8F4FD 0%, #D6ECFA 40%, #BFDFF5 70%, #9CC9E8 100%);
   min-height: 100vh;
-  font-family: 'Arial', sans-serif;
+  background: linear-gradient(90deg, #E8F4FD 0%, #D6ECFA 40%, #BFDFF5 70%, #9CC9E8 100%);
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* 2. Heading: Centered perfectly */
 .products-main-heading {
-  width: 100%;
   text-align: center;
   color: #0b2c6f;
-  font-size: 2.6rem; /* Adjusted size */
-   font-weight:700;
-  margin-bottom: 30px; /* Space between title and products */
- 
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 30px;
 }
 
-/* 3. Content Body: Holds sidebar and grid side-by-side */
 .product-content-body {
   display: flex;
-  flex-direction: row;
   gap: 40px;
   align-items: flex-start;
-  width: 100%;
 }
 
-/* 4. Sidebar: Fixed width */
+/* Sidebar */
 .filter-sidebar {
   width: 280px;
   flex-shrink: 0;
-  background: linear-gradient(135deg, #0b2c6f, #172c7a);
-  padding: 25px;
-  border-radius: 20px;
-  height: fit-content;
-}
-
-/* 5. Product Grid: Takes remaining space */
-.product-grid {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(200px, 1fr));
-  gap: 25px;
-}
-
-/* Rest of your card styling remains the same... */
-
-/* Keep your sidebar width fixed */
-.filter-sidebar {
-  width: 280px;
-  flex-shrink: 0; /* Prevents sidebar from shrinking */
-background: linear-gradient(135deg, #05163a, #0b2c6f);
+  background: linear-gradient(135deg, #05163a, #0b2c6f);
   padding: 25px;
   border-radius: 20px;
   height: fit-content;
@@ -60,7 +33,7 @@ background: linear-gradient(135deg, #05163a, #0b2c6f);
 }
 
 .filter-title {
-  color: white;
+  color: #ffffff;
   font-size: 1.1rem;
   margin-bottom: 20px;
   font-weight: 600;
@@ -72,14 +45,14 @@ background: linear-gradient(135deg, #05163a, #0b2c6f);
 }
 
 .filter-item {
-  background: white;
+  background: #ffffff;
   padding: 12px 20px;
   margin-bottom: 10px;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
-  color: #444;
   font-weight: 500;
+  color: #444;
 }
 
 .filter-item:hover {
@@ -89,30 +62,29 @@ background: linear-gradient(135deg, #05163a, #0b2c6f);
 
 .filter-item.active {
   background: #0056b3;
-  color: white;
+  color: #ffffff;
 }
 
-/* --- THE FIX FOR CARD SIZING & ALIGNMENT --- */
+/* Grid */
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(220px, 1fr)); 
-  gap: 25px;
   flex: 1;
-  /* Stops cards from stretching vertically to fill the page height */
-  align-items: start; 
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 25px;
+  align-items: start;
 }
 
+/* Card */
 .product-card {
   background: #E8F4FD;
   border-radius: 20px;
-  border: 2px solid #e1e8ed;
+  border: 1px solid #e1e8ed;
   padding: 20px;
-  transition: all 0.3s ease;
-  height: auto;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-  position: relative;  
-  overflow: hidden;     
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .product-card::before {
   content: "";
   position: absolute;
@@ -120,46 +92,39 @@ background: linear-gradient(135deg, #05163a, #0b2c6f);
   border-radius: 20px;
   padding: 2px;
   background: linear-gradient(135deg, #0b2c6f, #4facfe);
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   opacity: 0;
   transition: opacity 0.3s ease;
-  pointer-events: none;
 }
+
 .product-card:hover::before {
   opacity: 1;
 }
 
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(4, 13, 33, 0.15);
+}
 
-/* Internal wrapper from your JSX */
+/* Card content */
 .card-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-.product-card:hover {
-  transform: translateY(-5px);
-  /* This shadow matches the darker blue theme */
-  box-shadow: 0 10px 25px rgba(4, 13, 33, 0.15); 
-  border: 1px solid #0b2c6f;
-}
 
-/* Image styling based on your Ortho images */
 .product-image-box {
   width: 100%;
-  height: 100px; 
-  margin-bottom: 3px;
-  border:2px solid white;
+  height: 100px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fcfcfc;
-  border-radius: 12px;
-  overflow: hidden;
 }
 
 .product-img {
@@ -169,21 +134,19 @@ background: linear-gradient(135deg, #05163a, #0b2c6f);
 }
 
 .brand-text {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin: 25px 0 5px 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 18px 0 10px;
   color: #0b2c6f;
 }
 
-
 .category-label {
   margin-top: auto;
-  background: white;
+  background: #ffffff;
   color: #0b2c6f;
   padding: 6px 18px;
   border-radius: 25px;
   font-size: 0.75rem;
-  font-weight: bold;
-  display: inline-block;
+  font-weight: 700;
   text-transform: uppercase;
 }
