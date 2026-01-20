@@ -49,37 +49,51 @@ function Home() {
         </div>
       </section>
 
-      {/* ================= BELOW HERO SECTION ================= */}
+      {/* ================= BELOW HERO ================= */}
       <section className="below-hero-section">
         <div className="below-hero-inner">
 
-          {/* ================= INTRO CONTENT ================= */}
-          <div className="home-intro">
-            <h2>Built on Science. Focused on Care.</h2>
+          {/* ================= FEATURE INTRO ================= */}
+          <div className="feature-section">
 
-            <p className="home-intro-sub">
-              Purpose-driven pharmaceutical solutions designed to support
-              everyday healthcare needs.
-            </p>
+            {/* TEXT WITH ANIMATION */}
+            <div className="feature-text animate-text">
+              <h2 className="animate-line delay-1">
+                Built on Science. Focused on Care.
+              </h2>
 
-            <p className="home-intro-text">
-              Glemberg Pharma focuses on delivering reliable, well-researched
-              medicines across <strong>Orthopaedic, Dermatology,</strong> and
-              <strong> General healthcare</strong> segments. Our approach
-              combines scientific expertise with a deep understanding of
-              patient and practitioner requirements—ensuring consistency,
-              safety, and trust in every formulation.
-            </p>
+              <p className="feature-sub animate-line delay-2">
+                Purpose-driven pharmaceutical solutions designed to support
+                everyday healthcare needs.
+              </p>
 
-            <p className="home-intro-text">
-              From development to delivery, we work with a clear goal:
-              to make quality healthcare solutions accessible, dependable,
-              and aligned with real-world clinical needs.
-            </p>
+              <p className="animate-line delay-3">
+                Glemberg Pharma focuses on delivering reliable, well-researched
+                medicines across <strong>Orthopaedic, Dermatology,</strong> and
+                <strong> General healthcare</strong> segments.
+              </p>
 
-            <NavLink to="/about" className="learn-more-btn">
-              Learn More About Us
-            </NavLink>
+              <p className="animate-line delay-4">
+                From development to delivery, our approach ensures consistency,
+                safety, and trust—making quality healthcare solutions accessible
+                and dependable.
+              </p>
+
+              <NavLink
+                to="/about"
+                className="feature-btn animate-line delay-5"
+              >
+                Learn More
+              </NavLink>
+            </div>
+
+            {/* IMAGE SPACE (ADD IMAGE LATER) */}
+            <div className="feature-image">
+              <div className="image-placeholder">
+                Image Area
+              </div>
+            </div>
+
           </div>
 
           {/* ================= STATS ================= */}
@@ -109,8 +123,8 @@ function Home() {
           <div className="quality-section">
             <h2>International Quality Standards</h2>
             <p>
-              We manufacture from certified partners, ensuring strict
-              compliance with international quality and safety standards.
+              We manufacture from certified partners, ensuring strict compliance
+              with international quality and safety standards.
             </p>
 
             <a
