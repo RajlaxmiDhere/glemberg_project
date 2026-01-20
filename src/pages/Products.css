@@ -105,11 +105,11 @@
 .product-card {
   background: #E8F4FD;
   border-radius: 20px;
-  border: 2px solid #00008b;
+  border: 2px solid ;
   padding: 20px;
   transition: all 0.3s ease;
   height: auto;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  box-shadow:#00008b;
   position: relative;  
   overflow: hidden;     
 }
