@@ -49,6 +49,9 @@ function Home() {
   return (
     <>
       {/* ================= HERO VIDEO ================= */}
+      <div className="feature-image">
+   <img src={featureImg} alt="Medical Science" className="feature-main-img" />
+</div>
       <section className="hero-video-section">
         <video
           className="hero-video"
