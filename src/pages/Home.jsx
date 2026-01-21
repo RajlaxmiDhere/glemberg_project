@@ -94,11 +94,7 @@ function Home() {
 
               <p className="animate-line delay-3">
                 Delivering trusted medicines across Orthopaedic, Dermatology,
-                and General healthcare segments.
-              </p>
-
-              <p className="animate-line delay-4">
-                From development to delivery, our focus remains on safety,
+                and General healthcare segments.From development to delivery, our focus remains on safety,
                 consistency, and real-world clinical reliability.
               </p>
 
