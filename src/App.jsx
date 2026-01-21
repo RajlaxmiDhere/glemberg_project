@@ -1,7 +1,6 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react"; // Added useEffect
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"; // Added useLocation
 import Navbar from "./components/Navbar";
-// ❌ REMOVED THE LINK TAG FROM HERE
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -11,10 +10,24 @@ import Footer from "./components/Footer";
 
 import "./App.css";
 
+// --- SCROLL TO TOP HELPER ---
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+// ----------------------------
+
 function App() {
   return (
     <BrowserRouter>
-     
+      {/* Place it here so it runs on every route change */}
+      <ScrollToTop />
+      
       <Navbar />
 
       <Routes>
