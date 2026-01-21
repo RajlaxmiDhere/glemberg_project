@@ -119,7 +119,7 @@ function Home() {
     <div className="category-info">
       <h3>General Care</h3>
       <p></p>
-      <NavLink to="/products#General Range" className="view-link">View products</NavLink>
+      <NavLink to="/products#General" className="view-link">View products</NavLink>
     </div>
   </div>
 
@@ -130,7 +130,7 @@ function Home() {
     <div className="category-info">
       <h3>Ortho Care</h3>
       <p></p>
-      <NavLink to="/products#Ortho Division" className="view-link">View products</NavLink>
+      <NavLink to="/products#Ortho" className="view-link">View products</NavLink>
     </div>
   </div>
 
@@ -141,7 +141,7 @@ function Home() {
     <div className="category-info">
       <h3>Darma Care</h3>
       <p></p>
-      <NavLink to="/products#Darma Division" className="view-link">View products</NavLink>
+      <NavLink to="/products#Darma" className="view-link">View products</NavLink>
     </div>
   </div>
 </div>
