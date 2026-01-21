@@ -11,9 +11,9 @@ function Home() {
   const [showWelcome, setShowWelcome] = useState(false);
 
   // ✅ COUNT-UP STATES
-  const [products, setProducts] = useState(1);
-  const [team, setTeam] = useState(1);
-  const [clients, setClients] = useState(1);
+  const [products, setProducts] = useState(0);
+  const [team, setTeam] = useState(0);
+  const [clients, setClients] = useState(0);
 
   useEffect(() => {
     const hasSeen = sessionStorage.getItem("hasSeenWelcome");
@@ -22,43 +22,27 @@ function Home() {
       sessionStorage.setItem("hasSeenWelcome", "true");
     }
 
-    // ✅ IMPROVED COUNT-UP LOGIC
-  useEffect(() => {
-    const hasSeen = sessionStorage.getItem("hasSeenWelcome");
-    if (!hasSeen) {
-      setShowWelcome(true);
-      sessionStorage.setItem("hasSeenWelcome", "true");
-    }
-
-    // Trigger all three with the new logic
+    // ✅ Start all counters
     animateCount(setProducts, 20);
     animateCount(setTeam, 25);
     animateCount(setClients, 500);
   }, []);
 
-  // 🔹 Smooth counter function using requestAnimationFrame or calculated steps
+  // 🔹 Smooth counter function using requestAnimationFrame
   const animateCount = (setter, target) => {
-    let start = 0;
-    const duration = 1500; // Animation will last exactly 1.5 seconds for everyone
-    const startTime = performance.now();
+    let startTime = null;
+    const duration = 2000; // 2 seconds for all animations
 
-    const updateCount = (currentTime) => {
-      const elapsedTime = currentTime - startTime;
-      const progress = Math.min(elapsedTime / duration, 1); // Range from 0 to 1
-
-      // Calculate current value based on progress
-      const currentValue = Math.floor(progress * target);
-      
-      setter(currentValue);
-
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      setter(Math.floor(progress * target));
       if (progress < 1) {
-        requestAnimationFrame(updateCount);
-      } else {
-        setter(target); // Ensure it ends exactly at the target
+        window.requestAnimationFrame(step);
       }
     };
 
-    requestAnimationFrame(updateCount);
+    window.requestAnimationFrame(step);
   };
 
   return (
@@ -98,7 +82,6 @@ function Home() {
 
           {/* ================= FEATURE INTRO ================= */}
           <div className="feature-section">
-
             <div className="feature-text animate-text">
               <h2 className="animate-line delay-1">
                 Built on Science. Focused on Care.
@@ -127,18 +110,15 @@ function Home() {
               </NavLink>
             </div>
 
-            {/* IMAGE SPACE */}
             <div className="feature-image">
               <div className="image-placeholder">
                 Image Area
               </div>
             </div>
-
           </div>
 
           {/* ================= STATS (COUNT-UP) ================= */}
           <div className="stats-modern">
-
             <div className="stat-card-modern blue">
               <FaIndustry className="stat-icon" />
               <h2>{products}+</h2>
@@ -156,7 +136,6 @@ function Home() {
               <h2>{clients}+</h2>
               <p>Happy Clients</p>
             </div>
-
           </div>
 
           {/* ================= QUALITY ================= */}
