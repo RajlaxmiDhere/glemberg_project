@@ -10,6 +10,10 @@ import dermaImg from "../assets/derma_division.jpg";
 import generalImg from "../assets/general_range.jpg";
 import orthoImg from "../assets/ortho_division.jpg";
 import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
+{/* In Home.jsx */}
+<NavLink to="/products#general" className="view-link">View products</NavLink>
+<NavLink to="/products#ortho" className="view-link">View products</NavLink>
+<NavLink to="/products#derma" className="view-link">View products</NavLink>
 
 function Home() {
   const [showWelcome, setShowWelcome] = useState(false);
