@@ -24,6 +24,18 @@ import Itragem200 from "../assets/Itragem_200_cap.png";
 
 const Product = () => {
   const [filter, setFilter] = useState("all");
+  useEffect(() => {
+    const hash = location.hash.replace("#", ""); // e.g., converts "#ortho" to "ortho"
+    
+    if (hash === "general" || hash === "ortho" || hash === "derma" ) {
+      setFilter(hash);
+    } else {
+      setFilter("all");
+    }
+    
+    // Scroll to top when the filter changes
+    window.scrollTo(0, 0);
+  }, [location]);
 
   const products = [
     { id: 1, name: "Bonew Jelly Sachet", category: "ortho", division: "ORTHO DIVISION", image: bonewJelly },
