@@ -116,14 +116,26 @@ function Home() {
               </NavLink>
             </div>
 
-            {/* IMAGE SPACE */}
-            <div className="feature-image">
-              <div className="image-placeholder">
-                Image Area
-              </div>
-            </div>
+/* Replace your existing .feature-image and .image-placeholder with this: */
 
-          </div>
+.feature-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-main-img {
+  width: 100%;
+  max-width: 500px; /* Slightly larger than the placeholder */
+  height: auto;
+  border-radius: 28px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+}
+
+.feature-main-img:hover {
+  transform: scale(1.02); /* Subtle zoom effect on hover */
+}
 
           {/* ================= STATS (COUNT-UP) ================= */}
           <div className="stats-modern">
