@@ -167,11 +167,11 @@
   animation: textFadeUp 0.9s ease forwards;
 }
 
-.delay-1 { animation-delay: 1.9s; }
-.delay-2 { animation-delay: 1.9s; }
-.delay-3 { animation-delay: 1.9s; }
-.delay-4 { animation-delay: 1.9s; }
-.delay-5 { animation-delay: 1.9s; }
+.delay-1 { animation-delay: 1.3s; }
+.delay-2 { animation-delay: 1.3s; }
+.delay-3 { animation-delay: 1.3s; }
+.delay-4 { animation-delay: 1.3s; }
+.delay-5 { animation-delay: 2s; }
 
 @keyframes textFadeUp {
   to {
