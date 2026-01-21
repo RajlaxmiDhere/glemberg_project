@@ -49,6 +49,9 @@ function Home() {
   return (
     <>
       {/* ================= HERO VIDEO ================= */}
+      <div className="feature-image">
+  <div className="image-placeholder">Image Area</div>
+</div>
       <section className="hero-video-section">
         <video
           className="hero-video"
