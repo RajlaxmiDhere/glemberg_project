@@ -6,8 +6,8 @@ import { NavLink } from "react-router-dom";
 
 // Assets
 import featureImg from "../assets/feature-medical.jpg";
-import diabeticImg from "../assets/derma_division.jpg"; 
-import neuroImg from "../assets/general_range.jpg";
+import dermaImg from "../assets/derma_division.jpg"; 
+import generalImg from "../assets/general_range.jpg";
 import orthoImg from "../assets/ortho_division.jpg";
 import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
 
@@ -114,33 +114,33 @@ function Home() {
 <div className="category-grid">
   <div className="category-card orange">
     <div className="category-image">
-      <img src={diabeticImg} alt="General Range" />
+      <img src={generalImg} alt="General Care" />
     </div>
     <div className="category-info">
-      <h3>Diabetic Care</h3>
-      <p>Sugar Control</p>
+      <h3>General Care</h3>
+      <p></p>
       <NavLink to="/products#General Range" className="view-link">View products</NavLink>
     </div>
   </div>
 
   <div className="category-card teal">
     <div className="category-image">
-      <img src={neuroImg} alt="Ortho Care" />
+      <img src={orthoImg} alt="Ortho Care" />
     </div>
     <div className="category-info">
-      <h3>Neuro Care</h3>
-      <p>Brain Health</p>
+      <h3>Ortho Care Care</h3>
+      <p></p>
       <NavLink to="/products#Ortho Division" className="view-link">View products</NavLink>
     </div>
   </div>
 
   <div className="category-card blue-light">
     <div className="category-image">
-      <img src={orthoImg} alt="Darma Care" />
+      <img src={dermaImg} alt="Darma Care" />
     </div>
     <div className="category-info">
-      <h3>Orthopedics Care</h3>
-      <p>Bone & Joint</p>
+      <h3>Darma Care</h3>
+      <p></p>
       <NavLink to="/products#Darma Division" className="view-link">View products</NavLink>
     </div>
   </div>
