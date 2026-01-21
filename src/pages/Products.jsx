@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react"; // 1. Added useEffect
+import { useLocation } from "react-router-dom";    // 2. Added useLocation
 import "./Products.css";
 
 /* Assets */
@@ -24,18 +25,21 @@ import Itragem200 from "../assets/Itragem_200_cap.png";
 
 const Product = () => {
   const [filter, setFilter] = useState("all");
+  const location = useLocation(); // 3. Defined location
+
   useEffect(() => {
-    const hash = location.hash.replace("#", ""); // e.g., converts "#ortho" to "ortho"
+    // Check if there is a hash in the URL (e.g., #ortho)
+    const hash = location.hash.replace("#", ""); 
     
-    if (hash === "general" || hash === "ortho" || hash === "derma" ) {
+    if (hash === "general" || hash === "ortho" || hash === "derma") {
       setFilter(hash);
     } else {
       setFilter("all");
     }
     
-    // Scroll to top when the filter changes
+    // Scroll to top when the user arrives or filter changes
     window.scrollTo(0, 0);
-  }, [location]);
+  }, [location]); // Re-run whenever the URL changes
 
   const products = [
     { id: 1, name: "Bonew Jelly Sachet", category: "ortho", division: "ORTHO DIVISION", image: bonewJelly },
