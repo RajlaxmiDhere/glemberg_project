@@ -107,6 +107,41 @@ function Home() {
               />
             </div>
           </div>
+          {/* ================= CATEGORY CARDS (New Section) ================= */}
+<div className="category-grid">
+  <div className="category-card orange">
+    <div className="category-image">
+      <img src={diabeticImg} alt="Diabetic Care" />
+    </div>
+    <div className="category-info">
+      <h3>Diabetic Care</h3>
+      <p>Sugar Control</p>
+      <NavLink to="/products#diabetic" className="view-link">View products</NavLink>
+    </div>
+  </div>
+
+  <div className="category-card teal">
+    <div className="category-image">
+      <img src={neuroImg} alt="Neuro Care" />
+    </div>
+    <div className="category-info">
+      <h3>Neuro Care</h3>
+      <p>Brain Health</p>
+      <NavLink to="/products#neuro" className="view-link">View products</NavLink>
+    </div>
+  </div>
+
+  <div className="category-card blue-light">
+    <div className="category-image">
+      <img src={orthoImg} alt="Orthopedics Care" />
+    </div>
+    <div className="category-info">
+      <h3>Orthopedics Care</h3>
+      <p>Bone & Joint</p>
+      <NavLink to="/products#ortho" className="view-link">View products</NavLink>
+    </div>
+  </div>
+</div>
 
           {/* ================= STATS ================= */}
           <div className="stats-modern">
