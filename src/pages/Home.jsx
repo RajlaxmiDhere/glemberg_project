@@ -5,15 +5,16 @@ import { FaIndustry, FaUserMd, FaSmile } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 // Certificate PDF
+import featureImg from "../assets/feature-medical.jpg";
 import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
 
 function Home() {
   const [showWelcome, setShowWelcome] = useState(false);
 
   // ✅ COUNT-UP STATES
-  const [products, setProducts] = useState(1);
-  const [team, setTeam] = useState(1);
-  const [clients, setClients] = useState(1);
+  const [products, setProducts] = useState(0);
+  const [team, setTeam] = useState(0);
+  const [clients, setClients] = useState(0);
 
   useEffect(() => {
     const hasSeen = sessionStorage.getItem("hasSeenWelcome");
@@ -22,24 +23,27 @@ function Home() {
       sessionStorage.setItem("hasSeenWelcome", "true");
     }
 
-    // ✅ COUNT-UP LOGIC
+    // ✅ Start all counters
     animateCount(setProducts, 20);
     animateCount(setTeam, 25);
     animateCount(setClients, 500);
-
   }, []);
 
-  // 🔹 reusable counter function
+  // 🔹 Smooth counter function using requestAnimationFrame
   const animateCount = (setter, target) => {
-    let start = 1;
-    const duration = 1200; // ms
-    const stepTime = Math.max(Math.floor(duration / target), 20);
+    let startTime = null;
+    const duration = 5000; // 2 seconds for all animations
 
-    const counter = setInterval(() => {
-      start += 1;
-      setter(start);
-      if (start >= target) clearInterval(counter);
-    }, stepTime);
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      setter(Math.floor(progress * target));
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+
+    window.requestAnimationFrame(step);
   };
 
   return (
@@ -79,7 +83,6 @@ function Home() {
 
           {/* ================= FEATURE INTRO ================= */}
           <div className="feature-section">
-
             <div className="feature-text animate-text">
               <h2 className="animate-line delay-1">
                 Built on Science. Focused on Care.
@@ -92,11 +95,7 @@ function Home() {
 
               <p className="animate-line delay-3">
                 Delivering trusted medicines across Orthopaedic, Dermatology,
-                and General healthcare segments.
-              </p>
-
-              <p className="animate-line delay-4">
-                From development to delivery, our focus remains on safety,
+                and General healthcare segments.From development to delivery, our focus remains on safety,
                 consistency, and real-world clinical reliability.
               </p>
 
@@ -108,18 +107,15 @@ function Home() {
               </NavLink>
             </div>
 
-            {/* IMAGE SPACE */}
             <div className="feature-image">
               <div className="image-placeholder">
                 Image Area
               </div>
             </div>
-
           </div>
 
           {/* ================= STATS (COUNT-UP) ================= */}
           <div className="stats-modern">
-
             <div className="stat-card-modern blue">
               <FaIndustry className="stat-icon" />
               <h2>{products}+</h2>
@@ -137,7 +133,6 @@ function Home() {
               <h2>{clients}+</h2>
               <p>Happy Clients</p>
             </div>
-
           </div>
 
           {/* ================= QUALITY ================= */}
