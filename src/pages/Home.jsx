@@ -114,34 +114,34 @@ function Home() {
 <div className="category-grid">
   <div className="category-card orange">
     <div className="category-image">
-      <img src={diabeticImg} alt="Diabetic Care" />
+      <img src={diabeticImg} alt="General Range" />
     </div>
     <div className="category-info">
       <h3>Diabetic Care</h3>
       <p>Sugar Control</p>
-      <NavLink to="/products#diabetic" className="view-link">View products</NavLink>
+      <NavLink to="/products#General Range" className="view-link">View products</NavLink>
     </div>
   </div>
 
   <div className="category-card teal">
     <div className="category-image">
-      <img src={neuroImg} alt="Neuro Care" />
+      <img src={neuroImg} alt="Ortho Care" />
     </div>
     <div className="category-info">
       <h3>Neuro Care</h3>
       <p>Brain Health</p>
-      <NavLink to="/products#neuro" className="view-link">View products</NavLink>
+      <NavLink to="/products#Ortho Division" className="view-link">View products</NavLink>
     </div>
   </div>
 
   <div className="category-card blue-light">
     <div className="category-image">
-      <img src={orthoImg} alt="Orthopedics Care" />
+      <img src={orthoImg} alt="Darma Care" />
     </div>
     <div className="category-info">
       <h3>Orthopedics Care</h3>
       <p>Bone & Joint</p>
-      <NavLink to="/products#ortho" className="view-link">View products</NavLink>
+      <NavLink to="/products#Darma Division" className="view-link">View products</NavLink>
     </div>
   </div>
 </div>
