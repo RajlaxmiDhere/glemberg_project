@@ -6,9 +6,9 @@ import { NavLink } from "react-router-dom";
 
 // Assets
 import featureImg from "../assets/feature-medical.jpg";
-import diabeticImg from "../assets/diabetic.jpg"; 
-import neuroImg from "../assets/neuro.jpg";
-import orthoImg from "../assets/ortho.jpg";
+import diabeticImg from "../assets/derma_division.jpg"; 
+import neuroImg from "../assets/general_range.jpg";
+import orthoImg from "../assets/ortho_division.jpg";
 import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
 
 function Home() {
