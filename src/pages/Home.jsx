@@ -87,18 +87,15 @@ function Home() {
               <h2 className="animate-line delay-1">
                 Built on Science. Focused on Care.
               </h2>
-
               <p className="feature-sub animate-line delay-2">
                 Purpose-driven pharmaceutical solutions designed to support
                 everyday healthcare needs.
               </p>
-
               <p className="animate-line delay-3">
                 Delivering trusted medicines across Orthopaedic, Dermatology,
-                and General healthcare segments.From development to delivery, our focus remains on safety,
+                and General healthcare segments. From development to delivery, our focus remains on safety,
                 consistency, and real-world clinical reliability.
               </p>
-
               <NavLink
                 to="/about"
                 className="feature-btn animate-line delay-5"
@@ -107,19 +104,15 @@ function Home() {
               </NavLink>
             </div>
 
-            {/* Change this part in your Home.jsx */}
-<div className="feature-image">
-  <img 
-    src={featureImg} 
-    alt="Glemberg Pharma Medical Facility" 
-    className="feature-main-img" 
-  />
-</div>
-              <div className="image-placeholder">
-                Image Area
-              </div>
+            <div className="feature-image">
+               {/* ACTUAL IMAGE PLACEMENT */}
+               <img 
+                 src={featureImg} 
+                 alt="Medical Feature" 
+                 className="feature-main-img" 
+               />
             </div>
-          </div>
+          </div> {/* End Feature Section */}
 
           {/* ================= STATS (COUNT-UP) ================= */}
           <div className="stats-modern">
@@ -160,10 +153,7 @@ function Home() {
             </a>
           </div>
 
-        </div>
-      </section>
+        </div> {/* End below-hero-inner */}
+      </section> {/* End below-hero-section */}
     </>
   );
-}
-
-export default Home;
