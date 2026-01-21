@@ -5,6 +5,7 @@ import { FaIndustry, FaUserMd, FaSmile } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 // Certificate PDF
+import featureImg from "../assets/feature-medical.jpg";
 import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
 
 function Home() {
