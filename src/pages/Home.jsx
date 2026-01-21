@@ -22,24 +22,43 @@ function Home() {
       sessionStorage.setItem("hasSeenWelcome", "true");
     }
 
-    // ✅ COUNT-UP LOGIC
+    // ✅ IMPROVED COUNT-UP LOGIC
+  useEffect(() => {
+    const hasSeen = sessionStorage.getItem("hasSeenWelcome");
+    if (!hasSeen) {
+      setShowWelcome(true);
+      sessionStorage.setItem("hasSeenWelcome", "true");
+    }
+
+    // Trigger all three with the new logic
     animateCount(setProducts, 20);
     animateCount(setTeam, 25);
     animateCount(setClients, 500);
-
   }, []);
 
-  // 🔹 reusable counter function
+  // 🔹 Smooth counter function using requestAnimationFrame or calculated steps
   const animateCount = (setter, target) => {
-    let start = 1;
-    const duration = 1200; // ms
-    const stepTime = Math.max(Math.floor(duration / target), 20);
+    let start = 0;
+    const duration = 1500; // Animation will last exactly 1.5 seconds for everyone
+    const startTime = performance.now();
 
-    const counter = setInterval(() => {
-      start += 1;
-      setter(start);
-      if (start >= target) clearInterval(counter);
-    }, stepTime);
+    const updateCount = (currentTime) => {
+      const elapsedTime = currentTime - startTime;
+      const progress = Math.min(elapsedTime / duration, 1); // Range from 0 to 1
+
+      // Calculate current value based on progress
+      const currentValue = Math.floor(progress * target);
+      
+      setter(currentValue);
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCount);
+      } else {
+        setter(target); // Ensure it ends exactly at the target
+      }
+    };
+
+    requestAnimationFrame(updateCount);
   };
 
   return (
