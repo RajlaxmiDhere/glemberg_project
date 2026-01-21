@@ -128,7 +128,7 @@ function Home() {
       <img src={orthoImg} alt="Ortho Care" />
     </div>
     <div className="category-info">
-      <h3>Ortho Care Care</h3>
+      <h3>Ortho Care</h3>
       <p></p>
       <NavLink to="/products#Ortho Division" className="view-link">View products</NavLink>
     </div>
