@@ -172,6 +172,72 @@
 .delay-3 { animation-delay: 1.3s; }
 .delay-4 { animation-delay: 1.3s; }
 .delay-5 { animation-delay: 2s; }
+/* ================= CATEGORY GRID ================= */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 80px;
+}
+
+.category-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* This creates the slanted bottom-right corner effect */
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%);
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+}
+
+.category-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.category-info {
+  padding: 30px 25px;
+  color: #ffffff;
+  flex-grow: 1;
+}
+
+/* Specific Background Colors from your screenshot */
+.category-card.orange .category-info { background-color: #f36f21; }
+.category-card.teal .category-info { background-color: #2bb673; }
+.category-card.blue-light .category-info { background-color: #00aeef; }
+
+.category-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.category-info p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.view-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  padding-bottom: 2px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 @keyframes textFadeUp {
   to {
