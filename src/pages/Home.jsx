@@ -107,7 +107,14 @@ function Home() {
               </NavLink>
             </div>
 
-            <div className="feature-image">
+            {/* Change this part in your Home.jsx */}
+<div className="feature-image">
+  <img 
+    src={featureImg} 
+    alt="Glemberg Pharma Medical Facility" 
+    className="feature-main-img" 
+  />
+</div>
               <div className="image-placeholder">
                 Image Area
               </div>
