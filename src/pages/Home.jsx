@@ -31,7 +31,7 @@ function Home() {
   // 🔹 Smooth counter function using requestAnimationFrame
   const animateCount = (setter, target) => {
     let startTime = null;
-    const duration = 2000; // 2 seconds for all animations
+    const duration = 5000; // 2 seconds for all animations
 
     const step = (timestamp) => {
       if (!startTime) startTime = timestamp;
