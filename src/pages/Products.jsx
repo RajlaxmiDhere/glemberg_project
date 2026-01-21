@@ -86,17 +86,21 @@ const Product = () => {
         </aside>
 
         <main className="product-grid">
-          {filteredProducts.map(product => (
-            <div key={product.id} className="product-card">
-              <div className="card-inner">
-                <div className="product-image-box">
-                  <img src={product.image} alt={product.name} className="product-img" />
+          {filteredProducts.length > 0 ? (
+            filteredProducts.map(product => (
+              <div key={product.id} className="product-card">
+                <div className="card-inner">
+                  <div className="product-image-box">
+                    <img src={product.image} alt={product.name} className="product-img" />
+                  </div>
+                  <h2 className="brand-text">{product.name}</h2>
+                  <div className="category-label">{product.division}</div>
                 </div>
-                <h2 className="brand-text">{product.name}</h2>
-                <div className="category-label">{product.division}</div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p className="no-products">No products found in this category.</p>
+          )}
         </main>
       </div>
     </div>
@@ -104,4 +108,3 @@ const Product = () => {
 };
 
 export default Product;
-
