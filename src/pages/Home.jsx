@@ -4,7 +4,7 @@ import pillVideo from "../assets/video1.mp4";
 import { FaIndustry, FaUserMd, FaSmile } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
-// Certificate PDF
+// Assets
 import featureImg from "../assets/feature-medical.jpg";
 import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
 
@@ -29,10 +29,10 @@ function Home() {
     animateCount(setClients, 500);
   }, []);
 
-  // 🔹 Smooth counter function using requestAnimationFrame
+  // 🔹 Smooth counter function
   const animateCount = (setter, target) => {
     let startTime = null;
-    const duration = 5000; // 2 seconds for all animations
+    const duration = 2000; // 2 seconds
 
     const step = (timestamp) => {
       if (!startTime) startTime = timestamp;
@@ -42,7 +42,6 @@ function Home() {
         window.requestAnimationFrame(step);
       }
     };
-
     window.requestAnimationFrame(step);
   };
 
@@ -65,9 +64,7 @@ function Home() {
 
         <div className="hero-content">
           {showWelcome && (
-            <div className="welcome-tagline">
-              Welcome to Glemberg Pharma
-            </div>
+            <div className="welcome-tagline">Welcome to Glemberg Pharma</div>
           )}
           <h1>Committed to Better Healthcare</h1>
           <p>
@@ -80,7 +77,7 @@ function Home() {
       {/* ================= BELOW HERO ================= */}
       <section className="below-hero-section">
         <div className="below-hero-inner">
-
+          
           {/* ================= FEATURE INTRO ================= */}
           <div className="feature-section">
             <div className="feature-text animate-text">
@@ -93,41 +90,36 @@ function Home() {
               </p>
               <p className="animate-line delay-3">
                 Delivering trusted medicines across Orthopaedic, Dermatology,
-                and General healthcare segments. From development to delivery, our focus remains on safety,
-                consistency, and real-world clinical reliability.
+                and General healthcare segments. From development to delivery,
+                our focus remains on safety, consistency, and real-world
+                clinical reliability.
               </p>
-              <NavLink
-                to="/about"
-                className="feature-btn animate-line delay-5"
-              >
+              <NavLink to="/about" className="feature-btn animate-line delay-5">
                 Learn More
               </NavLink>
             </div>
 
             <div className="feature-image">
-               {/* ACTUAL IMAGE PLACEMENT */}
-               <img 
-                 src={featureImg} 
-                 alt="Medical Feature" 
-                 className="feature-main-img" 
-               />
+              <img 
+                src={featureImg} 
+                alt="Glemberg Healthcare" 
+                className="feature-main-img" 
+              />
             </div>
-          </div> {/* End Feature Section */}
+          </div>
 
-          {/* ================= STATS (COUNT-UP) ================= */}
+          {/* ================= STATS ================= */}
           <div className="stats-modern">
             <div className="stat-card-modern blue">
               <FaIndustry className="stat-icon" />
               <h2>{products}+</h2>
               <p>Products</p>
             </div>
-
             <div className="stat-card-modern orange">
               <FaUserMd className="stat-icon" />
               <h2>{team}+</h2>
               <p>Team Members</p>
             </div>
-
             <div className="stat-card-modern purple">
               <FaSmile className="stat-icon" />
               <h2>{clients}+</h2>
@@ -142,7 +134,6 @@ function Home() {
               We manufacture from certified partners, ensuring strict compliance
               with international quality and safety standards.
             </p>
-
             <a
               href={certificate}
               target="_blank"
@@ -152,8 +143,10 @@ function Home() {
               View Certificate of Incorporation
             </a>
           </div>
-
-        </div> {/* End below-hero-inner */}
-      </section> {/* End below-hero-section */}
+        </div>
+      </section>
     </>
   );
+}
+
+export default Home;
