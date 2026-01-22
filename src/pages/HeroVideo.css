@@ -148,13 +148,12 @@
   border-radius: 28px;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
   transition: transform 0.5s ease;
-   transform: translateX(70px);
+  transform: translate(70px, 50px);
 }
 
 .feature-main-img:hover {
-  transform: scale(1.02); /* Subtle zoom effect on hover */
+  transform: translate(70px, 50px) scale(1.02);
 }
-
 /* =========================
    TEXT ANIMATION
    ========================= */
