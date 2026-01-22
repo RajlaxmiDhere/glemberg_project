@@ -33,7 +33,7 @@ function Home() {
 
   const animateCount = (setter, target) => {
     let startTime = null;
-    const duration = 5000;
+    const duration = 8000;
 
     const step = (timestamp) => {
       if (!startTime) startTime = timestamp;
