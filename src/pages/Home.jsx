@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./HeroVideo.css";
 import pillVideo from "../assets/video1.mp4";
 import { FaIndustry, FaUserMd, FaSmile } from "react-icons/fa";
@@ -19,6 +19,10 @@ function Home() {
   const [team, setTeam] = useState(0);
   const [clients, setClients] = useState(0);
 
+  // ✅ REFS FOR SCROLL DETECTION
+  const statsRef = useRef(null);
+  const hasAnimated = useRef(false);
+
   useEffect(() => {
     const hasSeen = sessionStorage.getItem("hasSeenWelcome");
     if (!hasSeen) {
@@ -26,19 +30,41 @@ function Home() {
       sessionStorage.setItem("hasSeenWelcome", "true");
     }
 
-    animateCount(setProducts, 20);
-    animateCount(setTeam, 25);
-    animateCount(setClients, 500);
+    // ✅ INTERSECTION OBSERVER LOGIC
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting && !hasAnimated.current) {
+          hasAnimated.current = true; // Run only once
+          animateCount(setProducts, 20);
+          animateCount(setTeam, 25);
+          animateCount(setClients, 500);
+        }
+      },
+      { threshold: 0.2 } // Trigger when 20% of the section is visible
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => {
+      if (statsRef.current) observer.unobserve(statsRef.current);
+    };
   }, []);
 
   const animateCount = (setter, target) => {
     let startTime = null;
-    const duration = 5000;
+    const duration = 2000; // Adjusted for better UX (2 seconds)
 
     const step = (timestamp) => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
-      setter(Math.floor(progress * target));
+      
+      // Smooth easing function
+      const easeOutQuad = progress * (2 - progress);
+      setter(Math.floor(easeOutQuad * target));
+
       if (progress < 1) {
         window.requestAnimationFrame(step);
       }
@@ -83,6 +109,9 @@ function Home() {
           </div>
 
           {/* ================= CATEGORY CARDS ================= */}
+          <div className="category-section-header">
+  <h2 className="category-main-title">Our Products</h2>
+</div>
           <div className="category-grid">
             <div className="category-card orange">
               <div className="category-image">
@@ -91,7 +120,6 @@ function Home() {
               <div className="category-info">
                 <h3>General Care</h3>
                 <p>Wide range of healthcare solutions</p>
-                {/* Fixed to lowercase #general to match Product.jsx */}
                 <NavLink to="/products#general" className="view-link">View products</NavLink>
               </div>
             </div>
@@ -103,7 +131,6 @@ function Home() {
               <div className="category-info">
                 <h3>Ortho Care</h3>
                 <p>Advanced bone and joint support</p>
-                {/* Fixed to lowercase #ortho */}
                 <NavLink to="/products#ortho" className="view-link">View products</NavLink>
               </div>
             </div>
@@ -115,14 +142,13 @@ function Home() {
               <div className="category-info">
                 <h3>Derma Care</h3>
                 <p>Specialized skin health treatments</p>
-                {/* Fixed to lowercase #derma */}
                 <NavLink to="/products#derma" className="view-link">View products</NavLink>
               </div>
             </div>
           </div>
 
-          {/* ================= STATS ================= */}
-          <div className="stats-modern">
+          {/* ================= STATS (Triggered on Scroll) ================= */}
+          <div className="stats-modern" ref={statsRef}>
             <div className="stat-card-modern blue">
               <FaIndustry className="stat-icon" />
               <h2>{products}+</h2>
