@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react"; // 1. Added useEffect
+import { useLocation } from "react-router-dom";    // 2. Added useLocation
 import "./Products.css";
 
 /* Assets */
@@ -24,6 +25,21 @@ import Itragem200 from "../assets/Itragem_200_cap.png";
 
 const Product = () => {
   const [filter, setFilter] = useState("all");
+  const location = useLocation(); // 3. Defined location
+
+  useEffect(() => {
+    // Check if there is a hash in the URL (e.g., #ortho)
+    const hash = location.hash.replace("#", ""); 
+    
+    if (hash === "general" || hash === "ortho" || hash === "derma") {
+      setFilter(hash);
+    } else {
+      setFilter("all");
+    }
+    
+    // Scroll to top when the user arrives or filter changes
+    window.scrollTo(0, 0);
+  }, [location]); // Re-run whenever the URL changes
 
   const products = [
     { id: 1, name: "Bonew Jelly Sachet", category: "ortho", division: "ORTHO DIVISION", image: bonewJelly },
@@ -74,17 +90,21 @@ const Product = () => {
         </aside>
 
         <main className="product-grid">
-          {filteredProducts.map(product => (
-            <div key={product.id} className="product-card">
-              <div className="card-inner">
-                <div className="product-image-box">
-                  <img src={product.image} alt={product.name} className="product-img" />
+          {filteredProducts.length > 0 ? (
+            filteredProducts.map(product => (
+              <div key={product.id} className="product-card">
+                <div className="card-inner">
+                  <div className="product-image-box">
+                    <img src={product.image} alt={product.name} className="product-img" />
+                  </div>
+                  <h2 className="brand-text">{product.name}</h2>
+                  <div className="category-label">{product.division}</div>
                 </div>
-                <h2 className="brand-text">{product.name}</h2>
-                <div className="category-label">{product.division}</div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p className="no-products">No products found in this category.</p>
+          )}
         </main>
       </div>
     </div>
@@ -92,4 +112,3 @@ const Product = () => {
 };
 
 export default Product;
-

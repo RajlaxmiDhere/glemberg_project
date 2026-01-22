@@ -4,14 +4,12 @@ import pillVideo from "../assets/video1.mp4";
 import { FaIndustry, FaUserMd, FaSmile } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
-// Certificate PDF
+// Assets
 import featureImg from "../assets/feature-medical.jpg";
 import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
 
 function Home() {
   const [showWelcome, setShowWelcome] = useState(false);
-
-  // ✅ COUNT-UP STATES
   const [products, setProducts] = useState(0);
   const [team, setTeam] = useState(0);
   const [clients, setClients] = useState(0);
@@ -23,41 +21,30 @@ function Home() {
       sessionStorage.setItem("hasSeenWelcome", "true");
     }
 
-    // ✅ Start all counters
     animateCount(setProducts, 20);
     animateCount(setTeam, 25);
     animateCount(setClients, 500);
   }, []);
 
-  // 🔹 Smooth counter function using requestAnimationFrame
   const animateCount = (setter, target) => {
     let startTime = null;
-    const duration = 5000; // 2 seconds for all animations
+    const duration = 1800;
 
     const step = (timestamp) => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
       setter(Math.floor(progress * target));
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      }
+      if (progress < 1) requestAnimationFrame(step);
     };
 
-    window.requestAnimationFrame(step);
+    requestAnimationFrame(step);
   };
 
   return (
     <>
       {/* ================= HERO VIDEO ================= */}
       <section className="hero-video-section">
-        <video
-          className="hero-video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-        >
+        <video className="hero-video" autoPlay muted loop playsInline>
           <source src={pillVideo} type="video/mp4" />
         </video>
 
@@ -65,9 +52,7 @@ function Home() {
 
         <div className="hero-content">
           {showWelcome && (
-            <div className="welcome-tagline">
-              Welcome to Glemberg Pharma
-            </div>
+            <div className="welcome-tagline">Welcome to Glemberg Pharma</div>
           )}
           <h1>Committed to Better Healthcare</h1>
           <p>
@@ -81,7 +66,7 @@ function Home() {
       <section className="below-hero-section">
         <div className="below-hero-inner">
 
-          {/* ================= FEATURE INTRO ================= */}
+          {/* ================= FEATURE SECTION ================= */}
           <div className="feature-section">
             <div className="feature-text animate-text">
               <h2 className="animate-line delay-1">
@@ -89,32 +74,68 @@ function Home() {
               </h2>
 
               <p className="feature-sub animate-line delay-2">
-                Purpose-driven pharmaceutical solutions designed to support
-                everyday healthcare needs.
+                Purpose-driven pharmaceutical solutions for everyday healthcare.
               </p>
 
               <p className="animate-line delay-3">
-                Delivering trusted medicines across Orthopaedic, Dermatology,
-                and General healthcare segments.From development to delivery, our focus remains on safety,
-                consistency, and real-world clinical reliability.
+                Delivering reliable medicines across Orthopaedic, Dermatology,
+                and General healthcare segments with uncompromised quality.
               </p>
 
-              <NavLink
-                to="/about"
-                className="feature-btn animate-line delay-5"
-              >
+              <NavLink to="/about" className="feature-btn animate-line delay-5">
                 Learn More
               </NavLink>
             </div>
 
+            {/* IMAGE */}
             <div className="feature-image">
-              <div className="image-placeholder">
-                Image Area
-              </div>
+              <img
+                src={featureImg}
+                alt="Patient care and medical support"
+                className="feature-main-img"
+              />
             </div>
           </div>
 
-          {/* ================= STATS (COUNT-UP) ================= */}
+          {/* ================= DIVISION CARDS ================= */}
+          <div className="division-cards">
+
+            <div className="division-card general">
+              <h3>General Healthcare</h3>
+              <p>
+                Comprehensive medicines for common medical conditions,
+                supporting everyday health and recovery.
+              </p>
+              <NavLink to="/products?category=general" className="division-btn">
+                View Products
+              </NavLink>
+            </div>
+
+            <div className="division-card ortho">
+              <h3>Orthopaedic Range</h3>
+              <p>
+                Advanced formulations designed to support bone, joint,
+                and musculoskeletal health.
+              </p>
+              <NavLink to="/products?category=ortho" className="division-btn">
+                View Products
+              </NavLink>
+            </div>
+
+            <div className="division-card derma">
+              <h3>Dermatology Range</h3>
+              <p>
+                Scientifically developed skincare solutions focused on
+                safety, efficacy, and skin wellness.
+              </p>
+              <NavLink to="/products?category=derma" className="division-btn">
+                View Products
+              </NavLink>
+            </div>
+
+          </div>
+
+          {/* ================= STATS ================= */}
           <div className="stats-modern">
             <div className="stat-card-modern blue">
               <FaIndustry className="stat-icon" />
@@ -142,7 +163,6 @@ function Home() {
               We manufacture from certified partners, ensuring strict compliance
               with international quality and safety standards.
             </p>
-
             <a
               href={certificate}
               target="_blank"
