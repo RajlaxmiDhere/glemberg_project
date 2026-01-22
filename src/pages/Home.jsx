@@ -6,15 +6,10 @@ import { NavLink } from "react-router-dom";
 
 // Assets
 import featureImg from "../assets/feature-medical.jpg";
-import dermaImg from "../assets/derma_division.jpg"; 
-import generalImg from "../assets/general_range.jpg";
-import orthoImg from "../assets/ortho_division.jpg";
 import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
 
 function Home() {
   const [showWelcome, setShowWelcome] = useState(false);
-
-  // ✅ COUNT-UP STATES
   const [products, setProducts] = useState(0);
   const [team, setTeam] = useState(0);
   const [clients, setClients] = useState(0);
@@ -33,92 +28,111 @@ function Home() {
 
   const animateCount = (setter, target) => {
     let startTime = null;
-    const duration = 5000;
+    const duration = 1800;
 
     const step = (timestamp) => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
       setter(Math.floor(progress * target));
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      }
+      if (progress < 1) requestAnimationFrame(step);
     };
-    window.requestAnimationFrame(step);
+
+    requestAnimationFrame(step);
   };
 
   return (
     <>
       {/* ================= HERO VIDEO ================= */}
       <section className="hero-video-section">
-        <video className="hero-video" autoPlay muted loop playsInline preload="auto">
+        <video className="hero-video" autoPlay muted loop playsInline>
           <source src={pillVideo} type="video/mp4" />
         </video>
+
         <div className="hero-overlay"></div>
+
         <div className="hero-content">
-          {showWelcome && <div className="welcome-tagline">Welcome to Glemberg Pharma</div>}
+          {showWelcome && (
+            <div className="welcome-tagline">Welcome to Glemberg Pharma</div>
+          )}
           <h1>Committed to Better Healthcare</h1>
-          <p>Glemberg Pharma delivers safe, effective, and innovative pharmaceutical solutions to improve lives.</p>
+          <p>
+            Glemberg Pharma delivers safe, effective, and innovative
+            pharmaceutical solutions to improve lives.
+          </p>
         </div>
       </section>
 
       {/* ================= BELOW HERO ================= */}
       <section className="below-hero-section">
         <div className="below-hero-inner">
-          
-          {/* ================= FEATURE INTRO ================= */}
+
+          {/* ================= FEATURE SECTION ================= */}
           <div className="feature-section">
             <div className="feature-text animate-text">
-              <h2 className="animate-line delay-1">Built on Science. Focused on Care.</h2>
+              <h2 className="animate-line delay-1">
+                Built on Science. Focused on Care.
+              </h2>
+
               <p className="feature-sub animate-line delay-2">
-                Purpose-driven pharmaceutical solutions designed to support everyday healthcare needs.
+                Purpose-driven pharmaceutical solutions for everyday healthcare.
               </p>
+
               <p className="animate-line delay-3">
-                Delivering trusted medicines across Orthopaedic, Dermatology, and General healthcare segments.
+                Delivering reliable medicines across Orthopaedic, Dermatology,
+                and General healthcare segments with uncompromised quality.
               </p>
-              <NavLink to="/about" className="feature-btn animate-line delay-5">Learn More</NavLink>
+
+              <NavLink to="/about" className="feature-btn animate-line delay-5">
+                Learn More
+              </NavLink>
             </div>
+
+            {/* IMAGE */}
             <div className="feature-image">
-              <img src={featureImg} alt="Glemberg Healthcare" className="feature-main-img" />
+              <img
+                src={featureImg}
+                alt="Patient care and medical support"
+                className="feature-main-img"
+              />
             </div>
           </div>
 
-          {/* ================= CATEGORY CARDS ================= */}
-          <div className="category-grid">
-            <div className="category-card orange">
-              <div className="category-image">
-                <img src={generalImg} alt="General Care" />
-              </div>
-              <div className="category-info">
-                <h3>General Care</h3>
-                <p>Wide range of healthcare solutions</p>
-                {/* Fixed to lowercase #general to match Product.jsx */}
-                <NavLink to="/products#general" className="view-link">View products</NavLink>
-              </div>
+          {/* ================= DIVISION CARDS ================= */}
+          <div className="division-cards">
+
+            <div className="division-card general">
+              <h3>General Healthcare</h3>
+              <p>
+                Comprehensive medicines for common medical conditions,
+                supporting everyday health and recovery.
+              </p>
+              <NavLink to="/products?category=general" className="division-btn">
+                View Products
+              </NavLink>
             </div>
 
-            <div className="category-card teal">
-              <div className="category-image">
-                <img src={orthoImg} alt="Ortho Care" />
-              </div>
-              <div className="category-info">
-                <h3>Ortho Care</h3>
-                <p>Advanced bone and joint support</p>
-                {/* Fixed to lowercase #ortho */}
-                <NavLink to="/products#ortho" className="view-link">View products</NavLink>
-              </div>
+            <div className="division-card ortho">
+              <h3>Orthopaedic Range</h3>
+              <p>
+                Advanced formulations designed to support bone, joint,
+                and musculoskeletal health.
+              </p>
+              <NavLink to="/products?category=ortho" className="division-btn">
+                View Products
+              </NavLink>
             </div>
 
-            <div className="category-card blue-light">
-              <div className="category-image">
-                <img src={dermaImg} alt="Derma Care" />
-              </div>
-              <div className="category-info">
-                <h3>Derma Care</h3>
-                <p>Specialized skin health treatments</p>
-                {/* Fixed to lowercase #derma */}
-                <NavLink to="/products#derma" className="view-link">View products</NavLink>
-              </div>
+            <div className="division-card derma">
+              <h3>Dermatology Range</h3>
+              <p>
+                Scientifically developed skincare solutions focused on
+                safety, efficacy, and skin wellness.
+              </p>
+              <NavLink to="/products?category=derma" className="division-btn">
+                View Products
+              </NavLink>
             </div>
+
           </div>
 
           {/* ================= STATS ================= */}
@@ -128,11 +142,13 @@ function Home() {
               <h2>{products}+</h2>
               <p>Products</p>
             </div>
+
             <div className="stat-card-modern orange">
               <FaUserMd className="stat-icon" />
               <h2>{team}+</h2>
               <p>Team Members</p>
             </div>
+
             <div className="stat-card-modern purple">
               <FaSmile className="stat-icon" />
               <h2>{clients}+</h2>
@@ -143,11 +159,20 @@ function Home() {
           {/* ================= QUALITY ================= */}
           <div className="quality-section">
             <h2>International Quality Standards</h2>
-            <p>We manufacture from certified partners, ensuring strict compliance.</p>
-            <a href={certificate} target="_blank" rel="noopener noreferrer" className="certificate-btn">
+            <p>
+              We manufacture from certified partners, ensuring strict compliance
+              with international quality and safety standards.
+            </p>
+            <a
+              href={certificate}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="certificate-btn"
+            >
               View Certificate of Incorporation
             </a>
           </div>
+
         </div>
       </section>
     </>
