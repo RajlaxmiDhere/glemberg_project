@@ -110,7 +110,7 @@ function Home() {
 
           {/* ================= CATEGORY CARDS ================= */}
           <div className="category-section-header">
-  <h2 className="category-main-title">Our Product</h2>
+  <h2 className="category-main-title">Our Products</h2>
 </div>
           <div className="category-grid">
             <div className="category-card orange">
