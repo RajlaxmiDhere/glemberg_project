@@ -166,17 +166,6 @@ function Home() {
             </div>
           </div>
 
-          {/* ================= QUALITY ================= */}
-          <div className="quality-section">
-            <h2>International Quality Standards</h2>
-            <p>We manufacture from certified partners, ensuring strict compliance.</p>
-            <a href={certificate} target="_blank" rel="noopener noreferrer" className="certificate-btn">
-              View Certificate of Incorporation
-            </a>
-          </div>
-        </div>
-      </section>
-    </>
   );
 }
 
