@@ -4,35 +4,40 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
-app.use(express.json());
 
-// 1. Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("Connected to MongoDB"))
-  .catch(err => console.log(err));
+// Middleware
+app.use(cors()); // This allows your React app to talk to the server
+app.use(express.json()); // This allows the server to read JSON data
 
-// 2. Create a Schema & Model
-const ContactSchema = new mongoose.Schema({
+// 1. Connect to MongoDB (Replace with your connection string)
+const MONGO_URI = "mongodb://localhost:27017/glemberg_db"; 
+
+mongoose.connect(MONGO_URI)
+  .then(() => console.log("✅ MongoDB Connected"))
+  .catch(err => console.error("❌ MongoDB Connection Error:", err));
+
+// 2. Define the Data Schema
+const contactSchema = new mongoose.Schema({
   name: String,
   email: String,
   phone: String,
   message: String,
-  date: { type: Date, default: Date.now }
+  createdAt: { type: Date, default: Date.now }
 });
 
-const Contact = mongoose.model('Contact', ContactSchema);
+const Contact = mongoose.model('Contact', contactSchema);
 
-// 3. The API Route
+// 3. The POST Route to save data
 app.post('/api/contact', async (req, res) => {
   try {
-    const newContact = new Contact(req.body);
-    await newContact.save();
-    res.status(201).json({ message: "Data saved successfully!" });
+    const { name, email, phone, message } = req.body;
+    const newEntry = new Contact({ name, email, phone, message });
+    await newEntry.save();
+    res.status(201).json({ message: "Data saved to database!" });
   } catch (error) {
     res.status(500).json({ error: "Failed to save data" });
   }
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const PORT = 5000;
+app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
