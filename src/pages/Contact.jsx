@@ -1,103 +1,148 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Contact.css";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaWhatsapp } from "react-icons/fa";
+import {
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaWhatsapp
+} from "react-icons/fa";
 
 const Contact = () => {
-  // 1. State for form data
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: ""
-  });
 
-  const [status, setStatus] = useState("");
+  const phoneNumbers = [
+    "+91 7559189020",
+    "+91 8975173157",
+  ];
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const email = "glembergpharmaceuticals@gmail.com";
 
-  // 2. Submit Handler
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("Sending...");
+  const whatsappNumber = "917559189020";
+  const whatsappMessage = "Hello! I have an enquiry regarding your services.";
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    whatsappMessage
+  )}`;
 
-    try {
-      const response = await fetch("http://localhost:5000/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setStatus("Success! Your message has been stored.");
-        setFormData({ name: "", email: "", phone: "", message: "" }); // Reset form
-      } else {
-        setStatus("Error: Could not save message.");
-      }
-    } catch (error) {
-      setStatus("Server Error. Please try again later.");
-    }
-  };
+  const mapLink =
+    "https://www.google.com/maps/place/Neminath+Nagar,+Sangli,+Maharashtra+416416";
 
   return (
     <div className="contact-page-wrapper">
+
       <div className="container contact-top">
         <div className="row align-items-center">
-          
-          {/* LEFT: INFO (Keeping your original UI) */}
+
+          {/* LEFT: CONTACT INFO */}
           <div className="col-md-6">
             <div className="contact-info-card">
+
               <h3>Corporate Office</h3>
-              <p><b>Glemberg Pharma Pvt. Ltd.</b><br />Sangli, Maharashtra – 416416</p>
-              {/* ... Icons and buttons stay the same ... */}
+
+              <p>
+                <b>Glemberg Pharma Pvt. Ltd.</b> <br />
+                Neminath Nagar,<br />
+                Sangli, Maharashtra – 416416<br />
+                India
+              </p>
+
+              {/* LOCATION */}
+              <div className="info-value">
+                <span className="icon-circle">
+                  <FaMapMarkerAlt />
+                </span>
+                <a href={mapLink} target="_blank" rel="noopener noreferrer">
+                  View on Google Maps
+                </a>
+              </div>
+
+              {/* PHONE */}
+              <h3 className="info-heading">Phone Number</h3>
+              {phoneNumbers.map((num, index) => (
+                <div className="info-value" key={index}>
+                  <span className="icon-circle">
+                    <FaPhoneAlt />
+                  </span>
+                  <a
+                    href={`tel:${num.replace(/\s/g, "")}`}
+                    className="contact-link"
+                  >
+                    {num}
+                  </a>
+                </div>
+              ))}
+
+              {/* EMAIL */}
+              <h3 className="info-heading">Email</h3>
+              <div className="info-value">
+                <span className="icon-circle">
+                  <FaEnvelope />
+                </span>
+                <a href={`mailto:${email}`} className="contact-link">
+                  {email}
+                </a>
+              </div>
+
+              {/* WHATSAPP BUTTON */}
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whatsapp-enquire-btn"
+              >
+                <FaWhatsapp className="whatsapp-icon" />
+                Enquire Now
+              </a>
+
             </div>
           </div>
 
-          {/* RIGHT: FORM (Updated with handlers) */}
+          {/* RIGHT: CONTACT FORM */}
           <div className="col-md-6">
             <div className="contact-form">
               <h4 className="text-center mb-4">Contact Us</h4>
-              <form onSubmit={handleSubmit}>
+
+              <form>
                 <div className="mb-3">
                   <label>Your Name</label>
-                  <input 
-                    type="text" name="name" className="form-control" 
-                    value={formData.name} onChange={handleChange} required 
-                  />
+                  <input type="text" className="form-control" placeholder="Full Name" />
                 </div>
+
                 <div className="mb-3">
                   <label>Email Address</label>
-                  <input 
-                    type="email" name="email" className="form-control" 
-                    value={formData.email} onChange={handleChange} required 
-                  />
+                  <input type="email" className="form-control" placeholder="Email Address" />
                 </div>
+
                 <div className="mb-3">
                   <label>Phone Number</label>
-                  <input 
-                    type="tel" name="phone" className="form-control" 
-                    value={formData.phone} onChange={handleChange} required 
-                  />
+                  <input type="tel" className="form-control" placeholder="Phone Number" />
                 </div>
+
                 <div className="mb-3">
                   <label>Message</label>
-                  <textarea 
-                    name="message" className="form-control" rows="4" 
-                    value={formData.message} onChange={handleChange} required
-                  ></textarea>
+                  <textarea className="form-control" rows="4" placeholder="Your Message"></textarea>
                 </div>
 
                 <button type="submit" className="btn btn-primary w-100">
                   Submit
                 </button>
-
-                {status && <p className="text-center mt-3" style={{color: status.includes("Success") ? "green" : "red"}}>{status}</p>}
               </form>
             </div>
           </div>
+
         </div>
       </div>
+
+      {/* MAP */}
+      <div className="map-container">
+        <iframe
+          title="Google Map"
+          src="https://www.google.com/maps?q=Neminath%20Nagar%20Sangli%20Maharashtra&output=embed"
+          width="100%"
+          height="550"
+          style={{ border: 0 }}
+          loading="lazy"
+        ></iframe>
+      </div>
+
     </div>
   );
 };
