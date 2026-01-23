@@ -13,7 +13,7 @@ const Contact = () => {
   const [isSending, setIsSending] = useState(false);
 
   const phoneNumbers = ["+91 7559189020", "+91 8975173157"];
-  const email = "glembergpharmaceuticals@gmail.com";
+  const email = "shrutigavali03@gmail.com";
   const whatsappLink = `https://wa.me/917559189020?text=Hello! I have an enquiry regarding your services.`;
 
   const sendEmail = (e) => {
