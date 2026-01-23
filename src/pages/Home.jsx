@@ -110,8 +110,9 @@ function Home() {
 
           {/* ================= CATEGORY CARDS ================= */}
           <div className="category-section-header">
-  <h2 className="category-main-title">Our Products</h2>
-</div>
+            <h2 className="category-main-title">Our Products</h2>
+          </div>
+          
           <div className="category-grid">
             <div className="category-card orange">
               <div className="category-image">
@@ -165,7 +166,10 @@ function Home() {
               <p>Happy Clients</p>
             </div>
           </div>
-</>
+
+        </div> {/* Closes below-hero-inner */}
+      </section> {/* Closes below-hero-section */}
+    </>
   );
 }
 
