@@ -293,6 +293,29 @@
   border-bottom: 1px solid rgba(255,255,255,0.4);
   padding-bottom: 2px;
 }
+.product-explore-container {
+  text-align: center;
+  margin: -20px 0 80px 0; /* Pulls it closer to cards and pushes stats away */
+}
+
+.product-explore-btn {
+  display: inline-block;
+  padding: 12px 40px;
+  background: transparent;
+  color: #00008b;
+  border: 2px solid #00008b;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.product-explore-btn:hover {
+  background: #00008b;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 139, 0.2);
+}
 
 /* Responsive */
 @media (max-width: 900px) {
