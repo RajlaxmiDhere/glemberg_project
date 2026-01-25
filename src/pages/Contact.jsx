@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 import {
   FaMapMarkerAlt,
@@ -8,22 +8,65 @@ import {
 } from "react-icons/fa";
 
 const Contact = () => {
+  // ================= FORM STATE =================
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
+  });
 
+  const [status, setStatus] = useState("");
+
+  // ================= STATIC DATA =================
   const phoneNumbers = [
     "+91 7559189020",
-    "+91 8975173157",
+    "+91 8975173157"
   ];
 
   const email = "glembergpharmaceuticals@gmail.com";
 
-  const whatsappNumber = "917559189020";
-  const whatsappMessage = "Hello! I have an enquiry regarding your services.";
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    whatsappMessage
-  )}`;
+  const whatsappLink =
+    "https://wa.me/917559189020?text=Hello! I have an enquiry regarding your services.";
 
-  const mapLink =
-    "https://www.google.com/maps/place/Neminath+Nagar,+Sangli,+Maharashtra+416416";
+  // ================= HANDLE INPUT CHANGE =================
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  // ================= HANDLE FORM SUBMIT =================
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setStatus("Message sent successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: ""
+        });
+      } else {
+        setStatus("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Submission Error:", error);
+      setStatus("Error connecting to server.");
+    }
+  };
 
   return (
     <div className="contact-page-wrapper">
@@ -31,12 +74,11 @@ const Contact = () => {
       <div className="container contact-top">
         <div className="row align-items-center">
 
-          {/* LEFT: CONTACT INFO */}
+          {/* ================= LEFT: CONTACT INFO ================= */}
           <div className="col-md-6">
             <div className="contact-info-card">
 
               <h3>Corporate Office</h3>
-
               <p>
                 <b>Glemberg Pharma Pvt. Ltd.</b> <br />
                 Neminath Nagar,<br />
@@ -49,7 +91,11 @@ const Contact = () => {
                 <span className="icon-circle">
                   <FaMapMarkerAlt />
                 </span>
-                <a href={mapLink} target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.google.com/maps/place/Neminath+Nagar,+Sangli,+Maharashtra+416416"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   View on Google Maps
                 </a>
               </div>
@@ -81,7 +127,7 @@ const Contact = () => {
                 </a>
               </div>
 
-              {/* WHATSAPP BUTTON */}
+              {/* WHATSAPP */}
               <a
                 href={whatsappLink}
                 target="_blank"
@@ -95,35 +141,80 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* RIGHT: CONTACT FORM */}
+          {/* ================= RIGHT: CONTACT FORM ================= */}
           <div className="col-md-6">
             <div className="contact-form">
               <h4 className="text-center mb-4">Contact Us</h4>
 
-              <form>
+              <form onSubmit={handleSubmit}>
+
                 <div className="mb-3">
                   <label>Your Name</label>
-                  <input type="text" className="form-control" placeholder="Full Name" />
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="form-control"
+                    placeholder="Full Name"
+                    required
+                  />
                 </div>
 
                 <div className="mb-3">
                   <label>Email Address</label>
-                  <input type="email" className="form-control" placeholder="Email Address" />
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="form-control"
+                    placeholder="Email Address"
+                    required
+                  />
                 </div>
 
                 <div className="mb-3">
                   <label>Phone Number</label>
-                  <input type="tel" className="form-control" placeholder="Phone Number" />
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="form-control"
+                    placeholder="Phone Number"
+                    required
+                  />
                 </div>
 
                 <div className="mb-3">
                   <label>Message</label>
-                  <textarea className="form-control" rows="4" placeholder="Your Message"></textarea>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="form-control"
+                    rows="4"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
                 </div>
 
-                <button type="submit" className="btn btn-primary w-100">
-                  Submit
+                <button
+                  type="submit"
+                  className="btn btn-primary w-100"
+                  disabled={status === "Sending..."}
+                >
+                  {status === "Sending..." ? "Sending..." : "Submit"}
                 </button>
+
+                {/* STATUS MESSAGE */}
+                {status && (
+                  <p className="mt-3 text-center small">
+                    {status}
+                  </p>
+                )}
+
               </form>
             </div>
           </div>
@@ -131,7 +222,7 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* MAP */}
+      {/* ================= MAP ================= */}
       <div className="map-container">
         <iframe
           title="Google Map"
@@ -148,3 +239,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

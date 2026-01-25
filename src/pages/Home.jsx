@@ -13,15 +13,17 @@ import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
 
 function Home() {
   const [showWelcome, setShowWelcome] = useState(false);
+  const [isVisible, setIsVisible] = useState(false); 
 
   // ✅ COUNT-UP STATES
   const [products, setProducts] = useState(0);
   const [team, setTeam] = useState(0);
   const [clients, setClients] = useState(0);
 
-  // ✅ REFS FOR SCROLL DETECTION
-  const statsRef = useRef(null);
-  const hasAnimated = useRef(false);
+  // ✅ TWO SEPARATE REFS
+  const featureRef = useRef(null); // Triggers "Built on Science"
+  const statsRef = useRef(null);   // Triggers the actual counting
+  const hasAnimatedStats = useRef(false);
 
   useEffect(() => {
     const hasSeen = sessionStorage.getItem("hasSeenWelcome");
@@ -30,44 +32,45 @@ function Home() {
       sessionStorage.setItem("hasSeenWelcome", "true");
     }
 
-    // ✅ INTERSECTION OBSERVER LOGIC
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry.isIntersecting && !hasAnimated.current) {
-          hasAnimated.current = true; // Run only once
+    const textObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    const statsObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimatedStats.current) {
+          hasAnimatedStats.current = true; 
           animateCount(setProducts, 20);
           animateCount(setTeam, 25);
           animateCount(setClients, 500);
         }
       },
-      { threshold: 0.2 } // Trigger when 20% of the section is visible
+      { threshold: 0.5 } 
     );
 
-    if (statsRef.current) {
-      observer.observe(statsRef.current);
-    }
+    if (featureRef.current) textObserver.observe(featureRef.current);
+    if (statsRef.current) statsObserver.observe(statsRef.current);
 
     return () => {
-      if (statsRef.current) observer.unobserve(statsRef.current);
+      if (featureRef.current) textObserver.unobserve(featureRef.current);
+      if (statsRef.current) statsObserver.unobserve(statsRef.current);
     };
   }, []);
 
   const animateCount = (setter, target) => {
     let startTime = null;
-    const duration = 2000; // Adjusted for better UX (2 seconds)
-
+    const duration = 2000; 
     const step = (timestamp) => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
-      
-      // Smooth easing function
       const easeOutQuad = progress * (2 - progress);
       setter(Math.floor(easeOutQuad * target));
-
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      }
+      if (progress < 1) window.requestAnimationFrame(step);
     };
     window.requestAnimationFrame(step);
   };
@@ -87,21 +90,30 @@ function Home() {
         </div>
       </section>
 
-      {/* ================= BELOW HERO ================= */}
       <section className="below-hero-section">
         <div className="below-hero-inner">
           
-          {/* ================= FEATURE INTRO ================= */}
-          <div className="feature-section">
+          {/* ✅ TRIGGER 1: Text entrance */}
+          <div 
+            className={`feature-section ${isVisible ? "is-visible" : "is-hidden"}`} 
+            ref={featureRef}
+          >
             <div className="feature-text animate-text">
-              <h2 className="animate-line delay-1">Built on Science. Focused on Care.</h2>
-              <p className="feature-sub animate-line delay-2">
+              <h2 className={`animate-line ${isVisible ? "delay-1" : ""}`}>
+                Built on Science. Focused on Care.
+              </h2>
+              <p className={`feature-sub animate-line ${isVisible ? "delay-2" : ""}`}>
                 Purpose-driven pharmaceutical solutions designed to support everyday healthcare needs.
               </p>
-              <p className="animate-line delay-3">
+              <p className={`animate-line ${isVisible ? "delay-3" : ""}`}>
                 Delivering trusted medicines across Orthopaedic, Dermatology, and General healthcare segments.
               </p>
-              <NavLink to="/about" className="feature-btn animate-line delay-5">Learn More</NavLink>
+              <NavLink 
+                to="/about" 
+                className={`feature-btn animate-line ${isVisible ? "delay-5" : ""}`}
+              >
+                Learn More
+              </NavLink>
             </div>
             <div className="feature-image">
               <img src={featureImg} alt="Glemberg Healthcare" className="feature-main-img" />
@@ -110,13 +122,12 @@ function Home() {
 
           {/* ================= CATEGORY CARDS ================= */}
           <div className="category-section-header">
-  <h2 className="category-main-title">Our Products</h2>
-</div>
+            <h2 className="category-main-title">Our Products</h2>
+          </div>
+          
           <div className="category-grid">
             <div className="category-card orange">
-              <div className="category-image">
-                <img src={generalImg} alt="General Care" />
-              </div>
+              <div className="category-image"><img src={generalImg} alt="General Care" /></div>
               <div className="category-info">
                 <h3>General Care</h3>
                 <p>Wide range of healthcare solutions</p>
@@ -125,9 +136,7 @@ function Home() {
             </div>
 
             <div className="category-card teal">
-              <div className="category-image">
-                <img src={orthoImg} alt="Ortho Care" />
-              </div>
+              <div className="category-image"><img src={orthoImg} alt="Ortho Care" /></div>
               <div className="category-info">
                 <h3>Ortho Care</h3>
                 <p>Advanced bone and joint support</p>
@@ -136,9 +145,7 @@ function Home() {
             </div>
 
             <div className="category-card blue-light">
-              <div className="category-image">
-                <img src={dermaImg} alt="Derma Care" />
-              </div>
+              <div className="category-image"><img src={dermaImg} alt="Derma Care" /></div>
               <div className="category-info">
                 <h3>Derma Care</h3>
                 <p>Specialized skin health treatments</p>
@@ -147,7 +154,14 @@ function Home() {
             </div>
           </div>
 
-          {/* ================= STATS (Triggered on Scroll) ================= */}
+          {/* ✅ ADDED: Learn More Button for Products Section */}
+          <div className="product-explore-container">
+             <NavLink to="/products" className="product-explore-btn">
+               Explore All Products
+             </NavLink>
+          </div>
+
+          {/* ✅ TRIGGER 2: Counting starts only when you scroll to this div */}
           <div className="stats-modern" ref={statsRef}>
             <div className="stat-card-modern blue">
               <FaIndustry className="stat-icon" />
@@ -166,16 +180,8 @@ function Home() {
             </div>
           </div>
 
-          {/* ================= QUALITY ================= */}
-          <div className="quality-section">
-            <h2>International Quality Standards</h2>
-            <p>We manufacture from certified partners, ensuring strict compliance.</p>
-            <a href={certificate} target="_blank" rel="noopener noreferrer" className="certificate-btn">
-              View Certificate of Incorporation
-            </a>
-          </div>
-        </div>
-      </section>
+        </div> 
+      </section> 
     </>
   );
 }
