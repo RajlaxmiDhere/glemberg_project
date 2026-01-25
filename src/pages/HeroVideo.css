@@ -211,7 +211,10 @@
 }
 
 .category-main-title {
-  font-size: 2.6rem;
+   font-size: 2.6rem;
+  color: #0b2c6f;
+  margin-bottom: 14px;
+  position: relative;
   font-weight: 700;
   color: #00008b; /* Matching your theme blue */
   margin-bottom: 10px;
