@@ -13,7 +13,7 @@ import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
 
 function Home() {
   const [showWelcome, setShowWelcome] = useState(false);
-  const [isVisible, setIsVisible] = useState(false); // Controls the "Built on Science" entry
+  const [isVisible, setIsVisible] = useState(false); // Controls the entry animation
 
   // ✅ COUNT-UP STATES
   const [products, setProducts] = useState(0);
@@ -33,8 +33,9 @@ function Home() {
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
+        // Trigger only when the "Built on Science" section comes into view
         if (entry.isIntersecting) {
-          setIsVisible(true); // ✅ Trigger the text appearance
+          setIsVisible(true); // This triggers the CSS "coming on" animation
 
           if (!hasAnimated.current) {
             hasAnimated.current = true; 
@@ -44,7 +45,7 @@ function Home() {
           }
         }
       },
-      { threshold: 0.2 } 
+      { threshold: 0.2 } // Triggers when 20% of the section is visible
     );
 
     if (featureRef.current) {
@@ -71,6 +72,7 @@ function Home() {
 
   return (
     <>
+      {/* ================= HERO VIDEO ================= */}
       <section className="hero-video-section">
         <video className="hero-video" autoPlay muted loop playsInline preload="auto">
           <source src={pillVideo} type="video/mp4" />
@@ -83,10 +85,11 @@ function Home() {
         </div>
       </section>
 
+      {/* ================= BELOW HERO ================= */}
       <section className="below-hero-section">
         <div className="below-hero-inner">
           
-          {/* ✅ The text only "comes" (appears) when isVisible is true */}
+          {/* ✅ TRIGGER SECTION: Text "comes on" and stats start when this hits the viewport */}
           <div 
             className={`feature-section ${isVisible ? "is-visible" : "is-hidden"}`} 
             ref={featureRef}
@@ -106,6 +109,7 @@ function Home() {
             </div>
           </div>
 
+          {/* ================= CATEGORY CARDS ================= */}
           <div className="category-section-header">
             <h2 className="category-main-title">Our Products</h2>
           </div>
@@ -119,17 +123,45 @@ function Home() {
                 <NavLink to="/products#general" className="view-link">View products</NavLink>
               </div>
             </div>
-            {/* ... other cards ... */}
+
+            <div className="category-card teal">
+              <div className="category-image"><img src={orthoImg} alt="Ortho Care" /></div>
+              <div className="category-info">
+                <h3>Ortho Care</h3>
+                <p>Advanced bone and joint support</p>
+                <NavLink to="/products#ortho" className="view-link">View products</NavLink>
+              </div>
+            </div>
+
+            <div className="category-card blue-light">
+              <div className="category-image"><img src={dermaImg} alt="Derma Care" /></div>
+              <div className="category-info">
+                <h3>Derma Care</h3>
+                <p>Specialized skin health treatments</p>
+                <NavLink to="/products#derma" className="view-link">View products</NavLink>
+              </div>
+            </div>
           </div>
 
+          {/* ================= STATS ================= */}
           <div className="stats-modern">
             <div className="stat-card-modern blue">
               <FaIndustry className="stat-icon" />
               <h2>{products}+</h2>
               <p>Products</p>
             </div>
-            {/* ... other stats ... */}
+            <div className="stat-card-modern orange">
+              <FaUserMd className="stat-icon" />
+              <h2>{team}+</h2>
+              <p>Team Members</p>
+            </div>
+            <div className="stat-card-modern purple">
+              <FaSmile className="stat-icon" />
+              <h2>{clients}+</h2>
+              <p>Happy Clients</p>
+            </div>
           </div>
+
         </div> 
       </section> 
     </>
