@@ -180,6 +180,36 @@ function Home() {
             </div>
           </div>
 
+          {/* ================= CREDENTIALS / GOVT ACCREDITATION ================= */}
+<div className="credentials-section">
+  <div className="credentials-card">
+    <div className="gov-branding">
+      {/* Replace with a real Govt Logo URL or local asset */}
+      <img 
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" 
+        alt="Emblem of India" 
+        className="gov-logo" 
+      />
+      <div className="gov-text">
+        <span>GOVERNMENT OF INDIA</span>
+        <strong>MINISTRY OF CORPORATE AFFAIRS</strong>
+      </div>
+    </div>
+    
+    <div className="cert-action">
+      <p>Glemberg Pharmaceuticals is a registered entity under the Companies Act.</p>
+      <a 
+        href={certificate} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="view-cert-link"
+      >
+        Click to View Certificate (PDF)
+      </a>
+    </div>
+  </div>
+</div>
+
         </div> 
       </section> 
     </>

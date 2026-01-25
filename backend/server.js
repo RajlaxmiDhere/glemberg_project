@@ -4,7 +4,6 @@ const cors = require("cors");
 
 const app = express();
 
-// ✅ VERY IMPORTANT
 app.use(cors());
 app.use(express.json());
 
@@ -12,7 +11,7 @@ app.use(express.json());
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "rajlaxmi",       // put password if you have one
+  password: "rajlaxmi",    
   database: "glemberg_db",
 });
 
@@ -24,12 +23,11 @@ db.connect((err) => {
   }
 });
 
-// TEST ROUTE (IMPORTANT)
 app.get("/", (req, res) => {
   res.send("Backend is running");
 });
 
-// CONTACT API
+
 app.post("/api/contact", (req, res) => {
   const { name, email, phone, message } = req.body;
 
