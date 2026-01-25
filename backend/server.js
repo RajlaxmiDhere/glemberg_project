@@ -12,7 +12,7 @@ app.use(express.json());
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "",       // put password if you have one
+  password: "rajlaxmi",       // put password if you have one
   database: "glemberg_db",
 });
 
