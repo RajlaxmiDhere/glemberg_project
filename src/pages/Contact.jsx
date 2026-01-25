@@ -43,14 +43,12 @@ const Contact = () => {
     setStatus("Sending...");
 
     try {
-     const response = await fetch("http://localhost:5000/api/contact", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(formData),
-});
-
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
@@ -72,7 +70,6 @@ const Contact = () => {
 
   return (
     <div className="contact-page-wrapper">
-
       <div className="container contact-top">
         <div className="row align-items-center">
 
@@ -88,7 +85,6 @@ const Contact = () => {
                 India
               </p>
 
-              {/* LOCATION */}
               <div className="info-value">
                 <span className="icon-circle">
                   <FaMapMarkerAlt />
@@ -102,7 +98,6 @@ const Contact = () => {
                 </a>
               </div>
 
-              {/* PHONE */}
               <h3 className="info-heading">Phone Number</h3>
               {phoneNumbers.map((num, index) => (
                 <div className="info-value" key={index}>
@@ -118,7 +113,6 @@ const Contact = () => {
                 </div>
               ))}
 
-              {/* EMAIL */}
               <h3 className="info-heading">Email</h3>
               <div className="info-value">
                 <span className="icon-circle">
@@ -129,7 +123,6 @@ const Contact = () => {
                 </a>
               </div>
 
-              {/* WHATSAPP */}
               <a
                 href={whatsappLink}
                 target="_blank"
@@ -149,7 +142,6 @@ const Contact = () => {
               <h4 className="text-center mb-4">Contact Us</h4>
 
               <form onSubmit={handleSubmit}>
-
                 <div className="mb-3">
                   <label>Your Name</label>
                   <input
@@ -210,13 +202,9 @@ const Contact = () => {
                   {status === "Sending..." ? "Sending..." : "Submit"}
                 </button>
 
-                {/* STATUS MESSAGE */}
                 {status && (
-                  <p className="mt-3 text-center small">
-                    {status}
-                  </p>
+                  <p className="mt-3 text-center small">{status}</p>
                 )}
-
               </form>
             </div>
           </div>
@@ -235,10 +223,10 @@ const Contact = () => {
           loading="lazy"
         ></iframe>
       </div>
-
     </div>
   );
 };
 
 export default Contact;
+
 
