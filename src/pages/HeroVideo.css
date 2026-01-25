@@ -197,7 +197,8 @@
   animation: textFadeUp 0.9s ease forwards;
 }
 
-.delay-1 { animation-delay: 1.3s; }
+.delay-1 { animation-delay: 1.3s;
+         font-size: 2.5rem;}
 .delay-2 { animation-delay: 1.3s; }
 .delay-3 { animation-delay: 1.3s; }
 .delay-4 { animation-delay: 1.3s; }
