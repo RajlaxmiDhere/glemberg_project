@@ -32,7 +32,6 @@ function Home() {
       sessionStorage.setItem("hasSeenWelcome", "true");
     }
 
-    // ✅ OBSERVER FOR TEXT ENTRANCE
     const textObserver = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -42,7 +41,6 @@ function Home() {
       { threshold: 0.2 }
     );
 
-    // ✅ OBSERVER FOR COUNTING (Triggers only when stats section is visible)
     const statsObserver = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimatedStats.current) {
@@ -52,7 +50,7 @@ function Home() {
           animateCount(setClients, 500);
         }
       },
-      { threshold: 0.5 } // Higher threshold so counting starts when clearly visible
+      { threshold: 0.5 } 
     );
 
     if (featureRef.current) textObserver.observe(featureRef.current);
@@ -92,7 +90,6 @@ function Home() {
         </div>
       </section>
 
-      {/* ================= BELOW HERO ================= */}
       <section className="below-hero-section">
         <div className="below-hero-inner">
           
@@ -155,6 +152,13 @@ function Home() {
                 <NavLink to="/products#derma" className="view-link">View products</NavLink>
               </div>
             </div>
+          </div>
+
+          {/* ✅ ADDED: Learn More Button for Products Section */}
+          <div className="product-explore-container">
+             <NavLink to="/products" className="product-explore-btn">
+               Explore All Products
+             </NavLink>
           </div>
 
           {/* ✅ TRIGGER 2: Counting starts only when you scroll to this div */}
