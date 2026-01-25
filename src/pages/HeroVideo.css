@@ -305,15 +305,16 @@
 }
 
 .product-explore-btn {
-  display: inline-block;
-  padding: 12px 40px;
-  background: transparent;
-  color: #00008b;
-  border: 2px solid #00008b;
-  border-radius: 50px;
+ display: inline-block;
+  margin-top: 26px;
+  padding: 14px 36px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0b2c6f, #173a8a);
+  color: #ffffff;
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-explore-btn:hover {
