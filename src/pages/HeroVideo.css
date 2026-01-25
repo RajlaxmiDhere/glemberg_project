@@ -155,18 +155,34 @@
 .feature-main-img:hover {
   transform: translate(70px, 50px) scale(1.02);
 }
-/* Initial state: Hidden and slightly lower */
+/* Initial state when the section is NOT in view */
 .is-hidden {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
+  transform: translateY(50px); /* Slides down slightly */
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
 }
 
-/* Visible state: Triggered by scroll */
+/* State when the user reaches the point (triggered by React) */
 .is-visible {
   opacity: 1;
-  transform: translateY(0);
-  transition: all 0.8s ease-out;
+  transform: translateY(0); /* Slides up to its original position */
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+/* Optional: Stagger the text inside the section for a better effect */
+.is-visible .animate-line {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 /* =========================
    TEXT ANIMATION
