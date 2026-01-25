@@ -15,13 +15,15 @@ function Home() {
   const [showWelcome, setShowWelcome] = useState(false);
   const [isVisible, setIsVisible] = useState(false); 
 
-  // ✅ Initializing states at 0
+  // ✅ COUNT-UP STATES
   const [products, setProducts] = useState(0);
   const [team, setTeam] = useState(0);
   const [clients, setClients] = useState(0);
 
-  const featureRef = useRef(null);
-  const hasAnimated = useRef(false);
+  // ✅ TWO SEPARATE REFS
+  const featureRef = useRef(null); // Triggers "Built on Science"
+  const statsRef = useRef(null);   // Triggers the actual counting
+  const hasAnimatedStats = useRef(false);
 
   useEffect(() => {
     const hasSeen = sessionStorage.getItem("hasSeenWelcome");
@@ -30,51 +32,47 @@ function Home() {
       sessionStorage.setItem("hasSeenWelcome", "true");
     }
 
-    // ✅ INTERSECTION OBSERVER LOGIC
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        
-        // When the user reaches this point on the website
+    // ✅ OBSERVER FOR TEXT ENTRANCE
+    const textObserver = new IntersectionObserver(
+      ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true); // Trigger the text appearance
-
-          // Start counting ONLY when this point is hit and only once
-          if (!hasAnimated.current) {
-            hasAnimated.current = true; 
-            animateCount(setProducts, 20);
-            animateCount(setTeam, 25);
-            animateCount(setClients, 500);
-          }
+          setIsVisible(true);
         }
       },
-      { threshold: 0.2 } // Trigger when 20% of the section is visible
+      { threshold: 0.2 }
     );
 
-    if (featureRef.current) {
-      observer.observe(featureRef.current);
-    }
+    // ✅ OBSERVER FOR COUNTING (Triggers only when stats section is visible)
+    const statsObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimatedStats.current) {
+          hasAnimatedStats.current = true; 
+          animateCount(setProducts, 20);
+          animateCount(setTeam, 25);
+          animateCount(setClients, 500);
+        }
+      },
+      { threshold: 0.5 } // Higher threshold so counting starts when clearly visible
+    );
+
+    if (featureRef.current) textObserver.observe(featureRef.current);
+    if (statsRef.current) statsObserver.observe(statsRef.current);
 
     return () => {
-      if (featureRef.current) observer.unobserve(featureRef.current);
+      if (featureRef.current) textObserver.unobserve(featureRef.current);
+      if (statsRef.current) statsObserver.unobserve(statsRef.current);
     };
   }, []);
 
   const animateCount = (setter, target) => {
     let startTime = null;
-    const duration = 2000; // 2 seconds duration
-    
+    const duration = 2000; 
     const step = (timestamp) => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
-      
-      // Easing function for a smooth finish
       const easeOutQuad = progress * (2 - progress);
       setter(Math.floor(easeOutQuad * target));
-
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      }
+      if (progress < 1) window.requestAnimationFrame(step);
     };
     window.requestAnimationFrame(step);
   };
@@ -98,7 +96,7 @@ function Home() {
       <section className="below-hero-section">
         <div className="below-hero-inner">
           
-          {/* ✅ TRIGGER POINT: Counting and Text entry starts here */}
+          {/* ✅ TRIGGER 1: Text entrance */}
           <div 
             className={`feature-section ${isVisible ? "is-visible" : "is-hidden"}`} 
             ref={featureRef}
@@ -132,9 +130,7 @@ function Home() {
           
           <div className="category-grid">
             <div className="category-card orange">
-              <div className="category-image">
-                <img src={generalImg} alt="General Care" />
-              </div>
+              <div className="category-image"><img src={generalImg} alt="General Care" /></div>
               <div className="category-info">
                 <h3>General Care</h3>
                 <p>Wide range of healthcare solutions</p>
@@ -143,9 +139,7 @@ function Home() {
             </div>
 
             <div className="category-card teal">
-              <div className="category-image">
-                <img src={orthoImg} alt="Ortho Care" />
-              </div>
+              <div className="category-image"><img src={orthoImg} alt="Ortho Care" /></div>
               <div className="category-info">
                 <h3>Ortho Care</h3>
                 <p>Advanced bone and joint support</p>
@@ -154,9 +148,7 @@ function Home() {
             </div>
 
             <div className="category-card blue-light">
-              <div className="category-image">
-                <img src={dermaImg} alt="Derma Care" />
-              </div>
+              <div className="category-image"><img src={dermaImg} alt="Derma Care" /></div>
               <div className="category-info">
                 <h3>Derma Care</h3>
                 <p>Specialized skin health treatments</p>
@@ -165,8 +157,8 @@ function Home() {
             </div>
           </div>
 
-          {/* ================= STATS ================= */}
-          <div className="stats-modern">
+          {/* ✅ TRIGGER 2: Counting starts only when you scroll to this div */}
+          <div className="stats-modern" ref={statsRef}>
             <div className="stat-card-modern blue">
               <FaIndustry className="stat-icon" />
               <h2>{products}+</h2>
