@@ -13,9 +13,9 @@ import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
 
 function Home() {
   const [showWelcome, setShowWelcome] = useState(false);
-  const [isVisible, setIsVisible] = useState(false); // Controls the entry animation
+  const [isVisible, setIsVisible] = useState(false); 
 
-  // ✅ COUNT-UP STATES
+  // ✅ Initializing states at 0
   const [products, setProducts] = useState(0);
   const [team, setTeam] = useState(0);
   const [clients, setClients] = useState(0);
@@ -30,13 +30,16 @@ function Home() {
       sessionStorage.setItem("hasSeenWelcome", "true");
     }
 
+    // ✅ INTERSECTION OBSERVER LOGIC
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
-        // Trigger only when the "Built on Science" section comes into view
+        
+        // When the user reaches this point on the website
         if (entry.isIntersecting) {
-          setIsVisible(true); // This triggers the CSS "coming on" animation
+          setIsVisible(true); // Trigger the text appearance
 
+          // Start counting ONLY when this point is hit and only once
           if (!hasAnimated.current) {
             hasAnimated.current = true; 
             animateCount(setProducts, 20);
@@ -45,7 +48,7 @@ function Home() {
           }
         }
       },
-      { threshold: 0.2 } // Triggers when 20% of the section is visible
+      { threshold: 0.2 } // Trigger when 20% of the section is visible
     );
 
     if (featureRef.current) {
@@ -59,13 +62,19 @@ function Home() {
 
   const animateCount = (setter, target) => {
     let startTime = null;
-    const duration = 2000; 
+    const duration = 2000; // 2 seconds duration
+    
     const step = (timestamp) => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
+      
+      // Easing function for a smooth finish
       const easeOutQuad = progress * (2 - progress);
       setter(Math.floor(easeOutQuad * target));
-      if (progress < 1) window.requestAnimationFrame(step);
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
     };
     window.requestAnimationFrame(step);
   };
@@ -89,20 +98,27 @@ function Home() {
       <section className="below-hero-section">
         <div className="below-hero-inner">
           
-          {/* ✅ TRIGGER SECTION: Text "comes on" and stats start when this hits the viewport */}
+          {/* ✅ TRIGGER POINT: Counting and Text entry starts here */}
           <div 
             className={`feature-section ${isVisible ? "is-visible" : "is-hidden"}`} 
             ref={featureRef}
           >
             <div className="feature-text animate-text">
-              <h2 className="animate-line delay-1">Built on Science. Focused on Care.</h2>
-              <p className="feature-sub animate-line delay-2">
+              <h2 className={`animate-line ${isVisible ? "delay-1" : ""}`}>
+                Built on Science. Focused on Care.
+              </h2>
+              <p className={`feature-sub animate-line ${isVisible ? "delay-2" : ""}`}>
                 Purpose-driven pharmaceutical solutions designed to support everyday healthcare needs.
               </p>
-              <p className="animate-line delay-3">
+              <p className={`animate-line ${isVisible ? "delay-3" : ""}`}>
                 Delivering trusted medicines across Orthopaedic, Dermatology, and General healthcare segments.
               </p>
-              <NavLink to="/about" className="feature-btn animate-line delay-5">Learn More</NavLink>
+              <NavLink 
+                to="/about" 
+                className={`feature-btn animate-line ${isVisible ? "delay-5" : ""}`}
+              >
+                Learn More
+              </NavLink>
             </div>
             <div className="feature-image">
               <img src={featureImg} alt="Glemberg Healthcare" className="feature-main-img" />
@@ -116,7 +132,9 @@ function Home() {
           
           <div className="category-grid">
             <div className="category-card orange">
-              <div className="category-image"><img src={generalImg} alt="General Care" /></div>
+              <div className="category-image">
+                <img src={generalImg} alt="General Care" />
+              </div>
               <div className="category-info">
                 <h3>General Care</h3>
                 <p>Wide range of healthcare solutions</p>
@@ -125,7 +143,9 @@ function Home() {
             </div>
 
             <div className="category-card teal">
-              <div className="category-image"><img src={orthoImg} alt="Ortho Care" /></div>
+              <div className="category-image">
+                <img src={orthoImg} alt="Ortho Care" />
+              </div>
               <div className="category-info">
                 <h3>Ortho Care</h3>
                 <p>Advanced bone and joint support</p>
@@ -134,7 +154,9 @@ function Home() {
             </div>
 
             <div className="category-card blue-light">
-              <div className="category-image"><img src={dermaImg} alt="Derma Care" /></div>
+              <div className="category-image">
+                <img src={dermaImg} alt="Derma Care" />
+              </div>
               <div className="category-info">
                 <h3>Derma Care</h3>
                 <p>Specialized skin health treatments</p>
