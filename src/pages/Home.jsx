@@ -20,7 +20,8 @@ function Home() {
   const [clients, setClients] = useState(0);
 
   // ✅ REFS FOR SCROLL DETECTION
-  const statsRef = useRef(null);
+  // Changed statsRef to triggerRef for clarity, now watching the feature section
+  const triggerRef = useRef(null);
   const hasAnimated = useRef(false);
 
   useEffect(() => {
@@ -34,6 +35,7 @@ function Home() {
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
+        // Now triggers when the "Built on Science" section is visible
         if (entry.isIntersecting && !hasAnimated.current) {
           hasAnimated.current = true; // Run only once
           animateCount(setProducts, 20);
@@ -41,27 +43,26 @@ function Home() {
           animateCount(setClients, 500);
         }
       },
-      { threshold: 0.2 } // Trigger when 20% of the section is visible
+      { threshold: 0.2 } 
     );
 
-    if (statsRef.current) {
-      observer.observe(statsRef.current);
+    if (triggerRef.current) {
+      observer.observe(triggerRef.current);
     }
 
     return () => {
-      if (statsRef.current) observer.unobserve(statsRef.current);
+      if (triggerRef.current) observer.unobserve(triggerRef.current);
     };
   }, []);
 
   const animateCount = (setter, target) => {
     let startTime = null;
-    const duration = 2000; // Adjusted for better UX (2 seconds)
+    const duration = 2000; 
 
     const step = (timestamp) => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
       
-      // Smooth easing function
       const easeOutQuad = progress * (2 - progress);
       setter(Math.floor(easeOutQuad * target));
 
@@ -91,8 +92,9 @@ function Home() {
       <section className="below-hero-section">
         <div className="below-hero-inner">
           
-          {/* ================= FEATURE INTRO ================= */}
-          <div className="feature-section">
+          {/* ================= FEATURE INTRO (TRIGGER POINT) ================= */}
+          {/* ✅ Attached ref here so animation starts as soon as this section appears */}
+          <div className="feature-section" ref={triggerRef}>
             <div className="feature-text animate-text">
               <h2 className="animate-line delay-1">Built on Science. Focused on Care.</h2>
               <p className="feature-sub animate-line delay-2">
@@ -148,8 +150,9 @@ function Home() {
             </div>
           </div>
 
-          {/* ================= STATS (Triggered on Scroll) ================= */}
-          <div className="stats-modern" ref={statsRef}>
+          {/* ================= STATS ================= */}
+          {/* ✅ Ref removed from here to ensure logic starts earlier at the Feature section */}
+          <div className="stats-modern">
             <div className="stat-card-modern blue">
               <FaIndustry className="stat-icon" />
               <h2>{products}+</h2>
@@ -167,8 +170,8 @@ function Home() {
             </div>
           </div>
 
-        </div> {/* Closes below-hero-inner */}
-      </section> {/* Closes below-hero-section */}
+        </div> 
+      </section> 
     </>
   );
 }
