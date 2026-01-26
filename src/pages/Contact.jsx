@@ -4,7 +4,6 @@ import {
 FaMapMarkerAlt,
 FaPhoneAlt,
 FaEnvelope,
-  FaWhatsapp
   FaWhatsapp,
 } from "react-icons/fa";
 
