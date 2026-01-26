@@ -81,26 +81,30 @@
 }
 
 /* FEATURE TEXT */
+/* FEATURE TEXT */
 .feature-text h2 {
-  font-size: 2.6rem;          
-  color: #0b2c6f;             
-  margin-bottom: 14px;
-  position: relative;
-}
-
-.feature-sub {
-  font-size: 2rem;           
-  font-weight: 700;
-  color: #374151;            
-  margin-bottom: 24px;
-}
-
-.feature-text p {
-  font-size: 1.5rem;          
-  line-height: 1.85;
-  color: #374151;             
+  font-size: 2.6rem;          /* Main headline */
+  color: #0b2c6f;
   margin-bottom: 16px;
 }
+
+/* Sub heading */
+.feature-sub {
+  font-size: 1.8rem;          /* Between h2 and paragraph */
+  font-weight: 600;           /* Less heavy */
+  color: #374151;             /* SAME as paragraph */
+  margin-bottom: 18px;
+}
+
+/* Paragraph */
+.feature-text p {
+  font-size: 1.5rem;
+  line-height: 1.85;
+  font-weight: 400;           /* Normal reading weight */
+  color: #374151;             /* SAME color */
+  margin-bottom: 16px;
+}
+
 
 
 /* FEATURE BUTTON */
