@@ -211,25 +211,20 @@
   color: #0b2c6f;
   margin-bottom: 50px;
 }
-
 .category-main-title {
   font-size: 2.6rem;
-  color: #00008b;
-  margin-bottom: 10px;
+  color: #0b2c6f;
+  margin-bottom: 14px;
   position: relative;
   display: inline-block;
-  font-weight: 700;
 }
-
 .category-main-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
+ content: "";
+  width: 70px;
   height: 4px;
-  background: #00008b;
+  background: #0b2c6f;
+  display: block;
+  margin-top: 10px;
   border-radius: 2px;
 }
 
