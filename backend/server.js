@@ -1,91 +1,61 @@
-// ===============================
-// IMPORTS
-//===============================
 require("dotenv").config();
-
 const express = require("express");
 const mysql = require("mysql2");
 const cors = require("cors");
 
-// ===============================
-// APP INITIALIZATION
-// ===============================
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// ===============================
-// MIDDLEWARE
-// ===============================
+/* ================= MIDDLEWARE ================= */
 app.use(cors({
-  origin: "*",          // Allow requests from anywhere
+  origin: "*",        // allow all frontends
   methods: ["GET", "POST"],
 }));
+app.use(express.json());
 
-app.use(express.json()); // To read JSON body
-
-// ===============================
-// DATABASE CONNECTION
-// ===============================
+/* ================= MYSQL CONNECTION ================= */
 const db = mysql.createConnection({
-  host: process.env.DB_HOST,      // e.g. aws.connect.psdb.cloud
-  user: process.env.DB_USER,      // PlanetScale username
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,  // glemberg_db
-  ssl: {
-    rejectUnauthorized: true
-  }
+  database: process.env.DB_NAME,
 });
 
-// ===============================
-// CONNECT TO DB
-// ===============================
 db.connect((err) => {
   if (err) {
-    console.error("❌ MySQL Connection Failed:", err.message);
+    console.error("❌ MySQL connection failed:", err);
     return;
   }
   console.log("✅ MySQL Connected");
 });
 
-// ===============================
-// TEST ROUTE
-// ===============================
+/* ================= TEST ROUTE ================= */
 app.get("/", (req, res) => {
-  res.send("Glemberg Backend is Running 🚀");
+  res.send("Glemberg Backend is Running");
 });
 
-// ===============================
-// CONTACT FORM API
-// ===============================
+/* ================= CONTACT FORM API ================= */
 app.post("/api/contact", (req, res) => {
   const { name, email, phone, message } = req.body;
 
-  // Basic validation
   if (!name || !email || !phone || !message) {
     return res.status(400).json({ message: "All fields are required" });
   }
 
-  const sql = `
-    INSERT INTO contacts (name, email, phone, message)
-    VALUES (?, ?, ?, ?)
-  `;
+  const sql =
+    "INSERT INTO contacts (name, email, phone, message) VALUES (?, ?, ?, ?)";
 
-  db.query(sql, [name, email, phone, message], (err, result) => {
+  db.query(sql, [name, email, phone, message], (err) => {
     if (err) {
-      console.error("❌ Insert Error:", err);
+      console.error("❌ Insert error:", err);
       return res.status(500).json({ message: "Database error" });
     }
 
-    res.status(200).json({
-      message: "Message saved successfully",
-      id: result.insertId
-    });
+    res.status(200).json({ message: "Message stored successfully" });
   });
 });
 
-// ===============================
-// START SERVER
-// ===============================
+/* ================= START SERVER ================= */
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
