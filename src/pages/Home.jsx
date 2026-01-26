@@ -141,10 +141,10 @@ function Home() {
               <h2 className={`animate-line ${isVisible ? "delay-1" : ""}`}>
                 Built on Science. Focused on Care.
               </h2>
-              <p className={`feature-sub animate-line ${isVisible ? "delay-2" : ""}`}>
+              <h3 className={`feature-sub animate-line ${isVisible ? "delay-2" : ""}`}>
                 Purpose-driven pharmaceutical solutions designed to support 
                 everyday healthcare needs.
-              </p>
+              </h3>>
               <p className={`animate-line ${isVisible ? "delay-3" : ""}`}>
                 Delivering trusted medicines across Orthopaedic, Dermatology, 
                 and General healthcare segments.
