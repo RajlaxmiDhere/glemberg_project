@@ -14,7 +14,6 @@ name: "",
 email: "",
 phone: "",
     message: ""
-    message: "",
 });
 
 const [status, setStatus] = useState("");
