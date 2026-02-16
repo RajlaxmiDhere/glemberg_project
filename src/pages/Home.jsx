@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./HeroVideo.css";
-import pillVideo from "../assets/video1.mp4";
+import pillVideo from "../assets/update_pharma.mp4";
 import {
   FaIndustry,
   FaUserMd,
