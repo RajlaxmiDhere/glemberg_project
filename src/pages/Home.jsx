@@ -5,7 +5,6 @@ import {
   FaIndustry,
   FaUserMd,
   FaSmile,
-  FaAward,
   FaCheckCircle
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
@@ -33,21 +32,18 @@ function Home() {
   const hasAnimatedStats = useRef(false);
 
   useEffect(() => {
-    // Welcome screen logic
     const hasSeen = sessionStorage.getItem("hasSeenWelcome");
     if (!hasSeen) {
       setShowWelcome(true);
       sessionStorage.setItem("hasSeenWelcome", "true");
     }
 
-    // Text animation observer
     const textObserver = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setIsVisible(true);
       }
     }, { threshold: 0.2 });
 
-    // Stats counter observer
     const statsObserver = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting && !hasAnimatedStats.current) {
         hasAnimatedStats.current = true;
@@ -88,14 +84,9 @@ function Home() {
         </video>
         <div className="hero-overlay"></div>
         <div className="hero-content">
-          {showWelcome && (
-            <div className="welcome-tagline">Welcome to Glemberg Pharma</div>
-          )}
+          {showWelcome && <div className="welcome-tagline">Welcome to Glemberg Pharma</div>}
           <h1>Committed to Better Healthcare</h1>
-          <p>
-            Glemberg Pharma delivers safe, effective, and innovative 
-            pharmaceutical solutions to improve lives.
-          </p>
+          <p>Glemberg Pharma delivers safe, effective, and innovative pharmaceutical solutions.</p>
         </div>
       </section>
 
@@ -115,7 +106,7 @@ function Home() {
             </div>
           </div>
 
-          {/* ================= CATEGORY CARDS ================= */}
+          {/* ================= PRODUCT CATEGORIES ================= */}
           <div className="category-section-header">
             <h2 className="category-main-title">Our Products</h2>
           </div>
@@ -156,4 +147,73 @@ function Home() {
             </div>
             <div className="stat-card-modern orange">
               <FaUserMd className="stat-icon" />
-              <h2>
+              <h2>{team}+</h2>
+              <p>Team Members</p>
+            </div>
+            <div className="stat-card-modern purple">
+              <FaSmile className="stat-icon" />
+              <h2>{clients}+</h2>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+
+          {/* ================= CREDENTIALS & ACCREDITATIONS ================= */}
+          <div className="credentials-section">
+            <div className="credentials-container">
+              
+              {/* Govt Card */}
+              <div className="credentials-card">
+                <div className="gov-branding">
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" 
+                    alt="Emblem of India" 
+                    className="gov-logo" 
+                  />
+                  <div className="gov-text">
+                    <span>GOVERNMENT OF INDIA</span>
+                    <strong>MINISTRY OF CORPORATE AFFAIRS</strong>
+                  </div>
+                </div>
+                <div className="cert-action">
+                  <p>Registered entity under the Companies Act.</p>
+                  <a href={certificate} target="_blank" rel="noopener noreferrer" className="view-cert-link">
+                    View Incorporation Certificate
+                  </a>
+                </div>
+              </div>
+
+              {/* Quality Standards Bar */}
+              <div className="quality-standards-bar">
+                <div className="standard-item">
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/FSSAI_logo.svg/1200px-FSSAI_logo.svg.png" 
+                    alt="FSSAI" 
+                    className="standard-logo-img" 
+                  />
+                  <span>FSSAI Certified</span>
+                </div>
+                
+                <div className="standard-divider"></div>
+
+                <div className="standard-item">
+                  <div className="who-gmp-badge">
+                    <span className="who-text">WHO-GMP</span>
+                    <span className="certified-text">CERTIFIED</span>
+                  </div>
+                  <span>Quality Practice</span>
+                </div>
+
+                <div className="standard-divider"></div>
+
+                <div className="standard-item">
+                  <FaCheckCircle className="iso-icon" />
+                  <span>ISO 9001:2015</span>
+                </div>
+              </div>
+
+            </div> {/* Closing credentials-container */}
+          </div> {/* Closing credentials-section */}
+
+        </div> {/* Closing below-hero-inner */}
+      </section> {/* Closing below-hero-section */}
+    </
