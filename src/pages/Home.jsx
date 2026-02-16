@@ -287,9 +287,6 @@ function Home() {
         <span>Quality Management Practice</span>
       </div>
     </div>
-
-  </div>
-</div>
   );
 }
 
