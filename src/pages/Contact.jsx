@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 
 const Contact = () => {
-  // ================= FORM STATE =================
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,7 +18,6 @@ const Contact = () => {
 
   const [status, setStatus] = useState("");
 
-  // ================= STATIC DATA =================
   const phoneNumbers = [
     "+91 7559189020",
     "+91 8975173157"
@@ -29,7 +28,6 @@ const Contact = () => {
   const whatsappLink =
     "https://wa.me/917559189020?text=Hello! I have an enquiry regarding your services.";
 
-  // ================= HANDLE INPUT CHANGE =================
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -37,18 +35,20 @@ const Contact = () => {
     });
   };
 
-  // ================= HANDLE FORM SUBMIT =================
+  // ✅ FORMSPREE SUBMIT
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("Sending...");
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact", {
+
+      const response = await fetch("https://formspree.io/f/xgolyeba", {  
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Accept": "application/json"
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formData)
       });
 
       if (response.ok) {
@@ -60,11 +60,11 @@ const Contact = () => {
           message: ""
         });
       } else {
-        setStatus("Failed to send message. Please try again.");
+        setStatus("Failed to send message.");
       }
+
     } catch (error) {
-      console.error("Submission Error:", error);
-      setStatus("Error connecting to server.");
+      setStatus("Error sending message.");
     }
   };
 
@@ -73,7 +73,7 @@ const Contact = () => {
       <div className="container contact-top">
         <div className="row align-items-center">
 
-          {/* ================= LEFT: CONTACT INFO ================= */}
+          {/* LEFT */}
           <div className="col-md-6">
             <div className="contact-info-card">
 
@@ -86,9 +86,7 @@ const Contact = () => {
               </p>
 
               <div className="info-value">
-                <span className="icon-circle">
-                  <FaMapMarkerAlt />
-                </span>
+                <span className="icon-circle"><FaMapMarkerAlt /></span>
                 <a
                   href="https://www.google.com/maps/place/Neminath+Nagar,+Sangli,+Maharashtra+416416"
                   target="_blank"
@@ -101,13 +99,8 @@ const Contact = () => {
               <h3 className="info-heading">Phone Number</h3>
               {phoneNumbers.map((num, index) => (
                 <div className="info-value" key={index}>
-                  <span className="icon-circle">
-                    <FaPhoneAlt />
-                  </span>
-                  <a
-                    href={`tel:${num.replace(/\s/g, "")}`}
-                    className="contact-link"
-                  >
+                  <span className="icon-circle"><FaPhoneAlt /></span>
+                  <a href={`tel:${num.replace(/\s/g, "")}`} className="contact-link">
                     {num}
                   </a>
                 </div>
@@ -115,12 +108,8 @@ const Contact = () => {
 
               <h3 className="info-heading">Email</h3>
               <div className="info-value">
-                <span className="icon-circle">
-                  <FaEnvelope />
-                </span>
-                <a href={`mailto:${email}`} className="contact-link">
-                  {email}
-                </a>
+                <span className="icon-circle"><FaEnvelope /></span>
+                <a href={`mailto:${email}`} className="contact-link">{email}</a>
               </div>
 
               <a
@@ -136,12 +125,13 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* ================= RIGHT: CONTACT FORM ================= */}
+          {/* RIGHT FORM */}
           <div className="col-md-6">
             <div className="contact-form">
               <h4 className="text-center mb-4">Contact Us</h4>
 
               <form onSubmit={handleSubmit}>
+
                 <div className="mb-3">
                   <label>Your Name</label>
                   <input
@@ -205,6 +195,7 @@ const Contact = () => {
                 {status && (
                   <p className="mt-3 text-center small">{status}</p>
                 )}
+
               </form>
             </div>
           </div>
@@ -212,7 +203,7 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* ================= MAP ================= */}
+      {/* MAP */}
       <div className="map-container">
         <iframe
           title="Google Map"
