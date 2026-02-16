@@ -13,8 +13,8 @@
 }
 
 .products-main-heading{
-  font-size: 3rem;          /* ⭐ bigger than before */
-  font-weight: 800;         /* ⭐ thicker */
+  font-size: 2.6rem;          /* ⭐ bigger than before */
+  font-weight: 500;         /* ⭐ thicker */
   letter-spacing: 0.5px;    /* ⭐ subtle spacing like screenshot */
   color:#163a7a;            /* slightly deeper blue */
   margin:0;
