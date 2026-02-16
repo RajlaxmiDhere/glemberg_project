@@ -499,6 +499,75 @@
   border-color: #047857;
   transform: translateX(5px);
 }
+/* Container for both Govt and Industry certs */
+.credentials-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+/* Row for FSSAI and WHO-GMP */
+.industry-certs {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+  width: 100%;
+}
+
+.cert-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.cert-logo-img {
+  height: 50px; /* Adjusted for FSSAI logo aspect ratio */
+  width: auto;
+  filter: grayscale(100%); /* Optional: makes logos look professional */
+  transition: filter 0.3s ease;
+}
+
+.cert-item:hover .cert-logo-img {
+  filter: grayscale(0%);
+}
+
+.cert-item span {
+  font-size: 0.75rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Custom WHO-GMP Badge (since it often doesn't have a single "official" logo) */
+.who-gmp-badge {
+  border: 2px solid #2d3436;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.who-gmp-badge strong {
+  font-size: 1.2rem;
+  color: #2d3436;
+}
+
+.who-gmp-badge span {
+  font-size: 0.6rem !important;
+  background: #2d3436;
+  color: white !important;
+  padding: 2px;
+}
 
 /* ========================= RESPONSIVE DESIGN ========================= */
 @media (max-width: 900px) {
