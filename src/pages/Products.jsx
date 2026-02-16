@@ -42,10 +42,10 @@ const Product = () => {
   }, [location]); // Re-run whenever the URL changes
 
   const products = [
-    { id: 1, name: "Bonew Jelly Sachet", category: "ortho", division: "ORTHO DIVISION", image: bonewJelly },
+    { id: 1, name: "Gabanx NT 100", category: "ortho", division: "ORTHO DIVISION", image: gabanxNt },
     { id: 2, name: "Carnex LC Tab", category: "ortho", division: "ORTHO DIVISION", image: carnexLc },
     { id: 3, name: "GLEMVIT D3 60K", category: "ortho", division: "ORTHO DIVISION", image: glemvitD3 },
-    { id: 4, name: "Gabanx NT 100", category: "ortho", division: "ORTHO DIVISION", image: gabanxNt },
+    { id: 4, name: "Bonew Jelly Sachet", category: "ortho", division: "ORTHO DIVISION", image: bonewJelly },
     { id: 5, name: "Aceglem MR Tab", category: "general", division: "GENERAL RANGE", image: AceglemMR },
     { id: 6, name: "Aceglem SP Tab", category: "general", division: "GENERAL RANGE", image: AceglemSP },
     { id: 7, name: "Aceglem P Tab", category: "general", division: "GENERAL RANGE", image: AceglemP },
