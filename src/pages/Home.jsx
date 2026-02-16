@@ -216,4 +216,8 @@ function Home() {
 
         </div> {/* Closing below-hero-inner */}
       </section> {/* Closing below-hero-section */}
-    </
+    </>
+  );
+}
+
+export default Home;
