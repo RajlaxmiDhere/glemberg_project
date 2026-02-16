@@ -6,23 +6,25 @@
   background: linear-gradient(90deg, #E8F4FD 0%, #D6ECFA 40%, #BFDFF5 70%, #9CC9E8 100%);
   font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
-
 .products-main-heading{
   text-align:center;
   font-size:2.6rem;
   color:#0b2c6f;
-  margin-bottom:14px;
+  margin-bottom:25px;
   position:relative;
-  display:inline-block;     
+  width:fit-content;
+  margin-left:auto;
+  margin-right:auto;
 }
-
 .products-main-heading::after{
   content:"";
+  position:absolute;
+  left:50%;
+  bottom:-10px;
+  transform:translateX(-50%);
   width:70px;
   height:4px;
   background:#0b2c6f;
-  display:block;
-  margin:10px auto 0;
   border-radius:2px;
 }
 
