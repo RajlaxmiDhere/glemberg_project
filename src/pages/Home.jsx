@@ -243,40 +243,52 @@ function Home() {
             </div>
           </div>
 
-          {/* ================= CREDENTIALS / GOVERNMENT ACCREDITATION ================= */}
-          <div className="credentials-section">
-            <div className="credentials-card">
-              <div className="gov-branding">
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" 
-                  alt="Emblem of India" 
-                  className="gov-logo" 
-                />
-                <div className="gov-text">
-                  <span>GOVERNMENT OF INDIA</span>
-                  <strong>MINISTRY OF CORPORATE AFFAIRS</strong>
-                </div>
-              </div>
-
-              <div className="cert-action">
-                <p>
-                  Glemberg Pharmaceuticals is a registered entity under the Companies Act.
-                </p>
-                <a 
-                  href={certificate} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="view-cert-link"
-                >
-                  Click to View Certificate (PDF)
-                </a>
-              </div>
-            </div>
-          </div>
+          {/* ================= CREDENTIALS / ACCREDITATIONS ================= */}
+<div className="credentials-section">
+  <div className="credentials-container">
+    
+    {/* Govt / MCA Card */}
+    <div className="credentials-card">
+      <div className="gov-branding">
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" 
+          alt="Emblem of India" 
+          className="gov-logo" 
+        />
+        <div className="gov-text">
+          <span>GOVERNMENT OF INDIA</span>
+          <strong>MINISTRY OF CORPORATE AFFAIRS</strong>
         </div>
-      </section>
-    </>
-  );
-}
+      </div>
+      <div className="cert-action">
+        <p>Registered entity under the Companies Act.</p>
+        <a href={certificate} target="_blank" rel="noopener noreferrer" className="view-cert-link">
+          View MCA Certificate
+        </a>
+      </div>
+    </div>
+
+    {/* Industry Certifications Row */}
+    <div className="industry-certs">
+      <div className="cert-item">
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/FSSAI_logo.svg/1200px-FSSAI_logo.svg.png" 
+          alt="FSSAI Certified" 
+          className="cert-logo-img" 
+        />
+        <span>Food Safety & Standards Authority</span>
+      </div>
+      
+      <div className="cert-item">
+        <div className="who-gmp-badge">
+          <strong>WHO-GMP</strong>
+          <span>CERTIFIED</span>
+        </div>
+        <span>Quality Management Practice</span>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 export default Home;
