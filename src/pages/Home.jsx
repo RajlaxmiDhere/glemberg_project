@@ -279,4 +279,4 @@ function Home() {
   );
 }
 
-export default Home; can you add the logo of fssai and who-gmp in that section
+export default Home; 
