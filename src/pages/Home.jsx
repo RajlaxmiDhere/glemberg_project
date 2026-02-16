@@ -152,53 +152,69 @@ function Home() {
             </div>
           </div>
 
-          {/* ================= CREDENTIALS / ACCREDITATIONS ================= */}
-          <div className="credentials-section">
-            <div className="credentials-container">
-              
-              {/* Govt / MCA Card */}
-              <div className="credentials-card">
-                <div className="gov-branding">
-                  <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" 
-                    alt="Emblem of India" 
-                    className="gov-logo" 
-                  />
-                  <div className="gov-text">
-                    <span>GOVERNMENT OF INDIA</span>
-                    <strong>MINISTRY OF CORPORATE AFFAIRS</strong>
-                  </div>
-                </div>
-                <div className="cert-action">
-                  <p>Registered entity under the Companies Act.</p>
-                  <a href={certificate} target="_blank" rel="noopener noreferrer" className="view-cert-link">
-                    View MCA Certificate
-                  </a>
-                </div>
-              </div>
+{/* ================= INTERNATIONAL QUALITY STANDARDS ================= */}
+<div className="quality-standards-section">
+  <div className="quality-content">
+    <div className="quality-text">
+      <h2>International Quality Standards</h2>
+      <p>
+        We manufacture from partners holding the following certifications, 
+        ensuring our commitment to superior standards in every aspect of production.
+      </p>
+    </div>
 
-              {/* Industry Certifications Row */}
-              <div className="industry-certs">
-                <div className="cert-item">
-                  <img 
-                    src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/FSSAI_logo.svg/1200px-FSSAI_logo.svg.png" 
-                    alt="FSSAI Certified" 
-                    className="cert-logo-img" 
-                  />
-                  <span>Food Safety & Standards Authority</span>
-                </div>
-                
-                <div className="cert-item">
-                  <div className="who-gmp-badge">
-                    <strong>WHO-GMP</strong>
-                    <span>CERTIFIED</span>
-                  </div>
-                  <span>Quality Management Practice</span>
-                </div>
-              </div>
+    <div className="certifications-grid">
+      {/* WHO-GMP */}
+      <div className="cert-card">
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/WHO_Logo.svg/1200px-WHO_Logo.svg.png" 
+          alt="WHO-GMP" 
+        />
+        <span className="cert-name">WHO-GMP</span>
+      </div>
 
-            </div> {/* Closing credentials-container */}
-          </div> {/* Closing credentials-section */}
+      {/* FDA */}
+      <div className="cert-card">
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/US_FDA_logo.svg/1200px-US_FDA_logo.svg.png" 
+          alt="U.S. FDA" 
+        />
+      </div>
+
+      {/* ISO 9001 */}
+      <div className="cert-card">
+        <div className="iso-seal">
+          <div className="iso-inner">
+            <span>CERTIFIED</span>
+            <strong>ISO</strong>
+            <span>9001:2015</span>
+          </div>
+        </div>
+        <span className="cert-name">ISO 9001:2015</span>
+      </div>
+
+      {/* FSSAI */}
+      <div className="cert-card">
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/FSSAI_logo.svg/1200px-FSSAI_logo.svg.png" 
+          alt="FSSAI" 
+        />
+      </div>
+
+      {/* ISO 22000 */}
+      <div className="cert-card">
+        <div className="iso-seal blue">
+          <div className="iso-inner">
+            <span>CERTIFIED</span>
+            <strong>ISO</strong>
+            <span>22000:2018</span>
+          </div>
+        </div>
+        <span className="cert-name">ISO 22000:2018</span>
+      </div>
+    </div>
+  </div>
+</div> {/* Closing credentials-section */}
 
         </div> {/* Closing below-hero-inner */}
       </section> {/* Closing below-hero-section */}
