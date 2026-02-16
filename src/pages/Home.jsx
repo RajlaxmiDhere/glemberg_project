@@ -17,16 +17,12 @@ import orthoImg from "../assets/ortho_division.jpg";
 import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
 
 function Home() {
-  // State management
   const [showWelcome, setShowWelcome] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-
-  // Count-up states
   const [products, setProducts] = useState(0);
   const [team, setTeam] = useState(0);
   const [clients, setClients] = useState(0);
 
-  // Refs for scroll animations
   const featureRef = useRef(null); 
   const statsRef = useRef(null);   
   const hasAnimatedStats = useRef(false);
@@ -39,9 +35,7 @@ function Home() {
     }
 
     const textObserver = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsVisible(true);
-      }
+      if (entry.isIntersecting) setIsVisible(true);
     }, { threshold: 0.2 });
 
     const statsObserver = new IntersectionObserver(([entry]) => {
@@ -77,7 +71,7 @@ function Home() {
 
   return (
     <>
-      {/* ================= HERO VIDEO SECTION ================= */}
+      {/* 1. HERO VIDEO */}
       <section className="hero-video-section">
         <video className="hero-video" autoPlay muted loop playsInline preload="auto">
           <source src={pillVideo} type="video/mp4" />
@@ -90,10 +84,11 @@ function Home() {
         </div>
       </section>
 
+      {/* 2. MAIN CONTENT AREA */}
       <section className="below-hero-section">
         <div className="below-hero-inner">
           
-          {/* ================= FEATURE SECTION ================= */}
+          {/* A. FEATURE TEXT & IMAGE */}
           <div className={`feature-section ${isVisible ? "is-visible" : "is-hidden"}`} ref={featureRef}>
             <div className="feature-text animate-text">
               <h2 className={`animate-line ${isVisible ? "delay-1" : ""}`}>Built on Science. Focused on Care.</h2>
@@ -106,10 +101,11 @@ function Home() {
             </div>
           </div>
 
-          {/* ================= PRODUCT CATEGORIES ================= */}
+          {/* B. PRODUCT CATEGORIES */}
           <div className="category-section-header">
             <h2 className="category-main-title">Our Products</h2>
           </div>
+          
           <div className="category-grid">
             <div className="category-card orange">
               <div className="category-image"><img src={generalImg} alt="General Care" /></div>
@@ -118,6 +114,7 @@ function Home() {
                 <NavLink to="/products#general" className="view-link">View products</NavLink>
               </div>
             </div>
+            
             <div className="category-card teal">
               <div className="category-image"><img src={orthoImg} alt="Ortho Care" /></div>
               <div className="category-info">
@@ -125,6 +122,7 @@ function Home() {
                 <NavLink to="/products#ortho" className="view-link">View products</NavLink>
               </div>
             </div>
+            
             <div className="category-card blue-light">
               <div className="category-image"><img src={dermaImg} alt="Derma Care" /></div>
               <div className="category-info">
@@ -138,7 +136,7 @@ function Home() {
             <NavLink to="/products" className="product-explore-btn">Explore All Products</NavLink>
           </div>
 
-          {/* ================= STATS SECTION ================= */}
+          {/* C. STATS COUNTER */}
           <div className="stats-modern" ref={statsRef}>
             <div className="stat-card-modern blue">
               <FaIndustry className="stat-icon" />
@@ -157,11 +155,11 @@ function Home() {
             </div>
           </div>
 
-          {/* ================= CREDENTIALS & ACCREDITATIONS ================= */}
+          {/* D. TRUST & CREDENTIALS SECTION */}
           <div className="credentials-section">
             <div className="credentials-container">
               
-              {/* Govt Card */}
+              {/* Govt Accreditation Card */}
               <div className="credentials-card">
                 <div className="gov-branding">
                   <img 
@@ -182,7 +180,7 @@ function Home() {
                 </div>
               </div>
 
-              {/* Quality Standards Bar */}
+              {/* Quality Logos Row */}
               <div className="quality-standards-bar">
                 <div className="standard-item">
                   <img 
@@ -200,7 +198,7 @@ function Home() {
                     <span className="who-text">WHO-GMP</span>
                     <span className="certified-text">CERTIFIED</span>
                   </div>
-                  <span>Quality Practice</span>
+                  <span>Quality Excellence</span>
                 </div>
 
                 <div className="standard-divider"></div>
@@ -211,11 +209,11 @@ function Home() {
                 </div>
               </div>
 
-            </div> {/* Closing credentials-container */}
-          </div> {/* Closing credentials-section */}
+            </div> {/* End credentials-container */}
+          </div> {/* End credentials-section */}
 
-        </div> {/* Closing below-hero-inner */}
-      </section> {/* Closing below-hero-section */}
+        </div> {/* End below-hero-inner */}
+      </section> {/* End below-hero-section */}
     </>
   );
 }
