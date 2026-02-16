@@ -279,4 +279,4 @@ function Home() {
   );
 }
 
-export default Home;  add code in that
+export default Home; 
