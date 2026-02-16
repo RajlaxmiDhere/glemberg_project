@@ -68,8 +68,9 @@ const Product = () => {
 
   return (
     <div className="product-page-container">
-      <h1 className="products-main-heading">Our Products</h1>
-
+      <div class="products-heading-wrap">
+           <h1 class="products-main-heading">Our Products</h1>
+      </div>
       <div className="product-content-body">
         <aside className="filter-sidebar">
           <h3 className="filter-title">Filter by Product Division</h3>
