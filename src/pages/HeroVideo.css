@@ -421,152 +421,102 @@
   transform: translateY(-2px);
 }
 
-/* ========================= CREDENTIALS SECTION ========================= */
+/* ========================= UPDATED CREDENTIALS SECTION ========================= */
 .credentials-section {
   margin-top: 60px;
-  padding: 40px 0;
+  padding: 40px 20px;
   border-top: 1px dashed #ccc;
+}
+
+/* New wrapper to hold FSSAI, MCA Card, and WHO-GMP in a row */
+.credentials-flex-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Containers for the FSSAI and WHO logos */
+.side-accreditation {
+  flex: 0 0 140px; /* Fixed width so logos don't push the center card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
+/* The actual images for FSSAI and WHO-GMP */
+.colored-logo {
+  max-width: 100%;
+  height: auto;
+  max-height: 70px; /* Keeps them balanced with the MCA emblem */
+  object-fit: contain;
+  /* Subtle drop shadow to make the colors pop */
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.colored-logo:hover {
+  transform: scale(1.08);
+}
+
+/* Specific height adjustments for visual balance */
+.fssai {
+  max-height: 55px;
+}
+
+.gmp {
+  max-height: 85px;
+}
+
+/* Adjusting your existing credentials-card to fit the middle */
 .credentials-card {
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(5px);
-  padding: 30px;
+  padding: 25px 30px;
   border-radius: 15px;
-  max-width: 800px;
-  width: 100%;
+  max-width: 700px; /* Slightly reduced to make room for side logos */
+  flex: 1; 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 20px;
   border: 1px solid #e0e0e0;
 }
 
-.gov-branding {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+/* ========================= UPDATED RESPONSIVE DESIGN ========================= */
+
+@media (max-width: 992px) {
+  /* On tablets, stack the logos around the card */
+  .credentials-flex-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .side-accreditation {
+    flex: none;
+    order: 2; /* Moves FSSAI and WHO below the main card on mobile */
+  }
 }
 
-.gov-logo {
-  height: 70px;
-  width: auto;
-}
+@media (max-width: 768px) {
+  .credentials-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .gov-branding {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
 
-.gov-text {
-  display: flex;
-  flex-direction: column;
-  color: #333;
-  line-height: 1.2;
-}
-
-.gov-text span {
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  font-weight: 500;
-}
-
-.gov-text strong {
-  font-size: 1.1rem;
-  color: #000;
-  margin-top: 4px;
-}
-
-.cert-action {
-  text-align: right;
-}
-
-.cert-action p {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.view-cert-link {
-  display: inline-block;
-  color: #00008b;
-  font-weight: 700;
-  text-decoration: none;
-  border-bottom: 2px solid #00008b;
-  padding-bottom: 2px;
-  transition: all 0.3s ease;
-}
-
-.view-cert-link:hover {
-  color: #047857;
-  border-color: #047857;
-  transform: translateX(5px);
-}
-/* Container for both Govt and Industry certs */
-.credentials-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-  padding: 2rem 0;
-}
-
-/* Row for FSSAI and WHO-GMP */
-.industry-certs {
-  display: flex;
-  gap: 3rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  border-top: 1px solid #eee;
-  padding-top: 2rem;
-  width: 100%;
-}
-
-.cert-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  text-align: center;
-}
-
-.cert-logo-img {
-  height: 50px; /* Adjusted for FSSAI logo aspect ratio */
-  width: auto;
-  filter: grayscale(100%); /* Optional: makes logos look professional */
-  transition: filter 0.3s ease;
-}
-
-.cert-item:hover .cert-logo-img {
-  filter: grayscale(0%);
-}
-
-.cert-item span {
-  font-size: 0.75rem;
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Custom WHO-GMP Badge (since it often doesn't have a single "official" logo) */
-.who-gmp-badge {
-  border: 2px solid #2d3436;
-  padding: 5px 10px;
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-  font-family: sans-serif;
-  font-weight: bold;
-}
-
-.who-gmp-badge strong {
-  font-size: 1.2rem;
-  color: #2d3436;
-}
-
-.who-gmp-badge span {
-  font-size: 0.6rem !important;
-  background: #2d3436;
-  color: white !important;
-  padding: 2px;
+  .cert-action {
+    text-align: center;
+  }
 }
 
 /* ========================= RESPONSIVE DESIGN ========================= */
