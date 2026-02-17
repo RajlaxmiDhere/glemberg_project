@@ -78,10 +78,10 @@
 
 .below-hero-inner {
   max-width: 1200px;
-  margin: auto;
+  margin: 20px auto;   /* ⭐ reduce vertical margin */
   display: flex;
   flex-direction: column;
-  gap: 40px; /* This adds a consistent gap between all major rows */
+  gap: 40px;
 }
 
 /* =========================
