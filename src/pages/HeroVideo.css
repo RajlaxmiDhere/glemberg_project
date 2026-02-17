@@ -437,7 +437,7 @@
   height: 60px; /* Standard height for compliance logos */
   width: auto;
   filter: none; /* Clinical look */
-  opacity: 0.7;
+  opacity: 1;
   
 }
 
