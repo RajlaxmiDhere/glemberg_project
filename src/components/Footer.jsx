@@ -1,5 +1,5 @@
 import "./Footer.css";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo(2).jpg";
 import { NavLink } from "react-router-dom";
 
 /* ICONS */
