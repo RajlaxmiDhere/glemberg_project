@@ -214,29 +214,38 @@ function Home() {
   </div>
 
 
-  {/* RIGHT TRUST LOGOS (NO CARD) */}
-  <div className="trust-side">
+ <div className="trust-side">
 
-    <div className="trust-item">
-      <img src={fssaiLogo} className="cert-logo-img" alt="FSSAI"/>
-      <span>FSSAI Certified</span>
-    </div>
+  {/* TITLE */}
+  <h3 className="trust-title">Quality & Compliance Standards</h3>
 
+  <div className="trust-logos">
+
+    {/* 1️⃣ WHO-GMP */}
     <div className="trust-item">
       <img src={whoGmpLogo} className="cert-logo-img" alt="WHO GMP"/>
-      <span>WHO-GMP</span>
+    
     </div>
 
+    {/* 2️⃣ FSSAI */}
+    <div className="trust-item">
+      <img src={fssaiLogo} className="cert-logo-img" alt="FSSAI"/>
+    
+    </div>
+
+    {/* 3️⃣ Government */}
     <div className="trust-item">
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png"
         className="cert-logo-img"
         alt="Government"
       />
-      <span>Govt Approved</span>
+      
     </div>
 
   </div>
+
+</div>
 
 </div>
 
