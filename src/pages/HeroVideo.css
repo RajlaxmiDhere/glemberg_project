@@ -311,12 +311,6 @@
   opacity: 0.9;
 }
 
-/* The Green "Learn More" Pill */
-/* You can remove this if it exists */
-.learn-more-pill{
-  margin-left: 8px;
-  font-size: 1.2rem;
-}
 
 /* Ensure the pill is set to center the text */
 .learn-more-pill {
