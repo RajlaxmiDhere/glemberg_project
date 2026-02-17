@@ -214,38 +214,33 @@ function Home() {
   </div>
 
 
- <div className="trust-side">
+  {/* RIGHT SIDE */}
+  <div className="trust-side">
 
-  {/* TITLE */}
-  <h3 className="trust-title">Quality & Compliance Standards</h3>
+    <h3 className="trust-title">Quality & Compliance Standards</h3>
 
-  <div className="trust-logos">
+    <div className="trust-logos">
 
-    {/* 1️⃣ WHO-GMP */}
-    <div className="trust-item">
-      <img src={whoGmpLogo} className="cert-logo-img" alt="WHO GMP"/>
-    
-    </div>
+      {/* WHO bigger */}
+      <div className="trust-item who">
+        <img src={whoGmpLogo} className="cert-logo-img" alt="WHO GMP"/>
+      </div>
 
-    {/* 2️⃣ FSSAI */}
-    <div className="trust-item">
-      <img src={fssaiLogo} className="cert-logo-img" alt="FSSAI"/>
-    
-    </div>
+      <div className="trust-item">
+        <img src={fssaiLogo} className="cert-logo-img" alt="FSSAI"/>
+      </div>
 
-    {/* 3️⃣ Government */}
-    <div className="trust-item">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png"
-        className="cert-logo-img"
-        alt="Government"
-      />
-      
+      <div className="trust-item">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png"
+          className="cert-logo-img"
+          alt="Government"
+        />
+      </div>
+
     </div>
 
   </div>
-
-</div>
 
 </div>
 

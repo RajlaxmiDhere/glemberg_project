@@ -141,14 +141,10 @@
   max-width: 900px; /* Slightly larger than the placeholder */
   height: auto;
   border-radius: 28px;
+  transition: transform 0.5s ease
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
-  transition: transform 0.5s ease;
-  transform: translate(70px, 50px);
 }
 
-.feature-main-img:hover {
-  transform: translate(70px, 50px) scale(1.02);
-}
 /* Initial state when the section is NOT in view */
 .is-hidden {
   opacity: 0;
@@ -551,35 +547,17 @@
 /* ===== CERT ROW PROFESSIONAL LAYOUT ===== */
 /* ===== CORPORATE + TRUST PROFESSIONAL LAYOUT ===== */
 /* ===== CORPORATE + TRUST SAME ROW ===== */
+/* ===== FINAL CORPORATE + TRUST PROFESSIONAL ===== */
 
 .corporate-row{
   display:grid;
-  grid-template-columns:1.2fr 1fr;
-  gap:60px;
+  grid-template-columns:1.25fr 1fr;
+  gap:70px;
   max-width:1150px;
   margin:80px auto 100px;
   padding:0 20px;
   align-items:center;
 }
-/* TRUST TITLE */
-
-.trust-title{
-  font-size:1.4rem;
-  font-weight:700;
-  color:#1e3a5f;
-  text-align:center;
-  margin-bottom:25px;
-}
-
-/* make logos stay in one row */
-
-.trust-logos{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  flex-wrap:wrap;
-}
-
 
 /* LEFT CARD */
 
@@ -588,62 +566,74 @@
   align-items:center;
   gap:35px;
   background:#ffffff;
-  padding:40px 45px;
-  border-radius:20px;
+  padding:42px 48px;
+  border-radius:22px;
   border:1px solid #e6edf4;
   box-shadow:0 18px 50px rgba(0,0,0,0.06);
 }
 
-.corporate-cert-info h3{
-  font-size:1.9rem;
-  margin-bottom:10px;
-  color:#1e3a5f;
-}
-
-.corporate-cert-info p{
-  color:#4b5563;
-  margin-bottom:18px;
-}
-
-/* RIGHT TRUST */
+/* RIGHT SIDE */
 
 .trust-side{
   display:flex;
-  justify-content:space-around;
-  align-items:center;
-  gap:40px;
-}
-
-.trust-item{
-  display:flex;
   flex-direction:column;
+  justify-content:center;
   align-items:center;
-  gap:10px;
-  font-size:.85rem;
-  font-weight:700;
-  color:#64748b;
-  text-transform:uppercase;
-}
-.cert-logo-img {
-  height: 80px;   /* increased from 60px */
-  width: auto;
+  gap:30px;
+  padding-left:40px;
+
+  /* ⭐ subtle divider */
+  border-left:1px solid #e6edf4;
 }
 
+/* TITLE */
+
+.trust-title{
+  font-size:1.5rem;
+  font-weight:700;
+  color:#1e3a5f;
+  text-align:center;
+  margin:0;
+}
+
+/* LOGO ROW */
+
+.trust-logos{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:55px;
+}
+
+/* normal logos */
+
+.cert-logo-img{
+  height:88px;
+  width:auto;
+}
+
+/* ⭐ WHO bigger */
+
+.trust-item.who img{
+  height:110px;
+}
 
 /* MOBILE */
 
 @media(max-width:900px){
+
   .corporate-row{
     grid-template-columns:1fr;
   }
 
   .trust-side{
-    justify-content:center;
-    margin-top:20px;
+    border-left:none;
+    padding-left:0;
   }
 
   .corporate-cert-card{
     flex-direction:column;
     text-align:center;
   }
+
 }
