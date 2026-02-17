@@ -131,26 +131,23 @@
 /* FEATURE IMAGE */
 .feature-image {
   display: flex;
-  justify-content: flex-end;  
+  justify-content: center;
   align-items: center;
-  padding-left: 40px;          
 }
 
-/* Main image */
 .feature-main-img {
-  width: 110%;                
-  max-width: 980px;            
+  width: 100%;
+  max-width: 900px;
   height: auto;
-  border-radius: 32px;
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.18);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 28px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+  transform: translate(70px, 50px);
 }
 
 .feature-main-img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.22);
+  transform: translate(70px, 50px) scale(1.02);
 }
-
 
 /* ========================= ANIMATION CLASSES ========================= */
 .is-hidden {
@@ -536,4 +533,3 @@
     padding: 60px 20px;
   }
 }
-
