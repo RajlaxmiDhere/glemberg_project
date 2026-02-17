@@ -445,7 +445,7 @@
 }
 
 .cert-item:hover .cert-logo-img {
-  filter: grayscale(0%);
+  filter: none;
   opacity: 1;
   transform: scale(1.05);
 }
