@@ -3,8 +3,7 @@ import "./Contact.css";
 import {
   FaMapMarkerAlt,
   FaPhoneAlt,
-  FaEnvelope,
-  FaWhatsapp
+  FaEnvelope
 } from "react-icons/fa";
 
 const Contact = () => {
@@ -23,6 +22,7 @@ const Contact = () => {
   ];
 
   const email = "glembergpharmaceuticals@gmail.com";
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -30,7 +30,7 @@ const Contact = () => {
     });
   };
 
-  // ✅ FORMSPREE SUBMIT
+  // FORMSPREE SUBMIT
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("Sending...");
@@ -74,9 +74,9 @@ const Contact = () => {
 
               <h3>Corporate Office</h3>
               <p>
-                <b>Glemberg Pharma Pvt. Ltd.</b> <br />
-                Neminath Nagar,<br />
-                Sangli, Maharashtra – 416416<br />
+                <b>Glemberg Pharma Pvt. Ltd.</b><br/>
+                Neminath Nagar,<br/>
+                Sangli, Maharashtra – 416416<br/>
                 India
               </p>
 
@@ -106,7 +106,9 @@ const Contact = () => {
                 <span className="icon-circle"><FaEnvelope /></span>
                 <a href={`mailto:${email}`} className="contact-link">{email}</a>
               </div>
+
             </div>
+          </div>   {/* ✅ THIS WAS MISSING — LEFT COLUMN CLOSED */}
 
           {/* RIGHT FORM */}
           <div className="col-md-6">
@@ -202,3 +204,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
