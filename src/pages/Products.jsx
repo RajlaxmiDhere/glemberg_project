@@ -77,7 +77,7 @@ const Product = () => {
           <div className="breadcrumb">
             <NavLink to="/" className="breadcrumb-link">Home</NavLink>
             <span className="breadcrumb-arrow">›</span>
-            <span className="breadcrumb-current">Products</span>
+            <span className="breadcrumb-current">Our Products</span>
           </div>
 
         </div>
