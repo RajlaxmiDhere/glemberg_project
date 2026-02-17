@@ -228,4 +228,36 @@
   color:#25d366;
   font-size:22px;
 }
+/* =========================
+   PRODUCT FILTER ANIMATION
+   ========================= */
+
+/* animation for cards entering */
+
+.product-card{
+  animation: productFade 0.55s ease both;
+}
+
+@keyframes productFade{
+  from{
+    opacity:0;
+    transform:translateY(25px) scale(.96);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+
+
+/* optional small stagger delay for nicer effect */
+
+.product-card:nth-child(1){ animation-delay:.05s; }
+.product-card:nth-child(2){ animation-delay:.10s; }
+.product-card:nth-child(3){ animation-delay:.15s; }
+.product-card:nth-child(4){ animation-delay:.20s; }
+.product-card:nth-child(5){ animation-delay:.25s; }
+.product-card:nth-child(6){ animation-delay:.30s; }
+.product-card:nth-child(7){ animation-delay:.35s; }
+.product-card:nth-child(8){ animation-delay:.40s; }
 
