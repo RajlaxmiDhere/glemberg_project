@@ -311,33 +311,19 @@
   opacity: 0.9;
 }
 
-/* The Green "Learn More" Pill */
-/* You can remove this if it exists */
-.learn-more-pill span {
-  margin-left: 8px;
-  font-size: 1.2rem;
-}
 
 /* Ensure the pill is set to center the text */
 .learn-more-pill {
-  background-color: #00c853;
+  background-color: #00c853; 
   color: white;
-  padding: 10px 24px; /* Adjust padding for a balanced look without the arrow */
+  padding: 12px 28px; /* Balanced padding for text-only */
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  display: inline-flex;
+  display: inline-flex; /* Keeps it perfectly centered */
   align-items: center;
   justify-content: center;
-}
-.learn-more-pill {
-  background-color: #00c853; /* Bright green */
-  color: white;
-  padding: 12px 28px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .learn-more-pill:hover {
