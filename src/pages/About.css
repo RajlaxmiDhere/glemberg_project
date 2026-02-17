@@ -141,3 +141,42 @@ background: #FFFFFF;
     flex: 0 0 100%;
   }
 }
+.contact-hero{
+  background: linear-gradient(90deg,#003c2f,#00251e);
+  padding:70px 0;
+  color:white;
+}
+
+.contact-hero-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:0 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.contact-title{
+  font-size:40px;
+  font-weight:600;
+  margin:0;
+  opacity:0;
+  transform:translateY(30px);
+  animation:fadeSlideUp 1.2s ease forwards;
+}
+
+@keyframes fadeSlideUp{
+  to{opacity:1; transform:translateY(0);}
+}
+
+.breadcrumb{
+  font-size:22px;
+  font-weight:600;
+  display:flex;
+  gap:10px;
+}
+
+.breadcrumb-link{ color:white; text-decoration:none; }
+.breadcrumb-arrow{ color:#25d366; }
+.breadcrumb-current{ color:#25d366; }
+
