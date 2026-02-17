@@ -5,13 +5,7 @@
 }
 
 .top-social-inner {
-    background: linear-gradient(
-    90deg,
-    #E8F4FD 0%,
-    #D6ECFA 40%,
-    #BFDFF5 70%,
-    #9CC9E8 100%
-  );
+    background: #FFFFFF;
   height:45px;
   max-height:45px;
   max-width: 2000px;
