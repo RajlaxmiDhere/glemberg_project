@@ -439,7 +439,7 @@
 .cert-logo-img {
   height: 60px; /* Standard height for compliance logos */
   width: auto;
-  filter: grayscale(100%); /* Clinical look */
+  filter: none; /* Clinical look */
   opacity: 0.7;
   transition: all 0.4s ease;
 }
