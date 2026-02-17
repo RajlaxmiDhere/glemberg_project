@@ -404,13 +404,16 @@
 
 .certification-trust-bar {
   text-align: center;
-  margin-bottom: 4rem;
-  padding: 40px;
+  margin: 0 auto 4rem auto; /* Centered with bottom margin */
+  padding: 30px;            /* Slightly reduced padding */
   background: #ffffff;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   border: 1px solid #e2e8f0;
-  max-width:600
+
+  /* ✅ ADD THESE TWO LINES TO CONTROL WIDTH */
+  max-width: 600px;         /* Adjust this number (e.g., 700px) to make it even narrower */
+  width: 90%;               /* Ensures it stays responsive on smaller screens */
 }
 
 .cert-title {
