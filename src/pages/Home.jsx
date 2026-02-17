@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 import fssaiLogo from "../assets/fssai-seeklogo.png";
 import whoGmpLogo from "../assets/WHO-GMP.jpg";
 import featureImg from "../assets/feature-medical.jpg";
-import dermaImg from "../assets/derma_division.jpg"; 
+import dermaImg from "../assets/derma_division1.jpg"; 
 import generalImg from "../assets/general_range1.jpg";
 import orthoImg from "../assets/ortho_division.jpg";
 import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
