@@ -41,7 +41,7 @@
 .filter-sidebar {
   width: 280px;
   flex-shrink: 0;
-  background: linear-gradient(135deg, #05163a, #0b2c6f);
+  background: #004d43;
   padding: 25px;
   border-radius: 20px;
   height: fit-content;
@@ -77,7 +77,7 @@
 }
 
 .filter-item.active {
-  background: #0056b3;
+  background: #83A492;
   color: #ffffff;
 }
 
@@ -92,7 +92,7 @@
 
 /* Card */
 .product-card {
-  background: #E8F4FD;
+  background: #83A492;
   border-radius: 20px;
   border: 1px solid #e1e8ed;
   padding: 20px;
@@ -107,7 +107,7 @@
   inset: 0;
   border-radius: 20px;
   padding: 2px;
-  background: linear-gradient(135deg, #0b2c6f, #4facfe);
+  background: #83A492;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
