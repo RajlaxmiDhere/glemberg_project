@@ -548,3 +548,51 @@
     padding: 60px 20px;
   }
 }
+/* ===== CERT ROW PROFESSIONAL LAYOUT ===== */
+
+.cert-row{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:40px;
+  max-width:1100px;
+  margin:60px auto 100px;
+  align-items:stretch;
+}
+
+/* LEFT CARD (Corporate) */
+
+.credentials-card{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#fff;
+  padding:40px;
+  border-radius:18px;
+  border:1px solid #e6edf4;
+  box-shadow:0 12px 32px rgba(0,0,0,0.06);
+  transition:.35s;
+}
+
+.credentials-card:hover{
+  transform:translateY(-6px);
+}
+
+/* RIGHT CARD (Compliance) */
+
+.certification-trust-bar{
+  max-width:none;
+  width:100%;
+  padding:38px;
+  border-radius:18px;
+  box-shadow:0 12px 32px rgba(0,0,0,0.06);
+  border:1px solid #e6edf4;
+}
+
+/* responsive */
+
+@media(max-width:900px){
+  .cert-row{
+    grid-template-columns:1fr;
+  }
+}
+

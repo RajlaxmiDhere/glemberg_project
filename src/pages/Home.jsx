@@ -157,12 +157,6 @@ function Home() {
             </div>
           </div>
 
-          {/* ✅ ADDED: Learn More Button for Products Section */}
-          <div className="product-explore-container">
-             <NavLink to="/products" className="product-explore-btn">
-               Explore All Products
-             </NavLink>
-          </div>
 
           {/* ✅ TRIGGER 2: Counting starts only when you scroll to this div */}
           <div className="stats-modern" ref={statsRef}>
@@ -182,41 +176,64 @@ function Home() {
               <p>Happy Clients</p>
             </div>
           </div>
+          
           {/* ✅ ADDED: Credentials / Trust Section */}
-<div className="certification-trust-bar">
-  <p className="cert-title">Quality & Compliance Standards</p>
-  <div className="cert-logo-container">
-    
- <div className="cert-item">
-  <img src={fssaiLogo} alt="FSSAI" className="cert-logo-img" />
-  <span>FSSAI Certified</span>
-</div>
+{/* ===== CERTIFICATION + CORPORATE IN ONE ROW ===== */}
+<div className="cert-row">
 
-<div className="cert-item">
-  <img src={whoGmpLogo} alt="WHO-GMP" className="cert-logo-img" />
-  <span>WHO-GMP</span>
-</div>
-
-    <div className="cert-item">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" alt="Government of India" className="cert-logo-img" />
-      <span>Govt Approved</span>
-    </div>
-
-  </div>
-</div>
-
-<div className="credentials-section">
+  {/* LEFT : Corporate Certification */}
   <div className="credentials-card">
     <div className="cert-info">
       <h3>Corporate Certification</h3>
-      <a href={certificate} target="_blank" rel="noopener noreferrer" className="view-cert-link">
-        View Registration Certificate <i className="bi bi-file-earmark-pdf"></i>
+
+      <a
+        href={certificate}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="view-cert-link"
+      >
+        View Registration Certificate
       </a>
     </div>
+
     <div className="cert-action">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" className="gov-logo" alt="GOI" />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png"
+        className="gov-logo"
+        alt="GOI"
+      />
     </div>
   </div>
+
+
+  {/* RIGHT : Quality & Compliance */}
+  <div className="certification-trust-bar">
+    <p className="cert-title">Quality & Compliance Standards</p>
+
+    <div className="cert-logo-container">
+
+      <div className="cert-item">
+        <img src={fssaiLogo} alt="FSSAI" className="cert-logo-img"/>
+        <span>FSSAI Certified</span>
+      </div>
+
+      <div className="cert-item">
+        <img src={whoGmpLogo} alt="WHO-GMP" className="cert-logo-img"/>
+        <span>WHO-GMP</span>
+      </div>
+
+      <div className="cert-item">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png"
+          alt="Government"
+          className="cert-logo-img"
+        />
+        <span>Govt Approved</span>
+      </div>
+
+    </div>
+  </div>
+
 </div>
 
         </div> 
