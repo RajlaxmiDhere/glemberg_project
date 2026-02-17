@@ -500,8 +500,8 @@
 
 .stat-card-modern {
 
-  width:300px;          /* ⭐ increased from 220px */
-  padding:45px 30px;    /* ⭐ more inner space */
+  width:340px;        /* ⭐ bigger width */
+  padding:45px 30px;  /* keep balanced spacing */
 
   text-align:center;
   border-radius:16px;
@@ -511,6 +511,7 @@
 
   transition:0.3s ease;
 }
+
 
 /* ⭐ Bigger icon */
 .stat-icon{
