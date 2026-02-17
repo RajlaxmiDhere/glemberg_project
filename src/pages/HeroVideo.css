@@ -1,282 +1,396 @@
-/* =========================
-   HERO VIDEO SECTION
-   ========================= */
-
-.hero-video-section{
-  position:relative;
-  width:100%;
-  height:85vh;
-  overflow:hidden;
-  background:#000;
+/* ============================================================
+   1. HERO VIDEO SECTION
+   ============================================================ */
+.hero-video-section {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  background: #000;
 }
 
-.hero-video{
-  position:absolute;
-  top:50%;
-  left:50%;
-  min-width:100%;
-  min-height:100%;
-  transform:translate(-50%,-50%);
-  object-fit:cover;
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
 }
 
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.45);
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
 }
 
-.hero-content{
-  position:relative;
-  z-index:2;
-  height:100%;
-  max-width:900px;
-  margin:auto;
-  padding:0 20px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  color:#fff;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
 }
 
-.welcome-tagline{
-  font-size:1.1rem;
-  font-weight:600;
-  letter-spacing:1px;
-  margin-bottom:12px;
-  text-transform:uppercase;
-  color:#c9f7f5;
+.welcome-tagline {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  color: #c9f7f5;
 }
 
-.hero-content h1{
-  font-size:3rem;
-  font-weight:700;
-  margin-bottom:18px;
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 18px;
 }
 
-.hero-content p{
-  font-size:1.1rem;
-  line-height:1.7;
-  max-width:700px;
-  color:#e6ecf5;
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 700px;
+  color: #e6ecf5;
 }
 
-/* =========================
-   BELOW HERO
-   ========================= */
-
-.below-hero-section{
-  background:#fff;
-  padding:100px 20px;
+/* ============================================================
+   2. FEATURE SECTION & LAYOUT
+   ============================================================ */
+.below-hero-section {
+  background: #FFFFFF;
+  padding: 100px 20px;
 }
 
-.below-hero-inner{
-  max-width:1200px;
-  margin:auto;
-  display:flex;
-  flex-direction:column;
-  gap:40px;
+.below-hero-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
-/* =========================
-   FEATURE SECTION
-   ========================= */
-
-.feature-section{
-  display:grid;
-  grid-template-columns:1.1fr 0.9fr;
-  gap:60px;
-  align-items:center;
-  margin-bottom:100px;
+.feature-section {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 100px;
 }
 
-/* IMAGE PROFESSIONAL */
-
-.feature-image{
-  position:relative;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+.feature-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 640px;
 }
 
-.feature-image::before{
-  content:"";
-  position:absolute;
-  width:85%;
-  height:85%;
-  background:linear-gradient(135deg,#f4f8ff,#e8f0ff);
-  border-radius:30px;
-  z-index:0;
-  box-shadow:0 30px 70px rgba(30,79,145,0.12);
+.feature-text h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #00008b;
+  margin-bottom: 18px;
+  white-space: nowrap;
 }
 
-.feature-main-img{
-  position:relative;
-  z-index:2;
-  width:100%;
-  max-width:540px;
-  border-radius:26px;
-  box-shadow:0 40px 80px rgba(0,0,0,0.18);
-  transition:.5s;
+.feature-sub {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #047857;
+  margin-bottom: 24px;
 }
 
-.feature-main-img:hover{
-  transform:translateY(-8px) scale(1.02);
+.feature-text p {
+  font-size: 1.5rem;
+  line-height: 1.85;
+  color: #374151;
+  margin-bottom: 16px;
 }
 
-/* =========================
-   PRODUCTS SECTION (FIXED)
-   ========================= */
+.feature-big { font-size: 2rem; font-weight: 700; }
+.feature-medium { font-size: 1.45rem; font-weight: 700; }
+.feature-small { font-size: 1.15rem; }
 
-.products-container-modern{
-  background:#0b4f46;
-  padding:140px 0 110px;
-  margin-top:-100px;
-  clip-path:polygon(0 15%,100% 0,100% 100%,0 100%);
+.feature-btn {
+  display: inline-block;
+  margin-top: 26px;
+  padding: 14px 36px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0b2c6f, #173a8a);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ⭐ NEW INNER WRAPPER */
-
-.products-inner{
-  max-width:1200px;
-  margin:auto;
-  padding:0 40px;
+.feature-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(11, 44, 111, 0.35);
 }
 
-/* HEADER */
-
-.products-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  gap:30px;
-  margin-bottom:60px;
+/* ============================================================
+   3. PREMIUM PHARMA IMAGE BLOCK
+   ============================================================ */
+.feature-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.header-text-group{
-  max-width:560px;
+.feature-image::before {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  background: linear-gradient(135deg, #f4f8ff, #e8f0ff);
+  border-radius: 30px;
+  z-index: 0;
+  box-shadow: 0 30px 70px rgba(30, 79, 145, 0.12);
 }
 
-.category-main-title{
-  font-size:2.2rem;
-  font-weight:700;
-  margin-bottom:18px;
-  color:#fff;
+.feature-main-img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 540px;
+  border-radius: 26px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.18), 0 8px 25px rgba(30,79,145,0.12);
+  transition: all .55s cubic-bezier(.2,.8,.2,1);
 }
 
-.category-subtitle{
-  font-size:1.1rem;
-  line-height:1.6;
-  color:rgba(255,255,255,.85);
+.feature-main-img:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 60px 120px rgba(0,0,0,0.22), 0 15px 40px rgba(30,79,145,0.18);
 }
 
-/* BUTTON */
-
-.learn-more-pill{
-  background:#00c853;
-  color:white;
-  padding:12px 28px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:600;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  transition:.3s;
+.feature-image::after {
+  content: "";
+  position: absolute;
+  right: 8%;
+  bottom: 8%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(30, 79, 145, 0.06);
+  z-index: 1;
 }
 
-.learn-more-pill:hover{
-  background:#00e676;
-  transform:translateY(-2px);
+/* ============================================================
+   4. PRODUCTS & CATEGORY GRID (Modern Slant)
+   ============================================================ */
+.products-container-modern {
+  background-color: #004d43;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 120px 0 80px 0;
+  z-index: 10;
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  margin-top: -100px;
 }
 
-/* GRID */
-
-.category-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:35px;
+.products-header {
+  padding-top: 40px;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto 40px auto;
 }
 
-/* CARD (kept same look) */
-
-.category-card{
-  background:white;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 20px 40px rgba(0,0,0,.18);
-  transition:.3s;
+.category-main-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
 }
 
-.category-card:hover{
-  transform:translateY(-10px);
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto 80px auto;
 }
 
-.category-image img{
-  width:100%;
-  height:260px;
-  object-fit:cover;
+.category-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%);
+  transition: transform 0.3s ease;
 }
 
-.category-info{
-  padding:28px 26px;
-  color:white;
+.category-card:hover { transform: translateY(-10px); }
+
+.category-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
-.category-info.cardiac{background:#1e4ea1;}
-.category-info.diabetic{background:#f36f21;}
-.category-info.neuro{background:#2bb673;}
-
-.category-info h3{
-  font-size:1.8rem;
-  margin-bottom:10px;
+.category-info {
+  padding: 30px 25px;
+  color: #ffffff;
+  flex-grow: 1;
 }
 
-.category-info p{
-  font-size:1.05rem;
-  margin-bottom:30px;
-  opacity:.9;
+.category-card.orange .category-info { background-color: #f36f21; }
+.category-card.teal .category-info { background-color: #2bb673; }
+.category-card.blue-light .category-info { background-color: #00aeef; }
+.category-card.deep-navy .category-info { background-color: #0b2c6f; }
+
+.category-info h3 { font-size: 1.8rem; font-weight: 700; margin-bottom: 5px; }
+.category-info p { font-size: 1.1rem; margin-bottom: 40px; opacity: 0.9; }
+
+.view-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  padding-bottom: 2px;
 }
 
-.view-link{
-  background:rgba(255,255,255,.2);
-  padding:8px 20px;
-  border-radius:20px;
-  border:1px solid white;
-  color:white;
-  text-decoration:none;
-  font-weight:500;
+/* ============================================================
+   5. STATS SECTION
+   ============================================================ */
+.stats-modern {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  padding: 0 20px;
+  flex-wrap: wrap;
 }
 
-/* =========================
-   STATS
-   ========================= */
-
-.stats-modern{
-  display:flex;
-  justify-content:center;
-  gap:80px;
-  margin-top:50px;
-  margin-bottom:80px;
-  flex-wrap:wrap;
+.stat-card-modern {
+  width: 220px;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 12px;
+  clip-path: polygon(0 0, 90% 0, 100% 15%, 100% 100%, 0 100%);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+.stat-card-modern:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.12);
+}
 
-@media(max-width:900px){
+.stat-card-modern h2 { font-size: 3.2rem; font-weight: 700; }
+.stat-card-modern p { font-size: 1.1rem; font-weight: 500; }
 
-  .feature-section{
-    grid-template-columns:1fr;
-    text-align:center;
+.stat-card-modern.blue { background: #eef2ff; color: #1e40af; }
+.stat-card-modern.orange { background: #fff1e6; color: #ea580c; }
+.stat-card-modern.purple { background: #f3f0ff; color: #6d28d9; }
+
+/* ============================================================
+   6. CORPORATE & TRUST ROW
+   ============================================================ */
+.corporate-row {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 70px;
+  max-width: 1150px;
+  margin: 80px auto 100px;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.corporate-cert-card {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  background: #ffffff;
+  padding: 42px 48px;
+  border-radius: 22px;
+  border: 1px solid #e6edf4;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.06);
+}
+
+.trust-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-left: 40px;
+  border-left: 1px solid #e6edf4;
+}
+
+.trust-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e3a5f;
+  text-align: center;
+}
+
+.trust-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+}
+
+.cert-logo-img { height: 88px; width: auto; }
+.trust-item.who img { height: 110px; }
+
+/* ============================================================
+   7. ANIMATIONS
+   ============================================================ */
+.is-hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+@keyframes textFadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-line {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: textFadeUp 0.9s ease forwards;
+}
+
+.delay-1, .delay-2, .delay-3, .delay-4 { animation-delay: 1.3s; }
+.delay-5 { animation-delay: 2s; }
+
+/* ============================================================
+   8. RESPONSIVE DESIGN
+   ============================================================ */
+@media (max-width: 900px) {
+  .feature-section, .corporate-row, .category-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
+  .hero-content h1 { font-size: 2.2rem; }
+  .trust-side { border-left: none; padding-left: 0; }
+  .corporate-cert-card { flex-direction: column; }
+}
 
-  .products-header{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
+@media (max-width: 600px) {
+  .below-hero-section { padding: 60px 20px; }
 }

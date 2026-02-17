@@ -150,80 +150,56 @@ function Home() {
 </div>
 
 {/* PRODUCTS SECTION (UNCHANGED) */}
-{/* PRODUCTS SECTION */}
 <section className="products-container-modern">
+  <div className="products-header">
+    <div className="header-text-group">
+      <h2 className="category-main-title">Our Products</h2>
+      <p className="category-subtitle">
+        Our diverse product portfolio covers specialized divisions including  
+        general,ortho,darma care. Each category is developed with 
+        precision, ensuring quality, safety, and efficacy to meet global healthcare needs.
+      </p>
+    </div>
+    <NavLink to="/products" className="learn-more-pill">
+      Learn More
+    </NavLink>
+  </div>
 
-  {/* ⭐ ADD THIS INNER WRAPPER */}
-  <div className="products-inner">
-
-    <div className="products-header">
-      <div className="header-text-group">
-        <h2 className="category-main-title">Our Products</h2>
-
-        <p className="category-subtitle">
-          Our diverse product portfolio covers specialized divisions including  
-          general,ortho,darma care. Each category is developed with 
-          precision, ensuring quality, safety, and efficacy to meet global healthcare needs.
-        </p>
-
+  <div className="category-grid">
+    <div className="category-card">
+      <div className="category-image">
+        <img src={generalImg} alt="General Care" />
       </div>
-
-      <NavLink to="/products" className="learn-more-pill">
-        Learn More
-      </NavLink>
-
+      <div className="category-info cardiac">
+        <h3>General Care</h3>
+        <p>Advanced solutions for cardiovascular health.</p>
+        <NavLink to="/products#general" className="view-link">View Products</NavLink>
+      </div>
     </div>
 
-
-    <div className="category-grid">
-
-      <div className="category-card">
-        <div className="category-image">
-          <img src={generalImg} alt="General Care" />
-        </div>
-        <div className="category-info cardiac">
-          <h3>General Care</h3>
-          <p>Advanced solutions for cardiovascular health.</p>
-          <NavLink to="/products#general" className="view-link">
-            View Products
-          </NavLink>
-        </div>
+    <div className="category-card">
+      <div className="category-image">
+        <img src={orthoImg} alt="Ortho Care" />
       </div>
-
-
-      <div className="category-card">
-        <div className="category-image">
-          <img src={orthoImg} alt="Ortho Care" />
-        </div>
-        <div className="category-info diabetic">
-          <h3>Ortho Care</h3>
-          <p>Comprehensive management for metabolic health.</p>
-          <NavLink to="/products#ortho" className="view-link">
-            View Products
-          </NavLink>
-        </div>
+      <div className="category-info diabetic">
+        <h3>Ortho Care</h3>
+        <p>Comprehensive management for metabolic health.</p>
+        <NavLink to="/products#ortho" className="view-link">View Products</NavLink>
       </div>
-
-
-      <div className="category-card">
-        <div className="category-image">
-          <img src={dermaImg} alt="Darma Care" />
-        </div>
-        <div className="category-info neuro">
-          <h3>Darma Care</h3>
-          <p>Innovative treatments for neurological wellbeing.</p>
-          <NavLink to="/products#derma" className="view-link">
-            View Products
-          </NavLink>
-        </div>
-      </div>
-
     </div>
 
-  </div>   {/* ⭐ VERY IMPORTANT — closes products-inner */}
-
+    <div className="category-card">
+      <div className="category-image">
+        <img src={dermaImg} alt="Darma Care" />
+      </div>
+      <div className="category-info neuro">
+        <h3>Darma Care</h3>
+        <p>Innovative treatments for neurological wellbeing.</p>
+        <NavLink to="/products#derma" className="view-link">View Products</NavLink>
+      </div>
+    </div>
+  </div>
 </section>
-
 
 {/* REST CODE UNCHANGED BELOW */}
 
