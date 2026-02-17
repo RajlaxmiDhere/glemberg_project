@@ -1,5 +1,5 @@
-import React, { useEffect } from "react"; // Added useEffect
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"; // Added useLocation
+import React, { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
 import Home from "./pages/Home";
@@ -10,7 +10,6 @@ import Footer from "./components/Footer";
 
 import "./App.css";
 
-// --- SCROLL TO TOP HELPER ---
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -20,14 +19,13 @@ function ScrollToTop() {
 
   return null;
 }
-// ----------------------------
 
 function App() {
   return (
     <BrowserRouter>
-      {/* Place it here so it runs on every route change */}
+
       <ScrollToTop />
-      
+
       <Navbar />
 
       <Routes>
@@ -36,8 +34,20 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      
+
+      {/* ⭐ WHATSAPP FLOAT BUTTON (ADDED HERE) */}
+      <a
+        href="https://wa.me/7559189020"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="footer-whatsapp-float"
+      >
+        <img src="/whatsapp.png" alt="WhatsApp" />
+        Enquire Now
+      </a>
+
       <Footer />
+
     </BrowserRouter>
   );
 }
