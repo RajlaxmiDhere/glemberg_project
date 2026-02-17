@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react"; // 1. Added useEffect
-import { useLocation } from "react-router-dom";    // 2. Added useLocation
+import React, { useState, useEffect } from "react";
+import { useLocation, NavLink } from "react-router-dom";
 import "./Products.css";
 
 /* Assets */
@@ -24,91 +24,151 @@ import Genzocopowder from "../assets/Genzoco_powder.png";
 import Itragem200 from "../assets/Itragem_200_cap.png";
 
 const Product = () => {
+
   const [filter, setFilter] = useState("all");
-  const location = useLocation(); // 3. Defined location
+  const location = useLocation();
 
   useEffect(() => {
-    // Check if there is a hash in the URL (e.g., #ortho)
-    const hash = location.hash.replace("#", ""); 
-    
+    const hash = location.hash.replace("#", "");
+
     if (hash === "general" || hash === "ortho" || hash === "derma") {
       setFilter(hash);
     } else {
       setFilter("all");
     }
-    
-    // Scroll to top when the user arrives or filter changes
-    window.scrollTo(0, 0);
-  }, [location]); // Re-run whenever the URL changes
+
+    window.scrollTo(0,0);
+
+  }, [location]);
 
   const products = [
-    { id: 1, name: "Gabanx NT 100", category: "ortho", division: "ORTHO DIVISION", image: gabanxNt },
-    { id: 2, name: "Carnex LC Tab", category: "ortho", division: "ORTHO DIVISION", image: carnexLc },
-    { id: 3, name: "GLEMVIT D3 60K", category: "ortho", division: "ORTHO DIVISION", image: glemvitD3 },
-    { id: 4, name: "Bonew Jelly Sachet", category: "ortho", division: "ORTHO DIVISION", image: bonewJelly },
-    { id: 5, name: "Aceglem MR Tab", category: "general", division: "GENERAL RANGE", image: AceglemMR },
-    { id: 6, name: "Aceglem SP Tab", category: "general", division: "GENERAL RANGE", image: AceglemSP },
-    { id: 7, name: "Aceglem P Tab", category: "general", division: "GENERAL RANGE", image: AceglemP },
-    { id: 8, name: "Moxgem CV 625 Tab", category: "general", division: "GENERAL RANGE", image: Moxgemcv625 },
-    { id: 9, name: "Moxgem 500 Cap", category: "general", division: "GENERAL RANGE", image: Moxgem500cap },
-    { id: 10, name: "Cefogem 100 Tab", category: "general", division: "GENERAL RANGE", image: Cefogem100 },
-    { id: 11, name: "Cefogem 200 Tab", category: "general", division: "GENERAL RANGE", image: Cefogem200 },
-    { id: 12, name: "Cefogem CV Tab", category: "general", division: "GENERAL RANGE", image: Cefogemcv },
-    { id: 13, name: "Cefixgim 100 Tab", category: "general", division: "GENERAL RANGE", image: Cefixgim100 },
-    { id: 14, name: "Cefixgim 200 Tab", category: "general", division: "GENERAL RANGE", image: Cefixgim200 },
-    { id: 15, name: "Gempan 40 Tab", category: "general", division: "GENERAL RANGE", image: Gempan40 },
-    { id: 16, name: "Raberg DSR Cap", category: "general", division: "GENERAL RANGE", image: RabergDSR },
-    { id: 17, name: "Ferroz XT Tab", category: "general", division: "GENERAL RANGE", image: Ferrozxt },
-    { id: 18, name: "Genzoco Powder", category: "derma", division: "DERMA DIVISION", image: Genzocopowder },
-    { id: 19, name: "Itragem 200 Cap", category: "derma", division: "DERMA DIVISION", image: Itragem200 },
+    { id:1,name:"Gabanx NT 100",category:"ortho",division:"ORTHO DIVISION",image:gabanxNt },
+    { id:2,name:"Carnex LC Tab",category:"ortho",division:"ORTHO DIVISION",image:carnexLc },
+    { id:3,name:"GLEMVIT D3 60K",category:"ortho",division:"ORTHO DIVISION",image:glemvitD3 },
+    { id:4,name:"Bonew Jelly Sachet",category:"ortho",division:"ORTHO DIVISION",image:bonewJelly },
+    { id:5,name:"Aceglem MR Tab",category:"general",division:"GENERAL RANGE",image:AceglemMR },
+    { id:6,name:"Aceglem SP Tab",category:"general",division:"GENERAL RANGE",image:AceglemSP },
+    { id:7,name:"Aceglem P Tab",category:"general",division:"GENERAL RANGE",image:AceglemP },
+    { id:8,name:"Moxgem CV 625 Tab",category:"general",division:"GENERAL RANGE",image:Moxgemcv625 },
+    { id:9,name:"Moxgem 500 Cap",category:"general",division:"GENERAL RANGE",image:Moxgem500cap },
+    { id:10,name:"Cefogem 100 Tab",category:"general",division:"GENERAL RANGE",image:Cefogem100 },
+    { id:11,name:"Cefogem 200 Tab",category:"general",division:"GENERAL RANGE",image:Cefogem200 },
+    { id:12,name:"Cefogem CV Tab",category:"general",division:"GENERAL RANGE",image:Cefogemcv },
+    { id:13,name:"Cefixgim 100 Tab",category:"general",division:"GENERAL RANGE",image:Cefixgim100 },
+    { id:14,name:"Cefixgim 200 Tab",category:"general",division:"GENERAL RANGE",image:Cefixgim200 },
+    { id:15,name:"Gempan 40 Tab",category:"general",division:"GENERAL RANGE",image:Gempan40 },
+    { id:16,name:"Raberg DSR Cap",category:"general",division:"GENERAL RANGE",image:RabergDSR },
+    { id:17,name:"Ferroz XT Tab",category:"general",division:"GENERAL RANGE",image:Ferrozxt },
+    { id:18,name:"Genzoco Powder",category:"derma",division:"DERMA DIVISION",image:Genzocopowder },
+    { id:19,name:"Itragem 200 Cap",category:"derma",division:"DERMA DIVISION",image:Itragem200 },
   ];
 
   const filteredProducts =
-    filter === "all" ? products : products.filter(p => p.category === filter);
+    filter==="all" ? products : products.filter(p=>p.category===filter);
 
   return (
+
     <div className="product-page-container">
-      <div class="products-heading-wrap">
-           <h1 class="products-main-heading">Our Products</h1>
+
+      {/* ===== GREEN HERO HEADER ===== */}
+      <div className="contact-hero">
+        <div className="contact-hero-inner">
+
+          <h1 className="contact-title">Our Products</h1>
+
+          <div className="breadcrumb">
+            <NavLink to="/" className="breadcrumb-link">Home</NavLink>
+            <span className="breadcrumb-arrow">›</span>
+            <span className="breadcrumb-current">Products</span>
+          </div>
+
+        </div>
       </div>
+
+
+      {/* ===== ORIGINAL PAGE (UNCHANGED) ===== */}
+
+      <div className="products-heading-wrap">
+        <h1 className="products-main-heading">Our Products</h1>
+      </div>
+
       <div className="product-content-body">
+
         <aside className="filter-sidebar">
+
           <h3 className="filter-title">Filter by Product Division</h3>
+
           <ul className="filter-list">
-            <li className={`filter-item ${filter === "all" ? "active" : ""}`} onClick={() => setFilter("all")}>
+
+            <li className={`filter-item ${filter==="all"?"active":""}`}
+                onClick={()=>setFilter("all")}>
               Show All Products
             </li>
-            <li className={`filter-item ${filter === "general" ? "active" : ""}`} onClick={() => setFilter("general")}>
+
+            <li className={`filter-item ${filter==="general"?"active":""}`}
+                onClick={()=>setFilter("general")}>
               General Range
             </li>
-            <li className={`filter-item ${filter === "ortho" ? "active" : ""}`} onClick={() => setFilter("ortho")}>
+
+            <li className={`filter-item ${filter==="ortho"?"active":""}`}
+                onClick={()=>setFilter("ortho")}>
               Ortho Division
             </li>
-            <li className={`filter-item ${filter === "derma" ? "active" : ""}`} onClick={() => setFilter("derma")}>
+
+            <li className={`filter-item ${filter==="derma"?"active":""}`}
+                onClick={()=>setFilter("derma")}>
               Derma Division
             </li>
+
           </ul>
+
         </aside>
 
+
         <main className="product-grid">
-          {filteredProducts.length > 0 ? (
-            filteredProducts.map(product => (
+
+          {filteredProducts.length>0 ? (
+
+            filteredProducts.map(product=>(
+
               <div key={product.id} className="product-card">
+
                 <div className="card-inner">
+
                   <div className="product-image-box">
-                    <img src={product.image} alt={product.name} className="product-img" />
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="product-img"
+                    />
                   </div>
+
                   <h2 className="brand-text">{product.name}</h2>
-                  <div className="category-label">{product.division}</div>
+
+                  <div className="category-label">
+                    {product.division}
+                  </div>
+
                 </div>
+
               </div>
+
             ))
+
           ) : (
-            <p className="no-products">No products found in this category.</p>
+
+            <p className="no-products">
+              No products found in this category.
+            </p>
+
           )}
+
         </main>
+
       </div>
+
     </div>
+
   );
 };
 
