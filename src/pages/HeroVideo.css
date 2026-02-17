@@ -321,6 +321,24 @@
 }
 
 /* The Green "Learn More" Pill */
+/* You can remove this if it exists */
+.learn-more-pill span {
+  margin-left: 8px;
+  font-size: 1.2rem;
+}
+
+/* Ensure the pill is set to center the text */
+.learn-more-pill {
+  background-color: #00c853;
+  color: white;
+  padding: 10px 24px; /* Adjust padding for a balanced look without the arrow */
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 .learn-more-pill {
   background-color: #00c853; /* Bright green */
   color: white;
