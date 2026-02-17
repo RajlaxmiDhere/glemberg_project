@@ -194,7 +194,7 @@ function Home() {
 
 <div className="cert-item">
   <img src={whoGmpLogo} alt="WHO-GMP" className="cert-logo-img" />
-  <span>WHO-GMP Compliant</span>
+  <span>WHO-GMP</span>
 </div>
 
     <div className="cert-item">
@@ -209,7 +209,6 @@ function Home() {
   <div className="credentials-card">
     <div className="cert-info">
       <h3>Corporate Certification</h3>
-      <p>Glemberg Pharmaceuticals is a registered entity under the Ministry of Corporate Affairs, Government of India.</p>
       <a href={certificate} target="_blank" rel="noopener noreferrer" className="view-cert-link">
         View Registration Certificate <i className="bi bi-file-earmark-pdf"></i>
       </a>
