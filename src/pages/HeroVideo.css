@@ -605,6 +605,11 @@
   color:#64748b;
   text-transform:uppercase;
 }
+.cert-logo-img {
+  height: 90px;   /* increased from 60px */
+  width: auto;
+}
+
 
 /* MOBILE */
 
