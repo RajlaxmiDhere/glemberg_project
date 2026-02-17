@@ -19,8 +19,7 @@ const Contact = () => {
   const [status, setStatus] = useState("");
 
   const phoneNumbers = [
-    "+91 7559189020",
-    "+91 8975173157"
+    "+91 7559189020"
   ];
 
   const email = "glembergpharmaceuticals@gmail.com";
