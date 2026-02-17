@@ -273,23 +273,22 @@
   margin-left: -50vw;
   margin-right: -50vw;
   
-  /* Increased padding to give the cut room to breathe */
-  padding: 100px 0 80px 0; 
+  /* Give extra top padding so the slant doesn't cut into your text */
+  padding: 120px 0 80px 0; 
   z-index: 10;
 
-  /* ✅ THIS CREATES THE SHARP LEFT CORNER CUT */
-  /* (0 12%): The left side starts 12% down from the top */
-  /* (100% 0): The right side is at the very top (0%) */
-  clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+  /* ✅ THE ARCHITECTURAL CUT */
+  /* This creates a slope where the left side is lower than the right side */
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
   
-  /* Pull it up to overlap the previous section for that seamless look */
+  /* Pull the section up to overlap the previous white section */
   margin-top: -100px; 
-  border-radius: 0;
+  border-radius: 0; /* Remove any old rounding to keep the cut sharp */
 }
 
-/* Adjust the text header so it doesn't get obscured by the slant */
+/* Adjust your header so it stays below the slanted "ceiling" */
 .products-header {
-  padding-top: 50px; 
+  padding-top: 40px; 
   max-width: 1200px;
   width: 90%;
   margin: 0 auto 40px auto;
