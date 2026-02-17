@@ -155,7 +155,7 @@ function Home() {
       <div className="category-info cardiac">
         <h3>General Care</h3>
         <p>Advanced solutions for cardiovascular health.</p>
-        <NavLink to="/products#cardiac" className="view-link">View Products</NavLink>
+        <NavLink to="/products#general" className="view-link">View Products</NavLink>
       </div>
     </div>
 
@@ -167,7 +167,7 @@ function Home() {
       <div className="category-info diabetic">
         <h3>Ortho Care</h3>
         <p>Comprehensive management for metabolic health.</p>
-        <NavLink to="/products#diabetic" className="view-link">View Products</NavLink>
+        <NavLink to="/products#ortho" className="view-link">View Products</NavLink>
       </div>
     </div>
 
@@ -179,7 +179,7 @@ function Home() {
       <div className="category-info neuro">
         <h3>Darma Care</h3>
         <p>Innovative treatments for neurological wellbeing.</p>
-        <NavLink to="/products#neuro" className="view-link">View Products</NavLink>
+        <NavLink to="/products#derma" className="view-link">View Products</NavLink>
       </div>
     </div>
   </div>
