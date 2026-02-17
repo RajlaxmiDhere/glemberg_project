@@ -466,12 +466,12 @@
 
 .credentials-card {
   display: flex;
-  align-items: center;
+  align-items: right;
   justify-content: space-between;
   background: #fff;
   padding: 40px;
   border-radius: 16px;
-  max-width: 200px;
+  max-width: 400px;
   width: 100%;
   border: 1px solid #e0e0e0;
   box-shadow: 0 4px 20px rgba(0,0,0,0.03);
