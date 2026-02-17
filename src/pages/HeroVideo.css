@@ -424,7 +424,7 @@
 .stats-modern {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
   /* This ensures it doesn't overlap the section above */
   margin-top: 40px; 
   margin-bottom: 80px; 
