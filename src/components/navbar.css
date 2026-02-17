@@ -34,7 +34,7 @@
 /* TAGLINE */
 .navbar-tagline {
   font-family: 'Georgia', serif;
-  color: #3A7CA5;   /* pharma blue instead of white */
+  color:#2A6F97;   /* pharma blue instead of white */
   font-size: 30px;
   font-weight: 300;
   font-style: italic;
@@ -53,7 +53,7 @@
 }
 
 .nav-links a {
-  color:#3A7CA5;   /* pharma blue menu text */
+  color:#2A6F97;   /* pharma blue menu text */
   font-size: 23px;
   font-weight: 600;
   text-decoration: none;
@@ -61,9 +61,9 @@
 
 /* Hover effect (added for attractiveness) */
 .nav-links a:hover {
-  color: #3A7CA5;
+  color:#00955D;
 }
 
 .nav-links a.active {
-  border-bottom: 2px solid #3A7CA5;
+  border-bottom: 2px solid #00955D;
 }
