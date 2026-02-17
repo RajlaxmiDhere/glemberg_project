@@ -127,10 +127,11 @@
 /* CONTACT TITLE ANIMATION */
 
 .contact-title{
-  font-size:35px;
-  font-weight:600;
+  font-size:40px;
+  font-weight:650;
   margin:0;
   opacity:0;
+  letter-spacing:0.5;
   transform:translateY(30px);
   animation:fadeSlideUp 1.2s ease forwards;
 }

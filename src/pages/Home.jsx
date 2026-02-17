@@ -150,7 +150,7 @@ function Home() {
     {/* Cardiac Care (Mapping your General Care data or adding new) */}
     <div className="category-card">
       <div className="category-image">
-        <img src={generalImg} alt="Cardiac Care" />
+        <img src={generalImg} alt="General Care" />
       </div>
       <div className="category-info cardiac">
         <h3>General Care</h3>
@@ -162,7 +162,7 @@ function Home() {
     {/* Diabetic Care */}
     <div className="category-card">
       <div className="category-image">
-        <img src={orthoImg} alt="Diabetic Care" />
+        <img src={orthoImg} alt="Ortho Care" />
       </div>
       <div className="category-info diabetic">
         <h3>Ortho Care</h3>
@@ -174,7 +174,7 @@ function Home() {
     {/* Neuro Care */}
     <div className="category-card">
       <div className="category-image">
-        <img src={dermaImg} alt="Neuro Care" />
+        <img src={dermaImg} alt="Darma Care" />
       </div>
       <div className="category-info neuro">
         <h3>Darma Care</h3>
