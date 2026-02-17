@@ -20,9 +20,6 @@
   position:relative;
   display:inline-block;
 }
-
-
-
 .products-main-heading::after{
   content:"";
   position:absolute;
@@ -33,9 +30,6 @@
   background:#163a7a;
   border-radius:2px;
 }
-
-
-
 
 .product-content-body {
   display: flex;
