@@ -92,9 +92,13 @@
   text-decoration:none;
   transition:font-weight 0.2s ease;
 }
-.footer-contact a:hover{
-  font-weight:700;   /* only bold on hover */
+
+
+
+.footer-links a:hover{
+  border-bottom:2px solid #ffffff;
 }
+
 
 /* =========================
    QUICK LINKS
@@ -111,7 +115,9 @@
 .footer-links a{
   color:#ffffff;
   text-decoration:none;
-  transition:font-weight 0.2s ease;
+  transition:all 0.2s ease;
+  border-bottom:2px solid transparent;
+  padding-bottom:2px;
 }
 .footer-links a:hover{
   font-weight:700;   /* only bold on hover */
