@@ -514,7 +514,7 @@
   width: auto;
   /* filter: grayscale(100%);  <-- Comment this out to test */
   /* opacity: 0.7;             <-- Comment this out to test */
-  border: 1px solid red;      /* Add this temporary border to see the image box */
+  border:none;      /* Add this temporary border to see the image box */
 }
 
 /* Responsive adjustment */
