@@ -278,11 +278,7 @@
 
 
 /* Adjust your header so it stays below the slanted "ceiling" */
-.products-header{
-  max-width: 1400px;
-  width:95%;
-  margin:auto;
-}
+
 
 .header-text-group {
   max-width: 700px;
@@ -305,18 +301,21 @@
 
 
 /* Ensure the pill is set to center the text */
-.learn-more-pill {
-  background-color: #00c853; 
-  color: white;
-  padding: 12px 28px; /* Balanced padding for text-only */
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-flex; /* Keeps it perfectly centered */
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s ease;
+.learn-more-pill{
+  background-color:#00c853;
+  color:white;
+  padding:12px 28px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:600;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  margin-left:auto;   /* ⭐ THIS pushes it fully right */
 }
+
 
 .learn-more-pill:hover {
   background-color: #00e676;
