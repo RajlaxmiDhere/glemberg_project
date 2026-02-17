@@ -221,27 +221,26 @@
   margin-left: -50vw;
   margin-right: -50vw;
   
-  /* Reduced padding as requested previously */
-  padding: 60px 0; 
+  /* Increased padding to give the cut room to breathe */
+  padding: 100px 0 80px 0; 
   z-index: 10;
 
-  /* ✅ THE LEFT CORNER CUT */
-  /* This says: 
-     Start 15% down on the left (0 15%), 
-     Go to the very top on the right (100% 0), 
-     Go to the bottom right (100% 100%), 
-     Go to the bottom left (0 100%) */
-  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  /* ✅ THIS CREATES THE SHARP LEFT CORNER CUT */
+  /* (0 12%): The left side starts 12% down from the top */
+  /* (100% 0): The right side is at the very top (0%) */
+  clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
   
-  border-radius: 0; 
-  margin-top: -80px; /* Pulls it up to overlap the previous section */
+  /* Pull it up to overlap the previous section for that seamless look */
+  margin-top: -100px; 
+  border-radius: 0;
 }
-/* Header Layout */
+
+/* Adjust the text header so it doesn't get obscured by the slant */
 .products-header {
-  padding-top: 30px; 
+  padding-top: 50px; 
   max-width: 1200px;
   width: 90%;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 40px auto;
 }
 .header-text-group {
   max-width: 700px;
