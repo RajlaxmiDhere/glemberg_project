@@ -53,11 +53,11 @@ function About() {
         </div>
         <div className="about-content">
           <h1>Our Goal</h1>
-          <h3>Advancing Global Health</h3>
+          <h3>Making a Positive Contribution to Society</h3>
           <p>
-            Our goal is to address critical healthcare needs through research,
-            quality manufacturing, and patient-focused solutions that positively
-            impact lives worldwide.
+            Our goal is to make a positive contribution to the society by providing every customer with product and service representing the best combination of performance and value.
+
+Our goal is to contribute positively to society by delivering products and services that embody the perfect balance of performance and value.
           </p>
         </div>
       </section>
