@@ -412,7 +412,7 @@
   border: 1px solid #e2e8f0;
 
   /* ✅ ADD THESE TWO LINES TO CONTROL WIDTH */
-  max-width: 700px;         /* Adjust this number (e.g., 700px) to make it even narrower */
+  max-width: 600px;         /* Adjust this number (e.g., 700px) to make it even narrower */
   width: 90%;               /* Ensures it stays responsive on smaller screens */
 }
 

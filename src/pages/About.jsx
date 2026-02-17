@@ -53,11 +53,11 @@ function About() {
         </div>
         <div className="about-content">
           <h1>Our Goal</h1>
-          <h3>Advancing Global Health</h3>
+          <h3>Making a Positive Contribution to Society</h3>
           <p>
-            Our goal is to address critical healthcare needs through research,
-            quality manufacturing, and patient-focused solutions that positively
-            impact lives worldwide.
+            Our goal is to make a positive contribution to the society by providing every customer with product and service representing the best combination of performance and value.
+<br></br>
+<p>Our goal is to contribute positively to society by delivering products and services that embody the perfect balance of performance and value.
           </p>
         </div>
       </section>
@@ -68,14 +68,11 @@ function About() {
           <img src={valuesImg} alt="Our Core Values" />
         </div>
         <div className="about-content">
-          <h1>Our Core Values</h1>
-          <ul>
-            <li>Innovation & Excellence</li>
-            <li>Patient-Centric Care</li>
-            <li>Quality & Safety</li>
-            <li>Integrity & Transparency</li>
-            <li>Commitment to Health</li>
-          </ul>
+        <h1>Our Core Values</h1>
+          <h3>Incorporating Core Values into Business Practices</h3>
+          <p>Honesty, humility, integrity, quality, collaboration, timely service and customer satisfaction. We believe that these values are the foundation of a successful business.
+<br></br>
+<p>We believe that honesty, humility, integrity, quality, collaboration, timely service, and customer satisfaction are the pillars that drive a truly successful business.</p>
         </div>
       </section>
 
