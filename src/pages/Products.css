@@ -41,7 +41,7 @@
 .filter-sidebar {
   width: 280px;
   flex-shrink: 0;
-  background: linear-gradient(135deg, #05163a, #0b2c6f);
+  background: #004d43;
   padding: 25px;
   border-radius: 20px;
   height: fit-content;
