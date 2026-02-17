@@ -831,3 +831,24 @@
   }
 
 }
+.feature-text-wrapper{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  max-width:640px;
+}
+
+.feature-big{
+  font-size:2.6rem;
+  font-weight:700;
+}
+
+.feature-medium{
+  font-size:1.45rem;
+  font-weight:700;
+}
+
+.feature-small{
+  font-size:1.15rem;
+}
+
