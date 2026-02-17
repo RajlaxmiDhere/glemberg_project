@@ -187,16 +187,15 @@ function Home() {
   <p className="cert-title">Quality & Compliance Standards</p>
   <div className="cert-logo-container">
     
-    <div className="cert-item">
-      {/* Replace with your local path or use these placeholder URLs */}
-      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/FSSAI_logo.svg/1200px-FSSAI_logo.svg.png" alt="FSSAI" className="cert-logo-img" />
-      <span>FSSAI Certified</span>
-    </div>
+ <div className="cert-item">
+  <img src={fssaiLogo} alt="FSSAI" className="cert-logo-img" />
+  <span>FSSAI Certified</span>
+</div>
 
-    <div className="cert-item">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6A7E6h32N-0EwI7e2C6A3S9t2GvT7S9kO_A&s" alt="WHO-GMP" className="cert-logo-img" />
-      <span>WHO-GMP Compliant</span>
-    </div>
+<div className="cert-item">
+  <img src={whoGmpLogo} alt="WHO-GMP" className="cert-logo-img" />
+  <span>WHO-GMP Compliant</span>
+</div>
 
     <div className="cert-item">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" alt="Government of India" className="cert-logo-img" />
