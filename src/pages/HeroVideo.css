@@ -1,33 +1,38 @@
 /* =========================
-   HERO VIDEO SECTION
+   HERO IMAGE SECTION FIX
    ========================= */
 .hero-video-section {
   position: relative;
   width: 100%;
   height: 85vh;
   overflow: hidden;
-  background: #000;
+  /* Change background from black to a lighter color if needed */
+  background: #f4f7f6; 
 }
 
+/* Treat the image just like the video was treated */
 .hero-video {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   transform: translate(-50%, -50%);
-  object-fit: cover;
+  object-fit: cover; /* This prevents the image from stretching */
+  z-index: 1;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  /* REDUCE DARKNESS: Changed 0.45 to 0.2 or 0.3 */
+  background: rgba(0, 0, 0, 0.25); 
+  z-index: 2;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   height: 100%;
   max-width: 900px;
   margin: auto;
@@ -262,21 +267,23 @@
   display:inline-block;
 }
 /* Optional: Adds a small underline deco */
+
 .products-container-modern {
-  background-color: #004d43;
-  width: 100%;
-  position: relative;
-  padding: 100px 0 80px 0;
+  background: #004d43;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  
+  padding: 110px 0 90px;
 }
 
+
 /* Adjust your header so it stays below the slanted "ceiling" */
-.products-header {
-  padding-top: 40px; 
-  max-width: 1200px;
-  font-size: 2.2rem
-  width: 90%;
-  margin: 0 auto 40px auto;
+.products-header{
+  max-width: 1400px;
+  width:95%;
+  margin:auto;
 }
+
 .header-text-group {
   max-width: 700px;
 }
@@ -317,14 +324,15 @@
 }
 
 /* Grid and Cards */
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  max-width: 1400px;       /* Increased from 1200px to reach further left/right */
-  width: 90%;
-  margin: 0 auto;
+.category-grid{
+  max-width:1400px;
+  width:95%;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
 }
+
 
 .category-card {
   background: white;

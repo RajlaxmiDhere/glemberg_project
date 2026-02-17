@@ -87,22 +87,20 @@ function Home() {
 
   return (
     <>
-      {/* HERO VIDEO */}
-      <section className="hero-video-section">
+    {/* HERO SECTION WITH IMAGE */}
+<section className="hero-video-section">
+  {/* Changed video to img */}
+  <img src={pillVideo} alt="Healthcare Banner" className="hero-video" />
 
-        <video className="hero-video" autoPlay muted loop playsInline preload="auto">
-          <source src={pillVideo} type="video/mp4" />
-        </video>
+  {/* 1. Lighten or remove this overlay if the image is too dark */}
+  <div className="hero-overlay"></div>
 
-        <div className="hero-overlay"></div>
-
-        <div className="hero-content">
-          {showWelcome && <div className="welcome-tagline">Welcome to Glemberg Pharma</div>}
-          <h1>Committed to Better Healthcare</h1>
-          <p>Glemberg Pharma delivers safe, effective, and innovative pharmaceutical solutions to improve lives.</p>
-        </div>
-
-      </section>
+  <div className="hero-content">
+    {showWelcome && <div className="welcome-tagline">Welcome to Glemberg Pharma</div>}
+    <h1>Committed to Better Healthcare</h1>
+    <p>Glemberg Pharma delivers safe, effective, and innovative pharmaceutical solutions to improve lives.</p>
+  </div>
+</section>
 
       <section className="below-hero-section">
         <div className="below-hero-inner">
