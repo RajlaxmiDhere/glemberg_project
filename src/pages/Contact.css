@@ -169,24 +169,13 @@ background: #FFFFFF;
 }
 /* ===== CONTACT HERO TOP BAR ===== */
 
+/* ===== TOP CONTACT HERO ===== */
+
 .contact-hero{
-  background:
-    linear-gradient(90deg,#003c2f,#00251e);
+  background: linear-gradient(90deg,#003c2f,#00251e);
   padding:70px 0;
   color:white;
   position:relative;
-  overflow:hidden;
-}
-
-/* hex pattern overlay */
-.contact-hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.06) 2px, transparent 2px),
-    radial-gradient(circle at 70% 60%, rgba(255,255,255,0.05) 2px, transparent 2px);
-  background-size:120px 120px;
 }
 
 .contact-hero-inner{
@@ -196,8 +185,6 @@ background: #FFFFFF;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  position:relative;
-  z-index:2;
 }
 
 .contact-hero h1{
@@ -208,11 +195,18 @@ background: #FFFFFF;
 
 .breadcrumb{
   font-size:18px;
-  opacity:.9;
+}
+
+.breadcrumb-link{
+  color:white;
+  text-decoration:none;
+}
+
+.breadcrumb-link:hover{
+  text-decoration:underline;
 }
 
 .breadcrumb span{
   margin:0 8px;
   color:#25d366;
 }
-
