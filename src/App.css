@@ -28,11 +28,27 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
-
-
 /* Hover effect just for scaling */
 .top-social-inner i:hover {
   transform: scale(1.2);
 }
+.footer-whatsapp-float{
+  position: fixed;     /* ✅ THIS makes it stick on every page */
+  right: 25px;
+  bottom: 25px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  background-color:#25d366;
+  color:#ffffff;
+  padding:15px 28px;
+  border-radius:34px;
+  font-size:19px;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 12px 28px rgba(37,211,102,0.45);
+  transition:transform 0.3s ease,box-shadow 0.3s ease;
+
+  z-index:9999;   /* ⭐ VERY IMPORTANT so it stays above everything */
+}
+
