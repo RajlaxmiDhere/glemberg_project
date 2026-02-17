@@ -5,7 +5,6 @@ import { FaIndustry, FaUserMd, FaSmile } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 // Assets
-// Add these at the top of Home.jsx with your other imports
 import fssaiLogo from "../assets/fssai-seeklogo.png";
 import whoGmpLogo from "../assets/WHO-GMP.jpg";
 import featureImg from "../assets/feature-medical.jpg";
@@ -18,14 +17,14 @@ function Home() {
   const [showWelcome, setShowWelcome] = useState(false);
   const [isVisible, setIsVisible] = useState(false); 
 
-  // ✅ COUNT-UP STATES
+  // COUNT-UP STATES
   const [products, setProducts] = useState(0);
   const [team, setTeam] = useState(0);
   const [clients, setClients] = useState(0);
 
-  // ✅ TWO SEPARATE REFS
-  const featureRef = useRef(null); // Triggers "Built on Science"
-  const statsRef = useRef(null);   // Triggers the actual counting
+  // REFS
+  const featureRef = useRef(null); 
+  const statsRef = useRef(null);   
   const hasAnimatedStats = useRef(false);
 
   useEffect(() => {
@@ -96,7 +95,7 @@ function Home() {
       <section className="below-hero-section">
         <div className="below-hero-inner">
           
-          {/* ✅ TRIGGER 1: Text entrance */}
+          {/* FEATURE SECTION */}
           <div 
             className={`feature-section ${isVisible ? "is-visible" : "is-hidden"}`} 
             ref={featureRef}
@@ -123,7 +122,7 @@ function Home() {
             </div>
           </div>
 
-          {/* ================= CATEGORY CARDS ================= */}
+          {/* PRODUCT CATEGORIES */}
           <div className="category-section-header">
             <h2 className="category-main-title">Our Products</h2>
           </div>
@@ -157,14 +156,13 @@ function Home() {
             </div>
           </div>
 
-          {/* ✅ ADDED: Learn More Button for Products Section */}
           <div className="product-explore-container">
              <NavLink to="/products" className="product-explore-btn">
                Explore All Products
              </NavLink>
           </div>
 
-          {/* ✅ TRIGGER 2: Counting starts only when you scroll to this div */}
+          {/* STATS SECTION */}
           <div className="stats-modern" ref={statsRef}>
             <div className="stat-card-modern blue">
               <FaIndustry className="stat-icon" />
@@ -182,42 +180,39 @@ function Home() {
               <p>Happy Clients</p>
             </div>
           </div>
-          {/* ✅ ADDED: Credentials / Trust Section */}
-<div className="certification-trust-bar">
-  <p className="cert-title">Quality & Compliance Standards</p>
-  <div className="cert-logo-container">
-    
- <div className="cert-item">
-  <img src={fssaiLogo} alt="FSSAI" className="cert-logo-img" />
-  <span>FSSAI Certified</span>
-</div>
 
-<div className="cert-item">
-  <img src={whoGmpLogo} alt="WHO-GMP" className="cert-logo-img" />
-  <span>WHO-GMP</span>
-</div>
+          {/* ✅ COMPLIANCE ROW (Side-by-Side) */}
+          <div className="compliance-row">
+            
+            <div className="certification-trust-bar">
+              <p className="cert-title">Quality Standards</p>
+              <div className="cert-logo-container">
+                <div className="cert-item">
+                  <img src={fssaiLogo} alt="FSSAI" className="cert-logo-img" />
+                  <span>FSSAI Certified</span>
+                </div>
+                <div className="cert-item">
+                  <img src={whoGmpLogo} alt="WHO-GMP" className="cert-logo-img" />
+                  <span>WHO-GMP</span>
+                </div>
+              </div>
+            </div>
 
-    <div className="cert-item">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" alt="Government of India" className="cert-logo-img" />
-      <span>Govt Approved</span>
-    </div>
+            <div className="credentials-card">
+              <div className="cert-info">
+                <h3>Corporate Certification</h3>
+                <a href={certificate} target="_blank" rel="noopener noreferrer" className="view-cert-link">
+                  View Registration Certificate <i className="bi bi-file-earmark-pdf"></i>
+                </a>
+              </div>
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" 
+                className="gov-logo-small" 
+                alt="GOI" 
+              />
+            </div>
 
-  </div>
-</div>
-
-<div className="credentials-section">
-  <div className="credentials-card">
-    <div className="cert-info">
-      <h3>Corporate Certification</h3>
-      <a href={certificate} target="_blank" rel="noopener noreferrer" className="view-cert-link">
-        View Registration Certificate <i className="bi bi-file-earmark-pdf"></i>
-      </a>
-    </div>
-    <div className="cert-action">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" className="gov-logo" alt="GOI" />
-    </div>
-  </div>
-</div>
+          </div>
 
         </div> 
       </section> 
