@@ -60,20 +60,22 @@ const Contact = () => {
       <div className="contact-hero">
         <div className="contact-hero-inner">
 
-        <h1 className="contact-title">Contact Us</h1>
+          <h1 className="contact-title">Contact Us</h1>
 
-
+          {/* ⭐ FIXED BREADCRUMB */}
           <div className="breadcrumb">
             <NavLink to="/" className="breadcrumb-link">Home</NavLink>
-            <span>›</span>
-            Contact Us
+
+            <span className="breadcrumb-arrow">›</span>
+
+            <span className="breadcrumb-current">Contact Us</span>
           </div>
 
         </div>
       </div>
 
 
-      {/* ===== YOUR EXISTING PAGE (UNCHANGED) ===== */}
+      {/* ===== PAGE CONTENT ===== */}
       <div className="container contact-top">
         <div className="row align-items-center">
 
@@ -200,3 +202,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
