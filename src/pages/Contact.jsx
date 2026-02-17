@@ -107,19 +107,6 @@ const Contact = () => {
                 <a href={`mailto:${email}`} className="contact-link">{email}</a>
               </div>
 
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="whatsapp-enquire-btn"
-              >
-                <FaWhatsapp className="whatsapp-icon" />
-                Enquire Now
-              </a>
-
-            </div>
-          </div>
-
           {/* RIGHT FORM */}
           <div className="col-md-6">
             <div className="contact-form">
