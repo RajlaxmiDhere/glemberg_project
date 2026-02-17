@@ -275,6 +275,17 @@
   
   padding: 110px 0 90px;
 }
+/* ⭐ FIX PRODUCTS HEADER LAYOUT */
+.products-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:40px;
+
+  max-width:1400px;
+  width:95%;
+  margin:0 auto 50px auto;
+}
 
 
 /* Adjust your header so it stays below the slanted "ceiling" */
