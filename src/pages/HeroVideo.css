@@ -131,21 +131,82 @@
   transform: translateY(-3px);
   box-shadow: 0 12px 30px rgba(11, 44, 111, 0.35);
 }
+/* =========================
+   FEATURE IMAGE — PREMIUM PROFESSIONAL VERSION
+   ========================= */
 
-/* IMAGE PLACEHOLDER */
-.feature-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.feature-image{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  font-family: inherit;   /* keeps SAME site font */
 }
 
-.feature-main-img {
-  width: 100%;
-  max-width: 900px; /* Slightly larger than the placeholder */
-  height: auto;
-  border-radius: 28px;
-  transition: transform 0.5s ease
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+/* Soft pharma background layer */
+
+.feature-image::before{
+  content:"";
+  position:absolute;
+  width:82%;
+  height:82%;
+  background:linear-gradient(135deg,#eaf4ff,#f6fbff);
+  border-radius:36px;
+  z-index:0;
+  transform:rotate(-3deg);
+}
+
+/* thin medical-style frame */
+
+.feature-image::after{
+  content:"";
+  position:absolute;
+  width:82%;
+  height:82%;
+  border:2px solid #e4edf6;
+  border-radius:36px;
+  z-index:0;
+  transform:rotate(2deg);
+}
+
+/* MAIN IMAGE */
+
+.feature-main-img{
+  position:relative;
+  z-index:2;
+
+  width:100%;
+  max-width:760px;
+  height:auto;
+
+  border-radius:28px;
+
+  box-shadow:
+    0 50px 120px rgba(0,0,0,0.14),
+    0 10px 30px rgba(0,0,0,0.08);
+
+  transition:all .55s cubic-bezier(.2,.8,.2,1);
+}
+
+/* Professional hover lift */
+
+.feature-image:hover .feature-main-img{
+  transform:translateY(-10px) scale(1.025);
+
+  box-shadow:
+    0 70px 160px rgba(0,0,0,0.18),
+    0 18px 45px rgba(0,0,0,0.12);
+}
+
+/* MOBILE SAFE */
+
+@media(max-width:900px){
+
+  .feature-image::before,
+  .feature-image::after{
+    display:none;
+  }
+
 }
 
 /* Initial state when the section is NOT in view */
@@ -260,6 +321,20 @@
 }
 
 /* The Green "Learn More" Pill */
+.learn-more-pill {
+  background-color: #00c853; /* Bright green */
+  color: white;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.learn-more-pill:hover {
+  background-color: #00e676;
+  transform: scale(1.05);
+}
 
 /* Grid and Cards */
 .category-grid {
