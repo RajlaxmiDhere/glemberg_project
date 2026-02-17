@@ -179,10 +179,10 @@ function Home() {
           
           {/* ✅ ADDED: Credentials / Trust Section */}
 {/* ===== CERTIFICATION + CORPORATE IN ONE ROW ===== */}
-{/* ===== CORPORATE CERTIFICATION + TRUST ROW ===== */}
-<div className="corporate-section">
+{/* ===== CORPORATE + TRUST SAME ROW ===== */}
+<div className="corporate-row">
 
-  {/* CORPORATE CARD */}
+  {/* LEFT CARD */}
   <div className="corporate-cert-card">
 
     <div className="corporate-cert-logo">
@@ -197,8 +197,8 @@ function Home() {
       <h3>Corporate Certification</h3>
 
       <p>
-        Glemberg Pharma Pvt. Ltd. is officially registered and compliant with
-        Indian corporate regulatory standards.
+        Glemberg Pharma Pvt. Ltd. is officially registered and compliant
+        with Indian corporate regulatory standards.
       </p>
 
       <a
@@ -214,8 +214,8 @@ function Home() {
   </div>
 
 
-  {/* TRUST LOGOS — NOT A CARD */}
-  <div className="trust-logos-row">
+  {/* RIGHT TRUST LOGOS (NO CARD) */}
+  <div className="trust-side">
 
     <div className="trust-item">
       <img src={fssaiLogo} className="cert-logo-img" alt="FSSAI"/>
@@ -239,6 +239,7 @@ function Home() {
   </div>
 
 </div>
+
 
 
         </div> 
