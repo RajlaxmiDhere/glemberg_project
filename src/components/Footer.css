@@ -39,7 +39,7 @@
   width: 200px;
   margin-bottom: 10px;
   border: 1px solid #FFFFFF;   /* white border */
-  padding: 6px;                /* space between logo & border */
+  padding: 3px;                /* space between logo & border */
   border-radius: 5px;          /* soft professional corners */
   background: #FFFFFF;         /* ensures border visible on dark footer */
 }
