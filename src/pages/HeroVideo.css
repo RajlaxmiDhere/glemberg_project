@@ -428,7 +428,7 @@
   display: flex;
   justify-content: center;
   /* 1. INCREASE GAP: Try 40px or 60px for a very spacious look */
-  gap: 50px; 
+  gap: 80px; 
   
   /* Space away from the section above */
   margin-top: 50px; 
