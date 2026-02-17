@@ -21,8 +21,8 @@
 .logo-group {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;    
-  text-align: right;
+  align-items: flex-start;   /* ✅ moved logo + tagline to LEFT */
+  text-align: left;
 }
 
 .navbar-logo {
@@ -34,13 +34,13 @@
 /* TAGLINE */
 .navbar-tagline {
   font-family: 'Georgia', serif;
-  color:#1F4E79;   /* pharma blue instead of white */
+  color:#1F4E79;   
   font-size: 30px;
   font-weight: 300;
   font-style: italic;
-  margin-top: -9px;
+  margin-top: 0px;          /* ✅ starts exactly from logo bottom */
   letter-spacing: 1px;
-  text-shadow: none;   /* removed shadow for cleaner professional look */
+  text-shadow: none;   
 }
 
 /* MENU */
@@ -53,13 +53,16 @@
 }
 
 .nav-links a {
-  color:#000000;   /* pharma blue menu text */
+  color:#000000;  
   font-size: 23px;
   font-weight: 600;
   text-decoration: none;
+  padding-bottom: 4px;      /* ✅ space for underline */
+  border-bottom: 2px solid transparent;
 }
 
-/* Hover effect (added for attractiveness) */
+/* ✅ GREEN UNDERLINE ON HOVER */
 .nav-links a:hover {
   color:#00955D;
+  border-bottom: 2px solid #00955D;
 }
