@@ -67,13 +67,7 @@
    BELOW HERO SECTION
    ========================= */
 .below-hero-section {
-  background: linear-gradient(
-    90deg,
-    #E8F4FD 0%,
-    #D6ECFA 40%,
-    #BFDFF5 70%,
-    #9CC9E8 100%
-  );
+ background: #FFFFFF;
   padding: 100px 20px;
 }
 
