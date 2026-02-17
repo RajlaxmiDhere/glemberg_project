@@ -315,8 +315,11 @@
 .learn-more-pill{
   background-color:#00c853;
   color:white;
-  padding:12px 28px;
+
+  padding:16px 38px;      /* ⭐ bigger button size */
+  font-size:1.15rem;      /* ⭐ bigger text */
   border-radius:50px;
+
   text-decoration:none;
   font-weight:600;
 
@@ -324,7 +327,9 @@
   align-items:center;
   justify-content:center;
 
-  margin-left:auto;   /* ⭐ THIS pushes it fully right */
+  margin-left:auto;
+
+  transition:0.3s ease;
 }
 
 
@@ -484,54 +489,52 @@
    STATS SECTION - INCREASED GAP
    ========================= */
 .stats-modern {
-  display: flex;
-  justify-content: center;
-  /* 1. INCREASE GAP: Try 40px or 60px for a very spacious look */
-  gap: 80px; 
-  
-  /* Space away from the section above */
-  margin-top: 50px; 
-  margin-bottom: 80px;
-  padding: 0 20px;
-  flex-wrap: wrap; /* Allows them to stack nicely on smaller screens */
+  display:flex;
+  justify-content:center;
+  gap:100px;            /* slightly more gap for bigger cards */
+  margin-top:70px;
+  margin-bottom:100px;
+  padding:0 20px;
+  flex-wrap:wrap;
 }
 
 .stat-card-modern {
-  /* 2. CONTROL CARD WIDTH: 
-     Setting a fixed width ensures the gap stays consistent */
-  width: 220px; 
-  padding: 30px 20px;
-  
-  text-align: center;
-  border-radius: 12px;
-  /* Adjusted clip-path for a cleaner look with more space */
+
+  width:300px;          /* ⭐ increased from 220px */
+  padding:45px 30px;    /* ⭐ more inner space */
+
+  text-align:center;
+  border-radius:16px;
+
   clip-path: polygon(0 0, 90% 0, 100% 15%, 100% 100%, 0 100%);
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+  box-shadow:0 18px 50px rgba(0,0,0,0.08);
+
+  transition:0.3s ease;
 }
 
-/* Optional: Make the icons slightly bigger to fill the space */
-.stat-icon {
-  font-size: 28px;
-  margin-bottom: 12px;
+/* ⭐ Bigger icon */
+.stat-icon{
+  font-size:40px;
+  margin-bottom:18px;
 }
 
-
-
-.stat-card-modern:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.12);
+/* ⭐ Bigger number */
+.stat-card-modern h2{
+  font-size:4rem;
+  font-weight:700;
 }
 
-
-.stat-card-modern h2 {
-  font-size: 3.2rem;
-  font-weight: 700;
+/* ⭐ Bigger label */
+.stat-card-modern p{
+  font-size:1.35rem;
+  font-weight:600;
 }
 
-.stat-card-modern p {
-  font-size: 1.1rem;
-  font-weight: 500;
+.stat-card-modern:hover{
+  transform:translateY(-8px);
+  box-shadow:0 30px 70px rgba(0,0,0,0.15);
 }
+
 
 .stat-card-modern.blue {
   background: #eef2ff;
