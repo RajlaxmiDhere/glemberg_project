@@ -260,20 +260,6 @@
 }
 
 /* The Green "Learn More" Pill */
-.learn-more-pill {
-  background-color: #00c853; /* Bright green */
-  color: white;
-  padding: 12px 28px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.learn-more-pill:hover {
-  background-color: #00e676;
-  transform: scale(1.05);
-}
 
 /* Grid and Cards */
 .category-grid {
