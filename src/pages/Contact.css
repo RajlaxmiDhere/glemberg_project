@@ -127,7 +127,7 @@
 /* CONTACT TITLE ANIMATION */
 
 .contact-title{
-  font-size:40px;
+  font-size:35px;
   font-weight:600;
   margin:0;
   opacity:0;
@@ -146,7 +146,7 @@
    BREADCRUMB FINAL STYLE
    ========================= */
 .breadcrumb{
-  font-size:30px;
+  font-size:22px;
   font-weight:600;
   display:flex;
   align-items:center;
@@ -156,18 +156,18 @@
 .breadcrumb-link{
   color:white;
   text-decoration:none;
-  font-size:30px;
+  font-size:22px;
 }
 
 .breadcrumb-arrow{
   color:#25d366;
-  font-size:30px;
+  font-size:22px;
   font-weight:600;
 }
 
 .breadcrumb-current{
   color:#25d366;
-  font-size:30px;
+  font-size:22px;
   font-weight:600;
 }
 
