@@ -14,7 +14,7 @@
    LEFT INFO CARD
    ========================= */
 .contact-info-card {
-  background: #E8F4FD;
+  background: #83A492;
   backdrop-filter: blur(8px);
   padding: 42px;
   border-radius: 20px;
@@ -24,7 +24,7 @@
 .contact-info-card h3 {
   font-size: 28px;
   font-weight: 600;
-  color: #1e4f91;
+  color: #FAFBFDF;
   margin-bottom: 14px;
 }
 
@@ -38,7 +38,7 @@
 .info-heading {
   font-size: 20px;
   font-weight: 600;
-  color: #1e4f91;
+  color: #FAFBFDF;
   margin-top: 28px;
   margin-bottom: 10px;
 }
@@ -81,7 +81,7 @@
    FORM
    ========================= */
 .contact-form {
-  background: #E8F4FD;
+  background: #83A492;
   padding: 38px;
   border-radius: 16px;
   box-shadow: 0 12px 28px rgba(30, 79, 145, 0.18);
