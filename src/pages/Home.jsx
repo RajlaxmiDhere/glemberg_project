@@ -164,6 +164,18 @@ function Home() {
               </div>
             </div>
           </div>
+          <div className="category-card deep-navy">
+    <div className="category-image">
+      {/* You can use featureImg or a specific 'all products' image here */}
+      <img src={featureImg} alt="Whole Range" /> 
+    </div>
+    <div className="category-info">
+      <h3>Whole Range</h3>
+      <p>Explore our complete pharmaceutical portfolio</p>
+      <NavLink to="/products" className="view-link">View all products</NavLink>
+    </div>
+  </div>
+</div>
 
 
           {/* ✅ TRIGGER 2: Counting starts only when you scroll to this div */}

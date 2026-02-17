@@ -60,7 +60,8 @@ const Contact = () => {
       <div className="contact-hero">
         <div className="contact-hero-inner">
 
-          <h1>Contact Us</h1>
+        <h1 className="contact-title">Contact Us</h1>
+
 
           <div className="breadcrumb">
             <NavLink to="/" className="breadcrumb-link">Home</NavLink>

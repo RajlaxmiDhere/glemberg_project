@@ -226,11 +226,15 @@
 }
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* Use auto-fit so it handles 3 or 4 cards automatically */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
   gap: 25px;
   margin-bottom: 80px;
 }
-
+/* Color for the new Whole Range card */
+.category-card.deep-navy .category-info { 
+  background-color: #0b2c6f; 
+}
 .category-card {
   background: #fff;
   border-radius: 12px;
