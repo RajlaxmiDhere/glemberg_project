@@ -1,33 +1,38 @@
 /* =========================
-   HERO VIDEO SECTION
+   HERO IMAGE SECTION FIX
    ========================= */
 .hero-video-section {
   position: relative;
   width: 100%;
   height: 85vh;
   overflow: hidden;
-  background: #000;
+  /* Change background from black to a lighter color if needed */
+  background: #f4f7f6; 
 }
 
+/* Treat the image just like the video was treated */
 .hero-video {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   transform: translate(-50%, -50%);
-  object-fit: cover;
+  object-fit: cover; /* This prevents the image from stretching */
+  z-index: 1;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  /* REDUCE DARKNESS: Changed 0.45 to 0.2 or 0.3 */
+  background: rgba(0, 0, 0, 0.25); 
+  z-index: 2;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   height: 100%;
   max-width: 900px;
   margin: auto;
