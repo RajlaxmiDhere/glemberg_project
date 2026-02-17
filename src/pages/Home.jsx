@@ -183,40 +183,35 @@ function Home() {
             </div>
           </div>
           {/* ✅ ADDED: Credentials / Trust Section */}
-<div className="certification-trust-bar">
-  <p className="cert-title">Quality & Compliance Standards</p>
-  <div className="cert-logo-container">
-    
- <div className="cert-item">
-  <img src={fssaiLogo} alt="FSSAI" className="cert-logo-img" />
-  <span>FSSAI Certified</span>
-</div>
 
-<div className="cert-item">
-  <img src={whoGmpLogo} alt="WHO-GMP" className="cert-logo-img" />
-  <span>WHO-GMP</span>
-</div>
 
-    <div className="cert-item">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" alt="Government of India" className="cert-logo-img" />
-      <span>Govt Approved</span>
+{/* ✅ Wrap both in this new container */}
+<div className="compliance-wrapper">
+
+  {/* SECTION 1: Trust Bar */}
+  <div className="certification-trust-bar">
+    <p className="cert-title">Quality Standards</p>
+    <div className="cert-logo-container">
+      <div className="cert-item">
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/f2/FSSAI_logo.svg" alt="FSSAI" className="cert-logo-img" />
+      </div>
+      <div className="cert-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/WHO_logo.svg" alt="WHO" className="cert-logo-img" />
+      </div>
     </div>
-
   </div>
-</div>
 
-<div className="credentials-section">
+  {/* SECTION 2: Credentials Card */}
   <div className="credentials-card">
     <div className="cert-info">
       <h3>Corporate Certification</h3>
       <a href={certificate} target="_blank" rel="noopener noreferrer" className="view-cert-link">
-        View Registration Certificate <i className="bi bi-file-earmark-pdf"></i>
+        View Govt Certificate
       </a>
     </div>
-    <div className="cert-action">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" className="gov-logo" alt="GOI" />
-    </div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" className="gov-logo-small" alt="GOI" />
   </div>
+
 </div>
 
         </div> 
