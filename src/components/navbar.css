@@ -2,8 +2,8 @@
    NAVBAR
    ========================= */
 .navbar {
-  background:linear-gradient(90deg, #F5FAFF, #E6F2FB);
-  padding: 10px 0; /* Reduced padding to move content up */
+  background: #FFFFFF;   /* Professional pharma white background */
+  padding: 10px 0;
   width: 100%;
 }
 
@@ -20,9 +20,9 @@
 /* LOGO GROUP */
 .logo-group {
   display: flex;
-  flex-direction: column; /* Vertical stacking */
+  flex-direction: column;
   align-items: flex-end;    
-  text-align: right;   /* Center tagline under logo */
+  text-align: right;
 }
 
 .navbar-logo {
@@ -31,16 +31,16 @@
   display: block;
 }
 
-/* TAGLINE - BIG & BOLD */
+/* TAGLINE */
 .navbar-tagline {
   font-family: 'Georgia', serif;
-  color: #ffffff;
-  font-size: 30px;        /* Large font size */
-  font-weight: 300;       /* Bold letters */
+  color: #294C6C;   /* pharma blue instead of white */
+  font-size: 30px;
+  font-weight: 300;
   font-style: italic;
   margin-top: -9px;
   letter-spacing: 1px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  text-shadow: none;   /* removed shadow for cleaner professional look */
 }
 
 /* MENU */
@@ -53,12 +53,17 @@
 }
 
 .nav-links a {
-  color: white;
+  color: #294C6C;   /* pharma blue menu text */
   font-size: 23px;
   font-weight: 600;
   text-decoration: none;
 }
 
+/* Hover effect (added for attractiveness) */
+.nav-links a:hover {
+  color: #3A7CA5;
+}
+
 .nav-links a.active {
-  border-bottom: 2px solid #c9f7f5;
+  border-bottom: 2px solid #3A7CA5;
 }
