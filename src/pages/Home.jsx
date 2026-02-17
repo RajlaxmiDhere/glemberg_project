@@ -179,12 +179,27 @@ function Home() {
           
           {/* ✅ ADDED: Credentials / Trust Section */}
 {/* ===== CERTIFICATION + CORPORATE IN ONE ROW ===== */}
-<div className="cert-row">
+{/* ===== CORPORATE CERTIFICATION + TRUST ROW ===== */}
+<div className="corporate-section">
 
-  {/* LEFT : Corporate Certification */}
-  <div className="credentials-card">
-    <div className="cert-info">
+  {/* CORPORATE CARD */}
+  <div className="corporate-cert-card">
+
+    <div className="corporate-cert-logo">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png"
+        className="gov-logo"
+        alt="GOI"
+      />
+    </div>
+
+    <div className="corporate-cert-info">
       <h3>Corporate Certification</h3>
+
+      <p>
+        Glemberg Pharma Pvt. Ltd. is officially registered and compliant with
+        Indian corporate regulatory standards.
+      </p>
 
       <a
         href={certificate}
@@ -196,45 +211,35 @@ function Home() {
       </a>
     </div>
 
-    <div className="cert-action">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png"
-        className="gov-logo"
-        alt="GOI"
-      />
-    </div>
   </div>
 
 
-  {/* RIGHT : Quality & Compliance */}
-  <div className="certification-trust-bar">
-    <p className="cert-title">Quality & Compliance Standards</p>
+  {/* TRUST LOGOS — NOT A CARD */}
+  <div className="trust-logos-row">
 
-    <div className="cert-logo-container">
-
-      <div className="cert-item">
-        <img src={fssaiLogo} alt="FSSAI" className="cert-logo-img"/>
-        <span>FSSAI Certified</span>
-      </div>
-
-      <div className="cert-item">
-        <img src={whoGmpLogo} alt="WHO-GMP" className="cert-logo-img"/>
-        <span>WHO-GMP</span>
-      </div>
-
-      <div className="cert-item">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png"
-          alt="Government"
-          className="cert-logo-img"
-        />
-        <span>Govt Approved</span>
-      </div>
-
+    <div className="trust-item">
+      <img src={fssaiLogo} className="cert-logo-img" alt="FSSAI"/>
+      <span>FSSAI Certified</span>
     </div>
+
+    <div className="trust-item">
+      <img src={whoGmpLogo} className="cert-logo-img" alt="WHO GMP"/>
+      <span>WHO-GMP</span>
+    </div>
+
+    <div className="trust-item">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png"
+        className="cert-logo-img"
+        alt="Government"
+      />
+      <span>Govt Approved</span>
+    </div>
+
   </div>
 
 </div>
+
 
         </div> 
       </section> 
