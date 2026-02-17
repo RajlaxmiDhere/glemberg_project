@@ -56,7 +56,7 @@ function About() {
           <h3>Making a Positive Contribution to Society</h3>
           <p>
             Our goal is to make a positive contribution to the society by providing every customer with product and service representing the best combination of performance and value.
-</p>
+<br></br>
 <p>Our goal is to contribute positively to society by delivering products and services that embody the perfect balance of performance and value.
           </p>
         </div>
@@ -71,7 +71,7 @@ function About() {
         <h1>Our Core Values</h1>
           <h3>Incorporating Core Values into Business Practices</h3>
           <p>Honesty, humility, integrity, quality, collaboration, timely service and customer satisfaction. We believe that these values are the foundation of a successful business.
-</p>
+<br></br>
 <p>We believe that honesty, humility, integrity, quality, collaboration, timely service, and customer satisfaction are the pillars that drive a truly successful business.</p>
         </div>
       </section>
