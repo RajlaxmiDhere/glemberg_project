@@ -839,12 +839,13 @@
 
 .feature-big{
   font-size:2rem;
-  font-weight:700;
+  font-weight:600;
 }
 
 .feature-medium{
   font-size:1.45rem;
-  font-weight:700;
+  font-weight:600;
+  color:#004d43;
 }
 
 .feature-small{
