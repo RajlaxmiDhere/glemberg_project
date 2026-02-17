@@ -23,10 +23,6 @@ const Contact = () => {
   ];
 
   const email = "glembergpharmaceuticals@gmail.com";
-
-  const whatsappLink =
-    "https://wa.me/917559189020?text=Hello! I have an enquiry regarding your services.";
-
   const handleChange = (e) => {
     setFormData({
       ...formData,

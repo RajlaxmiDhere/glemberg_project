@@ -2,183 +2,182 @@
    FOOTER BASE
    ========================= */
 .footer {
-  background:  #0B5A4F;
-  color: #ffffff;
-  position: relative;
-  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background:#0B5A4F;
+  color:#ffffff;
+  position:relative;
+  font-family:"Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+/* force same font everywhere except tagline */
+.footer *:not(.footer-tagline){
+  font-family:"Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 
 /* =========================
    CONTAINER
    ========================= */
-.footer-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 72px 40px 62px;
-  display: grid;
-  grid-template-columns: 1.4fr 1.4fr 1fr;
-  gap: 72px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+.footer-container{
+  max-width:1200px;
+  margin:auto;
+  padding:72px 40px 62px;
+  display:grid;
+  grid-template-columns:1.4fr 1.4fr 1fr;
+  gap:72px;
+  border-bottom:1px solid rgba(255,255,255,0.15);
 }
 
 /* =========================
    FOOTER COLUMN
    ========================= */
-
-.footer-col {
-  transition: transform 0.3s ease;
-  padding-right: 30px;         
-  border-right: 1px solid #9fba07;
+.footer-col{
+  transition:transform 0.3s ease;
+  padding-right:30px;
+  border-right:1px solid #9fba07;
 }
-.footer-col:hover {
-  transform: translateY(-4px);
+.footer-col:hover{
+  transform:translateY(-4px);
 }
-/* remove divider from last column */
-.footer-col:last-child {
-  border-right: none;
+.footer-col:last-child{
+  border-right:none;
 }
 
 /* =========================
    LOGO
    ========================= */
-.footer-logo {
-  width: 200px;
-  margin-bottom: 10px;
-  border: 1px solid #FFFFFF;   /* white border */
-  padding: 2px;                /* space between logo & border */
-  border-radius: 5px;          /* soft professional corners */
-  background: #FFFFFF;         /* ensures border visible on dark footer */
+.footer-logo{
+  width:200px;
+  margin-bottom:10px;
+  border:1px solid #FFFFFF;
+  padding:2px;
+  border-radius:5px;
+  background:#FFFFFF;
 }
 
-
 /* =========================
-   TAGLINE
+   TAGLINE  (kept special font/style)
    ========================= */
-.footer-tagline {
-  font-size: 19px;
-  font-style: italic;
-  letter-spacing: 0.5px;
-  color: #ffffff;
+.footer-tagline{
+  font-size:19px;
+  font-style:italic;
+  letter-spacing:0.5px;
+  color:#ffffff;
 }
 
 /* =========================
    HEADINGS
    ========================= */
-.footer-col h4 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 12px;
+.footer-col h4{
+  font-size:20px;
+  font-weight:600;
+  margin-bottom:12px;
   color:#c9eb09;
- letter-spacing: 0.5px;
+  letter-spacing:0.5px;
 }
 
 /* =========================
    CONTACT TEXT
    ========================= */
-.footer-contact {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.75;
-  margin-bottom: 16px;
-  color: #ffffff;
+.footer-contact{
+  font-size:18px;
+  font-weight:400;
+  line-height:1.75;
+  margin-bottom:16px;
+  color:#ffffff;
 }
-
-.footer-contact strong {
-  font-weight: 600;
+.footer-contact strong{
+  font-weight:600;
 }
-
-.footer-contact a {
-  color: #ffffff;
-  text-decoration: none;
+.footer-contact a{
+  color:#ffffff;
+  text-decoration:none;
+  transition:font-weight 0.2s ease;
 }
-
-.footer-contact a:hover {
-  text-decoration: underline;
+.footer-contact a:hover{
+  font-weight:700;   /* only bold on hover */
 }
 
 /* =========================
    QUICK LINKS
    ========================= */
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.footer-links{
+  list-style:none;
+  padding:0;
+  margin:0;
 }
-
-.footer-links li {
-  font-size: 19px;
-  margin-bottom: 14px;
+.footer-links li{
+  font-size:19px;
+  margin-bottom:14px;
 }
-
-.footer-links a {
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.footer-links a{
+  color:#ffffff;
+  text-decoration:none;
+  transition:font-weight 0.2s ease;
 }
-
-.footer-links a:hover {
-  color: #c9f7f5;
-  text-decoration: underline;
+.footer-links a:hover{
+  font-weight:700;   /* only bold on hover */
 }
 
 /* =========================
    FLOATING WHATSAPP BUTTON
    ========================= */
-.footer-whatsapp-float {
-  position: absolute;
-  right: 45px;
-  bottom: 95px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background-color: #25d366;
-  color: #ffffff;
-  padding: 15px 28px;
-  border-radius: 34px;
-  font-size: 19px;
-  font-weight: 700;
-  text-decoration: none;
-  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.45);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.footer-whatsapp-float{
+  position:absolute;
+  right:45px;
+  bottom:95px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  background-color:#25d366;
+  color:#ffffff;
+  padding:15px 28px;
+  border-radius:34px;
+  font-size:19px;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 12px 28px rgba(37,211,102,0.45);
+  transition:transform 0.3s ease,box-shadow 0.3s ease;
 }
-
-.footer-whatsapp-float img {
-  width: 24px;
-  height: 24px;
+.footer-whatsapp-float img{
+  width:24px;
+  height:24px;
 }
-
-.footer-whatsapp-float:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(37, 211, 102, 0.55);
+.footer-whatsapp-float:hover{
+  transform:translateY(-4px);
+  box-shadow:0 16px 36px rgba(37,211,102,0.55);
 }
 
 /* =========================
    FOOTER BOTTOM
    ========================= */
-.footer-bottom {
+.footer-bottom{
   background-color:#006965;
-     
-  text-align: center;
-  padding: 18px;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0.4px;
-  color: #ffffff;
+  text-align:center;
+  padding:18px;
+  font-size:16px;
+  font-weight:500;
+  letter-spacing:0.4px;
+  color:#ffffff;
 }
 
 /* =========================
    RESPONSIVE
    ========================= */
-@media (max-width: 900px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 44px;
-    text-align: center;
+@media (max-width:900px){
+  .footer-container{
+    grid-template-columns:1fr;
+    gap:44px;
+    text-align:center;
   }
 
-  .footer-whatsapp-float {
-    right: 50%;
-    transform: translateX(50%);
-    bottom: 105px;
+  .footer-col{
+    border-right:none;
+    padding-right:0;
+  }
+
+  .footer-whatsapp-float{
+    right:50%;
+    transform:translateX(50%);
+    bottom:105px;
   }
 }
+
