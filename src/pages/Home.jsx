@@ -163,7 +163,7 @@ function Home() {
               </div>
             </div>
 
-            {/* ✅ NEW: WHOLE RANGE CARD */}
+            {/* ✅ WHOLE RANGE CARD */}
             <div className="category-card deep-navy">
               <div className="category-image"><img src={featureImg} alt="Whole Range" /></div>
               <div className="category-info">
@@ -174,7 +174,7 @@ function Home() {
             </div>
           </div>
 
-          {/* ✅ STATS SECTION */}
+          {/* ================= STATS SECTION ================= */}
           <div className="stats-modern" ref={statsRef}>
             <div className="stat-card-modern blue">
               <FaIndustry className="stat-icon" />
@@ -193,7 +193,7 @@ function Home() {
             </div>
           </div>
           
-          {/* ✅ CORPORATE ROW */}
+          {/* ================= CORPORATE ROW ================= */}
           <div className="corporate-row">
             <div className="corporate-cert-card">
               <div className="corporate-cert-logo">
@@ -221,101 +221,8 @@ function Home() {
               </div>
             </div>
           </div>
-        </div> {/* Closes below-hero-inner */}
-      </section> {/* Closes below-hero-section */}
-    </>
-  );
-}
-          {/* ✅ TRIGGER 2: Counting starts only when you scroll to this div */}
-          <div className="stats-modern" ref={statsRef}>
-            <div className="stat-card-modern blue">
-              <FaIndustry className="stat-icon" />
-              <h2>{products}+</h2>
-              <p>Products</p>
-            </div>
-            <div className="stat-card-modern orange">
-              <FaUserMd className="stat-icon" />
-              <h2>{team}+</h2>
-              <p>Team Members</p>
-            </div>
-            <div className="stat-card-modern purple">
-              <FaSmile className="stat-icon" />
-              <h2>{clients}+</h2>
-              <p>Happy Clients</p>
-            </div>
-          </div>
-          
-          {/* ✅ ADDED: Credentials / Trust Section */}
-{/* ===== CERTIFICATION + CORPORATE IN ONE ROW ===== */}
-{/* ===== CORPORATE + TRUST SAME ROW ===== */}
-<div className="corporate-row">
-
-  {/* LEFT CARD */}
-  <div className="corporate-cert-card">
-
-    <div className="corporate-cert-logo">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png"
-        className="gov-logo"
-        alt="GOI"
-      />
-    </div>
-
-    <div className="corporate-cert-info">
-      <h3>Corporate Certification</h3>
-
-      <p>
-        Glemberg Pharma Pvt. Ltd. is officially registered and compliant
-        with Indian corporate regulatory standards.
-      </p>
-
-      <a
-        href={certificate}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="view-cert-link"
-      >
-        View Registration Certificate
-      </a>
-    </div>
-
-  </div>
-
-
-  {/* RIGHT SIDE */}
-  <div className="trust-side">
-
-    <h3 className="trust-title">Quality & Compliance Standards</h3>
-
-    <div className="trust-logos">
-
-      {/* WHO bigger */}
-      <div className="trust-item who">
-        <img src={whoGmpLogo} className="cert-logo-img" alt="WHO GMP"/>
-      </div>
-
-      <div className="trust-item">
-        <img src={fssaiLogo} className="cert-logo-img" alt="FSSAI"/>
-      </div>
-
-      <div className="trust-item">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png"
-          className="cert-logo-img"
-          alt="Government"
-        />
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-
-        </div> 
-      </section> 
+        </div> {/* ✅ Closes below-hero-inner */}
+      </section> {/* ✅ Closes below-hero-section */}
     </>
   );
 }
