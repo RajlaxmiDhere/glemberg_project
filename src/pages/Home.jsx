@@ -136,8 +136,8 @@ function Home() {
     <div className="header-text-group">
       <h2 className="category-main-title">Our Products</h2>
       <p className="category-subtitle">
-        Our diverse product portfolio covers specialized divisions including Cardiac, Diabetic, 
-        Neuro, Orthopedic, Gynecology, and General care. Each category is developed with 
+        Our diverse product portfolio covers specialized divisions including  
+        general,ortho,darma care. Each category is developed with 
         precision, ensuring quality, safety, and efficacy to meet global healthcare needs.
       </p>
     </div>
@@ -153,9 +153,9 @@ function Home() {
         <img src={generalImg} alt="Cardiac Care" />
       </div>
       <div className="category-info cardiac">
-        <h3>Cardiac Care</h3>
+        <h3>General Care</h3>
         <p>Advanced solutions for cardiovascular health.</p>
-        <NavLink to="/products#cardiac" className="view-link">Enquire Now</NavLink>
+        <NavLink to="/products#cardiac" className="view-link">View Products</NavLink>
       </div>
     </div>
 
@@ -165,9 +165,9 @@ function Home() {
         <img src={orthoImg} alt="Diabetic Care" />
       </div>
       <div className="category-info diabetic">
-        <h3>Diabetic Care</h3>
+        <h3>Ortho Care</h3>
         <p>Comprehensive management for metabolic health.</p>
-        <NavLink to="/products#diabetic" className="view-link">Enquire Now</NavLink>
+        <NavLink to="/products#diabetic" className="view-link">View Products</NavLink>
       </div>
     </div>
 
@@ -177,9 +177,9 @@ function Home() {
         <img src={dermaImg} alt="Neuro Care" />
       </div>
       <div className="category-info neuro">
-        <h3>Neuro Care</h3>
+        <h3>Darma Care</h3>
         <p>Innovative treatments for neurological wellbeing.</p>
-        <NavLink to="/products#neuro" className="view-link">Enquire Now</NavLink>
+        <NavLink to="/products#neuro" className="view-link">View Products</NavLink>
       </div>
     </div>
   </div>
