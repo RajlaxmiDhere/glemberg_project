@@ -221,28 +221,27 @@
   margin-left: -50vw;
   margin-right: -50vw;
   
-  padding: 100px 0; /* More padding looks better with the cut */
+  /* Reduced padding as requested previously */
+  padding: 60px 0; 
   z-index: 10;
 
-  /* 1. THE CUT: This creates a slant on the top-left.
-     (0 10%) means the top-left point starts 10% down from the top.
-     (100% 0) means the top-right point is at the very top. */
-  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+  /* ✅ THE LEFT CORNER CUT */
+  /* This says: 
+     Start 15% down on the left (0 15%), 
+     Go to the very top on the right (100% 0), 
+     Go to the bottom right (100% 100%), 
+     Go to the bottom left (0 100%) */
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
   
-  /* 2. REMOVE BORDER RADIUS: Clip-path handles the shape now */
   border-radius: 0; 
-  
-  /* Move it up slightly to overlap the previous section for a seamless look */
-  margin-top: -80px; 
+  margin-top: -80px; /* Pulls it up to overlap the previous section */
 }
 /* Header Layout */
 .products-header {
-  padding-top: 40px; 
-  display: flex;
-  justify-content: space-between;
-  max-width: 1400px;
+  padding-top: 30px; 
+  max-width: 1200px;
   width: 90%;
-  margin: 0 auto 50px auto;
+  margin: 0 auto 30px auto;
 }
 .header-text-group {
   max-width: 700px;
