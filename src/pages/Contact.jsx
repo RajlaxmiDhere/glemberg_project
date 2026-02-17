@@ -123,7 +123,6 @@ const Contact = () => {
 
           <div className="col-md-6">
             <div className="contact-form">
-              <h4 className="text-center mb-4">Contact Us</h4>
 
               <form onSubmit={handleSubmit}>
 
