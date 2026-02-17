@@ -68,14 +68,10 @@ Our goal is to contribute positively to society by delivering products and servi
           <img src={valuesImg} alt="Our Core Values" />
         </div>
         <div className="about-content">
-          <h1>Our Core Values</h1>
-          <ul>
-            <li>Innovation & Excellence</li>
-            <li>Patient-Centric Care</li>
-            <li>Quality & Safety</li>
-            <li>Integrity & Transparency</li>
-            <li>Commitment to Health</li>
-          </ul>
+          <h1>Incorporating Core Values into Business Practices</h1>
+          <p>Honesty, humility, integrity, quality, collaboration, timely service and customer satisfaction. We believe that these values are the foundation of a successful business.
+
+We believe that honesty, humility, integrity, quality, collaboration, timely service, and customer satisfaction are the pillars that drive a truly successful business.</p>
         </div>
       </section>
 
