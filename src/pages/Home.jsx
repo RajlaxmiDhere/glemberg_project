@@ -5,6 +5,9 @@ import { FaIndustry, FaUserMd, FaSmile } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 // Assets
+// Add these at the top of Home.jsx with your other imports
+import fssaiLogo from "../assets/fssai-seekologo.png";
+import whoGmpLogo from "../assets/WHO-GMP.png";
 import featureImg from "../assets/feature-medical.jpg";
 import dermaImg from "../assets/derma_division.jpg"; 
 import generalImg from "../assets/general_range1.jpg";
