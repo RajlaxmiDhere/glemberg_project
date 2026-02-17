@@ -142,8 +142,8 @@ function Home() {
       </p>
     </div>
     <NavLink to="/products" className="learn-more-pill">
-      Learn More <span>↗</span>
-    </NavLink>
+  Learn More
+</NavLink>
   </div>
 
   <div className="category-grid">
