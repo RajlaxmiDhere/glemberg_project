@@ -214,21 +214,24 @@
 /* Container Background to match screenshot */
 .products-container-modern {
   background-color: #004d43; 
-  padding: 80px 40px 120px 40px; /* Increased bottom padding from 80px to 120px */
-  border-radius: 40px 40px 0 0;
-  margin-top: -40px; 
+  width: 100vw;            /* Forces it to take the full viewport width */
   position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;      /* Centering trick to break out of any parent container */
+  margin-right: -50vw;
+  
+  padding: 80px 0;         /* Top/Bottom padding, 0 for sides */
+  border-radius: 0;        /* Optional: set to 0 if you want it perfectly square at edges */
   z-index: 10;
-  /* Add this to create a clean separation if the background colors clash */
-  margin-bottom: 60px; 
 }
-
 /* Header Layout */
 .products-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1200px;
+  align-items: flex-end;
+  max-width: 1400px;       /* Increase this to make it wider inside */
+  width: 90%;              /* Responsive width */
   margin: 0 auto 50px auto;
   color: white;
 }
@@ -269,9 +272,10 @@
 /* Grid and Cards */
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
-  max-width: 1200px;
+  max-width: 1400px;       /* Increased from 1200px to reach further left/right */
+  width: 90%;
   margin: 0 auto;
 }
 
