@@ -2,7 +2,7 @@
    NAVBAR
    ========================= */
 .navbar {
-  background: #FFFFFF;   /* Professional pharma white background */
+  background:linear-gradient(90deg, #F5FAFF, #E6F2FB);  
   padding: 10px 0;
   width: 100%;
 }
