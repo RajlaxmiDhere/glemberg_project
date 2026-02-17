@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import { FaWhatsapp } from "react-icons/fa";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -37,14 +38,15 @@ function App() {
 
       {/* ⭐ WHATSAPP FLOAT BUTTON (ADDED HERE) */}
       <a
-        href="https://wa.me/7559189020"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="footer-whatsapp-float"
-      >
-        <img src="/whatsapp.png" alt="WhatsApp" />
-        Enquire Now
-      </a>
+  href="https://wa.me/917559189020"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="footer-whatsapp-float"
+>
+  <FaWhatsapp />
+  Enquire Now
+</a>
+
 
       <Footer />
 
