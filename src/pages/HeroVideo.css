@@ -43,7 +43,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #ffffff;
+  color: #000000;
 }
 
 .welcome-tagline {
@@ -52,7 +52,7 @@
   letter-spacing: 1px;
   margin-bottom: 12px;
   text-transform: uppercase;
-  color: #c9f7f5;
+  color: #000000;
 }
 
 .hero-content h1 {
