@@ -214,34 +214,42 @@
 /* Container Background to match screenshot */
 .products-container-modern {
   background-color: #004d43; 
-  width: 100vw;            /* Forces it to take the full viewport width */
+  width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
-  margin-left: -50vw;      /* Centering trick to break out of any parent container */
+  margin-left: -50vw;
   margin-right: -50vw;
   
-  padding: 80px 0;         /* Top/Bottom padding, 0 for sides */
-  border-radius: 0;        /* Optional: set to 0 if you want it perfectly square at edges */
+  padding: 100px 0; /* More padding looks better with the cut */
   z-index: 10;
+
+  /* 1. THE CUT: This creates a slant on the top-left.
+     (0 10%) means the top-left point starts 10% down from the top.
+     (100% 0) means the top-right point is at the very top. */
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+  
+  /* 2. REMOVE BORDER RADIUS: Clip-path handles the shape now */
+  border-radius: 0; 
+  
+  /* Move it up slightly to overlap the previous section for a seamless look */
+  margin-top: -80px; 
 }
 /* Header Layout */
 .products-header {
+  padding-top: 40px; 
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  max-width: 1400px;       /* Increase this to make it wider inside */
-  width: 90%;              /* Responsive width */
+  max-width: 1400px;
+  width: 90%;
   margin: 0 auto 50px auto;
-  color: white;
 }
-
 .header-text-group {
   max-width: 700px;
 }
 
 .category-main-title {
-  font-size: 3.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 20px;
   color: #ffffff;
