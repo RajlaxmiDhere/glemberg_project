@@ -418,83 +418,65 @@
   transform: translateY(-2px);
 }
 
-/* ========================= CREDENTIALS SECTION ========================= */
-.credentials-section {
-  margin-top: 60px;
-  padding: 40px 0;
-  border-top: 1px dashed #ccc;
+.certification-trust-bar {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.cert-title {
+  color: var(--glemberg-blue);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
+}
+
+.cert-logo-container {
   display: flex;
   justify-content: center;
-}
-
-.credentials-card {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(5px);
-  padding: 30px;
-  border-radius: 15px;
-  max-width: 800px;
-  width: 100%;
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  border: 1px solid #e0e0e0;
+  gap: 60px;
+  flex-wrap: wrap;
 }
 
-.gov-branding {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.gov-logo {
-  height: 70px;
-  width: auto;
-}
-
-.gov-text {
+.cert-item {
   display: flex;
   flex-direction: column;
-  color: #333;
-  line-height: 1.2;
+  align-items: center;
+  gap: 12px;
 }
 
-.gov-text span {
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  font-weight: 500;
+.cert-logo-img {
+  height: 70px; /* Adjust based on your logo files */
+  width: auto;
+  filter: grayscale(100%); /* Keeps it clean and clinical */
+  opacity: 0.7;
+  transition: all 0.4s ease;
 }
 
-.gov-text strong {
-  font-size: 1.1rem;
-  color: #000;
-  margin-top: 4px;
+.cert-item:hover .cert-logo-img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
 }
 
-.cert-action {
-  text-align: right;
-}
-
-.cert-action p {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.view-cert-link {
-  display: inline-block;
-  color: #00008b;
+.cert-item span {
+  font-size: 0.8rem;
   font-weight: 700;
-  text-decoration: none;
-  border-bottom: 2px solid #00008b;
-  padding-bottom: 2px;
-  transition: all 0.3s ease;
+  color: var(--accent-gray);
+  text-transform: uppercase;
 }
 
-.view-cert-link:hover {
-  color: #047857;
-  border-color: #047857;
-  transform: translateX(5px);
+/* Update existing Credentials Card to look more cohesive */
+.credentials-card {
+  background: #fdfdfd;
+  border: 1px solid #e0e0e0;
 }
 
 /* ========================= RESPONSIVE DESIGN ========================= */
