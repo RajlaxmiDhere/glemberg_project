@@ -1,852 +1,258 @@
-/* =========================
-   HERO VIDEO SECTION
-   ========================= */
-.hero-video-section {
-  position: relative;
-  width: 100%;
-  height: 85vh;
-  overflow: hidden;
-  background: #000;
-}
-
-.hero-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  max-width: 900px;
-  margin: auto;
-  padding: 0 20px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #ffffff;
-}
-
-.welcome-tagline {
-  font-size: 1.1rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 12px;
-  text-transform: uppercase;
-  color: #c9f7f5;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 18px;
-}
-
-.hero-content p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  max-width: 700px;
-  color: #e6ecf5;
-}
-
-/* =========================
-   BELOW HERO SECTION
-   ========================= */
-.below-hero-section {
- background: #FFFFFF;
-  padding: 100px 20px;
-}
-
-.below-hero-inner {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 40px; /* This adds a consistent gap between all major rows */
-}
-
-/* =========================
-   FEATURE SECTION
-   ========================= */
-.feature-section {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 60px;
-  align-items: center;
-  margin-bottom: 100px;
-}
-
-/* TEXT */
-.feature-text h2 {
-  font-size: 2.3rem; /* Reduced from 3.2rem */
-  font-weight: 700;
-  color: #00008b;
-  margin-bottom: 18px;
-  white-space: nowrap; /* Prevents text from ever wrapping */
-}
-
-.feature-sub {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #047857;
-  margin-bottom: 24px;
-}
-
-.feature-text p {
-  font-size: 1.5rem;
-  line-height: 1.85;
-  color: #374151;
-  margin-bottom: 16px;
-}
-
-/* BUTTON */
-.feature-btn {
-  display: inline-block;
-  margin-top: 26px;
-  padding: 14px 36px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #0b2c6f, #173a8a);
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(11, 44, 111, 0.35);
-}
-/* =========================
-   FEATURE IMAGE — PREMIUM PROFESSIONAL VERSION
-   ========================= */
-/* ===============================
-   PROFESSIONAL PHARMA IMAGE BLOCK
-   =============================== */
-
-.feature-image{
-  position:relative;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-/* Soft background medical panel */
-
-.feature-image::before{
-  content:"";
-  position:absolute;
-  width:85%;
-  height:85%;
-  background:linear-gradient(135deg,#f4f8ff,#e8f0ff);
-  border-radius:30px;
-  z-index:0;
-  box-shadow:0 30px 70px rgba(30,79,145,0.12);
-}
-
-/* Main image */
-
-.feature-main-img{
-  position:relative;
-  z-index:2;
-
-  width:100%;
-  max-width:540px;
-
-  border-radius:26px;
-
-  /* PREMIUM SHADOW (corporate style) */
-  box-shadow:
-    0 40px 80px rgba(0,0,0,0.18),
-    0 8px 25px rgba(30,79,145,0.12);
-
-  transition:all .55s cubic-bezier(.2,.8,.2,1);
-}
-
-/* subtle hover lift (industry standard) */
-
-.feature-main-img:hover{
-  transform:translateY(-8px) scale(1.02);
-  box-shadow:
-    0 60px 120px rgba(0,0,0,0.22),
-    0 15px 40px rgba(30,79,145,0.18);
-}
-
-/* optional subtle floating medical badge */
-
-.feature-image::after{
-  content:"";
-  position:absolute;
-  right:8%;
-  bottom:8%;
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  background:rgba(30,79,145,0.06);
-  z-index:1;
-}
-
-/* Initial state when the section is NOT in view */
-.is-hidden {
-  opacity: 0;
-  transform: translateY(50px); /* Slides down slightly */
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-}
-
-/* State when the user reaches the point (triggered by React) */
-.is-visible {
-  opacity: 1;
-  transform: translateY(0); /* Slides up to its original position */
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-}
-
-/* Optional: Stagger the text inside the section for a better effect */
-.is-visible .animate-line {
-  animation: fadeInUp 0.8s ease forwards;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* =========================
-   TEXT ANIMATION
-   ========================= */
-.animate-text {
-  overflow: hidden;
-}
-
-.animate-line {
-  opacity: 0;
-  transform: translateY(25px);
-  animation: textFadeUp 0.9s ease forwards;
-}
-
-.delay-1 { animation-delay: 1.3s; }
-.delay-2 { animation-delay: 1.3s; }
-.delay-3 { animation-delay: 1.3s; }
-.delay-4 { animation-delay: 1.3s; }
-.delay-5 { animation-delay: 2s; }
-/* ================= CATEGORY GRID ================= */
-.category-section-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.category-main-title {
-   font-size: 2.8rem;          /* ⭐ bigger than before */
-  font-weight: 600;         /* ⭐ thicker */
-  color:#163a7a;            /* slightly deeper blue */
-  margin:0;
-  position:relative;
-  display:inline-block;
-}
-/* Optional: Adds a small underline deco */
-
-/* Container Background to match screenshot */
-.products-container-modern {
-  background-color: #004d43; 
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  
-  /* Give extra top padding so the slant doesn't cut into your text */
-  padding: 120px 0 80px 0; 
-  z-index: 10;
-
-  /* ✅ THE ARCHITECTURAL CUT */
-  /* This creates a slope where the left side is lower than the right side */
-  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-  
-  /* Pull the section up to overlap the previous white section */
-  margin-top: -100px; 
-  border-radius: 0; /* Remove any old rounding to keep the cut sharp */
-}
-
-/* Adjust your header so it stays below the slanted "ceiling" */
-.products-header {
-  padding-top: 40px; 
-  max-width: 1200px;
-  width: 90%;
-  margin: 0 auto 40px auto;
-}
-.header-text-group {
-  max-width: 700px;
-}
-
-.category-main-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #ffffff;
-}
-
-.category-subtitle {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  opacity: 0.9;
-}
-
-
-/* Ensure the pill is set to center the text */
-.learn-more-pill {
-  background-color: #00c853; 
-  color: white;
-  padding: 12px 28px; /* Balanced padding for text-only */
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-flex; /* Keeps it perfectly centered */
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s ease;
-}
-
-.learn-more-pill:hover {
-  background-color: #00e676;
-  transform: scale(1.05);
-}
-
-/* Grid and Cards */
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  max-width: 1400px;       /* Increased from 1200px to reach further left/right */
-  width: 90%;
-  margin: 0 auto;
-}
-
-.category-card {
-  background: white;
-  border-radius: 20px; /* Softer corners */
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-  clip-path: none; /* Remove the old clip-path for a cleaner look */
-}
-
-.category-card:hover {
-  transform: translateY(-10px);
-}
-
-.category-image img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-}
-
-.category-info {
-  padding: 25px;
-  color: white;
-}
-
-/* Card Brand Colors */
-.category-info.cardiac { background-color: #1e4ea1; } /* Royal Blue */
-.category-info.diabetic { background-color: #f36f21; } /* Orange */
-.category-info.neuro { background-color: #2bb673; } /* Green */
-
-.category-info h3 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-.category-info p {
-  font-size: 1rem;
-  margin-bottom: 25px;
-  opacity: 0.9;
-}
-
-/* Floating Enquire Button inside card */
-.view-link {
-  background: rgba(255,255,255,0.2);
-  padding: 8px 20px;
-  border-radius: 20px;
-  border: 1px solid white;
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-.category-main-subtitle {
-  font-size: 1.2rem;
-  color: #4b5563;
-  margin-top: 15px;
-}
-.category-grid {
-  display: grid;
-  /* Use auto-fit so it handles 3 or 4 cards automatically */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-  gap: 25px;
-  margin-bottom: 80px;
-}
-/* Color for the new Whole Range card */
-.category-card.deep-navy .category-info { 
-  background-color: #0b2c6f; 
-}
-.category-card {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  /* This creates the slanted bottom-right corner effect */
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%);
-  transition: transform 0.3s ease;
-}
-
-.category-card:hover {
-  transform: translateY(-10px);
-}
-
-.category-image img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-}
-
-.category-info {
-  padding: 30px 25px;
-  color: #ffffff;
-  flex-grow: 1;
-}
-
-/* Specific Background Colors from your screenshot */
-.category-card.orange .category-info { background-color: #f36f21; }
-.category-card.teal .category-info { background-color: #2bb673; }
-.category-card.blue-light .category-info { background-color: #00aeef; }
-
-.category-info h3 {
-  font-size: 1.8rem;
-  margin-bottom: 5px;
-  font-weight: 700;
-}
-
-.category-info p {
-  font-size: 1.1rem;
-  margin-bottom: 40px;
-  opacity: 0.9;
-}
-
-.view-link {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  border-bottom: 1px solid rgba(255,255,255,0.4);
-  padding-bottom: 2px;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .category-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@keyframes textFadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* =========================
-   STATS
-   ========================= */
-/* =========================
-   STATS SECTION - INCREASED GAP
-   ========================= */
-.stats-modern {
-  display: flex;
-  justify-content: center;
-  /* 1. INCREASE GAP: Try 40px or 60px for a very spacious look */
-  gap: 80px; 
-  
-  /* Space away from the section above */
-  margin-top: 50px; 
-  margin-bottom: 80px;
-  padding: 0 20px;
-  flex-wrap: wrap; /* Allows them to stack nicely on smaller screens */
-}
-
-.stat-card-modern {
-  /* 2. CONTROL CARD WIDTH: 
-     Setting a fixed width ensures the gap stays consistent */
-  width: 220px; 
-  padding: 30px 20px;
-  
-  text-align: center;
-  border-radius: 12px;
-  /* Adjusted clip-path for a cleaner look with more space */
-  clip-path: polygon(0 0, 90% 0, 100% 15%, 100% 100%, 0 100%);
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
-}
-
-/* Optional: Make the icons slightly bigger to fill the space */
-.stat-icon {
-  font-size: 28px;
-  margin-bottom: 12px;
-}
-
-
-
-.stat-card-modern:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.12);
-}
-
-
-.stat-card-modern h2 {
-  font-size: 3.2rem;
-  font-weight: 700;
-}
-
-.stat-card-modern p {
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-.stat-card-modern.blue {
-  background: #eef2ff;
-  color: #1e40af;
-}
-
-.stat-card-modern.orange {
-  background: #fff1e6;
-  color: #ea580c;
-}
-
-.stat-card-modern.purple {
-  background: #f3f0ff;
-  color: #6d28d9;
-}
-
-/* =========================
-   QUALITY
-   ========================= */
-.quality-section {
-  max-width: 800px;
-  margin: auto;
-  text-align: center;
-}
-
-.quality-section h2 {
-  font-size: 2.6rem;
-  font-weight: 700;
-  color: #047857;
-  margin-bottom: 18px;
-}
-
-.quality-section p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #374151;
-  margin-bottom: 25px;
-}
-
-.certificate-btn {
-  padding: 12px 28px;
-  background: #0b2c6f;
-  color: #ffffff;
-  font-weight: 600;
-  border-radius: 30px;
-  text-decoration: none;
-}
-
-.certificate-btn:hover {
-  background: #173a8a;
-}
-/* =========================
-   CREDENTIALS & TRUST BAR
-   ========================= */
-
-.certification-trust-bar {
-  text-align: center;
-  margin: 0 auto 4rem auto; /* Centered with bottom margin */
-  padding: 30px;            /* Slightly reduced padding */
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  border: 1px solid #e2e8f0;
-
-  /* ✅ ADD THESE TWO LINES TO CONTROL WIDTH */
-  max-width: 600px;         /* Adjust this number (e.g., 700px) to make it even narrower */
-  width: 90%;               /* Ensures it stays responsive on smaller screens */
-}
-
-.cert-title {
-  color: #1e3a5f; /* Your brand blue */
-  font-size: 1.1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin-bottom: 30px;
-}
-
-.cert-logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  flex-wrap: wrap;
-}
-
-.cert-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
-.cert-logo-img {
-  height: 60px; /* Standard height for compliance logos */
-  width: auto;
-  filter: none; /* Clinical look */
-  opacity: 1;
-  
-}
-
-.cert-item:hover .cert-logo-img {
-  filter: none;
-  opacity: 1;
-  transform:none;
-}
-
-.cert-item span {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #64748b;
-  text-transform: uppercase;
-}
-
-/* Detailed Credentials Card */
-.credentials-section {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 100px;
-}
-
-.credentials-card {
-  display: flex;
-  align-items: right;
-  justify-content: space-between;
-  background: #fff;
-  padding: 40px;
-  border-radius: 16px;
-  max-width: 400px;
-  width: 100%;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-}
-
-.credentials-card h3 {
-  color: #1e3a5f;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-.credentials-card p {
-  color: #4b5563;
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  max-width: 500px;
-}
-
-.view-cert-link {
-  color: #1e3a5f;
-  text-decoration: none;
-  font-weight: 700;
-  border-bottom: 2px solid #1e3a5f;
-  padding-bottom: 4px;
-   
-}
+import React, { useState, useEffect, useRef } from "react";
+import "./HeroVideo.css";
+import pillVideo from "../assets/video1.mp4";
+import { FaIndustry, FaUserMd, FaSmile } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
-.view-cert-link:hover {
-  color: #2bb673; /* Turns teal on hover */
-  border-color: #2bb673;
-}
-
-.gov-logo {
-  height: 100px;
-  width: auto;
-  opacity: 0.9;
-}
-.cert-logo-img {
-  height: 60px;
-  width: auto;
-  /* filter: grayscale(100%);  <-- Comment this out to test */
-  /* opacity: 0.7;             <-- Comment this out to test */
-  border:none;      /* Add this temporary border to see the image box */
-}
-
-/* Responsive adjustment */
-@media (max-width: 768px) {
-  .credentials-card {
-    flex-direction: column;
-    text-align: center;
-    gap: 30px;
-  }
-  .cert-logo-container {
-    gap: 30px;
-  }
-}
-
-/* =========================
-   RESPONSIVE
-   ========================= */
-@media (max-width: 900px) {
-  .feature-section {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .stats-modern {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .below-hero-section {
-    padding: 60px 20px;
-  }
-}
-/* ===== CERT ROW PROFESSIONAL LAYOUT ===== */
-/* ===== CORPORATE + TRUST PROFESSIONAL LAYOUT ===== */
-/* ===== CORPORATE + TRUST SAME ROW ===== */
-/* ===== FINAL CORPORATE + TRUST PROFESSIONAL ===== */
-
-.corporate-row{
-  display:grid;
-  grid-template-columns:1.25fr 1fr;
-  gap:70px;
-  max-width:1150px;
-  margin:80px auto 100px;
-  padding:0 20px;
-  align-items:center;
-}
-
-/* LEFT CARD */
-
-.corporate-cert-card{
-  display:flex;
-  align-items:center;
-  gap:35px;
-  background:#ffffff;
-  padding:42px 48px;
-  border-radius:22px;
-  border:1px solid #e6edf4;
-  box-shadow:0 18px 50px rgba(0,0,0,0.06);
-}
-
-/* RIGHT SIDE */
-
-.trust-side{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  gap:30px;
-  padding-left:40px;
-
-  /* ⭐ subtle divider */
-  border-left:1px solid #e6edf4;
-}
+import fssaiLogo from "../assets/fssai-seeklogo.png";
+import whoGmpLogo from "../assets/WHO-GMP.jpg";
+import featureImg from "../assets/feature-medical.jpg";
+import dermaImg from "../assets/derma_division.jpg"; 
+import generalImg from "../assets/general_range1.jpg";
+import orthoImg from "../assets/ortho_division1.jpg";
+import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
 
-/* TITLE */
-
-.trust-title{
-  font-size:1.5rem;
-  font-weight:700;
-  color:#1e3a5f;
-  text-align:center;
-  margin:0;
-}
+function Home() {
 
-/* LOGO ROW */
+  const [showWelcome, setShowWelcome] = useState(false);
+  const [isVisible, setIsVisible] = useState(false); 
 
-.trust-logos{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:55px;
-}
+  const [products, setProducts] = useState(0);
+  const [team, setTeam] = useState(0);
+  const [clients, setClients] = useState(0);
 
-/* normal logos */
+  const featureRef = useRef(null);
+  const statsRef = useRef(null);
+  const hasAnimatedStats = useRef(false);
 
-.cert-logo-img{
-  height:88px;
-  width:auto;
-}
+  useEffect(() => {
 
-/* ⭐ WHO bigger */
+    const hasSeen = sessionStorage.getItem("hasSeenWelcome");
 
-.trust-item.who img{
-  height:110px;
-}
+    if (!hasSeen) {
+      setShowWelcome(true);
+      sessionStorage.setItem("hasSeenWelcome", "true");
+    }
 
-/* MOBILE */
+    const textObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true);
+      },
+      { threshold: 0.2 }
+    );
 
-@media(max-width:900px){
+    const statsObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimatedStats.current) {
+          hasAnimatedStats.current = true; 
+          animateCount(setProducts, 20);
+          animateCount(setTeam, 25);
+          animateCount(setClients, 500);
+        }
+      },
+      { threshold: 0.5 } 
+    );
 
-  .corporate-row{
-    grid-template-columns:1fr;
-  }
+    if (featureRef.current) textObserver.observe(featureRef.current);
+    if (statsRef.current) statsObserver.observe(statsRef.current);
 
-  .trust-side{
-    border-left:none;
-    padding-left:0;
-  }
+    return () => {
+      if (featureRef.current) textObserver.unobserve(featureRef.current);
+      if (statsRef.current) statsObserver.unobserve(statsRef.current);
+    };
 
-  .corporate-cert-card{
-    flex-direction:column;
-    text-align:center;
-  }
+  }, []);
 
-}
-.feature-text-wrapper{
-  display:flex;
-  flex-direction:column;
-  gap:16px;
-  max-width:640px;
-}
+  const animateCount = (setter, target) => {
 
-.feature-big{
-  font-size:2rem;
-  font-weight:700;
-}
+    let startTime = null;
+    const duration = 2000;
 
-.feature-medium{
-  font-size:1.45rem;
-  font-weight:700;
-}
+    const step = (timestamp) => {
 
-.feature-small{
-  font-size:1.15rem;
-}
+      if (!startTime) startTime = timestamp;
+
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const easeOutQuad = progress * (2 - progress);
+
+      setter(Math.floor(easeOutQuad * target));
+
+      if (progress < 1) window.requestAnimationFrame(step);
+
+    };
+
+    window.requestAnimationFrame(step);
+
+  };
+
+  return (
+    <>
+      {/* HERO VIDEO */}
+      <section className="hero-video-section">
+
+        <video className="hero-video" autoPlay muted loop playsInline preload="auto">
+          <source src={pillVideo} type="video/mp4" />
+        </video>
+
+        <div className="hero-overlay"></div>
+
+        <div className="hero-content">
+          {showWelcome && <div className="welcome-tagline">Welcome to Glemberg Pharma</div>}
+          <h1>Committed to Better Healthcare</h1>
+          <p>Glemberg Pharma delivers safe, effective, and innovative pharmaceutical solutions to improve lives.</p>
+        </div>
+
+      </section>
+
+      <section className="below-hero-section">
+        <div className="below-hero-inner">
+
+{/* ✅ FEATURE SECTION (UPDATED ONLY THIS PART) */}
+
+<div 
+  className={`feature-section ${isVisible ? "is-visible" : "is-hidden"}`} 
+  ref={featureRef}
+>
+
+  <div className="feature-text-container">
+
+    {/* ⭐ NEW WRAPPER */}
+    <div className="feature-text-wrapper">
+
+      <h2 className={`feature-big animate-line ${isVisible ? "delay-1" : ""}`}>
+        Built on Science. Focused on Care.
+      </h2>
+
+      <p className={`feature-medium animate-line ${isVisible ? "delay-2" : ""}`}>
+        Purpose-driven pharmaceutical solutions designed to support everyday healthcare needs.
+      </p>
+
+      <p className={`feature-small animate-line ${isVisible ? "delay-3" : ""}`}>
+        Delivering trusted medicines across Orthopaedic, Dermatology, and General healthcare segments.
+      </p>
+
+    </div>
+
+    <div className={`animate-line ${isVisible ? "delay-5" : ""}`}>
+      <NavLink to="/about" className="feature-btn">
+        Learn More
+      </NavLink>
+    </div>
+
+  </div>
+
+  <div className="feature-image">
+    <div className="image-border-deco">
+       <img src={featureImg} alt="Glemberg Healthcare" className="feature-main-img" />
+    </div>
+  </div>
+
+</div>
+
+{/* PRODUCTS SECTION (UNCHANGED) */}
+<section className="products-container-modern">
+  <div className="products-header">
+    <div className="header-text-group">
+      <h2 className="category-main-title">Our Products</h2>
+      <p className="category-subtitle">
+        Our diverse product portfolio covers specialized divisions including  
+        general,ortho,darma care. Each category is developed with 
+        precision, ensuring quality, safety, and efficacy to meet global healthcare needs.
+      </p>
+    </div>
+    <NavLink to="/products" className="learn-more-pill">
+      Learn More
+    </NavLink>
+  </div>
+
+  <div className="category-grid">
+    <div className="category-card">
+      <div className="category-image">
+        <img src={generalImg} alt="General Care" />
+      </div>
+      <div className="category-info cardiac">
+        <h3>General Care</h3>
+        <p>Advanced solutions for cardiovascular health.</p>
+        <NavLink to="/products#general" className="view-link">View Products</NavLink>
+      </div>
+    </div>
+
+    <div className="category-card">
+      <div className="category-image">
+        <img src={orthoImg} alt="Ortho Care" />
+      </div>
+      <div className="category-info diabetic">
+        <h3>Ortho Care</h3>
+        <p>Comprehensive management for metabolic health.</p>
+        <NavLink to="/products#ortho" className="view-link">View Products</NavLink>
+      </div>
+    </div>
+
+    <div className="category-card">
+      <div className="category-image">
+        <img src={dermaImg} alt="Darma Care" />
+      </div>
+      <div className="category-info neuro">
+        <h3>Darma Care</h3>
+        <p>Innovative treatments for neurological wellbeing.</p>
+        <NavLink to="/products#derma" className="view-link">View Products</NavLink>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* REST CODE UNCHANGED BELOW */}
+
+          <div className="stats-modern" ref={statsRef}>
+            <div className="stat-card-modern blue">
+              <FaIndustry className="stat-icon" />
+              <h2>{products}+</h2>
+              <p>Products</p>
+            </div>
+            <div className="stat-card-modern orange">
+              <FaUserMd className="stat-icon" />
+              <h2>{team}+</h2>
+              <p>Team Members</p>
+            </div>
+            <div className="stat-card-modern purple">
+              <FaSmile className="stat-icon" />
+              <h2>{clients}+</h2>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+
+          <div className="corporate-row">
+            <div className="corporate-cert-card">
+              <div className="corporate-cert-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" className="gov-logo" alt="GOI" />
+              </div>
+              <div className="corporate-cert-info">
+                <h3>Corporate Certification</h3>
+                <p>Glemberg Pharma Pvt. Ltd. is officially registered and compliant with Indian corporate regulatory standards.</p>
+                <a href={certificate} target="_blank" rel="noopener noreferrer" className="view-cert-link">View Registration Certificate</a>
+              </div>
+            </div>
+
+            <div className="trust-side">
+              <h3 className="trust-title">Quality & Compliance Standards</h3>
+              <div className="trust-logos">
+                <div className="trust-item who">
+                  <img src={whoGmpLogo} className="cert-logo-img" alt="WHO GMP"/>
+                </div>
+                <div className="trust-item">
+                  <img src={fssaiLogo} className="cert-logo-img" alt="FSSAI"/>
+                </div>
+                <div className="trust-item">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" className="cert-logo-img" alt="Government" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </>
+  );
+}
+
+export default Home;
