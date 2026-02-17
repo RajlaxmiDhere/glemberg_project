@@ -27,7 +27,7 @@
   text-align: left;
 }
 .navbar-logo {
-  height: 130px;
+  height: 140px;
   width: auto;
   display: block;
 }
@@ -37,7 +37,7 @@
 .navbar-tagline {
   font-family: 'Georgia', serif;
   color:#1F4E79;   
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 300;
   font-style: italic;
   margin-top: 0px;          /* ✅ starts exactly from logo bottom */
