@@ -38,7 +38,12 @@
 .footer-logo {
   width: 180px;
   margin-bottom: 10px;
+  border: 3px solid #FFFFFF;   /* white border */
+  padding: 6px;                /* space between logo & border */
+  border-radius: 8px;          /* soft professional corners */
+  background: #FFFFFF;         /* ensures border visible on dark footer */
 }
+
 
 /* =========================
    TAGLINE
