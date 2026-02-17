@@ -179,6 +179,44 @@ function Home() {
               <p>Happy Clients</p>
             </div>
           </div>
+          {/* ✅ ADDED: Credentials / Trust Section */}
+<div className="certification-trust-bar">
+  <p className="cert-title">Quality & Compliance Standards</p>
+  <div className="cert-logo-container">
+    
+    <div className="cert-item">
+      {/* Replace with your local path or use these placeholder URLs */}
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/FSSAI_logo.svg/1200px-FSSAI_logo.svg.png" alt="FSSAI" className="cert-logo-img" />
+      <span>FSSAI Certified</span>
+    </div>
+
+    <div className="cert-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6A7E6h32N-0EwI7e2C6A3S9t2GvT7S9kO_A&s" alt="WHO-GMP" className="cert-logo-img" />
+      <span>WHO-GMP Compliant</span>
+    </div>
+
+    <div className="cert-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" alt="Government of India" className="cert-logo-img" />
+      <span>Govt Approved</span>
+    </div>
+
+  </div>
+</div>
+
+<div className="credentials-section">
+  <div className="credentials-card">
+    <div className="cert-info">
+      <h3>Corporate Certification</h3>
+      <p>Glemberg Pharmaceuticals is a registered entity under the Ministry of Corporate Affairs, Government of India.</p>
+      <a href={certificate} target="_blank" rel="noopener noreferrer" className="view-cert-link">
+        View Registration Certificate <i className="bi bi-file-earmark-pdf"></i>
+      </a>
+    </div>
+    <div className="cert-action">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" className="gov-logo" alt="GOI" />
+    </div>
+  </div>
+</div>
 
         </div> 
       </section> 
