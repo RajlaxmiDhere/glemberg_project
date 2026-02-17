@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./HeroVideo.css";
-import pillVideo from "../assets/video1.mp4";
+import pillVideo from "../assets/head.jpg";
 import { FaIndustry, FaUserMd, FaSmile } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 

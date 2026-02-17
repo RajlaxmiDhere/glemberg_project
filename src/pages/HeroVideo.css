@@ -262,28 +262,11 @@
   display:inline-block;
 }
 /* Optional: Adds a small underline deco */
-
-/* Container Background to match screenshot */
 .products-container-modern {
-  background-color: #004d43; 
-  width: 100vw;
+  background-color: #004d43;
+  width: 100%;
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  
-  /* Give extra top padding so the slant doesn't cut into your text */
-  padding: 120px 0 80px 0; 
-  z-index: 10;
-
-  /* ✅ THE ARCHITECTURAL CUT */
-  /* This creates a slope where the left side is lower than the right side */
-  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-  
-  /* Pull the section up to overlap the previous white section */
-  margin-top: -100px; 
-  border-radius: 0; /* Remove any old rounding to keep the cut sharp */
+  padding: 100px 0 80px 0;
 }
 
 /* Adjust your header so it stays below the slanted "ceiling" */
@@ -853,4 +836,5 @@
 
 .feature-small{
   font-size:1.25rem;
+   color:#000000;
 }
