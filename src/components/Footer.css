@@ -2,7 +2,7 @@
    FOOTER BASE
    ========================= */
 .footer {
-  background: #006965;;
+  background:  #0B5A4F;
   color: #ffffff;
   position: relative;
   font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -149,7 +149,7 @@
    FOOTER BOTTOM
    ========================= */
 .footer-bottom {
-  background-color: #0B5A4F;
+  background-color:#00827d;
   text-align: center;
   padding: 18px;
   font-size: 16px;
