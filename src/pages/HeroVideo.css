@@ -306,10 +306,12 @@
 }
 
 .category-subtitle {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  opacity: 0.9;
+  font-size: 1.35rem;   /* increased from 1.1rem */
+  line-height: 1.7;
+  opacity: 1;           /* make text fully visible */
+  color: #ffffff;       /* white text */
 }
+
 
 
 /* Ensure the pill is set to center the text */
