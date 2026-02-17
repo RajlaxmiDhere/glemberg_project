@@ -313,7 +313,7 @@
 
 /* The Green "Learn More" Pill */
 /* You can remove this if it exists */
-.learn-more-pill span {
+.learn-more-pill{
   margin-left: 8px;
   font-size: 1.2rem;
 }
