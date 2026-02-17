@@ -447,7 +447,7 @@
 .cert-item:hover .cert-logo-img {
   filter: none;
   opacity: 1;
-  transform: scale(1.05);
+  transform:none;
 }
 
 .cert-item span {
