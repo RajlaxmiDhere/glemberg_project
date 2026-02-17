@@ -96,32 +96,40 @@ function Home() {
       <section className="below-hero-section">
         <div className="below-hero-inner">
           
-          {/* ✅ TRIGGER 1: Text entrance */}
-          <div 
-            className={`feature-section ${isVisible ? "is-visible" : "is-hidden"}`} 
-            ref={featureRef}
-          >
-            <div className="feature-text animate-text">
-              <h2 className={`animate-line ${isVisible ? "delay-1" : ""}`}>
-                Built on Science. Focused on Care.
-              </h2>
-              <p className={`feature-sub animate-line ${isVisible ? "delay-2" : ""}`}>
-                Purpose-driven pharmaceutical solutions designed to support everyday healthcare needs.
-              </p>
-              <p className={`animate-line ${isVisible ? "delay-3" : ""}`}>
-                Delivering trusted medicines across Orthopaedic, Dermatology, and General healthcare segments.
-              </p>
-              <NavLink 
-                to="/about" 
-                className={`feature-btn animate-line ${isVisible ? "delay-5" : ""}`}
-              >
-                Learn More
-              </NavLink>
-            </div>
-            <div className="feature-image">
-              <img src={featureImg} alt="Glemberg Healthcare" className="feature-main-img" />
-            </div>
-          </div>
+{/* ✅ TRIGGER 1: Text entrance */}
+<div 
+  className={`feature-section ${isVisible ? "is-visible" : "is-hidden"}`} 
+  ref={featureRef}
+>
+  <div className="feature-text-container">
+    <h2 className={`animate-line ${isVisible ? "delay-1" : ""}`}>
+      Built on Science. <br/> 
+      <span className="text-highlight">Focused on Care.</span>
+    </h2>
+    
+    <div className={`feature-accent-box animate-line ${isVisible ? "delay-2" : ""}`}>
+      <p className="feature-sub">
+        Purpose-driven pharmaceutical solutions designed to support everyday healthcare needs.
+      </p>
+    </div>
+
+    <p className={`feature-description animate-line ${isVisible ? "delay-3" : ""}`}>
+      Delivering trusted medicines across Orthopaedic, Dermatology, and General healthcare segments.
+    </p>
+
+    <div className={`animate-line ${isVisible ? "delay-5" : ""}`}>
+      <NavLink to="/about" className="feature-btn">
+        Learn More
+      </NavLink>
+    </div>
+  </div>
+
+  <div className="feature-image">
+    <div className="image-border-deco">
+       <img src={featureImg} alt="Glemberg Healthcare" className="feature-main-img" />
+    </div>
+  </div>
+</div>
 
           {/* ================= CATEGORY CARDS ================= */}
           <div className="category-section-header">
