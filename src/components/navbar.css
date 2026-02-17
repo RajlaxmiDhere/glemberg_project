@@ -11,11 +11,13 @@
   max-width: 1900px;
   width: 100%;
   margin: auto;
-  padding: 0 100px;
+  padding: 0 60px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;   
+  gap: 120px;                    
 }
+
 
 /* LOGO GROUP */
 .logo-group {
