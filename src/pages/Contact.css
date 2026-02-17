@@ -188,15 +188,15 @@ background: #FFFFFF;
 }
 
 .contact-hero h1{
-  font-size:48px;
-  font-weight:700;
+  font-size:40px;
+  font-weight:600;
   margin:0;
 }
 /* ===== CONTACT TITLE ANIMATION ===== */
 
 .contact-title{
-  font-size:48px;
-  font-weight:700;
+  font-size:40px;
+  font-weight:600;
   margin:0;
 
   opacity:0;
@@ -213,7 +213,7 @@ background: #FFFFFF;
 
 
 .breadcrumb{
-  font-size:18px;
+  font-size:25px;
 }
 
 .breadcrumb-link{
