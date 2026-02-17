@@ -130,8 +130,7 @@ function Home() {
     </div>
   </div>
 </div>
-
-          {/* ================= CATEGORY CARDS ================= */}
+{/* ================= CATEGORY CARDS ================= */}
           <div className="category-section-header">
             <h2 className="category-main-title">Our Products</h2>
           </div>
@@ -163,22 +162,19 @@ function Home() {
                 <NavLink to="/products#derma" className="view-link">View products</NavLink>
               </div>
             </div>
+
+            {/* ✅ WHOLE RANGE CARD */}
+            <div className="category-card deep-navy">
+              <div className="category-image"><img src={featureImg} alt="Whole Range" /></div>
+              <div className="category-info">
+                <h3>Whole Range</h3>
+                <p>Explore our complete pharmaceutical portfolio</p>
+                <NavLink to="/products" className="view-link">View all products</NavLink>
+              </div>
+            </div>
           </div>
-          <div className="category-card deep-navy">
-    <div className="category-image">
-      {/* You can use featureImg or a specific 'all products' image here */}
-      <img src={featureImg} alt="Whole Range" /> 
-    </div>
-    <div className="category-info">
-      <h3>Whole Range</h3>
-      <p>Explore our complete pharmaceutical portfolio</p>
-      <NavLink to="/products" className="view-link">View all products</NavLink>
-    </div>
-  </div>
-</div>
 
-
-          {/* ✅ TRIGGER 2: Counting starts only when you scroll to this div */}
+          {/* ================= STATS SECTION ================= */}
           <div className="stats-modern" ref={statsRef}>
             <div className="stat-card-modern blue">
               <FaIndustry className="stat-icon" />
@@ -197,77 +193,36 @@ function Home() {
             </div>
           </div>
           
-          {/* ✅ ADDED: Credentials / Trust Section */}
-{/* ===== CERTIFICATION + CORPORATE IN ONE ROW ===== */}
-{/* ===== CORPORATE + TRUST SAME ROW ===== */}
-<div className="corporate-row">
+          {/* ================= CORPORATE ROW ================= */}
+          <div className="corporate-row">
+            <div className="corporate-cert-card">
+              <div className="corporate-cert-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" className="gov-logo" alt="GOI" />
+              </div>
+              <div className="corporate-cert-info">
+                <h3>Corporate Certification</h3>
+                <p>Glemberg Pharma Pvt. Ltd. is officially registered and compliant with Indian corporate regulatory standards.</p>
+                <a href={certificate} target="_blank" rel="noopener noreferrer" className="view-cert-link">View Registration Certificate</a>
+              </div>
+            </div>
 
-  {/* LEFT CARD */}
-  <div className="corporate-cert-card">
-
-    <div className="corporate-cert-logo">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png"
-        className="gov-logo"
-        alt="GOI"
-      />
-    </div>
-
-    <div className="corporate-cert-info">
-      <h3>Corporate Certification</h3>
-
-      <p>
-        Glemberg Pharma Pvt. Ltd. is officially registered and compliant
-        with Indian corporate regulatory standards.
-      </p>
-
-      <a
-        href={certificate}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="view-cert-link"
-      >
-        View Registration Certificate
-      </a>
-    </div>
-
-  </div>
-
-
-  {/* RIGHT SIDE */}
-  <div className="trust-side">
-
-    <h3 className="trust-title">Quality & Compliance Standards</h3>
-
-    <div className="trust-logos">
-
-      {/* WHO bigger */}
-      <div className="trust-item who">
-        <img src={whoGmpLogo} className="cert-logo-img" alt="WHO GMP"/>
-      </div>
-
-      <div className="trust-item">
-        <img src={fssaiLogo} className="cert-logo-img" alt="FSSAI"/>
-      </div>
-
-      <div className="trust-item">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png"
-          className="cert-logo-img"
-          alt="Government"
-        />
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-
-        </div> 
-      </section> 
+            <div className="trust-side">
+              <h3 className="trust-title">Quality & Compliance Standards</h3>
+              <div className="trust-logos">
+                <div className="trust-item who">
+                  <img src={whoGmpLogo} className="cert-logo-img" alt="WHO GMP"/>
+                </div>
+                <div className="trust-item">
+                  <img src={fssaiLogo} className="cert-logo-img" alt="FSSAI"/>
+                </div>
+                <div className="trust-item">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" className="cert-logo-img" alt="Government" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> {/* ✅ Closes below-hero-inner */}
+      </section> {/* ✅ Closes below-hero-section */}
     </>
   );
 }
