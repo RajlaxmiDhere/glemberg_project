@@ -58,19 +58,8 @@ function Footer() {
 
       </div>
 
-      {/* FLOATING WHATSAPP BUTTON */}
-      <a
-        href="https://wa.me/917559189020"
-        target="_blank"
-        rel="noreferrer"
-        className="footer-whatsapp-float"
-      >
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-          alt="WhatsApp"
-        />
-        Enquire Now
-      </a>
+ 
+     
 
       {/* COPYRIGHT */}
       <div className="footer-bottom">
