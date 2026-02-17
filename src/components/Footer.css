@@ -49,9 +49,9 @@
    TAGLINE
    ========================= */
 .footer-tagline {
-  font-size: 20px;
+  font-size: 19px;
   font-style: italic;
-  letter-spacing: 0px;
+  letter-spacing: 0.3px;
   color: #ffffff;
 }
 
