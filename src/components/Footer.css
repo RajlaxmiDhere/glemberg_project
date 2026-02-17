@@ -60,9 +60,10 @@
    ========================= */
 .footer-col h4 {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 16px;
-  color: #d5f617;
+  color:#c9eb09;
+ letter-spacing: 0.5px;
 }
 
 /* =========================
