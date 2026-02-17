@@ -24,12 +24,18 @@
 /* =========================
    FOOTER COLUMN
    ========================= */
+
 .footer-col {
   transition: transform 0.3s ease;
+  padding-right: 30px;         
+  border-right: 1px solid #9fba07;
 }
-
 .footer-col:hover {
   transform: translateY(-4px);
+}
+/* remove divider from last column */
+.footer-col:last-child {
+  border-right: none;
 }
 
 /* =========================
@@ -59,7 +65,7 @@
    HEADINGS
    ========================= */
 .footer-col h4 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 12px;
   color:#c9eb09;
