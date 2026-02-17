@@ -106,6 +106,7 @@ const Contact = () => {
                 <span className="icon-circle"><FaEnvelope /></span>
                 <a href={`mailto:${email}`} className="contact-link">{email}</a>
               </div>
+            </div>
 
           {/* RIGHT FORM */}
           <div className="col-md-6">
