@@ -439,7 +439,7 @@
   width: auto;
   filter: none; /* Clinical look */
   opacity: 0.7;
-  transition: all 0.4s ease;
+  
 }
 
 .cert-item:hover .cert-logo-img {
@@ -494,7 +494,7 @@
   font-weight: 700;
   border-bottom: 2px solid #1e3a5f;
   padding-bottom: 4px;
-  transition: all 0.3s ease;
+   
 }
 
 .view-cert-link:hover {
