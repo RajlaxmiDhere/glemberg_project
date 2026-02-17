@@ -141,12 +141,10 @@
   max-width: 900px; /* Slightly larger than the placeholder */
   height: auto;
   border-radius: 28px;
+  transition: transform 0.5s ease
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
 }
 
-.feature-main-img:hover {
-  transform: translate(70px, 50px) scale(1.02);
-}
 /* Initial state when the section is NOT in view */
 .is-hidden {
   opacity: 0;
