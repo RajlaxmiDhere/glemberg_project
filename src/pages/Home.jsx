@@ -188,7 +188,7 @@ function Home() {
 
     <div className="category-card">
       <div className="category-image">
-        <img src={dermaImg} alt="Darma Care" />
+        <img src={dermaImg} alt="Derma Care" />
       </div>
       <div className="category-info neuro">
         <h3>Darma Care</h3>
