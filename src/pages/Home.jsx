@@ -4,8 +4,6 @@ import pillVideo from "../assets/video1.mp4";
 import { FaIndustry, FaUserMd, FaSmile } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
-// Assets
-// Add these at the top of Home.jsx with your other imports
 import fssaiLogo from "../assets/fssai-seeklogo.png";
 import whoGmpLogo from "../assets/WHO-GMP.jpg";
 import featureImg from "../assets/feature-medical.jpg";
@@ -15,21 +13,22 @@ import orthoImg from "../assets/ortho_division1.jpg";
 import certificate from "../assets/Certificate of Incorporation Glemberg.pdf";
 
 function Home() {
+
   const [showWelcome, setShowWelcome] = useState(false);
   const [isVisible, setIsVisible] = useState(false); 
 
-  // ✅ COUNT-UP STATES
   const [products, setProducts] = useState(0);
   const [team, setTeam] = useState(0);
   const [clients, setClients] = useState(0);
 
-  // ✅ TWO SEPARATE REFS
-  const featureRef = useRef(null); // Triggers "Built on Science"
-  const statsRef = useRef(null);   // Triggers the actual counting
+  const featureRef = useRef(null);
+  const statsRef = useRef(null);
   const hasAnimatedStats = useRef(false);
 
   useEffect(() => {
+
     const hasSeen = sessionStorage.getItem("hasSeenWelcome");
+
     if (!hasSeen) {
       setShowWelcome(true);
       sessionStorage.setItem("hasSeenWelcome", "true");
@@ -37,9 +36,7 @@ function Home() {
 
     const textObserver = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
+        if (entry.isIntersecting) setIsVisible(true);
       },
       { threshold: 0.2 }
     );
@@ -63,65 +60,85 @@ function Home() {
       if (featureRef.current) textObserver.unobserve(featureRef.current);
       if (statsRef.current) statsObserver.unobserve(statsRef.current);
     };
+
   }, []);
 
   const animateCount = (setter, target) => {
+
     let startTime = null;
-    const duration = 2000; 
+    const duration = 2000;
+
     const step = (timestamp) => {
+
       if (!startTime) startTime = timestamp;
+
       const progress = Math.min((timestamp - startTime) / duration, 1);
       const easeOutQuad = progress * (2 - progress);
+
       setter(Math.floor(easeOutQuad * target));
+
       if (progress < 1) window.requestAnimationFrame(step);
+
     };
+
     window.requestAnimationFrame(step);
+
   };
 
   return (
     <>
-      {/* ================= HERO VIDEO ================= */}
+      {/* HERO VIDEO */}
       <section className="hero-video-section">
+
         <video className="hero-video" autoPlay muted loop playsInline preload="auto">
           <source src={pillVideo} type="video/mp4" />
         </video>
+
         <div className="hero-overlay"></div>
+
         <div className="hero-content">
           {showWelcome && <div className="welcome-tagline">Welcome to Glemberg Pharma</div>}
           <h1>Committed to Better Healthcare</h1>
           <p>Glemberg Pharma delivers safe, effective, and innovative pharmaceutical solutions to improve lives.</p>
         </div>
+
       </section>
 
       <section className="below-hero-section">
         <div className="below-hero-inner">
-          
-{/* ✅ TRIGGER 1: Text entrance */}
+
+{/* ✅ FEATURE SECTION (UPDATED ONLY THIS PART) */}
+
 <div 
   className={`feature-section ${isVisible ? "is-visible" : "is-hidden"}`} 
   ref={featureRef}
 >
+
   <div className="feature-text-container">
-    <h2 className={`animate-line ${isVisible ? "delay-1" : ""}`}>
-      Built on Science. <br/> 
-      <span className="text-highlight">Focused on Care.</span>
-    </h2>
-    
-    <div className={`feature-accent-box animate-line ${isVisible ? "delay-2" : ""}`}>
-      <p className="feature-sub">
+
+    {/* ⭐ NEW WRAPPER */}
+    <div className="feature-text-wrapper">
+
+      <h2 className={`feature-big animate-line ${isVisible ? "delay-1" : ""}`}>
+        Built on Science. Focused on Care.
+      </h2>
+
+      <p className={`feature-medium animate-line ${isVisible ? "delay-2" : ""}`}>
         Purpose-driven pharmaceutical solutions designed to support everyday healthcare needs.
       </p>
-    </div>
 
-    <p className={`feature-description animate-line ${isVisible ? "delay-3" : ""}`}>
-      Delivering trusted medicines across Orthopaedic, Dermatology, and General healthcare segments.
-    </p>
+      <p className={`feature-small animate-line ${isVisible ? "delay-3" : ""}`}>
+        Delivering trusted medicines across Orthopaedic, Dermatology, and General healthcare segments.
+      </p>
+
+    </div>
 
     <div className={`animate-line ${isVisible ? "delay-5" : ""}`}>
       <NavLink to="/about" className="feature-btn">
         Learn More
       </NavLink>
     </div>
+
   </div>
 
   <div className="feature-image">
@@ -129,8 +146,10 @@ function Home() {
        <img src={featureImg} alt="Glemberg Healthcare" className="feature-main-img" />
     </div>
   </div>
+
 </div>
-{/* ================= PRODUCTS SECTION ================= */}
+
+{/* PRODUCTS SECTION (UNCHANGED) */}
 <section className="products-container-modern">
   <div className="products-header">
     <div className="header-text-group">
@@ -142,12 +161,11 @@ function Home() {
       </p>
     </div>
     <NavLink to="/products" className="learn-more-pill">
-  Learn More
-</NavLink>
+      Learn More
+    </NavLink>
   </div>
 
   <div className="category-grid">
-    {/* Cardiac Care (Mapping your General Care data or adding new) */}
     <div className="category-card">
       <div className="category-image">
         <img src={generalImg} alt="General Care" />
@@ -159,7 +177,6 @@ function Home() {
       </div>
     </div>
 
-    {/* Diabetic Care */}
     <div className="category-card">
       <div className="category-image">
         <img src={orthoImg} alt="Ortho Care" />
@@ -171,7 +188,6 @@ function Home() {
       </div>
     </div>
 
-    {/* Neuro Care */}
     <div className="category-card">
       <div className="category-image">
         <img src={dermaImg} alt="Darma Care" />
@@ -185,7 +201,8 @@ function Home() {
   </div>
 </section>
 
-          {/* ================= STATS SECTION ================= */}
+{/* REST CODE UNCHANGED BELOW */}
+
           <div className="stats-modern" ref={statsRef}>
             <div className="stat-card-modern blue">
               <FaIndustry className="stat-icon" />
@@ -203,8 +220,7 @@ function Home() {
               <p>Happy Clients</p>
             </div>
           </div>
-          
-          {/* ================= CORPORATE ROW ================= */}
+
           <div className="corporate-row">
             <div className="corporate-cert-card">
               <div className="corporate-cert-logo">
@@ -232,8 +248,9 @@ function Home() {
               </div>
             </div>
           </div>
-        </div> {/* ✅ Closes below-hero-inner */}
-      </section> {/* ✅ Closes below-hero-section */}
+
+        </div>
+      </section>
     </>
   );
 }
