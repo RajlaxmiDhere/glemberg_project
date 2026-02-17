@@ -218,7 +218,119 @@
   background:#163a7a;
   border-radius:2px;
 }
+/* Container Background to match screenshot */
+.products-container-modern {
+  background-color: #004d43; /* Dark Teal from screenshot */
+  padding: 80px 40px;
+  border-radius: 40px 40px 0 0; /* Rounded top corners */
+  margin-top: -40px; /* Overlap effect if desired */
+  position: relative;
+  z-index: 10;
+}
 
+/* Header Layout */
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto 50px auto;
+  color: white;
+}
+
+.header-text-group {
+  max-width: 700px;
+}
+
+.category-main-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.category-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* The Green "Learn More" Pill */
+.learn-more-pill {
+  background-color: #00c853; /* Bright green */
+  color: white;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.learn-more-pill:hover {
+  background-color: #00e676;
+  transform: scale(1.05);
+}
+
+/* Grid and Cards */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category-card {
+  background: white;
+  border-radius: 20px; /* Softer corners */
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  clip-path: none; /* Remove the old clip-path for a cleaner look */
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+}
+
+.category-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.category-info {
+  padding: 25px;
+  color: white;
+}
+
+/* Card Brand Colors */
+.category-info.cardiac { background-color: #1e4ea1; } /* Royal Blue */
+.category-info.diabetic { background-color: #f36f21; } /* Orange */
+.category-info.neuro { background-color: #2bb673; } /* Green */
+
+.category-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.category-info p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+/* Floating Enquire Button inside card */
+.view-link {
+  background: rgba(255,255,255,0.2);
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 1px solid white;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
 .category-main-subtitle {
   font-size: 1.2rem;
   color: #4b5563;
