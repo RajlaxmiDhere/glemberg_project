@@ -211,16 +211,6 @@
 }
 /* Optional: Adds a small underline deco */
 
-.category-main-title::after {
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-14px;     /* slightly more gap for bigger font */
-  width:80px;       /* slightly longer underline */
-  height:4px;
-  background:#163a7a;
-  border-radius:2px;
-}
 /* Container Background to match screenshot */
 .products-container-modern {
   background-color: #004d43; 
