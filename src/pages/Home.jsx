@@ -1,6 +1,6 @@
 // 1. Add your logo imports at the top
 import fssaiLogo from "../assets/fssai-logo.png"; // Ensure these files exist in assets
-import whoGmpLogo from "../assets/who-gmp-logo.png";
+import whoGmpLogo from "../assets/WHO-GMP.jpg";
 
 // ... inside the return statement, scroll down to the credentials section ...
 
