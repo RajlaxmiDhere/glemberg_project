@@ -2,7 +2,7 @@
    NAVBAR
    ========================= */
 .navbar {
-  background: linear-gradient(135deg, #0b2c6f, #172c7a);
+  background: #096C6C;
   padding: 10px 0; /* Reduced padding to move content up */
   width: 100%;
 }
