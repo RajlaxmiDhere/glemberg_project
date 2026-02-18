@@ -1,3 +1,8 @@
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 .product-page-container {
   display: flex;
   flex-direction: column;
