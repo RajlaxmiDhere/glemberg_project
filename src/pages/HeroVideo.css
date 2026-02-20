@@ -1,3 +1,55 @@
+/* Hide on Desktop */
+.mobile-square-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* This creates a fixed bar at the bottom */
+  .mobile-square-menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal squares in a row */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    border-top: 1px solid #eee;
+  }
+
+  .menu-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1; /* Makes them perfect squares */
+    text-decoration: none;
+    color: #555;
+    font-size: 11px;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  /* Style for the icons */
+  .menu-box svg {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #0056b3; /* Pharma Blue */
+  }
+
+  /* Active state - highlights the square user is currently on */
+  .menu-box.active {
+    background-color: #f0f7ff;
+    color: #0056b3;
+    border-top: 3px solid #0056b3;
+  }
+
+  /* Add padding to the bottom of the body so content isn't hidden by the menu */
+  body {
+    padding-bottom: 80px;
+  }
+}
 /* --- Desktop Styles (Default) --- */
 .nav-links-container {
   display: flex;
