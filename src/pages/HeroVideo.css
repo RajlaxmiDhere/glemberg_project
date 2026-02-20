@@ -86,6 +86,50 @@
   max-width: 700px;
   color:#00000;
 }
+/* Hide by default (Desktop) */
+.mobile-bottom-nav {
+  display: none;
+}
+
+/* Mobile Only Styles */
+@media (max-width: 768px) {
+  .mobile-bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 20px; /* Floating slightly above the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border-radius: 15px; /* Rounded square look */
+    z-index: 1000;
+    padding: 10px;
+    justify-content: space-around;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-item {
+    text-decoration: none;
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    flex: 1;
+    transition: all 0.3s ease;
+  }
+
+  /* Active Link Styling */
+  .nav-item.active {
+    color: #007bff; /* Matches your pharma blue */
+    background: rgba(0, 123, 255, 0.1);
+    border-radius: 10px;
+  }
+}
 
 /* =========================
    BELOW HERO SECTION
