@@ -1,3 +1,51 @@
+/* --- Desktop Styles (Default) --- */
+.nav-links-container {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-box {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+/* --- Mobile "Square Box" Transformation --- */
+@media (max-width: 768px) {
+  .nav-links-container {
+    display: grid;
+    /* This creates two equal columns */
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px;
+    padding: 15px;
+    width: 100%;
+    max-width: 400px; /* Keeps the square group centered and neat */
+    margin: 0 auto;
+  }
+
+  .nav-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1; /* Forces the box to be a perfect square */
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    color: #0056b3; /* Professional Pharma Blue */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  /* Style for the active page box */
+  .nav-box.active {
+    background: #0056b3;
+    color: #ffffff;
+    border-color: #0056b3;
+  }
+}
 /* =========================
    HERO IMAGE SECTION FIX
    ========================= */
