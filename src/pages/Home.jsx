@@ -104,6 +104,25 @@ function Home() {
 
       <section className="below-hero-section">
         <div className="below-hero-inner">
+{/* Fixed Mobile Square Menu */}
+<div className="mobile-square-menu">
+  <NavLink to="/" className="menu-box">
+    <FaIndustry />
+    <span>Home</span>
+  </NavLink>
+  <NavLink to="/about" className="menu-box">
+    <FaUserMd />
+    <span>About</span>
+  </NavLink>
+  <NavLink to="/products" className="menu-box">
+    <div className="box-dot"></div>
+    <span>Products</span>
+  </NavLink>
+  <NavLink to="/contact" className="menu-box">
+    <FaSmile />
+    <span>Contact</span>
+  </NavLink>
+</div>
 
 {/* ✅ FEATURE SECTION (UPDATED ONLY THIS PART) */}
 
