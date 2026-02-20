@@ -197,6 +197,14 @@ function Home() {
     </div>
   </div>
 </section>
+<nav className="navbar">
+  <div className="nav-links-container">
+    <NavLink to="/" className="nav-box">Home</NavLink>
+    <NavLink to="/about" className="nav-box">About Us</NavLink>
+    <NavLink to="/products" className="nav-box">Products</NavLink>
+    <NavLink to="/contact" className="nav-box">Contact Us</NavLink>
+  </div>
+</nav>
 
 {/* REST CODE UNCHANGED BELOW */}
 
