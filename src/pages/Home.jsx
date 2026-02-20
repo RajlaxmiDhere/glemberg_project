@@ -245,6 +245,21 @@ function Home() {
               </div>
             </div>
           </div>
+          {/* MOBILE FLOATING MENU */}
+<div className="mobile-bottom-nav">
+  <NavLink to="/" className="nav-item">
+    <span>Home</span>
+  </NavLink>
+  <NavLink to="/about" className="nav-item">
+    <span>About</span>
+  </NavLink>
+  <NavLink to="/products" className="nav-item">
+    <span>Products</span>
+  </NavLink>
+  <NavLink to="/contact" className="nav-item">
+    <span>Contact</span>
+  </NavLink>
+</div>
 
         </div>
       </section>
