@@ -165,3 +165,40 @@
   }
 
 }
+/* =========================
+HAMBURGER MENU
+========================= */
+
+.hamburger{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* MOBILE NAVBAR */
+
+@media (max-width:768px){
+
+.hamburger{
+display:block;
+}
+
+.navbar-inner{
+flex-wrap:wrap;
+}
+
+.nav-links{
+width:100%;
+flex-direction:column;
+align-items:center;
+display:none;
+gap:20px;
+padding-top:20px;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+}
+
