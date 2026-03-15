@@ -860,41 +860,24 @@
   font-size:1.25rem;
    color:#000000;
 }
-/* =====================================
-   MOBILE RESPONSIVE FIX (NO DESIGN CHANGE)
-   ===================================== */
+/* =================================================
+   PROFESSIONAL MOBILE RESPONSIVE (SAFE ADDITION)
+   ================================================= */
 
-@media (max-width: 768px) {
+@media (max-width: 992px){
 
-  /* HERO SECTION */
-  .hero-video-section{
-    height:70vh;
-  }
-
-  .hero-content h1{
-    font-size:2rem;
-  }
-
-  .hero-content p{
-    font-size:1rem;
-  }
-
-  /* FEATURE SECTION STACK */
+  /* Feature section stacks nicely */
   .feature-section{
     grid-template-columns:1fr;
-    gap:30px;
+    gap:40px;
     text-align:center;
   }
 
-  .feature-text-wrapper{
-    max-width:100%;
+  .feature-image{
+    order:-1;
   }
 
-  .feature-main-img{
-    max-width:100%;
-  }
-
-  /* PRODUCTS HEADER STACK */
+  /* Products header alignment */
   .products-header{
     flex-direction:column;
     align-items:flex-start;
@@ -905,25 +888,24 @@
     margin-left:0;
   }
 
-  /* CATEGORY GRID */
+  /* Cards adjust cleanly */
   .category-grid{
-    grid-template-columns:1fr;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   }
 
-  /* STATS SECTION */
+  /* Stats spacing */
   .stats-modern{
-    gap:40px;
+    gap:50px;
   }
 
   .stat-card-modern{
-    width:100%;
-    max-width:320px;
+    width:280px;
   }
 
-  /* CORPORATE SECTION STACK */
+  /* Corporate row stack */
   .corporate-row{
     grid-template-columns:1fr;
-    gap:40px;
+    gap:50px;
   }
 
   .trust-side{
@@ -931,19 +913,61 @@
     padding-left:0;
   }
 
-  .corporate-cert-card{
-    flex-direction:column;
-    text-align:center;
+}
+
+
+/* MOBILE PHONES */
+@media (max-width:768px){
+
+  .hero-video-section{
+    height:70vh;
+  }
+
+  .hero-content{
+    padding:0 25px;
+  }
+
+  .hero-content h1{
+    font-size:2rem;
+  }
+
+  .hero-content p{
+    font-size:1rem;
+  }
+
+  .below-hero-section{
+    padding:70px 18px;
+  }
+
+  .feature-big{
+    font-size:1.7rem;
+  }
+
+  .feature-medium{
+    font-size:1.25rem;
+  }
+
+  .feature-small{
+    font-size:1.05rem;
+  }
+
+  .category-image img{
+    height:220px;
+  }
+
+  .stat-card-modern{
+    width:100%;
+    max-width:320px;
   }
 
 }
 
 
-/* SMALL MOBILE (PHONES) */
+/* SMALL PHONES */
 @media (max-width:480px){
 
   .hero-content h1{
-    font-size:1.7rem;
+    font-size:1.6rem;
   }
 
   .hero-content p{
@@ -951,15 +975,15 @@
   }
 
   .feature-big{
-    font-size:1.6rem;
+    font-size:1.5rem;
   }
 
   .feature-medium{
-    font-size:1.2rem;
+    font-size:1.15rem;
   }
 
   .feature-small{
-    font-size:1rem;
+    font-size:0.95rem;
   }
 
   .category-info h3{
@@ -967,7 +991,11 @@
   }
 
   .stat-card-modern h2{
-    font-size:3rem;
+    font-size:2.8rem;
+  }
+
+  .trust-logos{
+    gap:30px;
   }
 
 }
