@@ -9,7 +9,6 @@ const [menuOpen, setMenuOpen] = useState(false);
 
 return ( <nav className="navbar"> <div className="navbar-inner"> <div className="logo-group"> <img src={logo} alt="Glemberg Pharma" className="navbar-logo" /> <span className="navbar-tagline">Science with a Human Touch</span> </div>
 
-```
     {/* HAMBURGER BUTTON */}
     <div
       className="hamburger"
@@ -28,9 +27,6 @@ return ( <nav className="navbar"> <div className="navbar-inner"> <div className=
 
   </div>
 </nav>
-```
-
 );
 }
-
 export default Navbar;
