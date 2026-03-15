@@ -265,4 +265,55 @@ img {
 .product-card:nth-child(6){ animation-delay:.30s; }
 .product-card:nth-child(7){ animation-delay:.35s; }
 .product-card:nth-child(8){ animation-delay:.40s; }
+/* =====================================
+   RESPONSIVE PRODUCT GRID
+   ===================================== */
+
+/* Tablets */
+@media (max-width: 1100px){
+
+  .product-grid{
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+
+}
+
+/* Small tablets */
+@media (max-width: 900px){
+
+  .product-content-body{
+    flex-direction: column;
+  }
+
+  .filter-sidebar{
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .product-grid{
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+
+}
+
+/* Mobile phones */
+@media (max-width: 600px){
+
+  .product-page-container{
+    padding: 30px 18px;
+  }
+
+  .products-main-heading{
+    font-size: 2rem;
+  }
+
+  .product-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .product-image-box{
+    height: 90px;
+  }
+
+}
 
