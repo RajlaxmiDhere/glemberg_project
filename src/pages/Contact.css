@@ -47,14 +47,14 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 20px;
   color: #2f3e4e;
 }
 
 .icon-circle {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: #004d43;   /* ✅ changed here */
   display: flex;
