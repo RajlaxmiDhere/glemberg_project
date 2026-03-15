@@ -860,3 +860,142 @@
   font-size:1.25rem;
    color:#000000;
 }
+/* =================================================
+   PROFESSIONAL MOBILE RESPONSIVE (SAFE ADDITION)
+   ================================================= */
+
+@media (max-width: 992px){
+
+  /* Feature section stacks nicely */
+  .feature-section{
+    grid-template-columns:1fr;
+    gap:40px;
+    text-align:center;
+  }
+
+  .feature-image{
+    order:-1;
+  }
+
+  /* Products header alignment */
+  .products-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+  }
+
+  .learn-more-pill{
+    margin-left:0;
+  }
+
+  /* Cards adjust cleanly */
+  .category-grid{
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  }
+
+  /* Stats spacing */
+  .stats-modern{
+    gap:50px;
+  }
+
+  .stat-card-modern{
+    width:280px;
+  }
+
+  /* Corporate row stack */
+  .corporate-row{
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+
+  .trust-side{
+    border-left:none;
+    padding-left:0;
+  }
+
+}
+
+
+/* MOBILE PHONES */
+@media (max-width:768px){
+
+  .hero-video-section{
+    height:70vh;
+  }
+
+  .hero-content{
+    padding:0 25px;
+  }
+
+  .hero-content h1{
+    font-size:2rem;
+  }
+
+  .hero-content p{
+    font-size:1rem;
+  }
+
+  .below-hero-section{
+    padding:70px 18px;
+  }
+
+  .feature-big{
+    font-size:1.7rem;
+  }
+
+  .feature-medium{
+    font-size:1.25rem;
+  }
+
+  .feature-small{
+    font-size:1.05rem;
+  }
+
+  .category-image img{
+    height:220px;
+  }
+
+  .stat-card-modern{
+    width:100%;
+    max-width:320px;
+  }
+
+}
+
+
+/* SMALL PHONES */
+@media (max-width:480px){
+
+  .hero-content h1{
+    font-size:1.6rem;
+  }
+
+  .hero-content p{
+    font-size:0.95rem;
+  }
+
+  .feature-big{
+    font-size:1.5rem;
+  }
+
+  .feature-medium{
+    font-size:1.15rem;
+  }
+
+  .feature-small{
+    font-size:0.95rem;
+  }
+
+  .category-info h3{
+    font-size:1.5rem;
+  }
+
+  .stat-card-modern h2{
+    font-size:2.8rem;
+  }
+
+  .trust-logos{
+    gap:30px;
+  }
+
+}
