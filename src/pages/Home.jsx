@@ -83,19 +83,8 @@ function Home() {
 
   return (
     <>
-     
-           <div className="menu-icon" onClick={toggleMenu} style={{ backgroundColor: '#00a651', padding: '10px', color: 'white', borderRadius: '4px', cursor: 'pointer' }}>
-             {isMenuOpen ? <FaTimes /> : <FaBars />}
-           </div>
-        </div>
-
-        <nav className={isMenuOpen ? "nav-menu active" : "nav-menu"}>
-           <NavLink to="/" onClick={() => setIsMenuOpen(false)}>Home</NavLink>
-           <NavLink to="/about" onClick={() => setIsMenuOpen(false)}>About Us</NavLink>
-           <NavLink to="/products" onClick={() => setIsMenuOpen(false)}>Products</NavLink>
-           <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</NavLink>
-        </nav>
-      </header>
+ 
+  
 
       <section className="hero-video-section">
         <video 
