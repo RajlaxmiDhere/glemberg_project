@@ -14,7 +14,7 @@
    LEFT INFO CARD
    ========================= */
 .contact-info-card {
-  background: white;
+  background: #83A492;
   backdrop-filter: blur(8px);
   padding: 42px;
   border-radius: 20px;
