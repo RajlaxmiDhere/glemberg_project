@@ -29,15 +29,15 @@
 }
 
 .contact-info-card p {
-  font-size: 16.5px;
+  font-size: 20px;
   line-height: 1.85;
-  margin-bottom: 26px;
+  margin-bottom: 25px;
   color: #2f3e4e;
 }
 
 .info-heading {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
   color: #FAFBFDF;
   margin-top: 28px;
   margin-bottom: 10px;
@@ -53,8 +53,8 @@
 }
 
 .icon-circle {
-  width: 36px;
-  height: 36px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   background: #004d43;   /* ✅ changed here */
   display: flex;
