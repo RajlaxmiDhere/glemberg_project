@@ -1,213 +1,161 @@
 /* =========================
-   NAVBAR
-   ========================= */
+NAVBAR
+========================= */
+
 /* This applies to all screens by default (Desktop) */
 .header-container {
-  display: flex;
-  flex-direction: row; 
-  justify-content: space-between;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
 }
 
 /* This applies ONLY to mobile phones (Screens smaller than 768px) */
 @media (max-width: 768px) {
-  .header-container {
-    flex-direction: column; /* Stack items vertically on mobile */
-    align-items: center;
-    text-align: center;
-  }
-
-  .hide-on-mobile {
-    display: none; /* Hide heavy elements on small screens */
-  }
+.header-container {
+flex-direction: column;
+align-items: center;
+text-align: center;
 }
+
+.hide-on-mobile {
+display: none;
+}
+}
+
 .navbar {
-  background:#F8F9FB;  
-  padding: 10px 0;
-  width: 100%;
+background:#F8F9FB;
+padding: 10px 0;
+width: 100%;
 }
 
-.navbar-inner {   
-  max-width: 1300px;     
-  width: 100%;
-  margin: auto;
-  padding: 0 40px;
+.navbar-inner {
+max-width: 1300px;
+width: 100%;
+margin: auto;
+padding: 0 40px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+display: flex;
+align-items: center;
+justify-content: space-between;
 }
-
 
 /* LOGO GROUP */
 .logo-group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;   /* ✅ moved logo + tagline to LEFT */
-  text-align: left;
-}
-.navbar-logo {
-  height: 90px;
-  width: auto;
-  display: block;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+text-align: left;
 }
 
+.navbar-logo {
+height: 90px;
+width: auto;
+display: block;
+}
 
 /* TAGLINE */
 .navbar-tagline {
-  font-family: 'Georgia', serif;
-  color:#000000;   
-  font-size: 20px;
-  font-weight: 300;
-  font-style: italic;
-  margin-top: 0px;          /* ✅ starts exactly from logo bottom */
-  letter-spacing: 1px;
-  text-shadow: none;   
+font-family: 'Georgia', serif;
+color:#000000;
+font-size: 20px;
+font-weight: 300;
+font-style: italic;
+margin-top: 0px;
+letter-spacing: 1px;
+text-shadow: none;
 }
 
 /* MENU */
 .nav-links {
-  display: flex;
-  gap: 40px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+display: flex;
+gap: 40px;
+list-style: none;
+margin: 0;
+padding: 0;
 }
 
 .nav-links a {
-  color:#000000;  
-  font-size: 23px;
-  font-weight: 600;
-  text-decoration: none;
-  padding-bottom: 4px;      /* ✅ space for underline */
-  border-bottom: 2px solid transparent;
+color:#000000;
+font-size: 23px;
+font-weight: 600;
+text-decoration: none;
+padding-bottom: 4px;
+border-bottom: 2px solid transparent;
 }
 
-/* ✅ GREEN UNDERLINE ON HOVER */
+/* GREEN UNDERLINE ON HOVER */
 .nav-links a:hover {
-  color:#00955D;
-  border-bottom: 2px solid #00955D;
+color:#00955D;
+border-bottom: 2px solid #00955D;
 }
-/* ======================================
-   PROFESSIONAL MOBILE NAVBAR RESPONSIVE
-   ====================================== */
+
+/* RESPONSIVE */
 
 @media (max-width: 992px) {
 
-  .navbar-inner{
-    padding:0 20px;
-  }
-
-  .nav-links{
-    gap:25px;
-  }
-
-  .nav-links a{
-    font-size:20px;
-  }
-
+.navbar-inner{
+padding:0 20px;
 }
 
+.nav-links{
+gap:25px;
+}
 
-/* MOBILE PHONES */
+.nav-links a{
+font-size:20px;
+}
+
+}
 
 @media (max-width:768px){
 
-  .navbar-inner{
-    flex-direction:column;
-    align-items:center;
-    gap:15px;
-  }
-
-  .logo-group{
-    align-items:center;
-    text-align:center;
-  }
-
-  .navbar-logo{
-    height:70px;
-  }
-
-  .navbar-tagline{
-    font-size:16px;
-  }
-
-  .nav-links{
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:18px;
-  }
-
-  .nav-links a{
-    font-size:18px;
-  }
-
+.navbar-inner{
+flex-direction:column;
+align-items:center;
+gap:15px;
 }
 
+.logo-group{
+align-items:center;
+text-align:center;
+}
 
-/* SMALL PHONES */
+.navbar-logo{
+height:70px;
+}
+
+.navbar-tagline{
+font-size:16px;
+}
+
+.nav-links{
+flex-wrap:wrap;
+justify-content:center;
+gap:18px;
+}
+
+.nav-links a{
+font-size:18px;
+}
+
+}
 
 @media (max-width:480px){
 
-  .navbar-logo{
-    height:60px;
-  }
-
-  .navbar-tagline{
-    font-size:14px;
-  }
-
-  .nav-links{
-    gap:14px;
-  }
-
-  .nav-links a{
-    font-size:16px;
-  }
-
-}
-/* =========================
-   HAMBURGER MENU
-   ========================= */
-
-.hamburger{
-  display:none;
-  font-size:28px;
-  cursor:pointer;
+.navbar-logo{
+height:60px;
 }
 
-/* MOBILE NAVBAR */
-
-@media (max-width:768px){
-
-  .hamburger{
-    display:block;
-  }
-
-  .navbar-inner{
-    flex-wrap:wrap;
-  }
-
-  .nav-links{
-    width:100%;
-    flex-direction:column;
-    align-items:center;
-    gap:20px;
-    padding-top:20px;
-    display:none;
-  }
-
-  .nav-links.active{
-    display:flex;
-  }
-
+.navbar-tagline{
+font-size:14px;
 }
 
-/* DESKTOP */
+.nav-links{
+gap:14px;
+}
 
-@media (min-width:769px){
-
-  .hamburger{
-    display:none;
-  }
+.nav-links a{
+font-size:16px;
+}
 
 }
