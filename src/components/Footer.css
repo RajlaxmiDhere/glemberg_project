@@ -186,4 +186,82 @@
     bottom:105px;
   }
 }
+/* =====================================
+   TABLET RESPONSIVE
+   ===================================== */
+@media (max-width:768px){
+
+  .footer-container{
+    padding:60px 25px 50px;
+    gap:36px;
+  }
+
+  .footer-logo{
+    width:170px;
+    margin:auto;
+  }
+
+  .footer-tagline{
+    font-size:17px;
+  }
+
+  .footer-col h4{
+    font-size:18px;
+  }
+
+  .footer-contact{
+    font-size:16px;
+  }
+
+  .footer-links li{
+    font-size:17px;
+  }
+
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+   ===================================== */
+@media (max-width:480px){
+
+  .footer-container{
+    padding:45px 18px 40px;
+    gap:30px;
+  }
+
+  .footer-logo{
+    width:150px;
+  }
+
+  .footer-tagline{
+    font-size:15px;
+  }
+
+  .footer-col h4{
+    font-size:17px;
+  }
+
+  .footer-contact{
+    font-size:15px;
+    line-height:1.6;
+  }
+
+  .footer-links li{
+    font-size:16px;
+    margin-bottom:10px;
+  }
+
+  .footer-bottom{
+    font-size:14px;
+    padding:14px;
+  }
+
+  .footer-whatsapp-float{
+    padding:12px 20px;
+    font-size:16px;
+    bottom:85px;
+  }
+
+}
 
