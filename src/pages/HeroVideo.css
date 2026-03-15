@@ -9,44 +9,6 @@
   /* Change background from black to a lighter color if needed */
   background: #f4f7f6; 
 }
-.header-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 5%;
-  background: #fff;
-  position: relative;
-}
-
-.mobile-menu-btn {
-  display: none; /* Hidden on desktop */
-  background: #00a651; /* Green color from your screenshot */
-  color: white;
-  padding: 8px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-@media (max-width: 991px) {
-  .mobile-menu-btn {
-    display: block; /* Show on mobile */
-  }
-
-  .header-nav-links {
-    display: none; /* Hide links on mobile */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: white;
-    flex-direction: column;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
-
-  .header-nav-links.active {
-    display: flex; /* Show when isMenuOpen is true */
-  }
-}
 
 /* Treat the image just like the video was treated */
 .hero-video {
