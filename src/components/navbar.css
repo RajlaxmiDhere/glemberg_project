@@ -87,3 +87,118 @@
   color:#00955D;
   border-bottom: 2px solid #00955D;
 }
+/* ======================================
+   PROFESSIONAL MOBILE NAVBAR RESPONSIVE
+   ====================================== */
+
+@media (max-width: 992px) {
+
+  .navbar-inner{
+    padding:0 20px;
+  }
+
+  .nav-links{
+    gap:25px;
+  }
+
+  .nav-links a{
+    font-size:20px;
+  }
+
+}
+
+
+/* MOBILE PHONES */
+
+@media (max-width:768px){
+
+  .navbar-inner{
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+  }
+
+  .logo-group{
+    align-items:center;
+    text-align:center;
+  }
+
+  .navbar-logo{
+    height:70px;
+  }
+
+  .navbar-tagline{
+    font-size:16px;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+  }
+
+  .nav-links a{
+    font-size:18px;
+  }
+
+}
+
+
+/* SMALL PHONES */
+
+@media (max-width:480px){
+
+  .navbar-logo{
+    height:60px;
+  }
+
+  .navbar-tagline{
+    font-size:14px;
+  }
+
+  .nav-links{
+    gap:14px;
+  }
+
+  .nav-links a{
+    font-size:16px;
+  }
+
+}
+/* =========================
+HAMBURGER MENU
+========================= */
+
+.hamburger{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* MOBILE NAVBAR */
+
+@media (max-width:768px){
+
+.hamburger{
+display:block;
+}
+
+.navbar-inner{
+flex-wrap:wrap;
+}
+
+.nav-links{
+width:100%;
+flex-direction:column;
+align-items:center;
+display:none;
+gap:20px;
+padding-top:20px;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+}
+

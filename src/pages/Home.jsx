@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./HeroVideo.css";
-import pillVideo from "../assets/head2.jpg";
+import pillVideo from "../assets/introv_sUQGXCwy (online-video-cutter.com).mp4";
 import { FaIndustry, FaUserMd, FaSmile } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
@@ -85,23 +85,56 @@ function Home() {
 
   };
 
-  return (
+return (
     <>
-    {/* HERO SECTION WITH IMAGE */}
-<section className="hero-video-section">
-  {/* Changed video to img */}
-  <img src={pillVideo} alt="Healthcare Banner" className="hero-video" />
+      {/* 1. THE NAVIGATION HEADER (Add this here) */}
+      <header className="header-row">
+        <div className="header-column">
+           <div className="logo-section">
+              <img src={fssaiLogo} alt="Logo" className="nav-logo" style={{height: '50px'}} />
+              <div className="brand-info">
+                <h2 style={{fontSize: '1.2rem', margin: 0}}>Shield & Care</h2>
+                <p style={{fontSize: '0.8rem', margin: 0}}>Pharmaceuticals Pvt. Ltd.</p>
+              </div>
+           </div>
+           
+           {/* Hamburger Button */}
+           <div className="menu-icon" onClick={toggleMenu} style={{ backgroundColor: '#00a651', padding: '10px', color: 'white', borderRadius: '4px', cursor: 'pointer' }}>
+             {isMenuOpen ? <FaTimes /> : <FaBars />}
+           </div>
+        </div>
 
-  {/* 1. Lighten or remove this overlay if the image is too dark */}
-  <div className="hero-overlay"></div>
+        <nav className={isMenuOpen ? "nav-menu active" : "nav-menu"}>
+           <NavLink to="/" onClick={() => setIsMenuOpen(false)}>Home</NavLink>
+           <NavLink to="/about" onClick={() => setIsMenuOpen(false)}>About Us</NavLink>
+           <NavLink to="/products" onClick={() => setIsMenuOpen(false)}>Products</NavLink>
+           <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</NavLink>
+        </nav>
+      </header>
 
-  <div className="hero-content">
-    {showWelcome && <div className="welcome-tagline">Welcome to Glemberg Pharma</div>}
-    <h1>Committed to Better Healthcare</h1>
-    <p>Glemberg Pharma delivers safe, effective, and innovative pharmaceutical solutions to improve lives.</p>
-  </div>
-</section>
+      {/* 2. THE HERO SECTION WITH VIDEO */}
+      <section className="hero-video-section">
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline 
+          className="hero-video"
+        >
+          <source src={pillVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
 
+        <div className="hero-overlay"></div>
+
+        <div className="hero-content">
+          {showWelcome && <div className="welcome-tagline">Welcome to Glemberg Pharma</div>}
+          <h1>Committed to Better Healthcare</h1>
+          <p>Glemberg Pharma delivers safe, effective, and innovative pharmaceutical solutions to improve lives.</p>
+        </div>
+      </section>
+
+      {/* The rest of your code (below-hero-section) starts here... */}
       <section className="below-hero-section">
         <div className="below-hero-inner">
 
