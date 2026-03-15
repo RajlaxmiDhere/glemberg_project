@@ -5,7 +5,6 @@ import "./navbar.css";
 function Navbar() {
 return ( <nav className="navbar"> <div className="navbar-inner"> <div className="logo-group"> <img src={logo} alt="Glemberg Pharma" className="navbar-logo" /> <span className="navbar-tagline">Science with a Human Touch</span> </div>
 
-```
     {/* RIGHT MENU */}
     <ul className="nav-links">
       <li><NavLink to="/">Home</NavLink></li>
@@ -15,7 +14,6 @@ return ( <nav className="navbar"> <div className="navbar-inner"> <div className=
     </ul>
   </div>
 </nav>
-```
 
 );
 }
