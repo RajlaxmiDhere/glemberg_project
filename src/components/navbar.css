@@ -1,6 +1,25 @@
 /* =========================
    NAVBAR
    ========================= */
+/* This applies to all screens by default (Desktop) */
+.header-container {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+}
+
+/* This applies ONLY to mobile phones (Screens smaller than 768px) */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center;
+    text-align: center;
+  }
+
+  .hide-on-mobile {
+    display: none; /* Hide heavy elements on small screens */
+  }
+}
 .navbar {
   background:#F8F9FB;  
   padding: 10px 0;

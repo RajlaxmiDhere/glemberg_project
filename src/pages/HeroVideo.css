@@ -1,6 +1,125 @@
+/* Hide on Desktop */
+.mobile-square-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* This creates a fixed bar at the bottom */
+  .mobile-square-menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal squares in a row */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    border-top: 1px solid #eee;
+  }
+
+  .menu-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1; /* Makes them perfect squares */
+    text-decoration: none;
+    color: #555;
+    font-size: 11px;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  /* Style for the icons */
+  .menu-box svg {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #0056b3; /* Pharma Blue */
+  }
+
+  /* Active state - highlights the square user is currently on */
+  .menu-box.active {
+    background-color: #f0f7ff;
+    color: #0056b3;
+    border-top: 3px solid #0056b3;
+  }
+
+  /* Add padding to the bottom of the body so content isn't hidden by the menu */
+  body {
+    padding-bottom: 80px;
+  }
+}
+/* --- Desktop Styles (Default) --- */
+.nav-links-container {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-box {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+/* --- Mobile "Square Box" Transformation --- */
+@media (max-width: 768px) {
+  .nav-links-container {
+    display: grid;
+    /* This creates two equal columns */
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px;
+    padding: 15px;
+    width: 100%;
+    max-width: 400px; /* Keeps the square group centered and neat */
+    margin: 0 auto;
+  }
+
+  .nav-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1; /* Forces the box to be a perfect square */
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    color: #0056b3; /* Professional Pharma Blue */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  /* Style for the active page box */
+  .nav-box.active {
+    background: #0056b3;
+    color: #ffffff;
+    border-color: #0056b3;
+  }
+}
 /* =========================
    HERO IMAGE SECTION FIX
    ========================= */
+/* This applies to all screens by default (Desktop) */
+.header-container {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+}
+
+/* This applies ONLY to mobile phones (Screens smaller than 768px) */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center;
+    text-align: center;
+  }
+
+  .hide-on-mobile {
+    display: none; /* Hide heavy elements on small screens */
+  }
+}
 .hero-video-section {
   position: relative;
   width: 100%;
@@ -66,6 +185,50 @@
   line-height: 1.7;
   max-width: 700px;
   color:#00000;
+}
+/* Hide by default (Desktop) */
+.mobile-bottom-nav {
+  display: none;
+}
+
+/* Mobile Only Styles */
+@media (max-width: 768px) {
+  .mobile-bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 20px; /* Floating slightly above the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border-radius: 15px; /* Rounded square look */
+    z-index: 1000;
+    padding: 10px;
+    justify-content: space-around;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-item {
+    text-decoration: none;
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    flex: 1;
+    transition: all 0.3s ease;
+  }
+
+  /* Active Link Styling */
+  .nav-item.active {
+    color: #007bff; /* Matches your pharma blue */
+    background: rgba(0, 123, 255, 0.1);
+    border-radius: 10px;
+  }
 }
 
 /* =========================

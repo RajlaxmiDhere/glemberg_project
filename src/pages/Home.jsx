@@ -104,6 +104,25 @@ function Home() {
 
       <section className="below-hero-section">
         <div className="below-hero-inner">
+{/* Fixed Mobile Square Menu */}
+<div className="mobile-square-menu">
+  <NavLink to="/" className="menu-box">
+    <FaIndustry />
+    <span>Home</span>
+  </NavLink>
+  <NavLink to="/about" className="menu-box">
+    <FaUserMd />
+    <span>About</span>
+  </NavLink>
+  <NavLink to="/products" className="menu-box">
+    <div className="box-dot"></div>
+    <span>Products</span>
+  </NavLink>
+  <NavLink to="/contact" className="menu-box">
+    <FaSmile />
+    <span>Contact</span>
+  </NavLink>
+</div>
 
 {/* ✅ FEATURE SECTION (UPDATED ONLY THIS PART) */}
 
@@ -197,6 +216,14 @@ function Home() {
     </div>
   </div>
 </section>
+<nav className="navbar">
+  <div className="nav-links-container">
+    <NavLink to="/" className="nav-box">Home</NavLink>
+    <NavLink to="/about" className="nav-box">About Us</NavLink>
+    <NavLink to="/products" className="nav-box">Products</NavLink>
+    <NavLink to="/contact" className="nav-box">Contact Us</NavLink>
+  </div>
+</nav>
 
 {/* REST CODE UNCHANGED BELOW */}
 
@@ -245,6 +272,21 @@ function Home() {
               </div>
             </div>
           </div>
+          {/* MOBILE FLOATING MENU */}
+<div className="mobile-bottom-nav">
+  <NavLink to="/" className="nav-item">
+    <span>Home</span>
+  </NavLink>
+  <NavLink to="/about" className="nav-item">
+    <span>About</span>
+  </NavLink>
+  <NavLink to="/products" className="nav-item">
+    <span>Products</span>
+  </NavLink>
+  <NavLink to="/contact" className="nav-item">
+    <span>Contact</span>
+  </NavLink>
+</div>
 
         </div>
       </section>
