@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./HeroVideo.css";
 import pillVideo from "../assets/head2.jpg";
-import { FaIndustry, FaUserMd, FaSmile } from "react-icons/fa";
+import { FaIndustry, FaUserMd, FaSmile, FaBars, FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 import fssaiLogo from "../assets/fssai-seeklogo.png";
@@ -19,11 +19,15 @@ function Home() {
 
   const [products, setProducts] = useState(0);
   const [team, setTeam] = useState(0);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [clients, setClients] = useState(0);
 
   const featureRef = useRef(null);
   const statsRef = useRef(null);
   const hasAnimatedStats = useRef(false);
+  const toggleMenu = () => {
+  setIsMenuOpen(!isMenuOpen);
+};
 
   useEffect(() => {
 
@@ -80,6 +84,39 @@ function Home() {
       if (progress < 1) window.requestAnimationFrame(step);
 
     };
+    return (
+    <>
+      {/* PASTE THE HEADER HERE */}
+      <header className="header-row">
+        <div className="header-column">
+           {/* Logo and Brand Text */}
+           <div className="logo-section">
+              <img src={fssaiLogo} alt="Logo" className="nav-logo" style={{height: '50px'}} />
+              <div className="brand-info">
+                <h2 style={{fontSize: '1.2rem', margin: 0}}>Shield & Care</h2>
+                <p style={{fontSize: '0.8rem', margin: 0}}>Pharmaceuticals Pvt. Ltd.</p>
+              </div>
+           </div>
+
+           {/* The Hamburger Button (Green button from your screenshot) */}
+           <div className="menu-icon" onClick={toggleMenu} style={{ backgroundColor: '#00a651', padding: '10px', color: 'white', borderRadius: '4px', cursor: 'pointer' }}>
+             {isMenuOpen ? <FaTimes /> : <FaBars />}
+           </div>
+        </div>
+
+        {/* Navigation Links - Toggle class based on state */}
+        <nav className={isMenuOpen ? "nav-menu active" : "nav-menu"}>
+           <NavLink to="/" onClick={() => setIsMenuOpen(false)}>Home</NavLink>
+           <NavLink to="/about" onClick={() => setIsMenuOpen(false)}>About Us</NavLink>
+           <NavLink to="/products" onClick={() => setIsMenuOpen(false)}>Products</NavLink>
+           <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</NavLink>
+        </nav>
+      </header>
+
+      {/* HERO SECTION WITH IMAGE (This is where your existing code starts) */}
+      <section className="hero-video-section">
+        <img src={pillVideo} alt="Healthcare Banner" className="hero-video" />
+        ...
 
     window.requestAnimationFrame(step);
 
