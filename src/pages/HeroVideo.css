@@ -860,3 +860,114 @@
   font-size:1.25rem;
    color:#000000;
 }
+/* =====================================
+   MOBILE RESPONSIVE FIX (NO DESIGN CHANGE)
+   ===================================== */
+
+@media (max-width: 768px) {
+
+  /* HERO SECTION */
+  .hero-video-section{
+    height:70vh;
+  }
+
+  .hero-content h1{
+    font-size:2rem;
+  }
+
+  .hero-content p{
+    font-size:1rem;
+  }
+
+  /* FEATURE SECTION STACK */
+  .feature-section{
+    grid-template-columns:1fr;
+    gap:30px;
+    text-align:center;
+  }
+
+  .feature-text-wrapper{
+    max-width:100%;
+  }
+
+  .feature-main-img{
+    max-width:100%;
+  }
+
+  /* PRODUCTS HEADER STACK */
+  .products-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+  }
+
+  .learn-more-pill{
+    margin-left:0;
+  }
+
+  /* CATEGORY GRID */
+  .category-grid{
+    grid-template-columns:1fr;
+  }
+
+  /* STATS SECTION */
+  .stats-modern{
+    gap:40px;
+  }
+
+  .stat-card-modern{
+    width:100%;
+    max-width:320px;
+  }
+
+  /* CORPORATE SECTION STACK */
+  .corporate-row{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .trust-side{
+    border-left:none;
+    padding-left:0;
+  }
+
+  .corporate-cert-card{
+    flex-direction:column;
+    text-align:center;
+  }
+
+}
+
+
+/* SMALL MOBILE (PHONES) */
+@media (max-width:480px){
+
+  .hero-content h1{
+    font-size:1.7rem;
+  }
+
+  .hero-content p{
+    font-size:0.95rem;
+  }
+
+  .feature-big{
+    font-size:1.6rem;
+  }
+
+  .feature-medium{
+    font-size:1.2rem;
+  }
+
+  .feature-small{
+    font-size:1rem;
+  }
+
+  .category-info h3{
+    font-size:1.5rem;
+  }
+
+  .stat-card-modern h2{
+    font-size:3rem;
+  }
+
+}
