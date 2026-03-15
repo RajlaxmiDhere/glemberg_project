@@ -756,7 +756,8 @@
   grid-template-columns:1.25fr 1fr;
   gap:70px;
   max-width:1150px;
-  margin:80px auto 100px;
+   height:auto;
+  margin:auto;
   padding:0 20px;
   align-items:center;
 }
@@ -777,6 +778,7 @@
 /* RIGHT SIDE */
 
 .trust-side{
+    background:#004d43;
   display:flex;
   flex-direction:column;
   justify-content:center;
