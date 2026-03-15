@@ -202,3 +202,24 @@ display:flex;
 
 }
 
+/* HIDE DESKTOP MENU ON MOBILE */
+@media (max-width:768px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+}
+
+/* HIDE HAMBURGER ON DESKTOP */
+@media (min-width:769px){
+
+  .hamburger{
+    display:none;
+  }
+
+}
