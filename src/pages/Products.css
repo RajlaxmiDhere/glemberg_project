@@ -316,4 +316,36 @@ img {
   }
 
 }
+/* =====================================
+   PRODUCTS HEADER RESPONSIVE
+   ===================================== */
 
+@media (max-width: 900px){
+
+  .products-heading-wrap{
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .products-main-heading{
+    font-size:2.2rem;
+  }
+
+}
+
+@media (max-width: 600px){
+
+  .products-heading-wrap{
+    text-align:center;
+  }
+
+  .products-main-heading{
+    font-size:1.9rem;
+  }
+
+  .products-main-heading::after{
+    left:50%;
+    transform:translateX(-50%);
+  }
+
+}
