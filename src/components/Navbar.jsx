@@ -10,7 +10,7 @@ const [menuOpen, setMenuOpen] = useState(false);
 return ( <nav className="navbar"> <div className="navbar-inner"> <div className="logo-group"> <img src={logo} alt="Glemberg Pharma" className="navbar-logo" /> <span className="navbar-tagline">Science with a Human Touch</span> </div>
 
 ```
-    {/* HAMBURGER BUTTON (ADDED) */}
+    {/* HAMBURGER BUTTON */}
     <div
       className="hamburger"
       onClick={() => setMenuOpen(!menuOpen)}
@@ -25,6 +25,7 @@ return ( <nav className="navbar"> <div className="navbar-inner"> <div className=
       <li><NavLink to="/products">Products</NavLink></li>
       <li><NavLink to="/contact">Contact Us</NavLink></li>
     </ul>
+
   </div>
 </nav>
 ```
