@@ -83,30 +83,8 @@ function Home() {
 
   return (
     <>
- <header className="header-row">
-        <div className="header-column">
-           <div className="logo-section">
-              <img src={fssaiLogo} alt="Logo" className="nav-logo" style={{height: '50px'}} />
-              <div className="brand-info">
-                <h2 style={{fontSize: '1.2rem', margin: 0}}>Shield & Care</h2>
-                <p style={{fontSize: '0.8rem', margin: 0}}>Pharmaceuticals Pvt. Ltd.</p>
-              </div>
-           </div>
-           
-           </div>
-           
-           <div className="menu-icon" onClick={toggleMenu} style={{ backgroundColor: '#00a651', padding: '10px', color: 'white', borderRadius: '4px', cursor: 'pointer' }}>
-             {isMenuOpen ? <FaTimes /> : <FaBars />}
-           </div>
-        </div>
-
-        <nav className={isMenuOpen ? "nav-menu active" : "nav-menu"}>
-           <NavLink to="/" onClick={() => setIsMenuOpen(false)}>Home</NavLink>
-           <NavLink to="/about" onClick={() => setIsMenuOpen(false)}>About Us</NavLink>
-           <NavLink to="/products" onClick={() => setIsMenuOpen(false)}>Products</NavLink>
-           <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</NavLink>
-        </nav>
-      </header>
+ 
+  
 
       <section className="hero-video-section">
         <video 
