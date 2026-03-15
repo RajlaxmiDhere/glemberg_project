@@ -47,12 +47,12 @@
 }
 
 .welcome-tagline {
-  font-size: 12px ;
+  font-size: 32px ;
   font-weight: 600;
   letter-spacing: 1px;
   margin-bottom: 12px;
   text-transform: uppercase;
-  color: #000000;
+  color: #ffffff;
 }
 
 .hero-content h1 {
