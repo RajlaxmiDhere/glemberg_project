@@ -767,7 +767,7 @@
   display:flex;
   align-items:center;
   gap:35px;
-  background:#004d43;
+  background:#ffffff;
   padding:42px 48px;
   border-radius:22px;
   border:1px solid #e6edf4;
@@ -777,7 +777,7 @@
 /* RIGHT SIDE */
 
 .trust-side{
-    background:#004d43;
+    background:#ffffff;
   display:flex;
   flex-direction:column;
   justify-content:center;
