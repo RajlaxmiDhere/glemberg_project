@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -23,8 +23,7 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <BrowserRouter>
-
+    <HashRouter>
       <ScrollToTop />
 
       <Navbar />
@@ -36,21 +35,19 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
 
-      {/* ⭐ WHATSAPP FLOAT BUTTON (ADDED HERE) */}
+      {/* ⭐ WHATSAPP FLOAT BUTTON */}
       <a
-  href="https://wa.me/917559189020"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="footer-whatsapp-float"
->
-  <FaWhatsapp />
-  Enquire Now
-</a>
-
+        href="https://wa.me/917559189020"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="footer-whatsapp-float"
+      >
+        <FaWhatsapp />
+        Enquire Now
+      </a>
 
       <Footer />
-
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
