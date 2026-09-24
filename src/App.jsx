@@ -24,20 +24,18 @@ function App() {
   return (
     <HashRouter>
       <ScrollToTop />
+      <Navbar />
 
-      {/* Main layout container */}
-      <div className="app-container">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
 
-      {/* ⭐ KEEP THIS OUTSIDE ANY APP WRAPPER / CONTAINER */}
+      <Footer />
+
+      {/* Put it here — direct child of HashRouter */}
       <a
         href="https://wa.me/917559189020"
         target="_blank"
@@ -47,7 +45,6 @@ function App() {
         <FaWhatsapp />
         Enquire Now
       </a>
-
     </HashRouter>
   );
 }

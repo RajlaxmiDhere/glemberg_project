@@ -44,42 +44,36 @@ html, body {
 /* ⭐ FULLY RESPONSIVE & UNCLIPPED WHATSAPP FLOAT BUTTON */
 .footer-whatsapp-float {
   position: fixed !important;
-  right: clamp(12px, 2vw, 25px) !important;
-  bottom: clamp(12px, 2vh, 25px) !important;
-  z-index: 999999 !important; /* Stays above all layers */
+  bottom: 25px !important;
+  right: 25px !important;
+  z-index: 999999 !important;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(6px, 1vw, 12px);
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px;
 
   background-color: #25d366;
   color: #ffffff;
-  
-  /* Dynamic sizing based on viewport width */
-  padding: clamp(8px, 1.2vw, 15px) clamp(14px, 2vw, 28px);
+  padding: 12px 24px;
   border-radius: 34px;
-  font-size: clamp(13px, 1.2vw, 19px);
+  font-size: 16px;
   font-weight: 700;
   text-decoration: none;
 
-  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.45);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-  /* Ensures text doesn't wrap or clip outside screen boundaries */
+  /* Prevent text wrapping or squishing */
   white-space: nowrap;
-  width: auto;
-  max-width: fit-content;
-  box-sizing: border-box;
+  width: fit-content;
 }
 
-/* Fluid SVG icon sizing */
 .footer-whatsapp-float svg {
-  font-size: clamp(16px, 1.5vw, 22px);
+  font-size: 22px;
   flex-shrink: 0;
 }
 
 .footer-whatsapp-float:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 16px 32px rgba(37, 211, 102, 0.55);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.55);
 }
