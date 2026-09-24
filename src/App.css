@@ -1,3 +1,15 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow-x: clip; /* Fixes horizontal scrollbars without breaking fixed positioning */
+}
+
+#root {
+  width: 100%;
+}
+
 .top-social-bar {
   height: 70px;
   display: flex;
@@ -24,42 +36,44 @@
   transition: transform 0.3s ease;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 /* Hover effect just for scaling */
 .top-social-inner i:hover {
   transform: scale(1.2);
 }
 
-/* ⭐ FLEXIBLE & RESPONSIVE WHATSAPP FLOAT BUTTON */
+/* ⭐ FULLY RESPONSIVE & UNCLIPPED WHATSAPP FLOAT BUTTON */
 .footer-whatsapp-float {
-  position: fixed;     /* ✅ Keeps it sticking on every page */
-  right: clamp(12px, 2vw, 25px);
-  bottom: clamp(12px, 2vh, 25px);
+  position: fixed !important;
+  right: clamp(12px, 2vw, 25px) !important;
+  bottom: clamp(12px, 2vh, 25px) !important;
+  z-index: 999999 !important; /* Stays above all layers */
+
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: clamp(6px, 1vw, 12px);
+
   background-color: #25d366;
   color: #ffffff;
   
-  /* Flexible sizing that scales dynamically from mobile to desktop */
+  /* Dynamic sizing based on viewport width */
   padding: clamp(8px, 1.2vw, 15px) clamp(14px, 2vw, 28px);
   border-radius: 34px;
   font-size: clamp(13px, 1.2vw, 19px);
   font-weight: 700;
   text-decoration: none;
-  white-space: nowrap;
-  width: auto;
-  max-width: fit-content;
 
   box-shadow: 0 12px 28px rgba(37, 211, 102, 0.45);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  z-index: 9999;       /* ⭐ Stays above all content */
+
+  /* Ensures text doesn't wrap or clip outside screen boundaries */
+  white-space: nowrap;
+  width: auto;
+  max-width: fit-content;
+  box-sizing: border-box;
 }
 
-/* Ensures the icon inside scales fluidly with the text */
+/* Fluid SVG icon sizing */
 .footer-whatsapp-float svg {
   font-size: clamp(16px, 1.5vw, 22px);
   flex-shrink: 0;

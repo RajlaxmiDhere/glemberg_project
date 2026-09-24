@@ -20,22 +20,24 @@ function ScrollToTop() {
 
   return null;
 }
-
 function App() {
   return (
     <HashRouter>
       <ScrollToTop />
 
-      <Navbar />
+      {/* Main layout container */}
+      <div className="app-container">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </div>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-
-      {/* ⭐ WHATSAPP FLOAT BUTTON */}
+      {/* ⭐ KEEP THIS OUTSIDE ANY APP WRAPPER / CONTAINER */}
       <a
         href="https://wa.me/917559189020"
         target="_blank"
@@ -46,7 +48,6 @@ function App() {
         Enquire Now
       </a>
 
-      <Footer />
     </HashRouter>
   );
 }
