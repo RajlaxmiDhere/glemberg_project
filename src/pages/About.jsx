@@ -37,14 +37,14 @@ function About() {
           <div className="about-content">
             <h1>The Journey So Far</h1>
             <p>
-              <strong>Glemberg Pharma</strong> is a name synonymous with{" "}
+              <strong>Glemberg Pharmaceuticals</strong> is a name synonymous with{" "}
               <strong>trust and innovation</strong> in the global pharmaceutical
               landscape. Built on the core pillars of quality, safety, and purity,
               we go beyond manufacturing—we deliver a promise to improve lives.
               <br /><br />
               Our mission is fueled by dedicated scientists and researchers
               working relentlessly to make healthcare reliable and affordable.
-              At Glemberg Pharma, we are committed to enriching human life by
+              At Glemberg Pharmapharmaceuticals, we are committed to enriching human life by
               ensuring world-class healthcare access for everyone.
             </p>
           </div>
@@ -91,9 +91,8 @@ function About() {
             <h1>Our Core Values</h1>
             <h3>Incorporating Core Values into Business Practices</h3>
             <p>
-              Honesty, humility, integrity, quality, collaboration, timely service and customer satisfaction.
+              integrity, quality, timely service and customer satisfaction.
               We believe that these values are the foundation of a successful business.
-              We believe that honesty, humility, integrity, quality, collaboration, timely service, and customer satisfaction are the pillars that drive a truly successful business.
             </p>
           </div>
         </section>

@@ -104,7 +104,7 @@ function Home() {
         <div className="hero-content">
           {showWelcome && <div className="welcome-tagline">Welcome to Glemberg Pharma</div>}
           <h1>Committed to Better Healthcare</h1>
-          <p>Glemberg Pharma delivers safe, effective, and innovative pharmaceutical solutions to improve lives.</p>
+          <p>Glemberg Pharmapharmaceuticals delivers safe, effective, and innovative pharmaceutical solutions to improve lives.</p>
         </div>
       </section>
 
@@ -164,7 +164,7 @@ function Home() {
               <div className="corporate-cert-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/800px-Emblem_of_India.svg.png" className="gov-logo" alt="GOI" /></div>
               <div className="corporate-cert-info">
                 <h3>Corporate Certification</h3>
-                <p>Glemberg Pharma Pvt. Ltd. is officially registered and compliant.</p>
+                <p>Glemberg Pharmapharmaceuticals Pvt. Ltd. is officially registered and compliant.</p>
                 <a href={certificate} target="_blank" rel="noopener noreferrer" className="view-cert-link">View Registration Certificate</a>
               </div>
             </div>

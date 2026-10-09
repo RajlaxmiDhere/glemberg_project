@@ -37,7 +37,7 @@ function App() {
 
       {/* Put it here — direct child of HashRouter */}
       <a
-        href="https://wa.me/917559189020"
+        href="https://wa.me/8975173157"
         target="_blank"
         rel="noopener noreferrer"
         className="footer-whatsapp-float"

@@ -18,7 +18,7 @@ const Contact = () => {
 
   const [status, setStatus] = useState("");
 
-  const phoneNumbers = ["+91 7559189020"];
+  const phoneNumbers = ["+91 8975173157"];
   const email = "glembergpharmaceuticals@gmail.com";
 
   const handleChange = (e) => {
@@ -84,7 +84,7 @@ const Contact = () => {
 
               <h3>Corporate Office</h3>
               <p>
-                <b>Glemberg Pharma Pvt. Ltd.</b><br/>
+                <b>Glemberg Pharmapharmaceuticals Pvt. Ltd.</b><br/>
                 Neminath Nagar,<br/>
                 Sangli, Maharashtra – 416416<br/>
                 India

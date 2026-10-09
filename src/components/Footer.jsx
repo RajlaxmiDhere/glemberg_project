@@ -24,7 +24,7 @@ function Footer() {
 
           <p className="footer-contact">
             <FaMapMarkerAlt />{" "}
-            <strong>Glemberg Pharma Pvt. Ltd.</strong><br />
+            <strong>Glemberg Pharmapharmaceuticals Pvt. Ltd.</strong><br />
             Neminath Nagar,<br />
             Sangli, Maharashtra – 416416<br />
             India
@@ -33,7 +33,7 @@ function Footer() {
           <h4>Phone</h4>
           <p className="footer-contact">
             <FaPhoneAlt />{" "}
-            <a href="tel:+917559189020">+91 7559189020</a><br />
+            <a href="tel:+917559189020">+91 8975173157</a><br />
           </p>
 
           <h4>Email</h4>
