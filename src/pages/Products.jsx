@@ -13,7 +13,7 @@ import RabergDSR from "../assets/Raberg_DSR_cap.png";
 
 import Genzocopowder from "../assets/Genzoco_powder.png";
 import Itragem200 from "../assets/Itragem_200_cap.png";
-import Minoxarsolution from "../assets/Minoxar 5% solution.png";
+import Minoxarsolution from "../assets/Minoxarsolution.jpeg";
 
 const productsData = [
   { id: 1, name: "Gabanx NT 100", category: "ortho", division: "ORTHO DIVISION", image: gabanxNt },
