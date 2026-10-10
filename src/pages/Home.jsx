@@ -164,13 +164,12 @@ function Home() {
               </div>
             </div>
           </section>
-         {/* Statistics section with animated counters */}
-          <div className="stats-modern" ref={statsRef}>
-             <div className="stat-card-modern blue"><FaIndustry className="stat-icon" /><h2>{products}+</h2><p>Products</p></div>
-             <div className="stat-card-modern orange"><FaUserMd className="stat-icon" /><h2>{team}+</h2><p>Team Members</p></div>
-             <div className="stat-card-modern purple"><FaSmile className="stat-icon" /><h2>{clients}+</h2><p>Happy Clients</p></div>
-         </div>
-
+        {/* Statistics section with animated counters */}
+<div className="stats-modern" ref={statsRef}>
+  <div className="stat-card-modern blue"><FaIndustry className="stat-icon" /><h2>{products}</h2><p>Products</p></div>
+  <div className="stat-card-modern orange"><FaUserMd className="stat-icon" /><h2>{team}</h2><p>Team Members</p></div>
+  <div className="stat-card-modern purple"><FaSmile className="stat-icon" /><h2>{clients}+</h2><p>Happy Clients</p></div>
+</div>
           {/* Certification sections */}
          
          {/* Certifications and Quality Standards Row */}
