@@ -44,7 +44,7 @@ function About() {
               <br /><br />
               Our mission is fueled by dedicated scientists and researchers
               working relentlessly to make healthcare reliable and affordable.
-              At Glemberg Pharmapharmaceuticals, we are committed to enriching human life by
+              At Glemberg Pharmaceuticals, we are committed to enriching human life by
               ensuring world-class healthcare access for everyone.
             </p>
           </div>
@@ -59,7 +59,7 @@ function About() {
             <h1>Our Vision</h1>
             <h3>Pioneering Innovation with Enduring Trust</h3>
             <p>
-              We believe that “standard” is never enough. Through continuous
+              We believe that "standard" is never enough. Through continuous
               research, modern technology, and creative scientific thinking, we
               aim to develop therapies that redefine industry benchmarks while
               maintaining absolute reliability.

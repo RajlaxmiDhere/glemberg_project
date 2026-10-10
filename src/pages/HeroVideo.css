@@ -822,23 +822,33 @@
 }
 
 /* MOBILE */
+.certifications-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap; /* Ensures it wraps nicely on smaller mobile screens */
+}
 
-@media(max-width:900px){
+.corporate-cert-card {
+  flex: 1;
+  min-width: 300px;
+  /* Add your existing card styling here (background, shadow, padding, etc.) */
+}
 
-  .corporate-row{
-    grid-template-columns:1fr;
-  }
+.trust-side {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
 
-  .trust-side{
-    border-left:none;
-    padding-left:0;
-  }
-
-  .corporate-cert-card{
-    flex-direction:column;
-    text-align:center;
-  }
-
+.trust-logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin-top: 15px;
 }
 .feature-text-wrapper{
   display:flex;
