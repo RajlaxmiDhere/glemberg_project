@@ -60,7 +60,7 @@ function Home() {
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimatedStats.current) {
           hasAnimatedStats.current = true; // Prevents re-animation
-          animateCount(setProducts, 10); // Animate Products count to 20
+          animateCount(setProducts, 9); // Animate Products count to 20
           animateCount(setTeam, 11);     // Animate Team count to 25
           animateCount(setClients, 500);  // Animate Clients count to 500
         }
