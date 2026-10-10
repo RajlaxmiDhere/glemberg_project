@@ -14,6 +14,9 @@ import RabergDSR from "../assets/Raberg_DSR_cap.png";
 import Genzocopowder from "../assets/Genzoco_powder.png";
 import Itragem200 from "../assets/Itragem_200_cap.png";
 import Minoxarsolution from "../assets/Minoxarsolution.jpeg";
+import Minoxarsolutiont from "../assets/Minoxarsolutiont.png";
+
+
 
 const productsData = [
   { id: 1, name: "Gabanx NT 100", category: "ortho", division: "ORTHO DIVISION", image: gabanxNt },
@@ -25,6 +28,7 @@ const productsData = [
   { id: 7, name: "Genzoco Powder", category: "derma", division: "DERMA DIVISION", image: Genzocopowder },
   { id: 8, name: "Itragem 200 Cap", category: "derma", division: "DERMA DIVISION", image: Itragem200 },
   { id: 9, name: "Minoxar 5% solution", category: "derma", division: "DERMA DIVISION", image: Minoxarsolution },
+  { id: 10, name: "Minoxar 2.5% solution", category: "derma", division: "DERMA DIVISION", image: Minoxarsolutiont }
 ];
 
 const Product = () => {
